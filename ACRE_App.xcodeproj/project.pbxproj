@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		423A2A961BC6FECA00A87AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2A951BC6FECA00A87AF5 /* AppDelegate.swift */; };
-		423A2A981BC6FECA00A87AF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2A971BC6FECA00A87AF5 /* ViewController.swift */; };
-		423A2A9B1BC6FECA00A87AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423A2A991BC6FECA00A87AF5 /* Main.storyboard */; };
+		423A2A981BC6FECA00A87AF5 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2A971BC6FECA00A87AF5 /* LoginPageViewController.swift */; };
+		423A2A9B1BC6FECA00A87AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423A2A991BC6FECA00A87AF5 /* Main.storyboard */; settings = {ASSET_TAGS = (12, ); }; };
 		423A2A9D1BC6FECA00A87AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423A2A9C1BC6FECA00A87AF5 /* Assets.xcassets */; };
 		423A2AA01BC6FECA00A87AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423A2A9E1BC6FECA00A87AF5 /* LaunchScreen.storyboard */; };
 		423A2AAB1BC6FECA00A87AF5 /* ACRE_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2AAA1BC6FECA00A87AF5 /* ACRE_AppTests.swift */; };
+		423A2AB81BC7014600A87AF5 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423A2AB71BC7014600A87AF5 /* HomePageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		42DCB81C1BD55A0600F94CED /* RequestAuthenticationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DCB81B1BD55A0600F94CED /* RequestAuthenticationDataProvider.swift */; settings = {ASSET_TAGS = (); }; };
+		42E897AB1BCC191B00727240 /* RequestAuthenticationTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E897AA1BCC191B00727240 /* RequestAuthenticationTokenViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +28,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		42CAEF3C1BCDC94900CAF09A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		423A2A921BC6FECA00A87AF5 /* ACRE_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACRE_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423A2A951BC6FECA00A87AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		423A2A971BC6FECA00A87AF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423A2A971BC6FECA00A87AF5 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginPageViewController.swift; path = ACRE_App/LoginPageViewController.swift; sourceTree = "<group>"; };
 		423A2A9A1BC6FECA00A87AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		423A2A9C1BC6FECA00A87AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423A2A9F1BC6FECA00A87AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +52,9 @@
 		423A2AA61BC6FECA00A87AF5 /* ACRE_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACRE_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423A2AAA1BC6FECA00A87AF5 /* ACRE_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACRE_AppTests.swift; sourceTree = "<group>"; };
 		423A2AAC1BC6FECA00A87AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423A2AB71BC7014600A87AF5 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		42DCB81B1BD55A0600F94CED /* RequestAuthenticationDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAuthenticationDataProvider.swift; sourceTree = "<group>"; };
+		42E897AA1BCC191B00727240 /* RequestAuthenticationTokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAuthenticationTokenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +78,10 @@
 		423A2A891BC6FECA00A87AF5 = {
 			isa = PBXGroup;
 			children = (
+				42DCB81B1BD55A0600F94CED /* RequestAuthenticationDataProvider.swift */,
 				423A2A941BC6FECA00A87AF5 /* ACRE_App */,
 				423A2AA91BC6FECA00A87AF5 /* ACRE_AppTests */,
+				423A2AB91BC7015400A87AF5 /* Controller */,
 				423A2A931BC6FECA00A87AF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				423A2A951BC6FECA00A87AF5 /* AppDelegate.swift */,
-				423A2A971BC6FECA00A87AF5 /* ViewController.swift */,
 				423A2A991BC6FECA00A87AF5 /* Main.storyboard */,
 				423A2A9C1BC6FECA00A87AF5 /* Assets.xcassets */,
 				423A2A9E1BC6FECA00A87AF5 /* LaunchScreen.storyboard */,
@@ -96,6 +116,16 @@
 			path = ACRE_AppTests;
 			sourceTree = "<group>";
 		};
+		423A2AB91BC7015400A87AF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42E897AA1BCC191B00727240 /* RequestAuthenticationTokenViewController.swift */,
+				423A2A971BC6FECA00A87AF5 /* LoginPageViewController.swift */,
+				423A2AB71BC7014600A87AF5 /* HomePageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +136,7 @@
 				423A2A8E1BC6FECA00A87AF5 /* Sources */,
 				423A2A8F1BC6FECA00A87AF5 /* Frameworks */,
 				423A2A901BC6FECA00A87AF5 /* Resources */,
+				42CAEF3C1BCDC94900CAF09A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +171,11 @@
 		423A2A8A1BC6FECA00A87AF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					12,
+					cityPickerView,
+				);
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = AcreApp.Practice;
 				TargetAttributes = {
@@ -196,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423A2A981BC6FECA00A87AF5 /* ViewController.swift in Sources */,
+				423A2A981BC6FECA00A87AF5 /* LoginPageViewController.swift in Sources */,
 				423A2A961BC6FECA00A87AF5 /* AppDelegate.swift in Sources */,
+				42E897AB1BCC191B00727240 /* RequestAuthenticationTokenViewController.swift in Sources */,
+				42DCB81C1BD55A0600F94CED /* RequestAuthenticationDataProvider.swift in Sources */,
+				423A2AB81BC7014600A87AF5 /* HomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,10 +365,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ACRE_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Practice.ACRE-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -337,10 +382,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ACRE_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Practice.ACRE-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -387,6 +437,7 @@
 				423A2AB11BC6FECA00A87AF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		423A2AB21BC6FECA00A87AF5 /* Build configuration list for PBXNativeTarget "ACRE_AppTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +446,7 @@
 				423A2AB41BC6FECA00A87AF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
