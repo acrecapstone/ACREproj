@@ -20,15 +20,51 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     @IBOutlet weak var mlsEmailTextField: UITextField!
     @IBOutlet weak var mlsAreaPickerView: UIPickerView!
 
-    //var datas: [JSON] = []
-    
     //request token button
     @IBAction func requestAuthTokenPassword(sender: AnyObject) {
         
-        let url = NSURL(string: "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com")
-        let request = NSURLRequest(URL: url!)
-        let connection = NSURLConnection(request: request, delegate: self, startImmediately: true))
+        //declare parameters as a dictionary
+        //var parameters = ["email": mlsEmailTextField.text, "area": mlsAreaPickerView.description] as Dictionary<String, String>
         
+        
+        //create the URL with NSURL
+        let url = NSURL(string: "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com")
+        
+        //create the session object
+        var session = NSURLSession.sharedSession()
+        
+        //create the NSMutualRequest object using the url object
+        let request = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "POST"
+        
+        var error: NSError?
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(parameters, options: nil, error: &error) //pass dictionary to nsdata object and set it as request body
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        //create dataTask using the session object to send data to the server
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        print("Response: \(response)")
+            var strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+        print("Body: \(strData)")
+            var error: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &error) as? NSDictionary
+            
+        //did the jsonObjectwithData constructor return an error? If so, log the error
+            if (error != nil){
+                print(error!.localizedDescription)
+            let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                print("Error could not parse JSON: '\(jsonStr)'")
+            } else {
+            //okay the json object was nil, something went wrong. 
+            let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                print("Error could not parse JSON: '\(jsonStr)'")
+            }
+        })
+    
+        task.resume()
+
         //this will show the keyboard when clicking on email text field and then remove keyboard when done
         mlsEmailTextField.resignFirstResponder();
         mlsEmailTextField.text = mlsEmailTextField.text;
@@ -43,9 +79,13 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         
         //sends a request to chris based on the email received from user
         /**Alamofire.request(.GET, "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com")**/
+        
+        /**let url = NSURL(string: "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com")
+        let request = NSURLRequest(URL: url!)
+        let connection = NSURLConnection(request: request, delegate: self, startImmediately: true))**/
     }
     
-    func connection (connection: NSURLConnection!, willSendRequestForAuthenticationChallenge challenge: NSURLAuthenticationChallenge!)
+    /**func connection (connection: NSURLConnection!, willSendRequestForAuthenticationChallenge challenge: NSURLAuthenticationChallenge!)
     {
         if challenge.previousFailureCount > 1 {
         } else {
@@ -60,10 +100,42 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     {
         let status = (response as! NSHTTPURLResponse).statusCode
         //this should then push to login page
-    }
+    }**/
     
     
-    //picker view -- how to insert data into picker view
+    //this will post data to the url
+    /**func postDataSynchronous(url: String, bodyData: String, completionHandler: (reponseString: String!, error: NSError!) -> ())
+    {
+        var URL: NSURL = NSURL(string: url)!
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL: URL)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        var response: NSURLResponse?
+        var error: NSError?
+        
+        NSURLConnection.sendSynchronousRequest(request, queue: NSOperationQueue.mainQueue()){
+        response, data, error in
+            var output: String!
+            
+            if data != nil {
+                output = NSString (data: data, encoding: NSUTF8StringEncoding) as! String
+            }
+            
+            completionHandler(reponseString: output, error: error)
+        }
+    }**/
+
+    
+    
+    
+    
+    
+    
+    
+    
+    //picker view -- how to insert data into pick889er view
     var pickerDataSource = ["Greater Alabama", "Tuscaloosa"];
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

@@ -22,23 +22,27 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+        
         //if (mlsCityPickerView.tag == 12)
         //{
-        return pickerDataSource.count;
+        //return pickerDataSource.count;
         //}
         //else
         //{
-            //return timePickerView.count;
+        //return timePickerView.count;
         //}
     }
 
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+        
         //if (mlsCityPickerView.tag == 12)
         //{
-        return pickerDataSource[row]
+        //return pickerDataSource[row]
         //}
         //else
-        //{ return timePickerView[row]}
+        //{return timePickerView[row]}**/
     }
 
     func numberOfComponentsInTimeReportPickerView(pickerView: UIPickerView) -> Int { return 1 }
