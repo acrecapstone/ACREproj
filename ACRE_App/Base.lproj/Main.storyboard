@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAy-VU-JX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770.25" y="-563.5"/>
+            <point key="canvasLocation" x="779.25" y="-527.5"/>
         </scene>
         <!--Login Page View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -554,16 +554,6 @@
                                     <rect key="frame" x="169" y="384" width="196" height="30"/>
                                 </variation>
                             </textField>
-                            <pickerView tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Vl-NkF">
-                                <rect key="frame" x="0.0" y="50" width="600" height="92"/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="55" width="375" height="66"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="MIB-OC-d0G" id="PP8-Cb-WTk"/>
-                                </connections>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-VZ-Ogu">
                                 <rect key="frame" x="5" y="5" width="378" height="44"/>
                                 <attributedString key="attributedText">
@@ -593,6 +583,16 @@
                                     <outlet property="dataSource" destination="MIB-OC-d0G" id="hky-dc-xFe"/>
                                 </connections>
                             </pickerView>
+                            <pickerView tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Vl-NkF">
+                                <rect key="frame" x="0.0" y="50" width="600" height="92"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="55" width="375" height="66"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="MIB-OC-d0G" id="PP8-Cb-WTk"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -620,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juu-L2-GIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285.25" y="-527.5"/>
+            <point key="canvasLocation" x="2307.75" y="-527.5"/>
         </scene>
     </scenes>
     <resources>

@@ -21,7 +21,7 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     @IBOutlet weak var mlsAreaPickerView: UIPickerView!
 
     //request token button
-    @IBAction func requestAuthTokenPassword(sender: AnyObject) {
+    /**@IBAction func requestAuthTokenPassword(sender: AnyObject) {
         
         //declare parameters as a dictionary
         //var parameters = ["email": mlsEmailTextField.text, "area": mlsAreaPickerView.description] as Dictionary<String, String>
@@ -83,7 +83,6 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         /**let url = NSURL(string: "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com")
         let request = NSURLRequest(URL: url!)
         let connection = NSURLConnection(request: request, delegate: self, startImmediately: true))**/
-    }
     
     /**func connection (connection: NSURLConnection!, willSendRequestForAuthenticationChallenge challenge: NSURLAuthenticationChallenge!)
     {
@@ -126,12 +125,34 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
             completionHandler(reponseString: output, error: error)
         }
     }**/
-
+}**/
     
+    @IBAction func requestAuthTokenPassword(sender: AnyObject){
+        /**let url = urlWithSearchText("")
+        print("URL: '\(url)'")
+        if let jsonString = performGetRequestWithURL(url){
+        print("Received JSON string '\(jsonString)'")
+        }
+    }
     
+    func urlWithSearchText(searchText: String) -> NSURL{
+        let escapedSearchText = searchText.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let urlString = String(format: "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com", escapedSearchText)
+        let url = NSURL(string: urlString)
+        return url!
+    }
     
-    
-    
+    func performGetRequestWithURL(url: NSURL) -> String? {
+        var error: NSError?
+        if let resultString = String(contentsOfURL: url, encoding: NSUTF8StringEncoding, error: &error) {
+            return resultString
+        } else if let error = error {
+            print ("Download Error: \(error)")
+        } else {
+            print("Unknown Download Error")
+        }
+    return nil**/
+    }
     
     
     

@@ -15,7 +15,10 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var timeReportPickerView: UIPickerView!
     
     var pickerDataSource = ["140-Trussville", "139-Hoover", "138-Birmingham"]
-    var timePickerView = ["Monthly", "Quarterly"]
+    
+    var pickerData: [String] = [String]()
+    
+    //var timePickerView = ["Monthly", "Quarterly"]
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -42,17 +45,17 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //return pickerDataSource[row]
         //}
         //else
-        //{return timePickerView[row]}**/
+        //{return timePickerView[row]}
     }
 
     func numberOfComponentsInTimeReportPickerView(pickerView: UIPickerView) -> Int { return 1 }
     
     func timeReportPickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timePickerView.count;
+        return pickerData.count;
     }
 
     func timeReportPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return timePickerView[row]
+        return pickerData[row]
     }
     
     override func viewDidLoad() {
@@ -61,6 +64,9 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.mlsCityPickerView.delegate = self;
         self.timeReportPickerView.dataSource = self;
         self.timeReportPickerView.delegate = self;
+        
+    
+        pickerData = ["Monthly", "Quarterly"]
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -68,4 +74,11 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    
+    
+    
+    
+    
 }
