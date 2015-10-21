@@ -14,10 +14,8 @@ class DataProvider
     //declare members/variables
     
     //methods
-    
     func requestAuthentication ()
     {
-        
         //calling the get post for API - request authentication
         let urlPath = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
         let url = NSURL(string: urlPath)!
@@ -37,24 +35,21 @@ class DataProvider
                     dispatch_async(dispatch_get_main_queue(), {
                         self.tableData = results
                         self.appsTableView!.reloadData()
-                    }
+                    },
                 }
             }
+            //example of loading data into table view, but same idea
             
-            
-        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+        /**var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         var dataVal: NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: nil)
         
         print(response)
         var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: err) as? NSDictionary)!
-        print(Synchronous/(jsonResult))
+        print(Synchronous/(jsonResult))**/
         
-
         //request.URL = NSURL(string: url)
         //request.HTTPMethod = "GET"
-    
     }
-
 }
 
 

@@ -8,7 +8,7 @@
         <!--MARKET in a MINUTE-->
         <scene sceneID="zJX-Ut-nbv">
             <objects>
-                <viewController id="ZMt-Zo-zYK" customClass="RequestAuthenticationTokenViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="requestAuthenticationPageSegue" id="ZMt-Zo-zYK" customClass="RequestAuthenticationTokenViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dlt-ke-6xE"/>
                         <viewControllerLayoutGuide type="bottom" id="osd-F3-Ky0"/>
@@ -150,7 +150,7 @@
         <!--Login Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginPageSegue" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
