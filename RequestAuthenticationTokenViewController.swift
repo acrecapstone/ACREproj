@@ -20,18 +20,19 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     @IBOutlet weak var mlsEmailTextField: UITextField!
     @IBOutlet weak var mlsAreaPickerView: UIPickerView!
 
-    //let dataProvider = DataProvider()
-    //var user: User!
+    let dataProvider = DataProvider()
+    var mlsEmail = " "
     
     @IBAction func requestAuthTokenPassword(sender: AnyObject){
-        /**var authenticated: Bool
-        (authenticated, user) = dataProvider.requestAuthentication(mlsEmailTextField.text, mlsAreaPickerView.textInputMode)
+        
+        var authenticated: Bool
+        (authenticated, mlsEmail) = dataProvider.requestAuthentication(mlsEmailTextField.text!, mlsArea: mlsAreaPickerView.textInputContextIdentifier!)
         
         if (authenticated == true){
         //pushes to the login page
-            let thirdViewController: LoginPageViewController = (self.storyboard?.instantiateInitialViewController("requestAuthenticationPageSegue") as AnyObject? as LoginPageViewController)!
-            thirdViewController.mlsEmailTextField.text
-            thirdViewController.mlsAreaPickerView.textInputContextIdentifier
+            let thirdViewController: LoginPageViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("loginPageSegue") as AnyObject? as? LoginPageViewController)!
+            thirdViewController.mlsEmailTextField = self.mlsEmailTextField
+            thirdViewController.mlsAreaPickerView = self.mlsAreaPickerView
         }
         else{
             let alertView: UIAlertView = UIAlertView()
@@ -40,7 +41,7 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")
             alertView.show()
-        }**/
+        }
     }
     
     

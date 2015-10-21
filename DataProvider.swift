@@ -11,12 +11,55 @@ import UIKit
 
 class DataProvider
 {
-    //declare members/variables
-    
-    //methods
-    func requestAuthentication ()
+    func requestAuthentication(mlsEmail: String, mlsArea: String) -> (Bool, String)
     {
-        //calling the get post for API - request authentication
+        let authenticated: Bool = false
+        
+        let urlPath = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
+        let url = NSURL (string: urlPath)!
+        let request = NSMutableURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
+        print ("Task Completed")
+            if(error != nil) { print (error!.localizedDescription) }
+            var error: NSError?
+            do {
+                if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                    print(jsonResult)
+                }
+            } catch {
+                print(error)
+            }
+        })
+        
+        return(authenticated, mlsEmail)
+    }
+}
+    
+
+
+//        let urlString = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
+//        let url = NSURL(string: urlString)
+//        var authenticated: Bool = false
+//
+//        let request = NSMutableURLRequest = NSMutableURLRequest(URL: url!)
+//        request.setValue("Basic \(base64EncodedCredential)", forHTTPHeaderField: "Authorization")
+//        request.HTTPMethod = "GET"
+//
+//        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+//        let dataVal: NSData =  try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)
+//        var error: NSError
+//        do {
+//            if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+//                print(jsonResult)
+//            }
+//        } catch {
+//            print(error)
+//        }
+
+
+
+        /**calling the get post for API - request authentication
         let urlPath = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
         let url = NSURL(string: urlPath)!
         let request = NSMutableURLRequest(URL: url)
@@ -35,21 +78,17 @@ class DataProvider
                     dispatch_async(dispatch_get_main_queue(), {
                         self.tableData = results
                         self.appsTableView!.reloadData()
-                    },
+                    }
                 }
             }
-            //example of loading data into table view, but same idea
+            example of loading data into table view, but same idea
             
-        /**var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
+        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         var dataVal: NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: nil)
         
         print(response)
         var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: err) as? NSDictionary)!
-        print(Synchronous/(jsonResult))**/
+        print(Synchronous/(jsonResult))
         
-        //request.URL = NSURL(string: url)
-        //request.HTTPMethod = "GET"
-    }
-}
-
-
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"**/

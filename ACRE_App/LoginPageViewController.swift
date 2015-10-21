@@ -13,7 +13,6 @@ import Foundation
 
 class LoginPageViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    
 
     @IBOutlet weak var mlsEmailTextField: UITextField!
     @IBOutlet weak var authTokenPasswordTextField: UITextField!
