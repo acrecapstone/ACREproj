@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/acre/Library/Developer/Xcode/DerivedData/SwiftyJSON-dinwhrxbcrzhwfeusqeoazrezhgz/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "SwiftyJSON-Swift.h",
+          'external-contents': "/Users/acre/Library/Developer/Xcode/DerivedData/SwiftyJSON-dinwhrxbcrzhwfeusqeoazrezhgz/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "SwiftyJSON.h",
+          'external-contents': "/Users/acre/Downloads/SwiftyJSON-master/Source/SwiftyJSON.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/acre/Library/Developer/Xcode/DerivedData/SwiftyJSON-dinwhrxbcrzhwfeusqeoazrezhgz/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/acre/Library/Developer/Xcode/DerivedData/SwiftyJSON-dinwhrxbcrzhwfeusqeoazrezhgz/Build/Intermediates/SwiftyJSON.build/Debug-iphonesimulator/SwiftyJSON iOS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

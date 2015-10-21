@@ -1,0 +1,5 @@
+2015-10-21T12:25:00.525 ids_simd[2521] (Error) IDSSimulatorSupport: <IDSSimSupportLocalServer.m __68-[IDSSimSupportLocalServer setNetworkSimulation:enabled:completion:]_block_invoke:544> message send of data {
+    ControlCmd = SetNetSimulationEnabledCmd;
+    Enabled = 0;
+    ServiceName = "com.apple.private.alloy.sockpuppet.classd";
+} failed with error Error Domain=com.apple.idssimualtorsupport.errors Code=2 "(null)" UserInfo={NSUnderlyingError=0x7f8e03703010 {Error Domain=NSMachErrorDomain Code=268435459 "(ipc/send) invalid destination port"}}

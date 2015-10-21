@@ -1,0 +1,33 @@
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created table if needed ok: deleted_messages
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created table if needed ok: chat_handle_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created table if needed ok: chat_message_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created table if needed ok: message_attachment_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created table if needed ok: handle
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_handle_join_idx_handle_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_is_read
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_message_join_idx_chat_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_idx_is_archived
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_idx_chat_room_name_service_name
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_handle_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_message_join_idx_message_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_idx_chat_identifier
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_message_join_idx_message_id_only
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_failed
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: chat_idx_chat_identifier_service_name
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_handle
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_attachment_join_idx_attachment_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_date
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_expire_state
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_other_handle
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_attachment_join_idx_message_id
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created index ok: message_idx_was_downgraded
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_insert_on_message_attachment_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_chat_message_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_attachment
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_message_attachment_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: add_to_deleted_messages
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_chat
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: before_delete_on_attachment
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_chat_handle_join
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_delete_on_message
+2015-10-21 12:24:58 -0500 IMDPersistenceAgent[2582]: Created trigger ok: after_insert_on_chat_message_join 

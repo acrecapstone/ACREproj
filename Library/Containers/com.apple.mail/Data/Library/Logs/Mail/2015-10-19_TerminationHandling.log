@@ -1,0 +1,39 @@
+Oct 19 12:22:26 ACREs-Mac-mini.local Mail[328] <Debug>: <addTerminationHandler:> Added handler: <MailApp: 0x7f95e8e3e780>
+	_currentTerminationHandlers: (null)
+	_terminationHandlers: (
+	    "<MailApp: 0x7f95e8e3e780>"
+	)
+	_terminationReply: NSTerminateCancel
+Oct 19 12:22:26 ACREs-Mac-mini.local Mail[328] <Debug>: <addTerminationHandler:> Added handler: <ActivityViewer: 0x7f95e8c09d40>
+	_currentTerminationHandlers: (null)
+	_terminationHandlers: (
+	    "<MailApp: 0x7f95e8e3e780>",
+	    "<ActivityViewer: 0x7f95e8c09d40>"
+	)
+	_terminationReply: NSTerminateCancel
+Oct 19 12:22:26 ACREs-Mac-mini.local Mail[328] <Debug>: <addTerminationHandler:> Added handler: <MailTimeMachineController: 0x7f95e8c0b090>
+	_currentTerminationHandlers: (null)
+	_terminationHandlers: (
+	    "<MailApp: 0x7f95e8e3e780>",
+	    "<ActivityViewer: 0x7f95e8c09d40>",
+	    "<MailTimeMachineController: 0x7f95e8c0b090>"
+	)
+	_terminationReply: NSTerminateCancel
+Oct 19 12:22:27 ACREs-Mac-mini.local Mail[328] <Debug>: <_terminateNoConfirm>
+	_currentTerminationHandlers: (null)
+	_terminationHandlers: (
+	    "<MailApp: 0x7f95e8e3e780>",
+	    "<ActivityViewer: 0x7f95e8c09d40>",
+	    "<MailTimeMachineController: 0x7f95e8c0b090>"
+	)
+	_terminationReply: NSTerminateCancel
+Oct 19 12:22:27 ACREs-Mac-mini.local Mail[328] <Debug>: <applicationShouldTerminate:> BEGIN with handler: (null)
+	_currentTerminationHandlers: (
+	)
+	_terminationHandlers: (null)
+	_terminationReply: NSTerminateNow
+Oct 19 12:22:27 ACREs-Mac-mini.local Mail[328] <Debug>: <applicationShouldTerminate:> END
+	_currentTerminationHandlers: (
+	)
+	_terminationHandlers: (null)
+	_terminationReply: NSTerminateNow

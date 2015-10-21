@@ -1,0 +1,38 @@
+Oct 21 12:23:55 ACREs-Mac-mini wcd[2529] <Info>: [daemon] starting up
+Oct 21 12:23:55 ACREs-Mac-mini wcd[2529] <Info>: [daemon] Device Information: Simulator: iPhone 6s Plus (iPhone8,2), iPhone OS 9.0 (13A340), 100% (not charging)
+Oct 21 12:23:56 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor setUpInitialState]
+Oct 21 12:24:01 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor onqueue_handleInstalledApplicationsChanged]
+Oct 21 12:24:01 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] __60-[WCDSystemMonitor onqueue_handleActiveComplicationsChanged]_block_invoke_2 {(
+	)}
+Oct 21 12:24:01 ACREs-Mac-mini wcd[2529] <Error>: [daemon] __53-[WCDSystemMonitor watchConnectivityServiceAvailable]_block_invoke service not available
+Oct 21 12:24:01 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WatchConnectivityDaemon service:nearbyDevicesChanged:] (
+	)
+Oct 21 12:24:01 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor setActiveDeviceConnected:] YES
+Oct 21 12:24:05 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor setIOSApplicationsContainingActiveComplications:] {(
+	)}
+Oct 21 12:24:05 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor notifyObservers:] <WCDPushKitManager: 0x7fec90601eb0> of systemObserverActiveComplicationsChanged
+Oct 21 12:24:05 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDFirstUnlockManager sendStateIfNeccessary]
+Oct 21 12:24:06 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDFirstUnlockManager sendFirstUnlockState] YES
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledApplicationsInformation:] {
+	}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledApplicationsInformation:] overriding WatchKit application information for com.apple.stocks
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledApplicationsInformation:] iOSApplicationsContainingWatchApp: {(
+	    "com.apple.stocks"
+	)}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor notifyObservers:] <WatchConnectivityDaemon: 0x7fec90413130> of systemObserverInstalledApplicationsChanged
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] -[WatchConnectivityDaemon systemObserverInstalledApplicationsChanged] updated IDS with list of services: {(
+	    "com.apple.stocks"
+	)}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledApplicationsInformation:] iOSApplicationsWithWatchAppInstalled: {(
+	    "com.apple.stocks"
+	)}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledApplicationsInformation:] iOSAppBundleIDToUniqueInstallID: {
+	    "com.apple.stocks" = 0077a9713b9c60aeb7b440d1ab13e8f2;
+	}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor notifyObservers:] <WatchConnectivityDaemon: 0x7fec90413130> of systemObserverWatchAppsInstalledChanged
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledComplicationsInformation:] {
+	}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor updateInstalledComplicationsInformation:] iOSApplicationsContainingComplications: {(
+	)}
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] -[WCDSystemMonitor notifyObservers:] <WCDPushKitManager: 0x7fec90601eb0> of systemObserverComplicationsInstalledChanged
+Oct 21 12:24:40 ACREs-Mac-mini wcd[2529] <Info>: [daemon] [DEBUG] __37-[WCDSystemMonitor setUpInitialState]_block_invoke complete

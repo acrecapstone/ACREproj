@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "5e956004ad57da5f00314127863d3dfb"
+build_time: [498775079, 864304000]
+inputs: 
+	"/Users/acre/Downloads/SwiftyJSON-master-2/Source/SwiftyJSON.swift": [498123024, 0]

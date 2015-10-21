@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/VendorProfile.swift",
+  "offset": 2399,
+  "remove": 234,
+  "text": "let location = vendor[\"location\"] as AnyObject? as? NSDictionary\n        latitude = location!.valueForKey(\"latitude\") as AnyObject? as? Double\n        longitude = location!.valueForKey(\"longitude\") as AnyObject? as? Double\n        let",
+ }
+]

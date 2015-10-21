@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content=“TheAppGuruz” />
+    <meta property=“fb:admins” content=“318801998144155”>
+    <link rel="canonical" href="http://www.theappguruz.com/blog/use-sqlite-database-swift" />
+
+                <meta name="keywords" content="SQLite Database">
+        <meta name="title" content="How To Use SQLite Database In Swift">
+        <meta name="description" content="SQLite Database In Swift Tutorial. SQLite Database In Swift Demo. SQLite Database In Swift Code. SQLite Database In Swift Example.">
+
+        <meta property="og:title" content="How To Use SQLite Database In Swift" />
+        <meta property="og:description" content="SQLite Database In Swift Tutorial. SQLite Database In Swift Demo. SQLite Database In Swift Code. SQLite Database In Swift Example." />
+        <meta property="og:url" content="http://www.theappguruz.com/blog/use-sqlite-database-swift" />
+            <meta id="og_img" name="og:image" content="http://www.theappguruz.com/public/assets/public/images/favicon/apple-touch-icon-152x152.png" />
+    
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:description" content="SQLite Database In Swift Tutorial. SQLite Database In Swift Demo. SQLite Database In Swift Code. SQLite Database In Swift Example."/>
+        <meta name="twitter:title" content="How To Use SQLite Database In Swift"/>
+        <meta name="twitter:site" content=“@TheAppGuruz”/>
+        <meta name="twitter:domain" content=“TheAppGuruz”/>
+        <meta name="twitter:creator" content=“@theappguruz”/>
+        <meta name="twitter:image:src" content="http://www.theappguruz.com/public/assets/public/images/favicon/apple-touch-icon-152x152.png" />
+
+        <title>How To Use SQLite Database In Swift</title>
+
+    
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="http://www.theappguruz.com/public/assets/public/images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="http://www.theappguruz.com/public/assets/public/images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/materialize.css" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/slidebars.css">
+     <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/theme.css">
+
+    <!-- Script-->
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/materialize.js"></script>
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/init.js"></script>
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/slidebars.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/css/font-awesome.min.css" media="screen">
+	<script type="text/javascript" src="http://www.theappguruz.com/public/assets/admin/js/custom/common.js"></script>
+    <script type="text/javascript">
+/*$(window).on('mousemove', function(e) {
+        var w = $(window).width();
+        var h = $(window).height();
+		//console.log(e.pageY);
+        var offsetX = 0.5 - e.pageX / w;
+        var offsetY = 0.5 - e.pageY / h;
+
+        $(".parallax").each(function(i, el) {
+            var offset = parseInt($(el).data('offset')) + 30;
+            var translate = "translate3d(" + Math.round(offsetX * offset) + "px," + Math.round(offsetY * offset) + "px, 0px)";
+			console.log(translate);
+            $(el).css({
+                '-webkit-transform': translate,
+                'transform': translate,
+                'moz-transform': translate
+            });
+        });
+    });*/
+	</script>
+    
+</head>
+<body class="">
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-25606512-1', 'auto');
+    ga('send', 'pageview');
+	
+	$(document).ready(function(){
+    $(".sb-toggle-right").on('touchstart',function(){
+        $(".sb-slidebar").toggleClass( "open" );
+		$(".sb-toggle-right").toggleClass( "open" );
+    });
+	$(".sb-toggle-right").click(function(){
+        $(".sb-slidebar").toggleClass( "open" );
+		$(".sb-toggle-right").toggleClass( "open" );
+    });
+	
+});
+$('html').bind('touchend click', function (e) {
+        var container = $(".sb-slidebar");
+        if (!container.is(e.target)
+            && container.has(e.target).length === 0) {
+            container.removeClass('open');
+            $(".sb-toggle-right").removeClass('open');
+        }
+    });
+</script>
+
+<div class="sb-slidebar">
+    <div id='cssmenu'>
+        <ul>
+        	<li><b>Company</b>
+            <ul>
+            	<li class=""><a class="waves-effect" href="http://www.theappguruz.com/about-us">About Us</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/our-team">Our Team</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/client-testimonials">Client Testimonials</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/career">Career</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/contact-us">Contact Us</a></li>
+            </ul>
+            </li>
+            <li class="portfolio-nav"><b>Portfolio</b>
+            <ul>
+            	<li class=""><a class="waves-effect" href="http://www.theappguruz.com/portfolio/games">Games</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/portfolio/ios-apps">iOS Apps</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/portfolio/android-apps">Android Apps</a></li>
+                <li class=""><a class="waves-effect" href="http://www.theappguruz.com/portfolio/web">Websites</a></li>
+            </ul>
+            </li>
+            <li><b>Game Development</b>
+            <ul>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/3d-game-development">3D Game Development</a></li>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/ios-game-development">iOS Game Development</a></li>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/android-game-development">Android Game Development</a></li>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/game-development">Game Development</a></li>
+                </ul>
+            </li>
+             <li class="app-development-nav"><b>App Development</b>
+                <ul>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/mobile-application-development">Mobile App Development</a></li>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/iphone-app-development">iPhone App Development</a></li>
+                    <li class=""><a class="waves-effect" href="http://www.theappguruz.com/android-app-development">Android App Development</a></li>
+                </ul>
+            </li>
+            <li class=""><b><a class="waves-effect" href="http://www.theappguruz.com/web-design">Web Development</a></b></li>
+            <li class=""><b><a class="waves-effect" href="http://www.theappguruz.com/blog">Blog</a></b></li>
+        </ul>
+    </div>
+</div>
+<div class="slideDown">
+<a href="javascript:;" class="sb-toggle-right top-nav waves-effect"><i class="fa fa-bars"></i></a>
+<nav class="top-nav">
+    <div class="nav-wrapper"><h1><a href="http://www.theappguruz.com"><img src="http://www.theappguruz.com/public/assets/public/images/theappguruz.svg" alt="The App Guruz" title="The App Guruz"></a></h1></div>
+    <div class="req-quote"><a href="http://www.theappguruz.com/contact-us" class="waves-effect">Contact Us</a></div>
+</nav>
+</div>
+<div>
+    <div class="slideUp">
+    <a id="top"></a>    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/js/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/js/tagmanager/tagmanager.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/admin-tools/admin-plugins/admin-modal/adminmodal.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/admin-tools/admin-forms/css/admin-forms.css">
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/js/magnific/magnific-popup.css">
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/tagmanager/tagmanager.js"></script>
+    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/jquery.snippet.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.theappguruz.com/public/assets/public/js/jquery.snippet.min.css">
+    <script>
+        /*function appendResults(text) {
+            alert(text);
+            $("#twt_short_url").val(text);
+        }
+        function makeTwtShort(provider)
+        {
+            var longUrl=window.location.href+"?utm_source=twitter&utm_medium=share&utm_campaign=blog";
+            var request = gapi.client.urlshortener.url.insert({
+                'resource': {
+                    'longUrl': longUrl
+                }
+            });
+            request.execute(function(response)
+            {
+                if(response.id != null)
+                {
+                    appendResults(response.id);
+                }
+            });
+        }
+        function init() {
+            gapi.client.setApiKey('AIzaSyBg3uRt-2rSg8PML-MALHy5FkzQLfgiVhc');
+            gapi.client.load('urlshortener', 'v1').then(makeTwtShort);
+            //onloadInitialization();
+        }*/
+    </script>
+    <script type="text/javascript">
+        /* For Local*/
+        var clientId = '1017313521374-sp9ihfk6stq9rfnou6nesr5n1193fdjm.apps.googleusercontent.com';
+        var apiKey = 'AIzaSyDqoqvPi9CvM-VWaw2k9vBPqUKo6fJ0QBo';
+        /* For Live*/
+        //var clientId = '504505546905-2sq26aifie2hkqsfdvf2itgm1bmffcnt.apps.googleusercontent.com';
+        //var apiKey = "AIzaSyBg3uRt-2rSg8PML-MALHy5FkzQLfgiVhc";
+        // The authorization scope
+        var scopes = 'https://www.googleapis.com/auth/plus.me';
+        // onliad initialization
+        function onloadInitialization() {
+            // set our own api key
+            gapi.client.setApiKey(apiKey);
+            // and checkAuth in 1 ms
+            //window.setTimeout(checkAuth, 1);
+        }
+        // check authorization
+        function checkAuth() {
+            gapi.auth.authorize({
+                client_id: clientId,
+                scope: scopes,
+                immediate: true
+            }, function(){});
+        }
+        // handle authorization result
+        function handleAuthResult(authResult) {
+            //var authorizeButton = document.getElementById('postBitTag');
+            if (authResult && ! authResult.error) {
+                makeGoogleApiCalls();
+            } else {
+                //authorizeButton.style.visibility = '';
+                //authorizeButton.onclick = handleAuthClick;
+            }
+        }
+
+        // handle onclick event of Login button
+        function handleAuthClick(event) {
+            gapi.auth.authorize({
+                client_id: clientId,
+                scope: scopes,
+                immediate: false
+            }, handleAuthResult);
+
+            return false;
+        }
+        // make Google API calls: obtain logged-in member info and activity of friends
+        function makeGoogleApiCalls() {
+        	gapi.client.load('plus', 'v1', function() {
+                gapi.client.plus.people.get( {'userId' : 'me'} ).execute(function(info) {
+                    //alert(JSON.stringify(info))
+                    var pathArray = window.location.href.split( '/' );
+                    var blog_slug = pathArray[eval(pathArray.length - 1)];
+                    var userInfo = {
+                        'social_id' : info.id,
+                        'social_type' : "gplus",
+                        'name' : info.displayName,
+                        'email':info.emails[0].value,
+                        'age_range':info.ageRange.min,
+                        'slug' : blog_slug
+                    };
+                    downloadUser(userInfo);
+                })
+            });
+            /*gapi.client.load('plus', 'v1', function() {
+                // Request1: obtain logged-in member info
+                var request = gapi.client.plus.people.get({
+                    'userId': 'me'
+                });
+                request.execute(function(info) {
+                    //alert(JSON.stringify(info))
+                    var pathArray = window.location.href.split( '/' );
+                    var blog_slug = pathArray[eval(pathArray.length - 1)];
+                    var userInfo = {
+                     'social_id' : info.id,
+                     'social_type' : "gplus",
+                     'name' : info.displayName,
+                     //'email':info.emails[0].value,
+                     'age_range':info.ageRange.min,
+                     'slug' : blog_slug
+                     };
+                    //alert(JSON.stringify(userInfo))
+                    downloadUser(userInfo);
+                });
+
+                // Request2: obtain friend's activity feed
+                /*var restRequest = gapi.client.request({
+                 'path': '/plus/v1/activities',
+                 'params': {'query': 'Google+', 'orderBy': 'best'}
+                 });
+                 restRequest.execute(function(activityInfo) {
+                 // render activity items using 'gplusTemplate' template
+                 alert(JSON.stringify(activityInfo))
+                 });
+            });*/
+        }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=onloadInitialization"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("pre").snippet("java", {
+                style: "rand01",
+                clipboard: "http://www.theappguruz.com/public/assets/public/js/ZeroClipboard.swf",
+                showNum: false
+            });
+            //$(".content p").find("img").attr("onerror","imgError(this)");
+        });
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 100
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        function downloadUser(postData) {
+            AjaxCall(siteURL + 'socialLogin/download-user', "POST", postData, "Json", "responseDownloadUser",false);
+        }
+
+        function responseDownloadUser(response) {
+            console.log(response);
+        }
+    </script>
+    <style>
+        .social-icon a {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+        }
+        .fb_dialog1{position: fixed; left:50% !important; top:50%!important; margin-left:-283px; margin-top:-180px;}
+    </style>
+    <input type="hidden" id="twt_short_url">
+    <input type="hidden" id="blogSlug" value="use-sqlite-database-swift">
+    <div class="dark-section" style="background:#f9f9f9;">
+        <div class="container blog MT0">
+            <div class="row MB0">
+                <div class="border-right" id="Top">
+                    <div class="col s12">
+                        <div class="col s12 m8">
+                            <div class="blog-banner-full">
+                                <div class="blog-box-full">
+                                    <div class="blog-details">
+                                        <div class="blog-title pull-left">
+                                            <a href="http://www.theappguruz.com/blog/use-sqlite-database-swift">
+                                                <h2>How to use SQLite Database in Swift</h2>
+                                            </a>
+                                        </div>
+                                        <div class="blog-categorie pull-right"><a href="javascript:;">
+                                                iOS&nbsp                                            </a></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                                                        <div class="blog-post-information">
+                                        <div class="blog-post pull-left">
+                                            <span>Created By <a href="http://www.theappguruz.com/author/swatichoksi >> 88">Swati Choksi</a> | Last Updated on : 06 July 2015</span>
+                                        </div>
+                                        <div class="blog-social-links pull-right">
+                                            <span class="st_googleplus_large" displayText='Googleplus'></span>
+                                            <span class='st_facebook_large' displayText='Facebook'></span>
+                                            <span class='st_twitter_large' displayText='Tweet'  data-via='theappguruz'></span>
+                                            <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                                            <span class='st_pinterest_large' displayText='Pinterest'></span>
+                                        </div>
+                                        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+                                        <script type="text/javascript">
+                                            var switchTo5x = true;
+                                            stLight.options({
+                                                publisher: "e45fa3d8-d9cb-4210-ab63-255b4da4638a",
+                                                doNotHash: false,
+                                                doNotCopy: false,
+                                                hashAddressBar: false,
+                                                popup:false
+                                            });
+                                        </script>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="blog-banner-img-full"><a href="javascript:;"><img id="blog_banner_img" src="http://www.theappguruz.com/app/uploads/2015/06/4416how-to-use-sqlite-database-in-swift.jpg"></a>
+                                        <script type="text/javascript">
+                                            $(document).ready(function(){
+                                                var og_img = $("#blog_banner_img").attr('src');
+                                                $("#og_img").attr('content',og_img);
+                                            });
+                                        </script>
+                                    </div>
+                                                                            <div>
+                                            <center>
+                                                <a onclick="openPopupModel(),ga('send', 'event', { eventCategory: 'Blog', eventAction: 'download-btn'});" class="waves-effect blog-download-source"><b>Free Download Full Source Code!!!</b></a>
+                                            </center>
+                                        </div>
+                                                                        <div class="blog-short-description content"> <div class="content-blog">
+<div class="number-list">Jump To
+<ol>
+	<li><a href="#Step1">Create Layouts</a>
+
+	<ol>
+		<li><a href="#Step1_1">Create New Project</a></li>
+		<li><a href="#Step1_2">Create Layout</a></li>
+		<li><a href="#Step1_3">Set up Classes</a></li>
+		<li><a href="#Step1_4">Connect Properties &amp; Actions</a></li>
+	</ol>
+	</li>
+	<li><a href="#Step2">Integrate SQLite in our project</a>
+	<ol>
+		<li><a href="#Step2_1">Integrate FMDB</a></li>
+		<li><a href="#Step2_2">Link SQLite library</a></li>
+		<li><a href="#Step2_3">Solve ARC issue</a></li>
+		<li><a href="#Step2_4">Add Bridging Header</a></li>
+		<li><a href="#Step2_5">Create SQLite Database</a>
+		<ol>
+			<li><a href="#Step2_5_1">Copy Database into Application&rsquo;s Document Directory</a></li>
+			<li><a href="#Step2_5_2">Util Class</a></li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li><a href="#Step3">Insert/ Update/ Delete Records</a>
+	<ol>
+		<li><a href="#Step3_1">Create Model Class of database</a>
+		<ol>
+			<li><a href="#Step3_1_1">Create Model Manager Class (Singleton)</a></li>
+			<li><a href="#Step3_1_2">Querying database through Model Manager</a></li>
+		</ol>
+		</li>
+		<li><a href="#Step3_2">Insert Records</a>
+		<ol>
+			<li><a href="#Step3_2_1">View Records</a></li>
+		</ol>
+		</li>
+		<li><a href="#Step3_3">Update Records</a></li>
+		<li><a href="#Step3_4">Delete Records</a></li>
+	</ol>
+	</li>
+</ol>
+</div>
+</div>
+
+<div class="objective">
+<h2>Objective</h2>
+The main objective of this post is to help you understand&nbsp;how to Insert,&nbsp;Update,&nbsp;Delete&nbsp;Records in SQLite Database in Swift.</div>
+
+<p>&nbsp;</p>
+
+<p>Before I start coding the app, I would like to give you some knowledge about database we are going to use &ndash; SQLite</p>
+
+<p><strong>What is SQLite? </strong></p>
+
+<p>Four things to remember</p>
+
+<ol>
+	<li>SQLite is <strong>Relational Database Management System</strong> (RDBMS).</li>
+	<li>SQLite is also known as <strong>Embedded</strong> because it is available as library that is linked with our application. There is no stand-alone server running in the background. You have to handle all the operations within the app through various functions provided by SQLite library.</li>
+	<li>SQLite is written in <strong>C programming language</strong>. So if we want to use SQLite in our application we might have to work with complicated C functions, data types and pointers. (But here, in this post I am going through easier approach; I am using already available SQLite wrapper [FMDB] interface between SQLite database and my swift application).</li>
+	<li>Data available from SQLite database can be accessed using Structured Query Language, which is known as SQL (pronounced as Sequel). SQL is basic language used by most of the RDBMS.</li>
+</ol>
+
+<p>If you would like to learn more about SQLite, please refer the following link:</p>
+
+<ul>
+	<li><a href="http://www.sqlite.org" rel="nofollow" target="_blank">http://www.sqlite.org</a></li>
+</ul>
+
+<p>Lets get started with our app.</p>
+
+<div id="Step1">&nbsp;</div>
+
+<h2 class="blue-text"><span class="box">Step 1</span> <span>Create Layouts</span></h2>
+
+<div id="Step1_1">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">1.1</span> <span>Create New Project</span></h3>
+
+<p>Create new Xcode swift project named <strong><span class="square">DbDemoExampleSwift</span></strong>.&nbsp;If you don&rsquo;t know basic steps to create project in <strong>xCode</strong>, please refer following link:</p>
+
+<ul>
+	<li><a href="http://www.theappguruz.com/blog/make-iphone-app-ios">http://www.theappguruz.com/blog/make-iphone-app-ios</a></li>
+</ul>
+
+<p>In our project, we would be manipulating (Insert/Update/Delete) <strong>Students Data</strong> (Name &amp; Marks to keep the things simple).</p>
+
+<div id="Step1_2">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">1.2</span> <span>Create Layouts</span></h3>
+
+<p>Now, Lets get started with the layout.&nbsp;The layout in <strong>figure-1</strong> will be shown when application is launched.&nbsp;You can simply drag and drop controls from object library to view controller available in storyboard.</p>
+
+<p>Following objects are used to design layout</p>
+
+<ul>
+	<li><strong>UILabel</strong></li>
+	<li><strong>UIButton</strong></li>
+	<li><strong>UITableView</strong></li>
+	<li><strong>UITextField</strong></li>
+</ul>
+
+<p>If you would like to learn more about designing user interface, please refer the following link:</p>
+
+<ul>
+	<li><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LayoutandAppearance.html" rel="nofollow" target="_blank">https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LayoutandAppearance.html</a></li>
+</ul>
+
+<p><img alt="home-screen-view-controller" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/home-screen-view-controller.png" title="home-screen-view-controller" /></p>
+
+<p><strong><span class="square">HomeScreenViewController.swift&nbsp;</span></strong> (Figure - 1)</p>
+
+<p><img alt="insert-record-view-controller" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/insert-record-view-controller.png" title="insert-record-view-controller" /></p>
+
+<p><strong><span class="square">InsertRecordViewController.swift</span></strong> (Figure - 2)</p>
+
+<div id="Step1_3">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">1.3</span> <span>Set up Classes</span></h3>
+
+<p>Once you are done with the layouts, you have to create swift files, which correspond to particular layout.</p>
+
+<p><strong>a.</strong> In our case we are <strong>creating two swift files</strong> named</p>
+
+<ul>
+	<li><strong><span class="square">HomeScreenViewController.swift</span></strong> which handles showing students data.</li>
+	<li><strong><span class="square">InsertRecordViewController.swift</span></strong> which handles inserting students data</li>
+</ul>
+
+<p><strong>b.</strong> Now <strong>select View Controller</strong> as shown in following figure</p>
+
+<ul>
+	<li>Go to Identity inspector (tab from top right side).&nbsp;Set Class as <strong><span class="square">HomeScreenViewController</span></strong>.</li>
+</ul>
+
+<p><img alt="set-class" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/set-class.png" title="set-class" /></p>
+
+<p><strong>c.</strong> Now select view controller showed in figure -2</p>
+
+<ul>
+	<li>Go to Identity inspector&nbsp;Set Class as <strong><span class="square">InsertRecordViewController</span></strong>.</li>
+</ul>
+
+<p><strong>d.</strong> Create custom <strong>UITableViewCell Class</strong></p>
+
+<ul>
+	<li>Create <strong><span class="square">StudentCell</span></strong> class from&nbsp;<strong><span class="square">UITableViewCell</span></strong></li>
+	<li>Select <strong><span class="square">UITableViewCell</span></strong> from storyboard</li>
+	<li>Go to Identity inspector</li>
+	<li>Set Class as <strong><span class="square">StudentCell</span></strong></li>
+</ul>
+
+<p><strong>e.</strong> Create segue from storyboard</p>
+
+<ul>
+	<li>editSegue (HomeScreenViewController to InsertRecordViewController)</li>
+	<li>insertSegue (Insert Button to InsertRecordViewController)</li>
+</ul>
+
+<p>If you know how to do this, you can skip this step and directly go to <a href="#Step2">Step-2</a>.</p>
+
+<div id="Step1_4">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">1.4</span> <span>Connect Properties &amp; Actions</span></h3>
+
+<p>Now, create property and action as per following.</p>
+
+<p><strong>a.</strong> <strong><span class="square">HomeScreenViewController.swift</span></strong> (UIViewController)</p>
+
+<pre>
+<code>@IBOutlet weak var tbStudentData: UITableView!
+@IBAction func btnDeleteClicked(sender: AnyObject) {}
+@IBAction func btnEditClicked(sender: AnyObject) {}</code></pre>
+
+<p><strong>b.</strong> <strong><span class="square">InsertRecordViewController.swift</span></strong> (UIViewController)</p>
+
+<pre>
+<code>@IBOutlet weak var txtName: UITextField!
+@IBOutlet weak var txtMarks: UITextField!
+@IBAction func btnBackClicked(sender: AnyObject) {}
+@IBAction func btnSaveClicked(sender: AnyObject) {}</code></pre>
+
+<p><strong>c.</strong> <strong><span class="square">StudentCell.swift</span></strong> (UITableViewCell)</p>
+
+<pre>
+<code>@IBOutlet weak var lblContent: UILabel! // for displaying student name and marks
+@IBOutlet weak var btnEdit: UIButton!
+@IBOutlet weak var btnDelete: UIButton!</code></pre>
+
+<p>If you would like to learn more about property and action, please refer given link.</p>
+
+<ul>
+	<li><a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html" rel="nofollow" target="_blank">https://developer.apple.com/library/ios/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html</a></li>
+	<li><a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/Devpedia-CocoaApp/Outlet.html" rel="nofollow" target="_blank">https://developer.apple.com/library/ios/documentation/General/Conceptual/Devpedia-CocoaApp/Outlet.html</a></li>
+</ul>
+
+<div id="Step2">&nbsp;</div>
+
+<h2 class="blue-text"><span class="box">Step 2</span> <span>Integrate SQLite in our project</span></h2>
+
+<div id="Step2_1">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">2.1</span> <span>Integrate FMDB (Third Party Library)</span></h3>
+
+<p>In our project, we would be using <strong>FMDB</strong> in order to perform all the database operations.</p>
+
+<p><strong>What is FMDB?</strong></p>
+
+<p>FMDB stands for <strong>Flying Meat Database</strong>.&nbsp;This project aims to be a fully featured wrapper for SQLite.&nbsp;You can clone the FMDB repository from the given link.</p>
+
+<ul>
+	<li><a href="https://github.com/ccgus/fmdb" rel="nofollow" target="_blank">https://github.com/ccgus/fmdb</a></li>
+</ul>
+
+<p>To do this,&nbsp;Download FMDB from the above URL.&nbsp;Then Unzip downloaded file copy to <em><strong><span class="square">src &nbsp;&gt;&gt; fmdb</span></strong></em> folder of your project.&nbsp;When we are implementing database using SQLite and FMDB wrapper, most commonly used classes are</p>
+
+<ul>
+	<li><strong><span class="square">FMDatabase</span></strong> - used to represent single SQLite database.</li>
+	<li><strong><span class="square">FMResultSet</span></strong> - used to hold result of SQL query on FMDatabase object.</li>
+</ul>
+
+<p>If you would like to learn more about <strong>FMDB</strong>, please refer the following link</p>
+
+<ul>
+	<li><a href="http://ccgus.github.io/fmdb/html/Classes/FMDatabase.html" rel="nofollow" target="_blank">http://ccgus.github.io/fmdb/html/Classes/FMDatabase.html</a></li>
+</ul>
+
+<div id="Step2_2">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">2.2</span> <span>Link SQLite library</span></h3>
+
+<p><img alt="link-sqlite-library" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/link-sqlite-library.png" title="link-sqlite-library" /></p>
+
+<p>SQLite library is used to load Objective-C libraries when we add the database. If you ignore this, you will get number of errors at compile time regarding SQLite.</p>
+
+<p>To add library please follow these</p>
+
+<ul>
+	<li>Select your project from left panel of <strong>XCode</strong>.</li>
+	<li>Click the main target in the middle panel.</li>
+	<li>Select the <strong>Build Phases</strong>&nbsp;from available tabs.</li>
+	<li>Expand the arrow next to <strong>Link Binary With Libraries.</strong></li>
+	<li>Click the <strong>+&nbsp;button</strong></li>
+	<li>Search for <strong><span class="square">libsqlite3.0.dylib</span></strong> and add it.</li>
+</ul>
+
+<div id="Step2_3">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">2.3</span> <span>Solving ARC Issue</span></h3>
+
+<p>FMDatabase files do not support ARC and hence we have to set complier flag for all FMDatabase files. We use <em><strong><span class="square">-fno-objc-arc</span></strong></em>&nbsp;flag to disable <strong>ARC</strong> from <strong>FMDatabase</strong> Files.</p>
+
+<div class="border-box"><strong>Note: </strong>We have to set flag to FMDatabse files only and not to any other files.</div>
+
+<ul>
+	<li>Select your project from left panel of <strong>XCode.</strong></li>
+	<li>Click the main target in the middle panel.</li>
+	<li>Select the <strong>Build Phases</strong>&nbsp;from available tabs.</li>
+	<li>Expand the arrow next to <strong>Compile Souces</strong></li>
+	<li>Add compiler flag <em><strong><span class="square">-fno-objc-arc</span></strong></em> to&nbsp;FMDB library files as following.</li>
+</ul>
+
+<p><img alt="compile-sources" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/compile-sources.png" title="compile-sources" /></p>
+
+<div id="Step2_4">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">2.4</span> <span>Add Bridging Header (Objective-C to Swift Wrapper)</span></h3>
+
+<p>FMDatabase is in Objective C so if you want to use it in your swift project you need a bridging header file in your project.</p>
+
+<p><strong>a.</strong>&nbsp;Go To <em><strong><span class="square">File &gt;&gt;&nbsp;New &gt;&gt;&nbsp;file</span></strong></em> (select header file)<br />
+<strong>b.</strong>&nbsp;Use the <strong><span class="square">[ProjectName]-Bridging-Header.h</span></strong> naming convention.<br />
+<strong>c.</strong>&nbsp;Go to <em><strong><span class="square">Build Settings tab &gt;&gt;&nbsp;Swift Compiler</span></strong></em> section<br />
+&nbsp;&nbsp; &nbsp;1) Install Objective-C Compatibility <strong>Header = Yes</strong><br />
+&nbsp; &nbsp; 2) Objective-C bridging <strong>Header = [name of bridging header file]</strong></p>
+
+<p><img alt="swift-copiler-code-generation" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/swift-copiler-code-generation.png" title="swift-copiler-code-generation" /></p>
+
+<p>If you would like to learn more about <strong>Objective C bridging header</strong>, please refer the following link:</p>
+
+<ul>
+	<li><a href="http://www.theappguruz.com/blog/integrate-objective-c-file-swift" target="_blank">http://www.theappguruz.com/blog/integrate-objective-c-file-swift</a></li>
+</ul>
+
+<div id="Step2_5">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">2.5</span> <span>Create SQLite Database</span></h3>
+
+<p>To create database you can use SQLite Manager Add-on of the Firefox browser. Download it from the given link.</p>
+
+<p><strong>Download Link:</strong>&nbsp;<a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/" rel="nofollow" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/</a></p>
+
+<ul>
+	<li>Open <em><strong><span class="square">Firefox browser &gt;&gt;&nbsp;Tools &gt;&gt;&nbsp;SQLite Manager</span></strong></em>.</li>
+	<li>Create Database named <strong><span class="square">Student.sqlite</span></strong></li>
+	<li>Insert table student_info (RollNo(int[auto increment]), Name (text) , Marks (int) ).</li>
+	<li>Copy database to project repository (./DbDemoExampleSwift/Model).</li>
+</ul>
+
+<p><img alt="sqlite-manager" class="responsive-img" src="http://www.theappguruz.com/app/uploads/2015/08/sqlite-manager.png" title="sqlite-manager" /></p>
+
+<div id="Step2_5_1">&nbsp;</div>
+
+<h4 class="heading-small"><span class="box">2.5.1</span> <span>Copy Database into application&rsquo;s document directory</span></h4>
+
+<p><strong>Why?</strong></p>
+
+<p>As mentioned in <strong>2.5 step</strong>, Database is already copied to the project repository. Database file is now included in your application but it cant be used to store data yet.</p>
+
+<p>Hence, we need to copy database file to the document folder of our application on real device.&nbsp;Copy database file to application&rsquo;s document directory by calling below method in <em><strong><span class="square">applicationDidFinishLaunching()</span></strong></em> method of <strong><span class="square">AppDelegate</span></strong>, pass database name as argument in <em><strong><span class="square">copyFile()</span></strong></em> method.</p>
+
+<pre>
+<code>func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -&gt; Bool
+{
+        Util.copyFile("Student.sqlite")
+        return true
+}</code></pre>
+
+<div id="Step2_5_2">&nbsp;</div>
+
+<h4 class="heading-small"><span class="box">2.5.2</span> <span>Util Class</span></h4>
+
+<p>Lets create <strong>NSObject</strong> class called as <strong><span class="square">Utility</span></strong> class, which contains common and often reused functions as following.</p>
+
+<p>a. Use&nbsp;<em><strong><span class="square">getFilepath()</span></strong></em>&nbsp;to get path for specified file.</p>
+
+<pre>
+<code>class func getPath(fileName: String) -&gt; String {
+        
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent(fileName)
+        
+        return fileURL.path!
+    }</code></pre>
+
+<p><strong>NSSearchPathForDirectoriesInDomains</strong> returns the file path. It takes argument as follows:</p>
+
+<ul>
+	<li><strong>NSSearchPathDirectory</strong> - it specifies a location for various directories.</li>
+	<li><strong>NSSearchPathDomainMask</strong> - it specifies base location for <strong>NSSearchPathDirectory</strong> type.</li>
+	<li><strong>expandedTilde</strong> &ndash; if set to YES then tildes are expanded.</li>
+</ul>
+
+<p>If you would like to learn more about <strong>expandedTilde</strong>, please refer the following link</p>
+
+<ul>
+	<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/#//apple_ref/c/func/NSSearchPathForDirectoriesInDomains" rel="nofollow" target="_blank">https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/#//apple_ref/c/func/NSSearchPathForDirectoriesInDomains</a></li>
+	<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instp/NSString/stringByExpandingTildeInPath" rel="nofollow" target="_blank">https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instp/NSString/stringByExpandingTildeInPath</a></li>
+</ul>
+
+<p>If you would like to learn more about constants and its value for&nbsp;<strong>NSSearchPathForDirectoriesInDomains</strong>, please refer the following link</p>
+
+<ul>
+	<li>http://stackoverflow.com/questions/7627177/nssearchpathfordirectoriesindomains-explanation-confused</li>
+</ul>
+
+<p>b. Use <em><strong><span class="square">copyFile()</span></strong></em>&nbsp;to copy file from source to destination.</p>
+
+<pre>
+<code>class func copyFile(fileName: NSString) {
+        let dbPath: String = getPath(fileName as String)
+        let fileManager = NSFileManager.defaultManager()
+        if !fileManager.fileExistsAtPath(dbPath) {
+            
+            let documentsURL = NSBundle.mainBundle().resourceURL
+            let fromPath = documentsURL!.URLByAppendingPathComponent(fileName as String)
+            
+            var error : NSError?
+            do {
+                try fileManager.copyItemAtPath(fromPath.path!, toPath: dbPath)
+            } catch let error1 as NSError {
+                error = error1
+            }
+            let alert: UIAlertView = UIAlertView()
+            if (error != nil) {
+                alert.title = "Error Occured"
+                alert.message = error?.localizedDescription
+            } else {
+                alert.title = "Successfully Copy"
+                alert.message = "Your database copy successfully"
+            }
+            alert.delegate = nil
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
+    }</code></pre>
+
+<p>You can use <strong><span class="square">NSFileManager</span></strong> class on File and directories for following operations&nbsp;<strong>Locate, Create,&nbsp;Copy,&nbsp;Move.&nbsp;</strong>It provides <em><strong><span class="square">copyItemAtPath()</span></strong></em> function to copy files from source to destination.</p>
+
+<p>If you would like to learn more about <strong>NSFileManager</strong> class, please refer the following link:</p>
+
+<ul>
+	<li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSFileManager_Class/" rel="nofollow" target="_blank">https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSFileManager_Class/</a></li>
+</ul>
+
+<p>c. Use <em><strong><span class="square">InvokeAlert()</span></strong></em>&nbsp;function, which is used to show alert dialog with message given by user.</p>
+
+<pre>
+<code>class func invokeAlertMethod(strTitle: NSString, strBody: NSString, delegate: AnyObject?) 
+{
+        var alert: UIAlertView = UIAlertView()
+        alert.message = strBody as String
+        alert.title = strTitle as String
+        alert.delegate = delegate
+        alert.addButtonWithTitle("Ok")
+        alert.show()
+    }</code></pre>
+
+<p>This function simply create alert dialog with single button by providing its title, message and delegate.</p>
+
+<p>You can learn more about <strong>UIAlertView</strong> and its type from the given link</p>
+
+<ul>
+	<li><a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertView_Class/" rel="nofollow" target="_blank">https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertView_Class/ </a></li>
+</ul>
+
+<div id="Step3">&nbsp;</div>
+
+<h2 class="blue-text"><span class="box">Step 3</span> <span>Insert/Update/Delete Records</span></h2>
+
+<div id="Step3_1">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">3.1</span> <span>Create Model of database</span></h3>
+
+<p><strong>What is model?</strong><br />
+Model is used to <strong>handle all the fields of a single table</strong> from database.</p>
+
+<p><strong>Why you should use model class?</strong></p>
+
+<ul>
+	<li>You don&rsquo;t need to remember name of the fields of a table since all the operation would be performed by creating model of data.</li>
+	<li>If schema of the table is modified, you need to update model class only.</li>
+	<li>Creating model is a good programming practice and provides ease of access.</li>
+</ul>
+
+<p>I have created <strong><span class="square">StudentInfo.swift</span></strong> file of <strong>NSObject</strong> type as model class to fetch the data from <strong>StudentInfo</strong> table of my database.</p>
+
+<pre>
+<code>import UIKit
+
+class StudentInfo: NSObject
+ {    
+    var RollNo: String = String()
+    var Name: String = String()
+    var Marks: String = String()
+}</code></pre>
+
+<div id="Step3_1_1">&nbsp;</div>
+
+<h4 class="heading-small"><span class="box">3.1.1</span> <span>Create Model Manager (Singleton class)</span></h4>
+
+<p><strong>What is Singleton Class?</strong></p>
+
+<p>Singleton is a special type of class, in which <strong>only one instance of class exists</strong> for current process. Instance is shared across the entire application. It is useful when one or more <strong>ViewController</strong> uses the same instance throughout application. In our case, model manager uses object of Model class to perform various operations on database. It basically handles the object of model so we called it as Model Manager.</p>
+
+<p><strong>Why we are using it in our application? </strong></p>
+
+<p>Here we are creating singleton class to achieve following:</p>
+
+<ul>
+	<li>Database instance remain globally persistent throughout the application.</li>
+	<li>Thread safe</li>
+	<li>Database should remain in consistent state all the time since our application can get interrupted.</li>
+</ul>
+
+<p>Create singleton class <strong><span class="square">ModelManager</span></strong>.</p>
+
+<p><strong>&gt;&gt;</strong> Define constant named <strong>sharedInstance</strong> of type <strong>ModelManager</strong>.</p>
+
+<pre>
+<code>let sharedInstance = ModelManager()</code></pre>
+
+<p><strong>&gt;&gt;</strong> Declare class method named <em><strong><span class="square">getInstance()</span></strong></em> and initialize database property of class.</p>
+
+<pre>
+<code>// This code is called at most once
+class func getInstance() -&gt; ModelManager
+{
+        if(sharedInstance.database == nil)
+        {
+            sharedInstance.database = FMDatabase(path: Util.getPath("Student.sqlite"))
+        }
+        return sharedInstance
+ }</code></pre>
+
+<div id="Step3_1_2">&nbsp;</div>
+
+<h4 class="heading-small"><span class="box">3.1.2</span> <span>Querying Database through Model Manager</span></h4>
+
+<p>Querying database basically includes following steps:</p>
+
+<ul>
+	<li>Open database connection.</li>
+	<li>Call method to execute SQL query.<br />
+	<strong>&gt;&gt;&nbsp;executeUpdate:withArgumentsInArray: (SQL Insert/update/delete query and its parameters as argument):</strong>&nbsp;This method executes a single SQL update statement, SQL statements that does not return any results, such as <strong>INSERT</strong>, <strong>UPDATE</strong> and <strong>DELETE</strong>.<br />
+	<br />
+	<strong>&gt;&gt; executeQuery: (SQL select query and its parameters as argument.):</strong>&nbsp;This method executes SQL select statements and returns an FMResultSet object if successful, and nil for failure. FMResultSet returned by this method will be added to <strong>NSMUtableArray</strong> and <em><strong><span class="square">getAllStudentData()</span></strong></em> method returns whole array.</li>
+	<li>Handle the result.</li>
+	<li>Close database connection.</li>
+</ul>
+
+<div id="Step3_2">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">3.2</span> <span>Insert Records</span></h3>
+
+<pre>
+<code>func addStudentData(studentInfo: StudentInfo) -&gt; Bool
+ {
+        sharedInstance.database!.open()
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO student_info (Name, Marks) VALUES (?, ?)", withArgumentsInArray: [studentInfo.Name, studentInfo.Marks])
+        sharedInstance.database!.close()
+        return isInserted
+}</code></pre>
+
+<p><strong>&gt;&gt; Add record to StudentInfo:</strong></p>
+
+<p>Pass <em><strong><span class="square">StudenInfo(Name, Marks)</span></strong></em> object.&nbsp;(Don&rsquo;t need to pass RollNo because it is auto incremented field).</p>
+
+<pre>
+<code>@IBAction func btnSaveClicked(sender: AnyObject)
+    {
+        let studentInfo: StudentInfo = StudentInfo()
+                studentInfo.Name = txtName.text!
+                studentInfo.Marks = txtMarks.text!
+                let isInserted = ModelManager.getInstance().addStudentData(studentInfo)
+                if isInserted {
+                    Util.invokeAlertMethod("", strBody: "Record Inserted successfully.", delegate: nil)
+                } else {
+                    Util.invokeAlertMethod("", strBody: "Error in inserting record.", delegate: nil)
+                }
+    }</code></pre>
+
+<div id="Step3_2_1">&nbsp;</div>
+
+<h4 class="heading-small"><span class="box">3.2.1</span> <span>View Records</span></h4>
+
+<pre>
+<code>func getAllStudentData() -&gt; NSMutableArray {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM student_info", withArgumentsInArray: nil)
+        let marrStudentInfo : NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let studentInfo : StudentInfo = StudentInfo()
+                studentInfo.RollNo = resultSet.stringForColumn("RollNo")
+                studentInfo.Name = resultSet.stringForColumn("Name")
+                studentInfo.Marks = resultSet.stringForColumn("Marks")
+                marrStudentInfo.addObject(studentInfo)
+            }
+        }
+        sharedInstance.database!.close()
+        return marrStudentInfo
+    }</code></pre>
+
+<p><strong>&gt;&gt; Display records of StudentInfo:</strong></p>
+
+<p>Fetch data from <strong>student_info</strong> table</p>
+
+<pre>
+<code>func getStudentData()
+    {
+        marrStudentData = NSMutableArray()
+        marrStudentData = ModelManager.instance.getAllStudentData()
+        tbStudentData.reloadData()
+    }</code></pre>
+
+<p>You can call above method from <em><strong><span class="square">viewWillAppear()</span></strong></em>.</p>
+
+<p>To display records in <strong>UITableView</strong> -</p>
+
+<pre>
+<code>func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return marrStudentData.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        let cell:StudentCell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentCell
+        let student:StudentInfo = marrStudentData.objectAtIndex(indexPath.row) as! StudentInfo
+        cell.lblContent.text = "Name : \(student.Name)  \n  Marks : \(student.Marks)"
+        cell.btnDelete.tag = indexPath.row
+        cell.btnEdit.tag = indexPath.row
+        return cell
+    }</code></pre>
+
+<div id="Step3_3">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">3.3</span> <span>Update Records</span></h3>
+
+<pre>
+<code>func updateStudentData(studentInfo: StudentInfo) -&gt; Bool {
+        sharedInstance.database!.open()
+        let isUpdated = sharedInstance.database!.executeUpdate("UPDATE student_info SET Name=?, Marks=? WHERE RollNo=?", withArgumentsInArray: [studentInfo.Name, studentInfo.Marks, studentInfo.RollNo])
+        sharedInstance.database!.close()
+        return isUpdated
+    }</code></pre>
+
+<p><strong>&gt;&gt; Update record of StudentInfo:</strong></p>
+
+<p><strong>Bool flag</strong> is set to perform save or update operation when save button is clicked.&nbsp;Edit button is available for each record. So, when you want to edit specific record you have to set unique value to button.</p>
+
+<pre>
+<code>cell.btnEdit.tag = indexPath.row
+
+HomeScreenViewController.h
+
+@IBAction func btnEditClicked(sender: AnyObject)
+{
+        self.performSegueWithIdentifier("editSegue", sender: sender)
+}
+
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "editSegue")
+        {
+            let btnEdit : UIButton = sender as! UIButton
+            let selectedIndex : Int = btnEdit.tag
+            let viewController : InsertRecordViewController = segue.destinationViewController as! InsertRecordViewController
+            viewController.isEdit = true
+            viewController.studentData = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
+        }
+    }
+
+InsertRecordViewController.h
+
+@IBAction func btnSaveClicked(sender: AnyObject)
+    {
+        let studentInfo: StudentInfo = StudentInfo()
+                studentInfo.RollNo = studentData.RollNo
+                studentInfo.Name = txtName.text!
+                studentInfo.Marks = txtMarks.text!
+                let isUpdated = ModelManager.getInstance().updateStudentData(studentInfo)
+                if isUpdated {
+                    Util.invokeAlertMethod("", strBody: "Record updated successfully.", delegate: nil)
+                } else {
+                    Util.invokeAlertMethod("", strBody: "Error in updating record.", delegate: nil)
+                }
+    }</code></pre>
+
+<div id="Step3_4">&nbsp;</div>
+
+<h3 class="heading-medium"><span class="box">3.4</span> <span>Delete Records</span></h3>
+
+<pre>
+<code>func deleteStudentData(studentInfo: StudentInfo) -&gt; Bool {
+        sharedInstance.database!.open()
+        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM student_info WHERE RollNo=?", withArgumentsInArray: [studentInfo.RollNo])
+        sharedInstance.database!.close()
+        return isDeleted
+    }</code></pre>
+
+<p><strong>&gt;&gt; Delete record of StudentInfo:</strong></p>
+
+<p>Delete button is available for each record. So, when you want to delete specific record you have to set unique value to button.</p>
+
+<pre>
+<code>cell.btnDelete.tag = indexPath.row</code></pre>
+
+<p><strong>&gt;&gt; To Delete Particular Record:</strong></p>
+
+<pre>
+<code>@IBAction func btnDeleteClicked(sender: AnyObject) {
+        let btnDelete : UIButton = sender as! UIButton
+        let selectedIndex : Int = btnDelete.tag
+        let studentInfo: StudentInfo = marrStudentData.objectAtIndex(selectedIndex) as! StudentInfo
+        let isDeleted = ModelManager.getInstance().deleteStudentData(studentInfo)
+        if isDeleted {
+            Util.invokeAlertMethod("", strBody: "Record deleted successfully.", delegate: nil)
+        } else {
+            Util.invokeAlertMethod("", strBody: "Error in deleting record.", delegate: nil)
+        }
+        self.getStudentData()
+    }</code></pre>
+
+<p>I hope you found this blog post helpful while Using SQLite Database in Swift. Let me know if you have any questions or concerns regarding iOS, please put a comment here and we will get back to you ASAP.</p>
+
+<p>Got an Idea of iPhone App Development? What are you still waiting for? <strong><a href="http://www.theappguruz.com/contact-us">Contact us</a></strong> now and see the Idea live soon. Our company has been named as one of the best <strong><a href="http://www.theappguruz.com/iphone-app-development">iPhone App Development</a></strong> Company in India.</p>
+                                                                                    <div>
+                                                <center>
+                                                    <a onclick="openPopupModel(),ga('send', 'event', { eventCategory: 'Blog', eventAction: 'download-btn'});" class="waves-effect blog-download-source"><b>Free Download Full Source Code!!!</b></a>
+                                                </center>
+                                            </div>
+                                                                                <div class="blog-post-date">
+                                            <span>Created on : 29 September 2014</span>
+                                        </div>
+                                        <div class="blog-poster-details row">
+                                            <a href="http://www.theappguruz.com/author/swatichoksi"><h4>Swati Choksi</h4></a>
+
+                                            <div class="col s12 m1 P0"><img onerror="imgError(this);" src="http://www.theappguruz.com/app/uploads/user-profiles/swati-choksi.jpg" height="70px" width="70px"></div>
+                                            <div class="col s12 m11 PTB0">
+                                                <div class="blog-social-links">
+                                                    <a target="_blank" href="">
+                                                        <i class="fa fa-link"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://www.facebook.com/TheAppGuruz">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://plus.google.com/116641854632638613992/posts?rel=author">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://twitter.com/TheAppGuruz">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://in.linkedin.com/in/jasanitejas">
+                                                        <i class="fa fa-linkedin-square"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://www.pinterest.com/theAppGuruz/">
+                                                        <i class="fa fa-pinterest"></i>
+                                                    </a>
+                                                    <a target="_blank" href="https://www.youtube.com/user/TheAppGuruz">
+                                                        <i class="fa fa-youtube"></i>
+                                                    </a>
+                                                </div>
+                                                <p>I am <a href="http://www.theappguruz.com/iphone-app-development/">iOS developer</a>, as a developer my basic goal is continue to learn and improve my development skills , to make application more user friendly.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="mt15">
+                                                                                            </div>
+                                        </div>
+                                        <div class="col s12 plr0">
+                                            <div class="col s12 m6 plr0">
+                                                                                                    <div class="MTB35"><b>PREVIOUS POST</b><br>
+                                                        <a href="http://www.theappguruz.com/blog/hide-secrets-secret-pics-sms-apps-android-phone">Hide Secrets - for Secret Pics, SMS, Apps for Android Phone</a>
+                                                    </div>
+                                                                                            </div>
+                                            <div class="col s12 m6 plr0">
+                                                                                                    <div class="MTB35"><b>NEXT POST</b><br>
+                                                        <a href="http://www.theappguruz.com/blog/create-custom-keyboard-ios8">Create Custom Keyboard for iOS8</a>
+                                                    </div>
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div id="disqus_thread"></div>
+                                        <script type="text/javascript">
+                                            var disqus_shortname = 'theappguruz';
+                                            (function () {
+                                                var dsq = document.createElement('script');
+                                                dsq.type = 'text/javascript';
+                                                dsq.async = true;
+                                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                            })();
+                                        </script>
+                                        <noscript>
+                                            Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m4">
+    <div class="blog-left-part-box">
+        <div class="input-field default">
+            <form method="post" action="http://www.theappguruz.com/blog/search">
+            <input type="text" class="validate" id="search" name="searchText" placeholder="Search">
+            </form>
+        </div>
+    </div>
+    <div class="blog-left-part-box">
+        <h3>Categories</h3>
+        <a href="http://www.theappguruz.com/category/3ds-max" class="waves-effect blog-categories">3DS Max</a><a href="http://www.theappguruz.com/category/android" class="waves-effect blog-categories">Android</a><a href="http://www.theappguruz.com/category/blog" class="waves-effect blog-categories">Blog</a><a href="http://www.theappguruz.com/category/graphics" class="waves-effect blog-categories">Graphics</a><a href="http://www.theappguruz.com/category/ios" class="waves-effect blog-categories">iOS</a><a href="http://www.theappguruz.com/category/maya" class="waves-effect blog-categories">Maya</a><a href="http://www.theappguruz.com/category/unity" class="waves-effect blog-categories">Unity</a><a href="http://www.theappguruz.com/category/web" class="waves-effect blog-categories">Web</a>    </div>
+
+    <div class="blog-left-part-box recent-post">
+        <h3>Related Blog Posts</h3>
+        <ul>
+            <li><a href="http://www.theappguruz.com/blog/ios-social-messageui-framework">iOS - Social &amp; MessageUI Framework</a></li><li><a href="http://www.theappguruz.com/blog/sqlite-database-in-ios">iOS - Introduction to SQLite Database in iOS</a></li><li><a href="http://www.theappguruz.com/blog/use-sqlite-database-swift">How to use SQLite Database in Swift</a></li><li><a href="http://www.theappguruz.com/blog/ios-manage-contacts-from-your-application">iOS - Manage Contacts from Your Application</a></li><li><a href="http://www.theappguruz.com/blog/json-parsing-example-swift">JSON Parsing Example in Swift</a></li><li><a href="http://www.theappguruz.com/blog/notification-ios">Notification in iOS</a></li><li><a href="http://www.theappguruz.com/blog/working-ios-file-management-using-swift">Working with iOS File Management using Swift</a></li><li><a href="http://www.theappguruz.com/blog/ios-create-gradient-view">iOS - Create Gradient View</a></li><li><a href="http://www.theappguruz.com/blog/using-autolayout-in-ios">Using Auto Layout</a></li><li><a href="http://www.theappguruz.com/blog/using-nstimer-class-in-ios">Using NSTimer Class in iOS</a></li><li><a href="http://www.theappguruz.com/blog/make-iphone-app-ios">How to make iPhone App Tutorial</a></li><li><a href="http://www.theappguruz.com/blog/uialertcontroller-in-swift-tutorial">UIAlertController in Swift Tutorial</a></li>        </ul>
+    </div>
+
+    <div class="blog-left-part-box">
+        <!--<h3>Tags</h3>-->
+            </div>
+</div> </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function downloadClick()
+        {
+            //ga('send', 'event', { eventCategory: 'Blog', eventAction: 'buttonclick', eventLabel: 'Facebook', eventValue: http://www.theappguruz.com/blog/android-working-android-actionbar})
+        }
+        function openPopupModel()
+        {
+            $.magnificPopup.open({
+                items: {
+                    src: $("#modal-panel")
+                },
+                callbacks: {
+                    beforeOpen: function (e) {
+                        resetTimer();
+                        var Animation = $("#animation-switcher").find('.active-animation').attr('data-effect');
+                        this.st.mainClass = Animation;
+                    }
+                }
+            });
+        }
+        function imgError(image) {
+            image.onerror = "";
+            image.src = siteURL + "public/assets/public/images/logo.png";
+            return true;
+        }
+    </script>
+<div id="modal-panel" class="admin-form panel mfp-hide" style="position: relative; margin-left: 33%; max-width: 500px;">
+    <div class="panel">
+        <div class="row section col s12">
+            <div class="col s12" style="border-left: 1px solid rgb(221, 221, 221); padding-left: 25px; padding-top:25px;">
+                <div class="horizontal-line"> <span><b>THIS CONTENT IS LOCKED!</b></span> </div>
+                <div class="social-icon-share" style="margin-bottom: 35px;">
+                    <p>To download the code, share with one of the following social providers.</p>
+                    <button data-scope="email" data-onshare="shareState" data-callback="shareState" id='postBitTag' class="g-interactivepost waves-effect gplush" data-contenturl="http://www.theappguruz.com/blog/use-sqlite-database-swift?utm_source=gplus&utm_medium=share&utm_campaign=blog"
+                            data-clientid="1017313521374-sp9ihfk6stq9rfnou6nesr5n1193fdjm.apps.googleusercontent.com" data-cookiepolicy="none" data-prefilltext="How to use SQLite Database in Swift"
+                            data-calltoactionlabel="Read" data-calltoactionurl="http://www.theappguruz.com/blog/use-sqlite-database-swift?utm_source=gplus&utm_medium=share&utm_campaign=blog">
+                        <i class="fa fa-google-plus"></i>
+                        Share
+                    </button>
+                    <a href="javascript:;" onclick="myFacebookLogin()" class="fb-share waves-effect"><i class="fa fa-facebook-official"></i> Share</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.theappguruz.com/blog/use-sqlite-database-swift?utm_source=twitter&utm_medium=share&utm_campaign=blog" data-via="theappguruz" data-size="large" data-count="none">Tweet</a>
+                    <p><small>Note : If your browser pop-up is disabled, please allow pop-up for this site</small></p>
+                </div>
+                <center>
+                    <a class="waves-effect btn-large bark-blue" id="makingdifferenttimer" rel="nofollow" style="display: none;font-size: 16px; padding: 0px 25px;" target="_blank">Download</a>
+                </center>
+                <div id="mdtimer" style="display: none;">
+                    <div><b>Your source code is now downloading. If does not start download please wait for <span>10</span> seconds</b></div>
+                </div>
+                <div id="fb-root" style="position: fixed; top: -60px !important; left: 0 !important; z-index: 999999"></div>
+            </div>
+        </div>
+    </div>
+    <button class="mfp-close" type="button" title="Close (Esc)">×</button>
+</div>
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<script>
+    twttr.events.bind('tweet',function (event) {
+        var pathArray = window.location.href.split( '/' );
+        var blog_slug = pathArray[eval(pathArray.length - 1)];
+        var userInfo = {
+            'social_id' : 0,
+            'social_type' : "twitter",
+            'name' : "twitter user",
+            'email':"",
+            'age_range':0,
+            'slug' : blog_slug
+        };
+        //alert(JSON.stringify(userInfo))
+        downloadUser(userInfo);
+        downloadCode();
+    });
+</script>
+<script>
+    $(document).ready(function() {
+
+    });
+    var timer;
+    function resetTimer()
+    {
+        $("#mdtimer span").text(10);
+        $("#makingdifferenttimer").removeAttr('href').hide();
+        $("#mdtimer").hide();
+        //setTimer();
+    }
+
+    function setTimer()
+    {
+        $("#mdtimer").show();
+        var sec = 10
+        clearInterval(timer);
+        timer = setInterval(function() {
+            $('#mdtimer span').text(sec--);
+            if (sec == -1) {
+                $("#makingdifferenttimer").delay(1000).fadeIn(1000);
+                $("#mdtimer").hide(1000);
+                clearInterval(timer);
+            }
+        }   , 1000);
+    }
+    function shareState(data) {
+        if (data.action == "shared" && data.status == "completed") {
+            makeGoogleApiCalls();
+            downloadCode();
+        }
+    }
+    // Live : 787135804717832
+    // Local : 303777032969255
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '303777032969255',
+            xfbml      : true,
+            version    : 'v2.4'
+        });
+        //FB.Canvas.setAutoGrow();
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    function myFacebookLogin() {
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+                shareOnFB();
+            } else {
+                loginWithFB();
+            }
+        });
+    }
+
+    function loginWithFB()
+    {
+        FB.login(function(response) {
+            if (response.authResponse) {
+                shareOnFB();
+            } else {
+                console.log('User cancelled login or did not fully authorize.');
+            }
+        }, {scope: 'publish_actions,email,user_likes'});
+    }
+
+    function getOnFB()
+    {
+        FB.api('/me',{fields: 'email,name,gender,hometown,address,age_range,birthday'}, function(response) {
+            var pathArray = window.location.href.split( '/' );
+            var blog_slug = pathArray[eval(pathArray.length - 1)];
+            var userInfo = {
+                'social_id' : response.id,
+                'social_type' : "facebook",
+                'name' : response.name,
+                'email':response.email,
+                'slug' : blog_slug,
+                'age_range':response.age_range.min
+            };
+            downloadUser(userInfo);
+        });
+    }
+    function shareOnFB() {
+        var e = {
+            method: "feed",
+            link: "http://www.theappguruz.com/blog/use-sqlite-database-swift?utm_source=facebook&utm_medium=share&utm_campaign=blog",
+            picture: $("#blog_banner_img").attr("src"),
+            name: $("meta[name='title']").attr('content'),
+            caption: 'www.theappguruz.com',
+            description: $("meta[name='description']").attr('content')
+        };
+        FB.ui(e, function(t) {
+            if (t != undefined && t["post_id"]) {
+                getOnFB();
+                downloadCode();
+                //alert(JSON.stringify(getOnFB()))
+            }
+        })
+    }
+
+    function downloadCode() {
+        var postData = {'slug': $("#blogSlug").val()};
+        AjaxCall(siteURL + 'blog/ajax-download-source-code', "POST", postData, "Json", "responseAccessCode");
+    }
+
+    function responseAccessCode(response) {
+        if (response.payload != '') {
+            var $_url = response.payload;
+            $_url = $_url.replace(".git","/archive/master.zip");
+            window.open($_url, "","width=400, height=200");
+            $("#makingdifferenttimer").attr('href',$_url).hide();
+            setTimer();
+            //$.magnificPopup.close();
+        } else {
+            alert("No such blog found.")
+        }
+    }
+    function downloadUser(postData) {
+        //alert(JSON.stringify(postData));
+        //var postData = {'name': data.name};
+        AjaxCall(siteURL + 'socialLogin/download-user', "POST", postData, "Json", "responseDownloadUser",false);
+    }
+
+    function responseDownloadUser(response) {
+        console.log(response);
+    }
+</script>
+<script>
+
+</script>    <script type="text/javascript" src="http://www.theappguruz.com/public/assets/public/js/magnific/jquery.magnific-popup.js"></script>
+<script type="text/javascript">
+    function checkEmptyNewsletterForm(element)
+    {
+        var $_flag = false;
+        if($(element).find('input[name="email"]').length > 0 && $(element).find('input[name="email"]').val() == '') {
+            $(element).find('input[name="email"]').addClass("invalid").focus();
+        }
+        else{
+            if(isValidEmailAddress($(element).find('input[type="email"]').val())){
+                $(element).find('input[name="email"]').removeClass("invalid");
+                $_flag = true;
+            }else{
+                $(element).find('input[name="email"]').addClass("invalid").focus();
+            }
+        }
+        return $_flag;
+    }
+</script>
+    
+    
+    </div>
+
+      <div class="darktealbg get-in-touch"><div class="title center">
+    <h3>Start a Project </h3>
+    <p>Like what you see? We&#39;d love to hear from you!</p>
+    <div class="center get-in-touch"><a class="waves-effect" href="http://www.theappguruz.com/contact-us">GET IN TOUCH</a></div>
+  </div>
+   </div>   
+
+<div class="section-full-width content blog-detail-contactpart">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 content-left whitebg">
+                <div class="section-content ">
+                    <h3 class="section-content-title">Address</h3>
+                    <div class="address-block">
+                        <address>
+                            <h4>India</h4>
+                            <div><span>T</span> +91 90339 15992</div>
+                            <p>3rd Floor, Shivalik 5,<br>
+                                Gondal Road,<br>
+                                Rajkot &ndash; 360 002.</p>
+                        </address>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 content-right graybg">
+                <div class="section-content ">
+                    <h3 class="section-content-title">Address</h3>
+                    <div class="address-block">
+                        <address>
+                            <h4>USA</h4>
+
+                            <div><span>T</span> +305-3087507</div>
+
+                            <p>9172 Collins Av Surfside,<br>
+                                Fl 33154</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer"><div class="container">
+        <div class="row">
+                            <ul class="col s12 m3"><li><h3>Game Development</h3></li><ul><li><a href="http://www.theappguruz.com/3d-game-development">3D Game Development</a></li></ul><ul><li><a href="http://www.theappguruz.com/ios-game-development">IOS Game Development</a></li></ul><ul><li><a href="http://www.theappguruz.com/android-game-development">Android Game Development</a></li></ul><ul><li><a href="http://www.theappguruz.com/game-development">Game Development</a></li></ul></ul><ul class="col s12 m3"><li><h3>App Development</h3></li><ul><li><a href="http://www.theappguruz.com/application-development">Mobile App Development</a></li></ul><ul><li><a href="http://www.theappguruz.com/iphone-app-development">iPhone App Development</a></li></ul><ul><li><a href="http://www.theappguruz.com/android-app-development">Android App Development</a></li></ul></ul><ul class="col s12 m3"><li><h3>Tools</h3></li><ul><li><a href="http://www.theappguruz.com/blog/rocking-json-parsing-tool-android-developers">Android - JSON</a></li></ul><ul><li><a href="http://www.theappguruz.com/tag-tools/xml-layout/index.php">Android XML Layout Generator</a></li></ul><ul><li><a href="http://www.theappguruz.com/tag-tools/web/CSSAnimations/index.html">CSS Animation</a></li></ul></ul><ul class="col s12 m3"><li><h3>Company</h3></li><ul><li><a href="http://www.theappguruz.com/about-us">About us</a></li></ul><ul><li><a href="http://www.theappguruz.com/career">Career</a></li></ul><ul><li><a href="http://www.theappguruz.com/client-testimonials">Client Testimonials</a></li></ul><ul><li><a href="http://www.theappguruz.com/our-team">Our Team</a></li></ul><ul><li><a href="http://www.theappguruz.com/contact-us">Contact Us</a></li></ul></ul>                    </div>
+    </div>
+    <div class="container footer-border">
+      <div class="row">
+      <div class="col s12 m9">
+              <!--    Display custom Message-->
+                            <!--    End Display custom Message-->
+              <form name="newsletter" id="newsletter" method="post" action="http://www.theappguruz.com/newsletter/subscribe" onsubmit="return checkEmptyNewsletterForm(this);">
+                  <b>Receive our email newsletter</b>
+                  <p>Get technical updates about mobile games & apps on your email.</p>
+                                        
+                    <input class="validate defualt" id="email" name="email" placeholder="email address" type="email" value="" />
+                  <button id="newsletterFormBtn" type="submit" class="btn blue waves-effect">Sign up</button>
+              </form>
+          </div>
+      	 <div class="col s12 m3">
+        <div class="social-icon">
+        <b>Follow Us</b>
+      <h6><a class="waves-effect facebook" href="https://www.facebook.com/TheAppGuruz" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></h6>
+      <h6><a class="waves-effect twitter" href="https://twitter.com/theappguruz" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></h6>
+      <h6><a class="waves-effect gplus" href="https://plus.google.com/+Theappguruz/" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></h6>
+      <h6><a class="waves-effect pinterest" href="https://www.pinterest.com/theAppGuruz/" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></h6>
+      <h6><a class="waves-effect youtube" href="https://www.youtube.com/user/TheAppGuruz" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></h6><h6><a class="waves-effect facebook" href="https://www.linkedin.com/company/theappgruruz" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></h6>
+  </div></div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">&copy; 2015 The App Guruz. All rights reserved</div>
+    </div>
+</footer>
+</div>
+</div>
+<div id="backtotop" class="backtotop hide"><a href="#top"><i class="fa fa-arrow-up"></i></a></div>
+<script>
+    (function($) {
+        $(document).ready(function() {
+            $.slidebars();
+        });
+    }) (jQuery);
+</script>
+
+</body>
+</html>

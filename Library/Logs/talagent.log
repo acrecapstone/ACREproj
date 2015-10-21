@@ -1,0 +1,6 @@
+ Time	               Bundle ID	              Status	Comment
+0.000	                       -	                   -	TALagent Started (system uptime: 307.91 sec)
+0.052	                       -	                   -	Liveness: 0 -> 1 (run_as_server)
+0.215	                       -	                   -	Successfully read encryption key from keychain in 0.163611 seconds
+15.052	                       -	                   -	Liveness: 1 -> 0 (__run_as_server_block_invoke)
+15.052	                       -	                   -	Exiting out of boredom

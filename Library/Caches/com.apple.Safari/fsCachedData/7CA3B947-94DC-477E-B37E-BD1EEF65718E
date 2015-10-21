@@ -1,0 +1,578 @@
+  
+<a href="/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+
+
+
+<div class="commit full-commit ">
+  <a href="/acrecapstone/ACREproject/tree/376270642dcae7e6f2017328d0c6fa6de13452cb" class="btn btn-outline right" title="Browse the repository at this point in the history" rel="nofollow">Browse files</a>
+
+    <p class="commit-title">
+      Initial commit
+    </p>
+
+
+  <div class="commit-branches">
+    <include-fragment src="/acrecapstone/ACREproject/branch_commits/376270642dcae7e6f2017328d0c6fa6de13452cb">
+      <span class="octicon octicon-git-branch"></span>
+      <ul class="branches-list">
+        <li class="loading">Loading branch information<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></li>
+      </ul>
+</include-fragment>  </div>
+
+  <div class="commit-meta clearfix">
+    <span class="sha-block">commit <span class="sha user-select-contain">376270642dcae7e6f2017328d0c6fa6de13452cb</span></span>
+
+    <span class="sha-block" data-pjax>
+      0 parents
+    </span>
+
+    <div class="authorship">
+      <img alt="@acrecapstone" class="avatar" height="24" src="https://avatars3.githubusercontent.com/u/15201730?v=3&amp;s=48" width="24" />
+      <span class="author-name"><a href="/acrecapstone" rel="author">acrecapstone</a></span>
+      
+      authored <time datetime="2015-10-19T19:08:35Z" is="relative-time">Oct 19, 2015</time>
+
+    </div>
+  </div>
+</div>
+
+
+
+      <table style="display:none">
+    <tbody id="js-inline-comments-single-container-template">
+      
+<tr class="inline-comments js-inline-comments-container ">
+  
+
+<td class="line-comments  js-line-comments js-quote-selection-container  " colspan="3">
+  <div class="comment-holder js-comments-holder">
+  </div>
+
+  <div class="inline-comment-form-container js-inline-comment-form-container">
+  <div class="inline-comment-form-actions">
+    <button class="btn js-toggle-inline-comment-form">Add a line note</button>
+
+  </div>
+
+  <div class="inline-comment-form">
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/commit_comment/create" class="js-inline-comment-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="npTUxgiFTSnH8iJPFztQAotTR9FfzeDhuN+G7LePOZR2dMUw7YGLspwTHmLH9xXxxr3xDUKjjy4V4k/Jr6Cm/g==" /></div>
+        <input type="hidden" name="context" value="diff">
+
+          <input type="hidden" name="commit_id" value="376270642dcae7e6f2017328d0c6fa6de13452cb">
+          <input type="hidden" name="path">
+          <input type="hidden" name="position">
+          <input type="hidden" name="line">
+
+        
+<div class="js-previewable-comment-form js-suggester-container previewable-comment-form write-selected" data-preview-url="/preview?markdown_unsupported=false&amp;repository=44557322&amp;subject=376270642dcae7e6f2017328d0c6fa6de13452cb&amp;subject_type=Commit">
+  <div class="comment-form-head tabnav">
+      <div class="right">
+          <a class="tabnav-extra" href="https://guides.github.com/features/mastering-markdown/" target="_blank">
+            <span class="octicon octicon-markdown"></span>
+            Styling with Markdown is supported
+          </a>
+      </div>
+    <nav class="tabnav-tabs" role="tablist">
+      <a href="#" class="tabnav-tab write-tab js-write-tab selected" role="tab" aria-selected="true">Write</a>
+      <a href="#" class="tabnav-tab preview-tab js-preview-tab" role="tab">Preview</a>
+    </nav>
+  </div>
+
+  <div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Commit.
+</div>
+  <div class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image upload-enabled is-default"
+      data-upload-policy-url="/upload/policies/assets"
+        data-upload-repository-id="44557322"
+      >
+
+    <textarea name="comment[body]"
+              tabindex="1"
+              id="comment_body_1"
+              placeholder="Leave a comment"
+              aria-label="Comment body"
+              class="input-contrast comment-form-textarea js-comment-field  js-task-list-field js-quick-submit js-quote-selection-target js-session-resumable js-suggester-field"
+              required></textarea>
+
+        <p class="drag-and-drop">
+    <span class="default">
+        Attach files by dragging &amp; dropping or
+        <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+        <a class="manual-file-chooser-text" href="#">selecting them</a>.
+    </span>
+    <span class="loading">
+      <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" /> Uploading your files…
+    </span>
+    <span class="error bad-file">
+      Unfortunately, we don’t support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a
+        PNG, GIF, JPG, DOCX, PPTX, XLSX, TXT, or PDF.
+      </span>
+    </span>
+    <span class="error bad-permissions">
+      Attaching documents requires write permission to this repository.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a PNG, GIF, or JPG.
+      </span>
+    </span>
+    <span class="error repository-required">
+      Unfortunately, we don’t support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a PNG, GIF, or JPG.
+      </span>
+    </span>
+    <span class="error too-big">
+      Yowza, that’s a big file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a file smaller than 10MB.
+      </span>
+    </span>
+    <span class="error empty">
+      This file is empty.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a file that’s not empty.
+      </span>
+    </span>
+    <span class="error bad-browser">
+      This browser doesn’t support file attachments.
+      <span class="drag-and-drop-error-info">
+        We recommend updating to the latest
+        <a href="http://windows.microsoft.com/ie">Internet Explorer</a>,
+        <a href="https://chrome.google.com">Google Chrome</a>, or
+        <a href="https://www.mozilla.org/firefox">Firefox</a>.
+      </span>
+    </span>
+    <span class="error failed-request">
+      Something went really wrong, and we can’t process that file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again.</a>
+      </span>
+    </span>
+  </p>
+
+
+    <div class="suggester-container">
+      <div class="suggester js-suggester js-navigation-container"
+           data-url="/acrecapstone/ACREproject/suggestions/commit/376270642dcae7e6f2017328d0c6fa6de13452cb">
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-content">
+    <div class="comment">
+  <div class="comment-content">
+    <div class="comment-body markdown-body js-preview-body">
+      <p>Nothing to preview</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+
+  <div class="comment-form-error comment-form-bottom js-comment-update-error"></div>
+</div>
+
+
+        <div class="form-actions">
+          <div class="left">
+            <span class="ajax-indicator">
+              <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+            </span>
+          </div>
+
+          <button class="btn btn-primary" type="submit" tabindex="1" data-disable-invalid data-disable-with>
+            Comment
+          </button>
+
+          <button class="btn js-hide-inline-comment-form" type="button">Cancel</button>
+        </div>
+</form>  </div>
+</div>
+
+</td>
+
+</tr>
+
+    </tbody>
+  </table>
+
+
+    <a name="diff-stat"></a>
+    <div id="toc" class="details-collapse table-of-contents js-details-container">
+  <div class="btn-group right" data-ga-load="Diff, view, Viewed Unified Diff">
+  <a class="btn btn-sm selected" href="https://github.com/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb?diff=unified">
+    Unified
+  </a>
+  <a class="btn btn-sm" href="https://github.com/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb?diff=split">
+    Split
+  </a>
+</div>
+
+
+  <div class="toc-diff-stats">
+    <span class="octicon octicon-diff"></span>
+    Showing
+    <button type="button" class="btn-link js-details-target">
+      1 changed file
+    </button>
+    with
+    <strong>1 addition</strong>
+    and <strong>0 deletions</strong>.
+  </div>
+
+  <ol class="content collapse js-transitionable">
+    <li>
+      <span class="diffstat right">
+          <span class="text-diff-added">
+            +1
+          </span>
+          <span class="text-diff-deleted">
+            −0
+          </span>
+          <a href="#diff-04c6e90faac2675aa89e2176d2eec7d8" class="tooltipped tooltipped-s" aria-label="1 line changed">
+            <span class="diffstat-bar">
+              <span class="text-diff-added">&#xf053;</span>&#xf053;&#xf053;&#xf053;&#xf053;
+            </span>
+          </a>
+      </span>
+      <span class="octicon octicon-diff-added" title="added"></span>
+      <a href="#diff-04c6e90faac2675aa89e2176d2eec7d8">README.md</a>
+    </li>
+  </ol>
+</div>
+
+  <div id="files" class="diff-view commentable">
+    
+      <a name="diff-04c6e90faac2675aa89e2176d2eec7d8"></a>
+      <div id="diff-0"
+           class="file js-details-container
+                    soft-wrap
+                    file-type-prose
+                   
+                   
+                   show-inline-notes
+                 ">
+        <div class="file-header" data-path="README.md">
+          <div class="file-actions">
+              <span class="show-file-notes">
+                <label>
+                  <input type="checkbox" checked="checked" class="js-toggle-file-notes">
+                  Show notes
+                </label>
+              </span>
+
+              <span class="btn-group">
+                <a class="btn btn-sm tooltipped tooltipped tooltipped-n source selected"
+                   href="#diff-04c6e90faac2675aa89e2176d2eec7d8"
+                   aria-label="Display the source diff"><span class="octicon octicon-code"></span></a>
+                <a class="btn btn-sm tooltipped tooltipped-n rendered"
+                   href="https://github.com/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb?short_path=04c6e90#diff-04c6e90faac2675aa89e2176d2eec7d8"
+                   aria-label="Display the rich diff"><span class="octicon octicon-file-text"></span></a>
+              </span>
+          </div>
+          <div class="file-info">
+              <span class="diffstat tooltipped tooltipped-e" aria-label="1 addition &amp; 0 deletions">1 <span class="diffstat-bar"><span class="text-diff-added">&#xf053;</span>&#xf053;&#xf053;&#xf053;&#xf053;</span></span>
+
+            <span class="user-select-contain" title="README.md">
+              README.md
+            </span>
+            
+          </div>
+        </div>
+
+          
+            <div class="data highlight blob-wrapper">
+              <table class="diff-table tab-size  " data-tab-size="8">
+                  <colgroup>
+                    <col width="40">
+                    <col width="40">
+                    <col>
+                  </colgroup>
+                
+      <tr data-position="0">
+    <td id="diff-04c6e90faac2675aa89e2176d2eec7d8L-1" class="blob-num blob-num-hunk non-expandable" data-line-number="..."></td>
+    <td id="diff-04c6e90faac2675aa89e2176d2eec7d8R0" class="blob-num blob-num-hunk non-expandable" data-line-number="..."></td>
+    <td class="blob-code blob-code-inner blob-code-hunk">@@ -0,0 +1 @@</td>
+  </tr>
+
+    
+
+<tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-04c6e90faac2675aa89e2176d2eec7d8R1" data-line-number="1"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition">
+      <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment"
+         data-path="README.md"
+         data-anchor="diff-04c6e90faac2675aa89e2176d2eec7d8"
+         data-position="1"
+         data-line="1"
+         role="button"
+         aria-label="Add line comment"></span>
+
+    <span class="blob-code-inner">+<span class="pl-mh"><span class="pl-mh">#</span><span class="pl-mh"> </span>ACREproject</span></span>
+
+  </td>
+</tr>
+
+
+
+              </table>
+            </div>
+      </div>
+</div>
+
+<button class="js-toggle-all-file-notes" data-hotkey="i" style="display:none">Toggle all file notes</button>
+
+
+<div id="all_commit_comments" class="js-quote-selection-container">
+
+  <div class="commit-comments-heading">
+    
+<div id="partial-visible-comments-header">
+  <span class="right">
+    
+  <div class="discussion-sidebar-item lock-toggle">
+    <a href="#lock-confirmation" rel="facebox" class="lock-toggle-link">
+        <span class="octicon octicon-lock"></span>
+      Lock conversation
+    </a>
+
+    <div id="lock-confirmation" style="display:none">
+      <h2 class="facebox-header">Lock conversation on this commit</h2>
+
+      <p>Locking the conversation means:</p>
+
+      <ul>
+          <li>Other users <strong>can’t add new comments</strong> to this commit.</li>
+            <li>
+              You and other collaborators
+              <a href="https://help.github.com/articles/what-are-the-different-access-permissions">with access</a>
+              to this repository <strong>can still leave comments</strong> that others can see.
+            </li>
+      </ul>
+
+      <p>You can always unlock this commit again in the future.</p>
+
+      <div class="facebox-footer">
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb/lock" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="ShKVvXdc2ZhlJ2nZoBmOPhfyoB7MFWMKjB6Uyhmk2+j8BrsB5bzrYcrvXyaCA8gq5W+AjnwM6+S7OVey0iGK3g==" /></div>
+          <button type="submit" class="btn btn-danger btn-block">
+            Lock conversation on this commit
+          </button>
+</form>      </div>
+    </div>
+  </div>
+
+  </span>
+
+  <h4 class="commit-comment-count">
+    0 comments
+    on commit <code class="commit-sha">3762706</code>
+  </h4>
+
+</div>
+
+
+  </div>
+
+  <div id="comments" class="comment-holder">
+    
+
+<!-- Rendered timeline since 2015-10-19 12:08:35 -->
+<div id="partial-timeline-marker"
+      class="js-timeline-marker js-socket-channel js-updatable-content"
+      data-channel="acrecapstone/ACREproject:commit:376270642dcae7e6f2017328d0c6fa6de13452cb"
+      data-url="/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb/show_partial?partial=commit%2Ftimeline_marker&amp;since=1445281715"
+      data-last-modified="Mon, 19 Oct 2015 19:08:35 GMT">
+
+</div>
+
+  </div>
+
+  
+
+  
+  <div class="timeline-comment-wrapper timeline-new-comment js-comment-container ">
+    <a href="/acrecapstone"><img alt="@acrecapstone" class="timeline-comment-avatar" height="48" src="https://avatars1.githubusercontent.com/u/15201730?v=3&amp;s=96" width="48" /></a>
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/commit_comment/create" class="js-new-comment-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" data-type="json" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qgeS279Ek65wF7wsFzFm67ltSikE3XBFP4J2L2s2ixp8AC7aePqorQURo4XG7asvSIwBPLcMzBCSybpg2RKQmQ==" /></div>
+      <div class="timeline-comment">
+          <input type='hidden' name='commit_id' value='376270642dcae7e6f2017328d0c6fa6de13452cb'>
+          <input type='hidden' name='path' value=''>
+            
+<div class="js-previewable-comment-form js-suggester-container previewable-comment-form write-selected" data-preview-url="/preview?markdown_unsupported=false&amp;repository=44557322&amp;subject=376270642dcae7e6f2017328d0c6fa6de13452cb&amp;subject_type=Commit">
+  <div class="comment-form-head tabnav">
+      <div class="right">
+          <a class="tabnav-extra" href="https://guides.github.com/features/mastering-markdown/" target="_blank">
+            <span class="octicon octicon-markdown"></span>
+            Styling with Markdown is supported
+          </a>
+      </div>
+    <nav class="tabnav-tabs" role="tablist">
+      <a href="#" class="tabnav-tab write-tab js-write-tab selected" role="tab" aria-selected="true">Write</a>
+      <a href="#" class="tabnav-tab preview-tab js-preview-tab" role="tab">Preview</a>
+    </nav>
+  </div>
+
+  <div class="comment-form-error js-comment-form-error" style="display:none">    There was an error creating your Commit.
+</div>
+  <div class="write-content js-write-bucket js-uploadable-container js-upload-markdown-image upload-enabled is-default"
+      data-upload-policy-url="/upload/policies/assets"
+        data-upload-repository-id="44557322"
+      >
+
+    <textarea name="comment[body]"
+              tabindex="2"
+              id="new_commit_comment_field"
+              placeholder="Leave a comment"
+              aria-label="Comment body"
+              class="input-contrast comment-form-textarea js-comment-field  js-task-list-field js-quick-submit js-size-to-fit js-quote-selection-target js-session-resumable js-suggester-field"
+              required></textarea>
+
+        <p class="drag-and-drop">
+    <span class="default">
+        Attach files by dragging &amp; dropping or
+        <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+        <a class="manual-file-chooser-text" href="#">selecting them</a>.
+    </span>
+    <span class="loading">
+      <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" /> Uploading your files…
+    </span>
+    <span class="error bad-file">
+      Unfortunately, we don’t support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a
+        PNG, GIF, JPG, DOCX, PPTX, XLSX, TXT, or PDF.
+      </span>
+    </span>
+    <span class="error bad-permissions">
+      Attaching documents requires write permission to this repository.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a PNG, GIF, or JPG.
+      </span>
+    </span>
+    <span class="error repository-required">
+      Unfortunately, we don’t support that file type.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a PNG, GIF, or JPG.
+      </span>
+    </span>
+    <span class="error too-big">
+      Yowza, that’s a big file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a file smaller than 10MB.
+      </span>
+    </span>
+    <span class="error empty">
+      This file is empty.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again</a> with a file that’s not empty.
+      </span>
+    </span>
+    <span class="error bad-browser">
+      This browser doesn’t support file attachments.
+      <span class="drag-and-drop-error-info">
+        We recommend updating to the latest
+        <a href="http://windows.microsoft.com/ie">Internet Explorer</a>,
+        <a href="https://chrome.google.com">Google Chrome</a>, or
+        <a href="https://www.mozilla.org/firefox">Firefox</a>.
+      </span>
+    </span>
+    <span class="error failed-request">
+      Something went really wrong, and we can’t process that file.
+      <input type="file" multiple="multiple" class="manual-file-chooser js-manual-file-chooser">
+      <span class="drag-and-drop-error-info">
+        <a class="manual-file-chooser-text" href="#">Try again.</a>
+      </span>
+    </span>
+  </p>
+
+
+    <div class="suggester-container">
+      <div class="suggester js-suggester js-navigation-container"
+           data-url="/acrecapstone/ACREproject/suggestions/commit/376270642dcae7e6f2017328d0c6fa6de13452cb">
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-content">
+    <div class="comment">
+  <div class="comment-content">
+    <div class="comment-body markdown-body js-preview-body">
+      <p>Nothing to preview</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+
+  <div class="comment-form-error comment-form-bottom js-comment-update-error"></div>
+</div>
+
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" tabindex="2" data-disable-invalid data-disable-with>Comment on this commit</button>
+            </div>
+      </div>
+</form>
+  </div>
+
+</div>
+
+  <div class="thread-subscription-status js-thread-subscription-status js-socket-channel js-updatable-content"
+  data-channel="acrecapstone/ACREproject:thread-subscription:376270642dcae7e6f2017328d0c6fa6de13452cb:acrecapstone"
+  data-url="/notifications/thread_subscription?repository_id=44557322&amp;thread_class=Commit&amp;thread_id=376270642dcae7e6f2017328d0c6fa6de13452cb">
+
+  <span class="mega-octicon octicon-radio-tower"></span>
+
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/thread" class="thread-subscribe-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="V52MwnHxcrVCwNLU4tV7wbFo1VeG4wF76Aq4zwyA4zJmkRiHT3NyteFN8fULuyulPBjuDrNhJ6cWxRG95LhwbA==" /></div>    <input type="hidden" name="repository_id" value="44557322">
+    <input type="hidden" name="thread_id" value="376270642dcae7e6f2017328d0c6fa6de13452cb">
+    <input type="hidden" name="thread_class" value="Commit">
+    <input type="hidden" name="id" value="mute">
+
+    <button class="btn btn-sm" type="submit" data-disable-with>
+      <span class="octicon octicon-mute"></span>
+      Unsubscribe
+    </button>
+</form>
+  <p class="reason text-small text-muted">You’re receiving notifications because you’re subscribed to this repository.</p>
+</div>
+
+
+
+
+
+<div id="pjax-head">
+  <title>Initial commit · acrecapstone/ACREproject@3762706</title>
+  <meta name="selected-link" value="repo_commits">
+  <meta content="Rails, view, commit#show" data-pjax-transient="true" name="analytics-event" />
+  
+    <link data-pjax-transient="true" href="/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb.diff" rel="alternate" type="text/plain+diff" />
+  <link data-pjax-transient="true" href="/acrecapstone/ACREproject/commit/376270642dcae7e6f2017328d0c6fa6de13452cb.patch" rel="alternate" type="text/plain+patch" />
+
+  <meta name="diff-view" content="unified" data-pjax-transient>
+
+</div>
+
+<div id="js-flash-container">
+</div>
+
+

@@ -1,0 +1,9 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "c7cd4cb4712ac6f4d771f28dc7735c0e"
+build_time: [498604264, 171654000]
+inputs: 
+	"/Users/acre/Downloads/ACREproj-bfc76c98d890c0af0a7596e3223d353ca39333af/RequestAuthenticationTokenViewController.swift": !dirty [498604257, 0]
+	"/Users/acre/Downloads/ACREproj-bfc76c98d890c0af0a7596e3223d353ca39333af/RequestAuthenticationDataProvider.swift": [498589398, 0]
+	"/Users/acre/Downloads/ACREproj-bfc76c98d890c0af0a7596e3223d353ca39333af/ACRE_App/AppDelegate.swift": [498589398, 0]
+	"/Users/acre/Downloads/ACREproj-bfc76c98d890c0af0a7596e3223d353ca39333af/ACRE_App/LoginPageViewController.swift": [498589398, 0]
+	"/Users/acre/Downloads/ACREproj-bfc76c98d890c0af0a7596e3223d353ca39333af/HomePageViewController.swift": [498589398, 0]

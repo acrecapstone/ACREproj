@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <link rel="shortcut icon" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-144x144.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="Ox8sqMcC1pTkpbIGF8d8JB9kqA5MjRUGk32HnY7fKm0" />
+    <title>Spicing Up Xcode - 13 Tips and Tricks About XcodeRaizException &#8211; Raizlabs developer blog</title>
+    <link rel="pingback" href="//www.raizlabs.com/dev/xmlrpc.php" />
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<meta name="description" content="13 tips and tricks about Xcode, while eating a Scotch bonnet pepper. Spicing Up Xcode was presented by Zev Esienberg at Raizlabs&#039; 3rd Lightning Talks."/>
+<link rel="canonical" href="//www.raizlabs.com/dev/2015/03/spicing-up-xcode/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Spicing Up Xcode - 13 Tips and Tricks About Xcode" />
+<meta property="og:description" content="13 tips and tricks about Xcode, while eating a Scotch bonnet pepper. Spicing Up Xcode was presented by Zev Esienberg at Raizlabs&#039; 3rd Lightning Talks." />
+<meta property="og:url" content="http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/" />
+<meta property="og:site_name" content="RaizException - Raizlabs developer blog" />
+<meta property="article:section" content="Uncategorized" />
+<meta property="article:published_time" content="2015-03-13T16:07:06+00:00" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/hot-pepper-Xcode-150x150.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/balance-delimiters.gif" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/help-popover.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-without-X.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-with-X.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Program-Counter-with-arrow-1024x630.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Jump-Bar-Preview.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Preview-Pane-with-Multiple-Devices.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Full-287x300.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Filtered-300x99.png" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Feed" href="//www.raizlabs.com/dev/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Comments Feed" href="//www.raizlabs.com/dev/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Spicing Up Xcode Comments Feed" href="//www.raizlabs.com/dev/2015/03/spicing-up-xcode/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.raizlabs.com\/dev\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-github-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/themes/github/github.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-checkbox-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css?ver=2.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-form-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css?ver=2.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.9","is_admin":"0","ajaxurl":"http:\/\/www.raizlabs.com\/dev\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.6.9'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/modernizr.min.js?ver=2.6.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.raizlabs.com/dev/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.raizlabs.com/dev/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='//www.raizlabs.com/dev/?p=256' />
+<style type="text/css">.mc4wp-form input[name="_mc4wp_required_but_not_really"] { display: none !important; }</style>    <link rel="stylesheet" href="http://cdn.raizlabs.com/assets/v1431546750/style.css"/>
+
+    <script>
+        var _prum = [['id', '52325603abe53d5353000000'],
+            ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+                , p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67114-2', 'raizlabs.com');
+        ga('send', 'pageview');
+    </script>
+    <script src="//use.typekit.net/zou1wce.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="single single-post postid-256 single-format-standard">
+<header id="header">
+    <div class="container">
+        <h1 class="site-name"><a href="/" rel="home">Raizlabs</a></h1>
+
+        <a href="#" id="nav-toggle">&bull;<br>&bull;<br>&bull;</a><ul id="nav" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://www.raizlabs.com">Home</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="/news">Company News</a></li>
+<li id="menu-item-303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-303"><a href="http://www.raizlabs.com/company/jobs/">Careers</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="/dev">Developer Blog</a></li>
+</ul>
+    </div><!-- .container -->
+
+</header><!-- #header -->
+
+<div id="page-wrapper">
+
+    <div id="page">
+        <div class="container">
+
+    <section id="content" class="col-main" role="main">
+
+    
+        <article id="post-256" class="post-item post-256 post type-post status-publish format-standard hentry category-uncategorized">
+
+            <h1>Spicing Up Xcode</h1>
+
+            <p class="entry-meta">Posted&nbsp; <a href="http://www.raizlabs.com/dev/2015/03/"><time class="entry-date" datetime="2015-03-13T16:07:06+00:00" pubdate>March 13, 2015</time></a><span class="byline">&nbsp;by&nbsp; <span class="author vcard"><a class="url fn n" href="http://www.raizlabs.com/dev/author/zev-eisenbergraizlabs-com/" title="View all posts by Zev Eisenberg" rel="author">Zev Eisenberg</a></span></span></p>
+
+            
+            <div class="entry-content">
+                <p><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/hot-pepper-Xcode.png"><img class="alignright wp-image-269 size-thumbnail" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/hot-pepper-Xcode-150x150.png" alt="Spicing Up Xcode" width="150" height="150" /></a>At the third <a href="https://www.eventbrite.com/e/rz-lightning-talks-3-tickets-15600470427">Raizlabs Lightning Talks</a>, I ate a <a href="http://en.wikipedia.org/wiki/Scotch_bonnet_(pepper)">Scotch bonnet</a> pepper and presented 13 tips and tricks about Xcode. If you missed the talk, or wanted to know about one of the slides in more detail, here’s a video and a written version of everything I mentioned, plus a few extras.</p>
+<p>Spicing Up Xcode was inspired by <a href="https://www.youtube.com/user/HotPepperGaming">Hot Pepper Gaming</a>, a spectacular YouTube channel that answers the age-old question of what would happen if a bunch of professional game reviewers ate hot peppers and then reviewed video games.</p>
+<div style="text-align:center">
+<iframe src="https://player.vimeo.com/video/122111430" width="756" height="425" frameborder="0" title="Spicing Up Xcode" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<p>&nbsp;</p>
+<h1>Mac Keyboard Symbols</h1>
+<p>First, a refresher on some of the more obscure keyboard symbols.</p>
+<p>⌘ Command<br />
+⇧ Shift<br />
+⌥ Option<br />
+⌃ Control<br />
+↩ Return<br />
+← ↓ → ↑ Arrow Keys</p>
+<h1></h1>
+<h1>Spicing Up Xcode &#8211; Keyboard Shortcuts</h1>
+<h3>1. Control-Arrows to Jump by Camel Case</h3>
+<p>You can use ⌃→ and ⌃← to jump forward and backward by camel case substrings in any text in the editor. For example, if your insertion point is at the beginning of 
+			<span id="crayon-5627c8c0223da335907102" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">tableView</span></span> and you want to jump to between 
+			<span id="crayon-5627c8c0223f2593390078" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">table</span></span> and 
+			<span id="crayon-5627c8c022401461350969" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">View</span></span>, press ⌃→ and the cursor will move right one camel case substring. This also works in combination with the standard OS X text navigation shortcuts. For example, press ⌃⇧→ to select the next camel case substring, or ⌃delete to delete the previous camel case substring.</p>
+<p>Note that you may have to disable OS X’s default keyboard shortcuts for moving between Spaces, which use the same key combinations. You can do this under <strong>System Preferences</strong> → <strong>Keyboard</strong> → <strong>Shortcuts</strong> → <strong>Mission Control</strong>, and uncheck the boxes next to <strong>Move left a space</strong> and <strong>Move right a space</strong>.</p>
+<p>Sadly, jumping by camel case is not supported in Xcode’s native text fields (such as the Search field), nor elsewhere in OS X. I’ve <a href="http://www.openradar.me/radar?id=5835362484092928">filed a radar</a>.</p>
+<h3>2. Balance Delimiter</h3>
+<p>This Xcode command is located under <strong>Editor</strong> → <strong>Structure</strong> → <strong>Balance Delimiter</strong>. It selects the next outermost set of brackets, braces, or parentheses from the current selection. This is similar to the behavior where double-clicking a bracket, brace, or parenthesis will select its counterpart and everything in between. You can see both behaviors in this screen recording:</p>
+<div id="attachment_260" class="wp-caption aligncenter" style="width: 480px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/balance-delimiters.gif"><img class="wp-image-260 size-full" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/balance-delimiters.gif" alt="Screen recording showing selecting through matching braces and using the Balance Delimiter command." width="480" height="190" /></a><p class="wp-caption-text">Screen recording demonstrating the ability to select through matching braces, as well as the Balance Delimiter command.</p></div>
+<p style="text-align: left">You can set a keyboard shortcut for Balance Delimiter in <strong>Xcode Preferences </strong>→ <strong>Key Bindings</strong>. My shortcut of choice is ⌘⇧Space.</p>
+<h1>SPICING UP XCODE &#8211; Navigation</h1>
+<p>Xcode has dozens of commands and keyboard shortcuts to support many different kinds of navigation. You owe it to yourself to spend a while browsing through the <strong>View</strong>, <strong>Find</strong>, and <strong>Navigate</strong> menus to see what’s available. Try holding ⇧, ⌥, and ⇧⌥ to see what hidden commands are lurking in there!</p>
+<p>It would take several blog posts to cover all of the navigation shortcuts, but here some of my favorites:</p>
+<h3>3. Reveal in Project Navigator: ⌘⇧J</h3>
+<p>Opens the left sidebar, shows the Project Navigator, and selects the file you are currently editing. Convenient for seeing where it is in the project, and what its siblings and related files are.</p>
+<h3>4. Show Documentation: ⌥ Click</h3>
+<p>Option-click any method to show a popup with the documentation for that method. If you’re using a trackpad, you can also three-finger tap on the method. The best part: this works with all your own 
+			<span id="crayon-5627c8c02241b701608830" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">/** documentation comments */</span></span>  (like the ones you can create using <a href="https://github.com/onevcat/VVDocumenter-Xcode">VVDocumenter-Xcode</a>).</p>
+<div id="attachment_264" class="wp-caption aligncenter" style="width: 610px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/help-popover.png"><img class="wp-image-264 " src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/help-popover.png" alt="Three-finger tap or Option-click on a method to show its documentation in a popover." width="610" height="186" /></a><p class="wp-caption-text">Three-finger tap or Option-click on a method to show its documentation in a popover.</p></div>
+<h3>5. Open Documentation: ⌥ Double Click</h3>
+<p>If you want to open the full documentation browser for a particular method, Option-double click it. This is particularly useful for some of the core Apple framework methods, such as 
+			<span id="crayon-5627c8c02242c409613113" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">-[UIView isOpaque]</span></span>, since their long Discussion sections don’t appear in the popover mentioned above.</p>
+<h3>6. Open in Other Editor: ⌘⌥,</h3>
+<p>When you are editing a file in the primary editor, this shortcut will open it in the assistant editor. When you are in the assistant editor, it will open the same file in the main editor. This is useful when combined with other shortcuts to open files in various editors. For example, if you are working on a file in the assistant editor, but you want to promote it to the main editor before you open a new file in the assistant editor, this shortcut makes it easy.</p>
+<h3>7. Jump to Definition in… ⌘⌥⌃ Click</h3>
+<p>Like the above command, this one is contextual: whichever editor you are in, it opens a file in the other. However, instead of opening the <em>current file</em> in the other editor, it opens the definition of the symbol you click.</p>
+<h3>8. Better Navigation Through Trackpad Settings</h3>
+<p>OS X trackpad gestures have come a long way since they were introduced. Originally, you swiped with three fingers to navigate: left to go forward, right to go back. Later, this was replaced by a two-finger continuous drag gesture in the opposite direction. This shortcut fits better with the “natural” scroll direction introduced in OS X Lion, but it can be annoying to have to sit through a swipe animation when you want to quickly jump between files.</p>
+<p>Luckily, by twiddling a couple of trackpad settings, you can get the best of both worlds: the pretty, continuous two-finger transitions, and the instantaneous three-finger swipes. Note that they go in opposite directions from each other, but as long as you can keep that straight, you can use them interchangeably. To change these settings, go to <strong>System Preferences</strong> → <strong>Trackpad</strong> → <strong>More Gestures</strong>, and make the following changes:</p>
+<ul>
+<li><strong>Swipe between pages: Swipe with two or three fingers.</strong> Enables three-finger swipes.</li>
+<li><strong>Swipe between full-screen apps: Swipe left or right with four fingers.</strong> Frees up three-finger swipes from having to switch spaces, which you can now do with four fingers.</li>
+<li><strong>Bonus setting</strong>: change <strong>Mission Control</strong> and <strong>App Exposé</strong> each to use <strong>four fingers</strong> (or disable them if you don’t use them). This will allow you to swipe up or down in Xcode to switch between a class’s .h and .m files. The keyboard shortcut equivalents of these are ⌃⌘↑ and ⌃⌘↓. (Are going “up” and “down” the same? For normal .h/.m pairs, yes, but if you have .h, .m, and _Private.h, the shortcuts cycle through them forward and backward.)</li>
+</ul>
+<h3>9. Open Quickly ⌘⇧O</h3>
+<p>Anywhere in Xcode, type ⌘⇧O (as in <em>oh</em>, not <em>zero</em>) to bring up the Open Quickly dialog box. You can type the name of any file or symbol, and it will do a fuzzy match of everything in your project, plus all of Apple’s public headers. It searches file names, methods, functions, properties, and constants. The “fuzzy” part means that, while you have to get the letters in the right order, you can leave some out.</p>
+<p>In the example below, the file I’m looking for is called 
+			<span id="crayon-5627c8c02243f821139934" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">INVEditCreditCardsButtonView.xib</span></span>. I can’t remember the full name, but I know it had something to do with editing cards, and maybe it was a button, so I type “editcardbutton” into Open Quickly, and the first few results are pretty close to what I want:</p>
+<div id="attachment_265" class="wp-caption aligncenter" style="width: 484px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-without-X.png"><img class="wp-image-265" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-without-X.png" alt="Type a few letters to fuzzily match every file, symbol, and property in your project." width="484" height="300" /></a><p class="wp-caption-text">Type a few letters to fuzzily match every file, symbol, and property in your project.</p></div>
+<p>But remember, I wanted the xib. I could press the down arrow key twice, or use the mouse to double click the third result, but there’s an easier way. Since the file extension is taken into account in this dialog box, I can just add an additional “x” to my search in order to highlight the correct file, and then press Return to open it.</p>
+<div id="attachment_266" class="wp-caption aligncenter" style="width: 484px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-with-X.png"><img class="wp-image-266" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Quick-Open-with-X.png" alt="Type the first letter of the file extension to highlight just that file." width="484" height="116" /></a><p class="wp-caption-text">Type the first letter of the file extension to highlight just that file.</p></div>
+<h1></h1>
+<h1>SPICING UP XCODE &#8211; Tricks</h1>
+<p>Here are a few miscellaneous tricks that can greatly speed up your work in Xcode.</p>
+<h3>10. Move the Program Counter</h3>
+<p>When you are stopped on a breakpoint, there is a small green arrow shape that sticks out of the gutter on the left. This represents the program counter, and it points to the instruction that is about to be executed. The cool thing is that you can click and drag the program counter anywhere else in your program! This can be useful if you want to jump over a line without executing it, or perhaps go back and run a line again. With great power comes great ability to crash in new and spectacular ways, but if you’re careful, this can be a great time saver as an alternative to editing and recompiling.</p>
+<div id="attachment_281" class="wp-caption aligncenter" style="width: 551px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Program-Counter-with-arrow.png"><img class="wp-image-281 " src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Program-Counter-with-arrow-1024x630.png" alt="You can click and drag to move the program counter to any line. When you resume execution, it will start wherever you put it. Use this power wisely." width="551" height="339" /></a><p class="wp-caption-text">You can click and drag to move the program counter to any line. When you resume execution, it will start wherever you put it. Use this power wisely.</p></div>
+<h3>11. Preview Assistant Editor</h3>
+<p>If you are using <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITraitSet_ClassReference/">trait collections</a> in iOS 8+ apps, your xibs and storyboards are probably all 600 × 600 pt squares, and it can be hard to visualize how they will look at different sizes. Luckily, the Assistant Editor is here to help.</p>
+<p>Open the Assistant editor (⌘⌥↩). From the <a href="https://developer.apple.com/library/ios/recipes/xcode_help-jump_bar/Recipe.html">Jump Bar</a>, choose Preview.</p>
+<div id="attachment_268" class="wp-caption aligncenter" style="width: 720px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Jump-Bar-Preview.png"><img class="wp-image-268" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Jump-Bar-Preview.png" alt="Pick Preview from the first menu in the Jump Bar to see a preview of your interface at different screen sizes and orientations." width="720" height="450" /></a><p class="wp-caption-text">Pick Preview from the first menu in the Jump Bar to see a preview of your interface at different screen sizes and orientations. (Click to embiggen.)</p></div>
+<p>This will give you a preview pane with a device-specific view of your interface. You can click the <strong>+</strong> button at the bottom to add more screen sizes, allowing you to test your layouts with different widths, heights, and aspect ratios.</p>
+<div id="attachment_271" class="wp-caption aligncenter" style="width: 720px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Preview-Pane-with-Multiple-Devices.png"><img class="wp-image-271" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Preview-Pane-with-Multiple-Devices.png" alt="The Preview pane lets you see your interface on multiple devices sizes and orientations at the same time." width="720" height="450" /></a><p class="wp-caption-text">The Preview pane lets you see your interface on multiple devices sizes and orientations at the same time.</p></div>
+<h3>12. Searchable Menus</h3>
+<p>On a Mac, you can open a popup menu and type the first few letters of an item to jump to that item. You’ve probably used it to find your state or year of birth on Web forms. However, Xcode menus go one better. Most menus in Xcode are fully searchable. Just start typing, and a search field will appear, filtering the menu down by the characters you’ve typed. And the best part is that searchable menus employ the same fuzzy matching as the Open Quickly dialog.</p>
+<p>A great use of searchable menus is in the Show Document Items menu, which you can activate using ⌃6. This menu, which appears from the Jump Bar, shows all the classes, properties, and methods in the current file. It also shows dividing lines and section markers that you’ve inserted manually using 
+			<span id="crayon-5627c8c022455299486107" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">#pragma mark - Section Name</span></span>.</p>
+<div id="attachment_273" class="wp-caption aligncenter" style="width: 287px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Full.png"><img class="size-medium wp-image-273" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Full-287x300.png" alt="Press ⌃6 to show a list of all classes, methods, and properties in your file." width="287" height="300" /></a><p class="wp-caption-text">Press ⌃6 to show a list of all classes, methods, and properties in your file.</p></div>
+<p>Just start typing, and you can quickly filter this menu to select the item you want:</p>
+<div id="attachment_274" class="wp-caption aligncenter" style="width: 300px"><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Filtered.png"><img class="size-medium wp-image-274" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2015/02/Searchable-Menu-Filtered-300x99.png" alt="Many menus in Xcode allow typing to filter their contents." width="300" height="99" /></a><p class="wp-caption-text">Many menus in Xcode allow typing to filter their contents.</p></div>
+<h3>13. Alcatraz</h3>
+<p><a href="http://alcatraz.io">Alcatraz</a> is a package manager for Xcode. It lets you browse and easily install plugins, templates, and color schemes. I mentioned Alcatraz in the talk, but I wanted to use the extra space here to list some of my favorite Xcode plugins.</p>
+<ul>
+<li><a href="https://github.com/kattrali/deriveddata-exterminator"><strong>DerivedData Exterminator</strong></a><br />
+As your project grows, Xcode seems to lose its ability to keep track of all the files and sub-projects that make up your app, and various build products seem to get stale and need to be blown away. This plugin puts a button in the Xcode toolbar that makes it a snap.</li>
+<li><strong><a href="https://github.com/FuzzyAutocomplete/FuzzyAutocompletePlugin">FuzzyAutocomplete</a><br />
+</strong>This plugin supercharges Xcode’s CodeSense autocomplete system by adding fuzzy matching, just like you can already use in Open Quickly and searchable menus. It’s particularly good for Objective-C code, which often has many elements with long, similar names that differ only near the end. With FuzzyAutocomplete, if you’re trying to type a name like 
+			<span id="crayon-5627c8c022466187571629" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">UIViewAutoresizingFlexibleTopMargin</span></span>, you can just type, for example, 
+			<span id="crayon-5627c8c022474435928643" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">flextop</span></span>. FuzzyAutocomplete takes care of the rest. I <a href="http://www.openradar.me/19964390">filed a radar</a> for Apple to incorporate this into Xcode, because it should work like this out of the box.</li>
+<li><a href="https://github.com/johnno1962/GitDiff"><strong>GitDiff</strong></a><br />
+Xcode’s Comparison view is useful for seeing which lines have Git status, but it’s also cumbersome (it takes up half your screen). GitDiff provides a lightweight alternative: small colored bars that live in the gutter alongside line numbers and breakpoints. When I’m using it, I have a clear and unobtrusive reminder of which lines I’ve edited, which can help me to keep track of what I’m currently working on.</li>
+<li><a href="https://github.com/stefanceriu/SCXcodeSwitchExpander"><strong>SCXcodeSwitchExpander</strong></a><br />
+Type a 
+			<span id="crayon-5627c8c022483086279303" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">switch</span></span> statement, and this plugin will write all the 
+			<span id="crayon-5627c8c022492420192602" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">case</span></span>s for you, based on the values defined in your enumeration. Another one that should be built in.</li>
+<li><a href="https://github.com/onevcat/VVDocumenter-Xcode"><strong>VVDocumenter-Xcode</strong></a><br />
+Type 
+			<span id="crayon-5627c8c0224a4478587518" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-monaco" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important;"><span class="crayon-pre crayon-code" style="font-size: 12px !important; line-height: 15px !important;font-size: 12px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;">///</span></span> above any method or property, and this plugin will transform it into a formatted documentation comment, complete with placeholder parameters for the arguments and return value. Best of all, these comments work with the ⌥ Click documentation popover trick described above.</li>
+<li><a href="https://github.com/XVimProject/XVim"><strong>XVim</strong></a><br />
+Vim shortcuts and editing modes in Xcode. Useful if you like pain. (Can you tell I’m <a href="http://macromates.com">not a Vim user</a>? But it’s super powerful if you already know the shortcuts.)</li>
+</ul>
+<h1>What Are Your Favorites?</h1>
+<p>I hope these tips and tricks have been helpful. There is so much more depth and breadth to Xcode than the small amount I was able to cover here. What are your favorite tips and tricks? Post them in the comments below!</p>
+<p>&nbsp;</p>
+<p><strong>Interested in joining the Raizlabs team making great software? <a href="http://www.raizlabs.com/company/jobs/?utm_source=blog&amp;utm_medium=devblog&amp;utm_campaign=ps">We&#8217;re hiring developers in Boston and SF</a>.</strong></p>
+                            </div><!-- .entry-content -->
+
+        </article><!-- #post-256 -->
+
+        
+
+    <div id="comments" class="comments-area">
+
+    
+            <h3 class="comments-title">
+            6 thoughts on &ldquo;Spicing Up Xcode&rdquo;        </h3>
+
+        <ol class="commentlist">
+                <li class="comment even thread-even depth-1 group" id="comment-11113">
+                <div class="entry-meta">
+                    <img alt='' src='//2.gravatar.com/avatar/eacfbb9e5bb4a4432bd629a8747f5d78?s=50&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/eacfbb9e5bb4a4432bd629a8747f5d78?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    <a href='http://scotteg.com' rel='external nofollow' class='url'>Scott Gardner</a> &nbsp;
+                    <time pubdate datetime="2015-03-20T21:24:24+00:00">
+                    March 20, 2015 at 9:24 pm                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11113#respond' onclick='return addComment.moveForm( "comment-11113", "11113", "respond", "256" )' aria-label='Reply to Scott Gardner'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>Thanks! I picked up a couple of great new tips! One of my most used shortcuts is to command + option + shift + click on a target to open the destination picker. bit.ly/XcodeDestinationPicker Then either click on your desired destination or use the arrow keys (command + arrow keys to switch windows) to navigate around and press enter to select a destination. Now I gotta get me some of those peppers!</p>
+            </div>
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1 group" id="comment-11117">
+                <div class="entry-meta">
+                    <img alt='' src='//0.gravatar.com/avatar/9746d812624d62762a39093dc2adcc53?s=50&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9746d812624d62762a39093dc2adcc53?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    elmotron &nbsp;
+                    <time pubdate datetime="2015-03-21T07:58:20+00:00">
+                    March 21, 2015 at 7:58 am                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11117#respond' onclick='return addComment.moveForm( "comment-11117", "11117", "respond", "256" )' aria-label='Reply to elmotron'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>Concerning navigation, one essential thing Xcode is missing though: jumping to previous cursor positions _in_the_same_file_. Scenario: edit something, need to add an import on top, then go exactly where you were. Missing that is show stopper for me.</p>
+            </div>
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1 group" id="comment-11124">
+                <div class="entry-meta">
+                    <img alt='' src='//0.gravatar.com/avatar/c85028af274331beade5f06525d8cb06?s=50&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c85028af274331beade5f06525d8cb06?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    <a href='http://zeveisenberg.com' rel='external nofollow' class='url'>Zev Eisenberg</a> &nbsp;
+                    <time pubdate datetime="2015-03-23T23:14:30+00:00">
+                    March 23, 2015 at 11:14 pm                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11124#respond' onclick='return addComment.moveForm( "comment-11124", "11124", "respond", "256" )' aria-label='Reply to Zev Eisenberg'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>@Scott Gardner: great tip! I love the destination picker. It feels like it would be too fiddly at first, but it’s an excellent way to quickly throw a file into a new tab or screen.</p>
+<p>@elmotron I miss it too. I feel like I can sometimes get a “back” navigation action to go back to where I was editing, but I just tried and couldn’t get it to work. Here’s what I do as a workaround: if I’m somewhere in a file and I know I need to jump to the top for an import, I write some garbage or leave a line unfinished, so that I get an inline compiler error. After I make my edit at the top of the file, I use ⌘&#8217; (Command-apostrophe) to Jump to Next Issue, which brings me back to the line of code that I broke.</p>
+<p>Additionally, if you have GitDiff installed via Alcatraz, you can see little marks in the gutter on lines that are modified since the last commit. Not useful in a new file, or in a file with lots of changes, but sometimes it can be just the trick for getting back.</p>
+<p>And finally, you may want to check out <a href="https://github.com/stefanceriu/SCXcodeMiniMap" rel="nofollow">https://github.com/stefanceriu/SCXcodeMiniMap</a> &#8211; I don’t use it myself, but if you like Sublime Text’s map view, this may be a good way to find your place in a long file.</p>
+            </div>
+    <ul class="children">
+    <li class="comment odd alt depth-2 group" id="comment-11125">
+                <div class="entry-meta">
+                    <img alt='' src='//0.gravatar.com/avatar/349b8792ada8bab5738c866f2e799d0b?s=50&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/349b8792ada8bab5738c866f2e799d0b?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    <a href='http://zoreslav.com' rel='external nofollow' class='url'>Zoreslav</a> &nbsp;
+                    <time pubdate datetime="2015-03-24T15:57:36+00:00">
+                    March 24, 2015 at 3:57 pm                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11125#respond' onclick='return addComment.moveForm( "comment-11125", "11125", "respond", "256" )' aria-label='Reply to Zoreslav'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>You can also use ^@ to set a mark and then ^X^X to go back to it when needed (only moves cursor, cmd-shift-L to scroll to cursor).</p>
+<p>Someone should write an extension for this stuff.</p>
+            </div>
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1 group" id="comment-11128">
+                <div class="entry-meta">
+                    <img alt='' src='//0.gravatar.com/avatar/65c482b35360ec3d7738305d3f9ef5f9?s=50&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/65c482b35360ec3d7738305d3f9ef5f9?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    pablo &nbsp;
+                    <time pubdate datetime="2015-03-25T08:49:54+00:00">
+                    March 25, 2015 at 8:49 am                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11128#respond' onclick='return addComment.moveForm( "comment-11128", "11128", "respond", "256" )' aria-label='Reply to pablo'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>this is great! tho I think u are missing one of the most important things to shortcut in xcode, the debugger!. I changed play, step over, step in and step out action to ⌘1, ⌘2, ⌘3, ⌘4 and debugging is much easier (notice that u will loose the old functionlaity of those combinations, but I didn&#8217;t use them as much anyway)</p>
+            </div>
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1 group" id="comment-11645">
+                <div class="entry-meta">
+                    <img alt='' src='//1.gravatar.com/avatar/404d68f8c461ce21db7035288473a319?s=50&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/404d68f8c461ce21db7035288473a319?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    <a href='http://sanket.firodiya.com' rel='external nofollow' class='url'>Sanket</a> &nbsp;
+                    <time pubdate datetime="2015-09-04T00:58:29+00:00">
+                    September 4, 2015 at 12:58 am                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/?replytocom=11645#respond' onclick='return addComment.moveForm( "comment-11645", "11645", "respond", "256" )' aria-label='Reply to Sanket'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>This is great, specially #10 and #12.<br />
+Here&#8217;s a list of my favorite plugins btw &#8211;   <a href="https://github.com/sanketfirodiya/awesome-ios-plugins" rel="nofollow">https://github.com/sanketfirodiya/awesome-ios-plugins</a></p>
+            </div>
+    </li><!-- #comment-## -->
+        </ol><!-- .commentlist -->
+
+        
+    
+    
+    						<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/dev/2015/03/spicing-up-xcode/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="//www.raizlabs.com/dev/wp-comments-post.php?wpe-comment-post=raizlabs" method="post" id="commentform" class="comment-form">
+																										<p class="comment-form-author">
+                            <label for="author">Name</label>
+                            <input id="author" class="req" name="author" type="text" value="" size="30" /></p>
+<p class="comment-form-email">
+                            <label for="email">Email</label>
+                            <input id="email" class="req" name="email" type="text" value="" size="30" /></p>
+<p class="comment-form-url">
+                            <label for="url">Website</label>
+                            <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment">
+                                        <label for="comment">Comment</label>
+                                        <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						
+						<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='256' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ad7cd18ec0" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="237"/></p>					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area -->
+
+    
+    </section><!-- #content -->
+
+        <div class="col-sidebar" role="complementary">
+            <div id="text-2" class="widget widget_text">			<div class="textwidget"><a href="/dev/"><img border="0" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/04/raiz_exception.png" height="128" width="128"></a><p>
+RaizException is the developer blog for 
+ <a href="http://www.raizlabs.com">Raizlabs,</a> a company dedicated to improving the world through great software. Follow us on <a href="http://www.twitter.com/raizlabs">twitter</a> or learn about our <a href="http://www.raizlabs.com/company/jobs/">open jobs</a>.</div>
+		</div><div id="search-2" class="widget widget_search">    <form method="get" id="searchform" action="//www.raizlabs.com/dev/" role="search">
+        <label for="s">Search</label>
+        <input type="text" class="field" id="s" name="s" value="" />
+    </form>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/08/advanced-ios-typography/">iOS Typography: Stop Saying “No” to Designers</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/06/protocol-extensions-swift-2-0/">Protocol Extensions in Swift 2.0</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/">Spicing Up Xcode</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/02/how-to-script-os-x-keyboard-shortcuts/">How to Script OS X Keyboard Shortcuts</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/02/kvo-and-data-binding-in-ios-made-simple/">KVO and Data Binding in iOS Made Simple</a>
+						</li>
+				</ul>
+		</div><div id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href='http://www.raizlabs.com/dev/2015/08/'>August 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/06/'>June 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/03/'>March 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/02/'>February 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/01/'>January 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/12/'>December 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/03/'>March 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/02/'>February 2014</a></li>
+		</ul>
+</div><div id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://www.raizlabs.com/dev/category/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.raizlabs.com/dev/category/ios/" >iOS</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="http://www.raizlabs.com/dev/category/mac/" >Mac</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.raizlabs.com/dev/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+</div><div id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a rel="nofollow" href="http://www.raizlabs.com/dev/wp-login.php">Log in</a></li>
+			<li><a href="http://www.raizlabs.com/dev/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.raizlabs.com/dev/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div>        </div><!-- #secondary .widget-area -->
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div><!-- #page-wrapper -->
+
+
+<footer id="footer" role="contentinfo">
+    <div class="container">
+
+        <div class="footer_col_1">
+            <h3>Raizlabs</h3>
+                    </div>
+
+        <div class="footer_col_2">
+            <h3>Recently at RaizException &#8211; Raizlabs developer blog</h3>
+
+            <ul class="recent_posts">
+            <li><a href="http://www.raizlabs.com/dev/2015/08/advanced-ios-typography/">iOS Typography: Stop Saying “No” to Designers</a><br />
+                August 25, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/06/protocol-extensions-swift-2-0/">Protocol Extensions in Swift 2.0</a><br />
+                June 30, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/">Spicing Up Xcode</a><br />
+                March 13, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/02/how-to-script-os-x-keyboard-shortcuts/">How to Script OS X Keyboard Shortcuts</a><br />
+                February 10, 2015</li>
+
+    </ul>        </div>
+
+        <div class="footer_col_3">
+            <p class="footer_address">
+                <span>Boston, MA - HQ</span><br />
+                50 Milk Street, 19th Floor<br />
+                Boston, MA 02109<br />
+                <a href="tel:1-617-383-9007">(617) 383.9007</a>
+            </p>
+            <p class="footer_address">
+                <span>San Francisco Area</span><br />
+                360 22nd Street, Suite 501<br />
+                Oakland, CA 94612<br />
+                <a href="tel:1-415-935-3390">(415) 935.3390</a>
+            </p>
+
+                    </div>
+
+        <div class="clear"></div>
+        <p class="copyright">
+            <span>© 2015 Raizlabs</span><br>
+            <span>All rights reserved.</span>
+        </p>
+    </div><!-- .container -->
+</footer><!-- #footer -->
+
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/plugins/akismet/_inc/form.js?ver=3.1.5'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-includes/js/comment-reply.min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/plugins.js?ver=1.0'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/scripts.js?ver=1.1'></script>
+
+</body>
+</html>

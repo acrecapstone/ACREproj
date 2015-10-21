@@ -1,0 +1,810 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>Comparing master@{1day}...master · acrecapstone/ACREproject</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="acrecapstone/ACREproject" name="twitter:title" /><meta content="Contribute to ACREproject development by creating an account on GitHub." name="twitter:description" /><meta content="https://avatars0.githubusercontent.com/u/15201730?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars0.githubusercontent.com/u/15201730?v=3&amp;s=400" property="og:image" /><meta content="acrecapstone/ACREproject" property="og:title" /><meta content="https://github.com/acrecapstone/ACREproject" property="og:url" /><meta content="Contribute to ACREproject development by creating an account on GitHub." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTUyMDE3MzA6OWIxODNmZDk3OTM1OTEyNTJkODUyYWRkNmMxMjc3ODg6OThlNTZmMjNiYmFlZmRmODdkYTAzZWM3MjhkNWFhNjdhZDA3OTM1Y2JmNjJiNzNmODdhYzBkMmIzNmM1ZGU2Mw==--3a8ee04a08630f41e78a55d63dbd8052a87bb6a4">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="/acrecapstone/ACREproject/compare/master%40%7B1day%7D...master" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="82A0C302:45CA:1C512D4F:562541A9" name="octolytics-dimension-request_id" /><meta content="15201730" name="octolytics-actor-id" /><meta content="acrecapstone" name="octolytics-actor-login" /><meta content="53a526a8d8bbbe2f7a0d6f4d5022dee846e531fefbbb5d88b0e12730b7690bde" name="octolytics-actor-hash" />
+
+<meta content="Rails, view, compare#show" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+    <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+
+
+
+
+    <meta name="is-dotcom" content="true">
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="acrecapstone">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="8959ed46a90c0e2f6aa4406572b710705f886440" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-c2e8cb26e0d382b2b36fea72c80d98add1cc31d164f4534476f22569fdc04f31.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-981b551d648e2f2eee93509d6b6aad8a7b204a7202e2c617865bf1ec36e8f811.css" media="all" rel="stylesheet" />
+    
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="c7f50b528876ce6e0081e6bebc1509b3">
+
+      
+  <meta name="description" content="Contribute to ACREproject development by creating an account on GitHub.">
+  <meta name="go-import" content="github.com/acrecapstone/ACREproject git https://github.com/acrecapstone/ACREproject.git">
+
+  <meta content="15201730" name="octolytics-dimension-user_id" /><meta content="acrecapstone" name="octolytics-dimension-user_login" /><meta content="44557322" name="octolytics-dimension-repository_id" /><meta content="acrecapstone/ACREproject" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="44557322" name="octolytics-dimension-repository_network_root_id" /><meta content="acrecapstone/ACREproject" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/acrecapstone/ACREproject/commits/master.atom" rel="alternate" title="Recent Commits to ACREproject:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_in   env-production macintosh vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/acrecapstone/ACREproject/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content"
+        data-channel="notification-changed:acrecapstone"
+        data-url="/notifications/header">
+      <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+          <span class="mail-status all-read"></span>
+          <span class="octicon octicon-bell"></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="acrecapstone/ACREproject">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/acrecapstone/ACREproject/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+    <a class="dropdown-item" href="/acrecapstone/ACREproject/settings/collaboration" data-ga-click="Header, create new collaborator">
+      New collaborator
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-s js-menu-target" href="/acrecapstone"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@acrecapstone" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/15201730?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">acrecapstone</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/acrecapstone" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="BxQCKXlSnX7ioIzEQoskjMMJjZKvNdDYo6KMxRqZR4jSE/uYAtfTwFQFrktyAYzrFsB0WQ7+JxiRt3wUBRTSag==" /></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+
+      <div class="container">
+
+        <div class="clearfix">
+          
+
+<ul class="pagehead-actions">
+
+  <li>
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="LgfDYNAkVe0m2G8Xh1ZyTQf3x3YEtr/VY4ECDBteeQV5/YaG+sgPCTC8YLe5sR0WqBc/Tgyj8J7LFGI/WCuckw==" /></div>    <input id="repository_id" name="repository_id" type="hidden" value="44557322" />
+
+      <div class="select-menu js-menu-container js-select-menu">
+        <a href="/acrecapstone/ACREproject/subscription"
+          class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+          data-ga-click="Repository, click Watch settings, action:compare#show">
+          <span class="js-select-button">
+            <span class="octicon octicon-eye"></span>
+            Unwatch
+          </span>
+        </a>
+        <a class="social-count js-social-count" href="/acrecapstone/ACREproject/watchers">
+          1
+        </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span class="select-menu-title">Notifications</span>
+              <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+            </div>
+
+            <div class="select-menu-list js-navigation-container" role="menu">
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_included" name="do" type="radio" value="included" />
+                  <span class="select-menu-item-heading">Not watching</span>
+                  <span class="description">Be notified when participating or @mentioned.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Watch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                  <span class="select-menu-item-heading">Watching</span>
+                  <span class="description">Be notified of all conversations.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Unwatch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_ignore" name="do" type="radio" value="ignore" />
+                  <span class="select-menu-item-heading">Ignoring</span>
+                  <span class="description">Never be notified.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-mute"></span>
+                    Stop ignoring
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/unstar" class="js-toggler-form starred js-unstar-button" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="xlvT3hICHJ45tmAenFxbq8kLHWk9G/dIeLkztwVNM3G9LMr/WLh45rK5Tphy7HZdAdiaazLk9rIjq8Vs6Od+ag==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar acrecapstone/ACREproject"
+        data-ga-click="Repository, click unstar button, action:compare#show; text:Unstar">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/acrecapstone/ACREproject/stargazers">
+          0
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/star" class="js-toggler-form unstarred js-star-button" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qX1+6UIF7eqMzvH31AnkxhQpy7o7MsgnxukMUQYAdPnV8xOg5Q3lEs+69vHXVJD4hPxuDo8RvzvL+qIOUyyvLQ==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star acrecapstone/ACREproject"
+        data-ga-click="Repository, click star button, action:compare#show; text:Star">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/acrecapstone/ACREproject/stargazers">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/fork" class="btn-with-count" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="gVbt4oUIY5ivZxKV49akfZfiyp56ZMfnhYpXxN1C8Rtt+9wXJ0W+zWg+S0WuIj5IIe+6ylrK9dNRog3U1Wk6VQ==" /></div>
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:compare#show; text:Fork"
+                title="Fork your own copy of acrecapstone/ACREproject to your account"
+                aria-label="Fork your own copy of acrecapstone/ACREproject to your account">
+              <span class="octicon octicon-repo-forked"></span>
+              Fork
+            </button>
+</form>
+    <a href="/acrecapstone/ACREproject/network" class="social-count">
+      0
+    </a>
+  </li>
+</ul>
+
+          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="mega-octicon octicon-repo"></span>
+  <span class="author"><a href="/acrecapstone" class="url fn" itemprop="url" rel="author"><span itemprop="title">acrecapstone</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/acrecapstone/ACREproject" data-pjax="#js-repo-pjax-container">ACREproject</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline ">
+        <div class="repository-sidebar clearfix">
+          
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/acrecapstone/ACREproject/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/acrecapstone/ACREproject" aria-label="Code" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /acrecapstone/ACREproject">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/acrecapstone/ACREproject/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /acrecapstone/ACREproject/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="/acrecapstone/ACREproject/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /acrecapstone/ACREproject/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Wiki">
+        <a href="/acrecapstone/ACREproject/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /acrecapstone/ACREproject/wiki">
+          <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/acrecapstone/ACREproject/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /acrecapstone/ACREproject/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/acrecapstone/ACREproject/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /acrecapstone/ACREproject/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Settings">
+        <a href="/acrecapstone/ACREproject/settings" aria-label="Settings" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_settings repo_branch_settings hooks /acrecapstone/ACREproject/settings">
+          <span class="octicon octicon-gear"></span> <span class="full-word">Settings</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+</nav>
+
+            <div class="only-with-full-nav">
+                
+<div class="js-clone-url clone-url open"
+  data-protocol-type="http">
+  <h3 class="text-small text-muted"><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/acrecapstone/ACREproject.git" readonly="readonly" aria-label="HTTPS clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="ssh">
+  <h3 class="text-small text-muted"><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="git@github.com:acrecapstone/ACREproject.git" readonly="readonly" aria-label="SSH clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="subversion">
+  <h3 class="text-small text-muted"><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/acrecapstone/ACREproject" readonly="readonly" aria-label="Subversion checkout URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="clone-options text-small text-muted">You can clone with
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="OQDFyMViA10DTSUtLBqFMPREn5Y6eBa595BAJoBNoG2hKegIDU1GxMfYgAtElc+HIrAVRj+LfovkVyz1kELdRA==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="+5/RLok/8Mq3d0SwXgtns0UogxzohFVJDkUg2q997aYH9L+7lFWOcy0B8Efeyy/Ta7n4pA8MCnAWkMKDf3CwfQ==" /></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="A1Q84PPUcHlU/tk1kpVVp3w3ql6RriMeTi+fg6Zsr4aXfYY4xx7aGIYmbjevpuQQPGHI0pVDm5zMJbKPLQBI0g==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</div>
+  <a href="https://mac.github.com" class="btn btn-sm sidebar-button" title="Save acrecapstone/ACREproject to your computer and use it in GitHub Desktop." aria-label="Save acrecapstone/ACREproject to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-desktop-download"></span>
+    Clone in Desktop
+  </a>
+
+              <a href="/acrecapstone/ACREproject/archive/master.zip"
+                 class="btn btn-sm sidebar-button"
+                 aria-label="Download the contents of acrecapstone/ACREproject as a zip file"
+                 title="Download the contents of acrecapstone/ACREproject as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div>
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+          
+<div class="gh-header gh-header-new-pr">
+  <h1 class="gh-header-title">Compare changes</h1>
+  <div class="gh-header-meta">
+    Compare changes across branches, commits, tags, and more below. If you need to, you can also <a href="#" class="js-toggle-range-editor-cross-repo">compare across forks</a>.
+  </div>
+</div>
+
+
+
+<div class="range-editor text-muted js-range-editor ">
+  <span class="octicon octicon-git-compare range-editor-icon"></span>
+  <div class="range-cross-repo-pair">
+    <div class="select-menu js-menu-container js-select-menu fork-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target" type="button" aria-label="Choose a Base Repository" aria-haspopup="true">
+    <i>base fork:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="base: acrecapstone/ACREproject">acrecapstone/ACREproject</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a Base Repository</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="pull-repo-filter-field-base" class="js-filterable-field js-navigation-enable" placeholder="Filter repos" aria-label="Type or choose a repository">
+        </div>
+      </div>
+
+      <div class="select-menu-list">
+        <div data-filterable-for="pull-repo-filter-field-base" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/acrecapstone:master@%7B1day%7D...master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">
+                acrecapstone/ACREproject
+              </div>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    
+<div class="select-menu js-menu-container js-select-menu commitish-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target branch" type="button" aria-label="Choose a base branch" aria-haspopup="true">
+    <i>base:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="base: master@{1day}">master@{1day}</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container"
+    data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a base branch</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="commitish-filter-field-f72b7f10-7695-11e5-8f23-3f5caac64334" class="js-filterable-field js-navigation-enable" placeholder="Branch, tag, commit, or history marker" aria-label="Type or choose a branch, tag, commit, or history marker">
+        </div>
+      </div>
+
+      <div class="select-menu-list" data-pjax>
+        <div data-filterable-for="commitish-filter-field-f72b7f10-7695-11e5-8f23-3f5caac64334" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master...master" class="select-menu-item js-navigation-item js-navigation-open " role="menuitem" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">master</div>
+            </a>
+        </div>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/compare/master@%7B1day%7D...master" class="js-commitish-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input type="hidden" name="new_compare_type" value="base">
+          <div class="select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form">
+            <span class="octicon octicon-history select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="js-new-item-name"></span>
+            </div>
+          </div>
+</form>
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <span class="dots">...</span>
+
+  <div class="range-cross-repo-pair">
+    <div class="select-menu js-menu-container js-select-menu fork-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target" type="button" aria-label="Choose a Head Repository" aria-haspopup="true">
+    <i>head fork:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="head: acrecapstone/ACREproject">acrecapstone/ACREproject</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a Head Repository</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="pull-repo-filter-field-head" class="js-filterable-field js-navigation-enable" placeholder="Filter repos" aria-label="Type or choose a repository">
+        </div>
+      </div>
+
+      <div class="select-menu-list">
+        <div data-filterable-for="pull-repo-filter-field-head" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master@%7B1day%7D...acrecapstone:master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">
+                acrecapstone/ACREproject
+              </div>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    
+<div class="select-menu js-menu-container js-select-menu commitish-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target branch" type="button" aria-label="Choose a head branch" aria-haspopup="true">
+    <i>compare:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="compare: master">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container"
+    data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a head branch</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="commitish-filter-field-f72babca-7695-11e5-8eb7-428413ae5886" class="js-filterable-field js-navigation-enable" placeholder="Branch, tag, commit, or history marker" aria-label="Type or choose a branch, tag, commit, or history marker">
+        </div>
+      </div>
+
+      <div class="select-menu-list" data-pjax>
+        <div data-filterable-for="commitish-filter-field-f72babca-7695-11e5-8eb7-428413ae5886" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master@%7B1day%7D...master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">master</div>
+            </a>
+        </div>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/compare/master@%7B1day%7D...master" class="js-commitish-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input type="hidden" name="new_compare_type" value="head">
+          <div class="select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form">
+            <span class="octicon octicon-history select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="js-new-item-name"></span>
+            </div>
+          </div>
+</form>
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+
+<div class="compare-pr-placeholder">
+  <button class="btn primary left" type="button" disabled data-ga-click="Repository, go to new pull request form, location:compare page; text:Create pull request">
+    <span class="octicon octicon-git-pull-request"></span>
+    Create pull request
+  </button>
+  <a class="help-link right tooltipped tooltipped-w is-jump-link"
+     href="https://help.github.com/articles/using-pull-requests"
+     target="_blank"
+     aria-label="Guide: Using pull requests">
+     <span class="octicon octicon-question"></span>
+  </a>
+  <p>
+    Choose different branches or forks above to discuss and review changes.
+  </p>
+</div>
+
+<div class="blankslate">
+  <div class="context-loader large-format-loader">
+  <p><img alt="" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" /></p>
+  <p>Loading…</p>
+</div>
+
+
+  <h3>There isn’t anything to compare.</h3>
+  <p>We couldn’t figure out how to compare these references, do they point to valid commits?</p>
+  <div class="sample-comparisons">
+    <ul class="comparison-list">
+  <li class="title">Example comparisons</li>
+  <li>
+    <span class="octicon octicon-history"></span>
+    <a href="/acrecapstone/ACREproject/compare/master%40%7B1day%7D...master" class="css-truncate css-truncate-target" data-pjax>
+      master@{1day}...master
+    </a>
+    <em>24 hours ago</em>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+  </div>
+
+
+    </div>
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.09860s from github-fe142-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-080f1c155a28f5a4315d4a6862aeafb7e27bca0a74db6f7ae9e0048e321369d1.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-ac033f0062bd3f47c468d3da839d615dff91cfcf0e416ea0a0099fbcd4483aba.js"></script>
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  </body>
+</html>
+

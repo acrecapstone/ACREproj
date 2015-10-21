@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>SQLite Download Page</title>
+<style type="text/css">
+body {
+    margin: auto;
+    font-family: Verdana, sans-serif;
+    padding: 8px 1%;
+}
+
+a { color: #044a64 }
+a:visited { color: #734559 }
+
+.logo { position:absolute; margin:3px; }
+.tagline {
+  float:right;
+  text-align:right;
+  font-style:italic;
+  width:300px;
+  margin:12px;
+  margin-top:58px;
+}
+
+.menubar {
+  clear: both;
+  border-radius: 8px;
+  background: #044a64;
+  padding: 0px;
+  margin: 0px;
+  cell-spacing: 0px;
+}    
+.toolbar {
+  text-align: center;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0px 8px;
+}
+.toolbar a { color: white; text-decoration: none; padding: 6px 12px; }
+.toolbar a:visited { color: white; }
+.toolbar a:hover { color: #044a64; background: white; }
+
+.content    { margin: 5%; }
+.content dt { font-weight:bold; }
+.content dd { margin-bottom: 25px; margin-left:20%; }
+.content ul { padding:0px; padding-left: 15px; margin:0px; }
+
+/* Things for "fancyformat" documents start here. */
+.fancy img+p {font-style:italic}
+.fancy .codeblock i { color: darkblue; }
+.fancy h1,.fancy h2,.fancy h3,.fancy h4 {font-weight:normal;color:#044a64}
+.fancy h2 { margin-left: 10px }
+.fancy h3 { margin-left: 20px }
+.fancy h4 { margin-left: 30px }
+.fancy th {white-space:nowrap;text-align:left;border-bottom:solid 1px #444}
+.fancy th, .fancy td {padding: 0.2em 1ex; vertical-align:top}
+.fancy #toc a        { color: darkblue ; text-decoration: none }
+.fancy .todo         { color: #AA3333 ; font-style : italic }
+.fancy .todo:before  { content: 'TODO:' }
+.fancy p.todo        { border: solid #AA3333 1px; padding: 1ex }
+.fancy img { display:block; }
+.fancy :link:hover, .fancy :visited:hover { background: wheat }
+.fancy p,.fancy ul,.fancy ol,.fancy dl { margin: 1em 5ex }
+.fancy li p { margin: 1em 0 }
+/* End of "fancyformat" specific rules. */
+
+.yyterm {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 11px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+</style>
+  
+</head>
+<body>
+<div><!-- container div to satisfy validator -->
+
+<a href="index.html">
+<img class="logo" src="images/sqlite370_banner.gif" alt="SQLite Logo"
+ border="0"></a>
+<div><!-- IE hack to prevent disappearing logo--></div>
+<div class="tagline">Small. Fast. Reliable.<br>Choose any three.</div>
+
+<table width=100% class="menubar"><tr>
+  <td width=100%>
+  <div class="toolbar">
+    <a href="about.html">About</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="docs.html">Documentation</a>
+    <a href="download.html">Download</a>
+    <a href="copyright.html">License</a>
+    <a href="news.html">News</a>
+    <a href="support.html">Support</a>
+  </div>
+<script>
+  gMsg = "Search SQLite Docs..."
+  function entersearch() {
+    var q = document.getElementById("q");
+    if( q.value == gMsg ) { q.value = "" }
+    q.style.color = "black"
+    q.style.fontStyle = "normal"
+  }
+  function leavesearch() {
+    var q = document.getElementById("q");
+    if( q.value == "" ) { 
+      q.value = gMsg
+      q.style.color = "#044a64"
+      q.style.fontStyle = "italic"
+    }
+  }
+  function hideorshow(btn,obj){
+    var x = document.getElementById(obj);
+    var b = document.getElementById(btn);
+    if( x.style.display!='none' ){
+      x.style.display = 'none';
+      b.innerHTML='show';
+    }else{
+      x.style.display = '';
+      b.innerHTML='hide';
+    }
+    return false;
+  }
+</script>
+<td>
+    <div style="padding:0 1em 0px 0;white-space:nowrap">
+    <form name=f method="GET" action="https://www.sqlite.org/search">
+      <input id=q name=q type=text
+       onfocus="entersearch()" onblur="leavesearch()" style="width:24ex;padding:1px 1ex; border:solid white 1px; font-size:0.9em ; font-style:italic;color:#044a64;" value="Search SQLite Docs...">
+      <input type=submit value="Go" style="border:solid white 1px;background-color:#044a64;color:white;font-size:0.9em;padding:0 1ex">
+    </form>
+    </div>
+  </table>
+
+<div class=startsearch></div>
+  
+
+
+<h2>SQLite Download Page</h2>
+<table width="100%" cellpadding="5" cellspacing="0">
+
+<tr><td colspan="4"><b>Source Code</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a1' href='hp1.html'>sqlite-amalgamation-3090100.zip</a><br>(1.75 MiB)</td>
+<td width="5"></td>
+<td valign="top">C source code as an <a href="amalgamation.html">amalgamation</a>, version 3.9.1.<br>(sha1: 3113a7656a25b21d6368af75592b57a7c9edf747)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a name="amalgtarball"></a>
+<a id='a2' href='hp1.html'>sqlite-autoconf-3090100.tar.gz</a><br>(2.18 MiB)</td>
+<td width="5"></td>
+<td valign="top">C source code as an <a href="amalgamation.html">amalgamation</a>.  Also includes a "configure" script
+  and <a href="http://www.tcl.tk/doc/tea/">TEA</a> makefiles for the <a href="tclsqlite.html">TCL Interface</a>.<br>(sha1: 6b7d22c24c9695118a2706c8e026fb3c31780a30)</td></tr>
+<tr><td colspan="4"><a name="docco"></a><b>Documentation</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a3' href='hp1.html'>sqlite-doc-3090100.zip</a><br>(5.04 MiB)</td>
+<td width="5"></td>
+<td valign="top">Documentation as a bundle of static HTML files.<br>(sha1: 4546fc4304427621c49b99f71fc938890f1e7a72)</td></tr>
+<tr><td colspan="4"><a name="linux"></a><b>Precompiled Binaries for Linux</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a4' href='hp1.html'>sqlite-shell-linux-x86-3090100.zip</a><br>(401.95 KiB)</td>
+<td width="5"></td>
+<td valign="top">The <a href="cli.html">command-line shell</a> program (version 3.9.1).<br>(sha1: 832000f71a197f49660474ee7b897d78f7c68eb5)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a5' href='hp1.html'>sqlite-analyzer-linux-x86-3090100.zip</a><br>(956.76 KiB)</td>
+<td width="5"></td>
+<td valign="top">A program to analyze how space is allocated inside an SQLite database
+  file (version 3.9.1).<br>(sha1: 30adbb13a00901c6236d75b0d67c958e0aeaece9)</td></tr>
+<tr><td colspan="4"><a name="mac"></a><b>Precompiled Binaries for Mac OS X (x86)</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a6' href='hp1.html'>sqlite-shell-osx-x86-3090100.zip</a><br>(448.89 KiB)</td>
+<td width="5"></td>
+<td valign="top">The <a href="cli.html">command-line shell</a> program (version 3.9.1).<br>(sha1: f37cf1923cb1b4a9f70074c7c486171bb47de696)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a7' href='hp1.html'>sqlite-analyzer-osx-x86-3090100.zip</a><br>(835.34 KiB)</td>
+<td width="5"></td>
+<td valign="top">A program to analyze how space is allocated inside an SQLite database
+  file (version 3.9.1).<br>(sha1: eb3c7f40a6dbfe5954d77b7483b2c8eac77574cb)</td></tr>
+<tr><td colspan="4"><a name="win32"></a><b>Precompiled Binaries for Windows</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a8' href='hp1.html'>sqlite-shell-win32-x86-3090100.zip</a><br>(363.94 KiB)</td>
+<td width="5"></td>
+<td valign="top">The <a href="cli.html">command-line shell</a> program (version 3.9.1).<br>(sha1: 518192c71dc61efd54974067ee06e188dc4e32bf)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a9' href='hp1.html'>sqlite-dll-win32-x86-3090100.zip</a><br>(398.51 KiB)</td>
+<td width="5"></td>
+<td valign="top">32-bit DLL (x86) for SQLite verison 3.9.1.<br>(sha1: 0ed919f31ec393372ebab5533d071e3d151b2c01)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a10' href='hp1.html'>sqlite-analyzer-win32-x86-3090100.zip</a><br>(695.22 KiB)</td>
+<td width="5"></td>
+<td valign="top">A program to analyze how space is allocated inside an SQLite database
+  file (version 3.9.1).<br>(sha1: 4f846fd8251d5cb0f63d7fa169037aa2f3547ee4)</td></tr>
+<tr><td colspan="4"><b>Universal App Platform</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a11' href='hp1.html'>sqlite-uap-3090100.vsix</a><br>(6.77 MiB)</td>
+<td width="5"></td>
+<td valign="top">VSIX package for Universal App Platform development using Visual Studio 2015.<br>(sha1: 93aa8a62a7ffd4fd93eadc9d98629a98262232e9)</td></tr>
+<tr><td colspan="4"><a name="wp8"></a><b>Precompiled Binaries for Windows Phone 8</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a12' href='hp1.html'>sqlite-wp80-winrt-3090100.vsix</a><br>(3.68 MiB)</td>
+<td width="5"></td>
+<td valign="top">A complete VSIX package with an extension SDK and all other components
+  needed to use SQLite for application development with Visual Studio
+  2012 targeting Windows Phone 8.0.<br>(sha1: 55cfbf1623bcd3933d304d842205bb005f84b82f)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a13' href='hp1.html'>sqlite-wp81-winrt-3090100.vsix</a><br>(3.68 MiB)</td>
+<td width="5"></td>
+<td valign="top">A complete VSIX package with an extension SDK and all other components
+  needed to use SQLite for application development with Visual Studio
+  2013 targeting Windows Phone 8.1.<br>(sha1: 4b3a3f3977edc6c7469305b0d93cb2016a908f27)</td></tr>
+<tr><td colspan="4"><a name="winrt"></a><b>Precompiled Binaries for Windows Runtime</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a14' href='hp1.html'>sqlite-winrt-3090100.vsix</a><br>(5.58 MiB)</td>
+<td width="5"></td>
+<td valign="top">A complete VSIX package with an extension SDK and all other components
+  needed to use SQLite for WinRT application development with Visual Studio
+  2012.<br>(sha1: 80d10d946475aff9073fb39be76499e4b762aef8)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a15' href='hp1.html'>sqlite-winrt81-3090100.vsix</a><br>(5.55 MiB)</td>
+<td width="5"></td>
+<td valign="top">A complete VSIX package with an extension SDK and all other components
+  needed to use SQLite for WinRT 8.1 application development with Visual Studio
+  2013.<br>(sha1: 9e2155dcd94a0f4f413ae289627584e0c077e0b6)</td></tr>
+<tr><td colspan="4"><b>Precompiled Binaries for .NET</b></td></tr><tr><td width="10"></td><td valign="top" align="right"><a href="http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki">System.Data.SQLite</a></td><td width="5"></td><td valign="top">
+    Visit the <a href="http://system.data.sqlite.org/">System.Data.SQLite.org
+    </a> website and especially the <a href="http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki">download page</a> for
+    source code and binaries of SQLite for .NET.</td></tr>
+  <tr><td colspan="4"><a name="old"></a><b>Alternative Source Code Formats</b></td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a16' href='hp1.html'>sqlite-src-3090100.zip</a><br>(8.85 MiB)</td>
+<td width="5"></td>
+<td valign="top">Snapshop of the complete (raw) source tree for SQLite version 3.9.1.
+  See <a href="howtocompile.html">How To Compile SQLite</a> for usage details.<br>(sha1: 7711364f78dae9110a7c8b62eba27c37aacb4205)</td></tr>
+<tr><td width="10"></td><td valign="top" align="right"><a id='a17' href='hp1.html'>sqlite-preprocessed-3090100.zip</a><br>(1.88 MiB)</td>
+<td width="5"></td>
+<td valign="top">Preprocessed C sources for SQLite version 3.9.1.<br>(sha1: 5362686fc2d03a651da264a10071461e077222ea)</td></tr>
+
+</table>
+<hr>
+
+<a name="encoding"></a>
+
+<h3>Build Product Names</h3>
+
+<p>
+Build products are named using one of the following templates:
+
+<ol>
+<li> <b>sqlite-</b>product<b>-</b>version<b>.zip</b>
+<li> <b>sqlite-</b>product<b>-</b>version<b>.tar.gz</b>
+<li> <b>sqlite-</b>product<b>-</b>os<b>-</b>cpu<b>-</b>version<b>.zip</b>
+<li> <b>sqlite-</b>product<b>-</b>date<b>.zip</b>
+</ol>
+
+<p>Templates (1) and (2) are used for source-code products.  Template (1) is
+used for generic source-code products and templates (2) is used for source-code
+products that are generally only useful on unix-like platforms.  Template (3)
+is used for precompiled binaries products.  Template (4) is used for
+unofficial pre-release "snapshots" of source code.
+
+<p>The <i>version</i> is encoded so that filenames sort in order of
+increasing version number when viewed using "ls".  For version 3.X.Y the
+filename encoding is 3XXYY00.  For branch version 3.X.Y.Z, the encoding is
+3XXYYZZ.
+
+<p>The <i>date</i> in template (4) is of the form: YYYYMMDDHHMM
+
+<a name="cvs"></a>
+<a name="fossil"></a>
+<a name="srctree"></a>
+
+<h3>Source Code Repositories</h3>
+
+<p>
+The SQLite source code is maintained in three geographically-dispersed
+self-synchronizing
+<a href="http://www.fossil-scm.org/">Fossil</a> repositories that are
+available for anonymous read-only access.  Anyone can 
+view the repository contents and download historical versions
+of individual files or ZIP archives of historical check-ins.
+You can also <a href="getthecode.html#clone">clone the entire repository</a>.</p>
+
+<p>See the <a href="howtocompile.html">How To Compile SQLite</a> page for additional information
+on how to use the raw SQLite source code.
+Note that a recent version of <a href="http://www.tcl.tk/">Tcl</a>
+is required in order to build from the repository sources. 
+The <a href="amalgamation.html">amalgamation</a> source code files
+(the "sqlite3.c" and "sqlite3.h" files) build products and are
+not contained in raw source code tree.</p>
+
+<blockquote>
+<a href="http://www.sqlite.org/cgi/src">http://www.sqlite.org/cgi/src</a> (Dallas)<br>
+<a href="http://www2.sqlite.org/cgi/src">http://www2.sqlite.org/cgi/src</a> (Newark)<br>
+<a href="http://www3.sqlite.org/cgi/src">http://www3.sqlite.org/cgi/src</a> (Fremont)<br>
+</blockquote>
+
+<p>The documentation is maintained in separate
+<a href="http://www.fossil-scm.org/">Fossil</a> repositories located
+at:</p>
+
+<blockquote>
+<a href="http://www.sqlite.org/cgi/docsrc">http://www.sqlite.org/cgi/docsrc</a> (Dallas)<br>
+<a href="http://www2.sqlite.org/cgi/docsrc">http://www2.sqlite.org/cgi/docsrc</a> (Newark)<br>
+<a href="http://www3.sqlite.org/cgi/docsrc">http://www3.sqlite.org/cgi/docsrc</a> (Fremont)<br>
+</blockquote>
+<script type='text/JavaScript'>
+/* <![CDATA[ */
+function adce4d016d6cd(){
+function d391(a,b){document.getElementById(a).href=b;}
+d391('a16','2015/sqlite-src-3090100.zip');
+d391('a7','2015/sqlite-analyzer-osx-x86-3090100.zip');
+d391('a17','2015/sqlite-preprocessed-3090100.zip');
+d391('a8','2015/sqlite-shell-win32-x86-3090100.zip');
+d391('a9','2015/sqlite-dll-win32-x86-3090100.zip');
+d391('a1','2015/sqlite-amalgamation-3090100.zip');
+d391('a10','2015/sqlite-analyzer-win32-x86-3090100.zip');
+d391('a2','2015/sqlite-autoconf-3090100.tar.gz');
+d391('a11','2015/sqlite-uap-3090100.vsix');
+d391('a3','2015/sqlite-doc-3090100.zip');
+d391('a12','2015/sqlite-wp80-winrt-3090100.vsix');
+d391('a13','2015/sqlite-wp81-winrt-3090100.vsix');
+d391('a4','2015/sqlite-shell-linux-x86-3090100.zip');
+d391('a14','2015/sqlite-winrt-3090100.vsix');
+d391('a5','2015/sqlite-analyzer-linux-x86-3090100.zip');
+d391('a15','2015/sqlite-winrt81-3090100.vsix');
+d391('a6','2015/sqlite-shell-osx-x86-3090100.zip');
+}
+setTimeout('adce4d016d6cd();',10);
+/* ]]> */
+</script>
+
+

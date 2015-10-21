@@ -1,0 +1,8 @@
+Oct 19 14:17:11 ACREs-Mac-mini.local CoreSimulatorService[620] <Notice>: com.apple.CoreSimulator.CoreSimulatorService 179~1 starting.
+Oct 19 15:13:17 ACREs-Mac-mini.local CoreSimulatorService[620] <Warning>: Notification is missing xpc_notification key: {
+	    notification = "availableDevices_changed";
+	}
+Oct 21 10:40:23 ACREs-Mac-mini.local CoreSimulatorService[620] <Error>: Error Domain=com.apple.CoreSimulator.SimError Code=159 "Invalid device state" UserInfo=0x7f9082c1e400 {NSLocalizedDescription=Invalid device state, NSUnderlyingError=0x7f9082c3faa0 "The operation couldn’t be completed. (Mach error -308 - (ipc/mig) server died)"}
+Oct 21 10:40:24 ACREs-Mac-mini.local CoreSimulatorService[620] <Error>: Error Domain=com.apple.CoreSimulator.SimError Code=159 "Unable to lookup in current state: Shutdown" UserInfo=0x7f9082c32c40 {NSLocalizedDescription=Unable to lookup in current state: Shutdown}
+Oct 21 10:40:24 ACREs-Mac-mini.local CoreSimulatorService[620] <Error>: Error looking up host support port
+Oct 21 10:40:24 ACREs-Mac-mini.local CoreSimulatorService[620] <Error>: Error Domain=com.apple.CoreSimulator.SimError Code=159 "Invalid device state" UserInfo=0x7f9082c0ede0 {NSLocalizedDescription=Invalid device state}

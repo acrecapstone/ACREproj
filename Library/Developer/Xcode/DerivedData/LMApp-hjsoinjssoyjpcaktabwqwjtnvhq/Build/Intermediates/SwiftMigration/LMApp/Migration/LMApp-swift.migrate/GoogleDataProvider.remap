@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/GoogleDataProvider.swift",
+  "offset": 1434,
+  "remove": 1440,
+  "text": "(try? NSJSONSerialization.JSONObjectWithData(data, options:[])) as? NSDictionary {\n                    if let results = json[\"results\"] as? NSArray {\n                        for rawPlace:AnyObject in results {\n                            let place = GooglePlace(dictionary: (rawPlace as AnyObject? as? NSDictionary)!)\n                            placesArray.append(place)\n                        }\n                    }\n                }\n                dispatch_async(dispatch_get_main_queue()) {\n                    completion(placesArray)\n                }\n            }\n            \n            placesTask.resume()\n        }\n        \n        if (choice == 2) {\n            var urlString = \"https://maps.googleapis.com/maps/api/place/nearbysearch/json?&key=\\(browserKey)&location=\\(coordinate.latitude),\\(coordinate.longitude)&radius=\\(radius)&rankby=prominence&types=\\(searchItem)\"\n            \n            urlString = urlString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!\n            \n            UIApplication.sharedApplication().networkActivityIndicatorVisible = true\n            placesTask = session.dataTaskWithURL(NSURL(string: urlString)!) {data, response, error in\n                UIApplication.sharedApplication().networkActivityIndicatorVisible = false\n                var placesArray = [GooglePlace]()\n                if let json = (try? NSJSONSerialization.JSONObjectWithData(data, options:[])",
+ }
+]

@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/HomePageViewController.swift",
+  "offset": 366,
+  "remove": 266,
+  "text": "(\"\\(user.username)\" + \" \" + \"\\(pass)\")\n    }\n    \n    override func didReceiveMemoryWarning() {\n        super.didReceiveMemoryWarning()\n    }\n\n    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {\n        //pushes to mapView\n        let",
+ }
+]

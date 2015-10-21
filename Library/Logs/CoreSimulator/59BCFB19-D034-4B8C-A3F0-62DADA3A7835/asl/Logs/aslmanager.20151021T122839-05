@@ -1,0 +1,343 @@
+Oct 21 12:28:39: aslmanager starting
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/asl
+Oct 21 12:28:39: Data Store Size = 433076
+Oct 21 12:28:39: Data Store YMD Files (TTL = 7 days)
+Oct 21 12:28:39:   2015.10.21.G80.asl   167917 (age 0)
+Oct 21 12:28:39:   2015.10.21.U501.asl   264663 (age 0)
+Oct 21 12:28:39: Data Store AUX Directories
+Oct 21 12:28:39: Data Store BB.AUX Directories
+Oct 21 12:28:39: Data Store BB Files
+Oct 21 12:28:39:   BB.2016.10.31.G80.asl   496 (age 0)
+Oct 21 12:28:39: Start YMD File Scan
+Oct 21 12:28:39: Finished YMD File Scan
+Oct 21 12:28:39: Start AUX Directory Scan
+Oct 21 12:28:39: Finished AUX Directory Scan
+Oct 21 12:28:39: Start BB.AUX Directory Scan
+Oct 21 12:28:39: Finished BB.AUX Directory Scan
+Oct 21 12:28:39: Start BB Scan
+Oct 21 12:28:39: Finished BB Scan
+Oct 21 12:28:39: Data Store Size = 433076
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.asl
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/system.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     ignore src file system.log since it is internal and syslogd will checkpoint it when it needs to be renamed
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 52428800
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/asl
+Oct 21 12:28:39: Data Store Size = 433076
+Oct 21 12:28:39: Data Store YMD Files (TTL = 7 days)
+Oct 21 12:28:39:   2015.10.21.G80.asl   167917 (age 0)
+Oct 21 12:28:39:   2015.10.21.U501.asl   264663 (age 0)
+Oct 21 12:28:39: Data Store AUX Directories
+Oct 21 12:28:39: Data Store BB.AUX Directories
+Oct 21 12:28:39: Data Store BB Files
+Oct 21 12:28:39:   BB.2016.10.31.G80.asl   496 (age 0)
+Oct 21 12:28:39: Start YMD File Scan
+Oct 21 12:28:39: Finished YMD File Scan
+Oct 21 12:28:39: Start AUX Directory Scan
+Oct 21 12:28:39: Finished AUX Directory Scan
+Oct 21 12:28:39: Start BB.AUX Directory Scan
+Oct 21 12:28:39: Finished BB.AUX Directory Scan
+Oct 21 12:28:39: Start BB Scan
+Oct 21 12:28:39: Finished BB Scan
+Oct 21 12:28:39: Data Store Size = 433076
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/eventmonitor
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/performance
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/DiagnosticMessages
+Oct 21 12:28:39: Data Store Size = 11747
+Oct 21 12:28:39: Data Store YMD Files (TTL = 7 days)
+Oct 21 12:28:39:   2015.10.21.asl   11747 (age 0)
+Oct 21 12:28:39: Data Store AUX Directories
+Oct 21 12:28:39: Data Store BB.AUX Directories
+Oct 21 12:28:39: Data Store BB Files
+Oct 21 12:28:39: Start YMD File Scan
+Oct 21 12:28:39: Finished YMD File Scan
+Oct 21 12:28:39: Start AUX Directory Scan
+Oct 21 12:28:39: Finished AUX Directory Scan
+Oct 21 12:28:39: Start BB.AUX Directory Scan
+Oct 21 12:28:39: Finished BB.AUX Directory Scan
+Oct 21 12:28:39: Start BB Scan
+Oct 21 12:28:39: Finished BB Scan
+Oct 21 12:28:39: Data Store Size = 11747
+Oct 21 12:28:39: Finished processing module com.apple.asl
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.authkit.asl
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/Accounts/appleidtraffic.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 3 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/Accounts/authkit.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 3 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.authkit.asl
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.cloudd
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/com.apple.cloudkit.asl
+Oct 21 12:28:39: Finished processing module com.apple.cloudd
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.clouddocs
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.clouddocs.asl
+Oct 21 12:28:39: Data Store Size = 1378
+Oct 21 12:28:39: Data Store YMD Files (TTL = 7 days)
+Oct 21 12:28:39:   2015.10.21.asl   1378 (age 0)
+Oct 21 12:28:39: Data Store AUX Directories
+Oct 21 12:28:39: Data Store BB.AUX Directories
+Oct 21 12:28:39: Data Store BB Files
+Oct 21 12:28:39: Start YMD File Scan
+Oct 21 12:28:39: Finished YMD File Scan
+Oct 21 12:28:39: Start AUX Directory Scan
+Oct 21 12:28:39: Finished AUX Directory Scan
+Oct 21 12:28:39: Start BB.AUX Directory Scan
+Oct 21 12:28:39: Finished BB.AUX Directory Scan
+Oct 21 12:28:39: Start BB Scan
+Oct 21 12:28:39: Finished BB Scan
+Oct 21 12:28:39: Data Store Size = 1378
+Oct 21 12:28:39: Finished processing module com.apple.clouddocs
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.contacts.ContactsAutocomplete
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.contacts.ContactsAutocomplete/Probes.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 209715200
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.contacts.ContactsAutocomplete/Sorting.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 209715200
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.contacts.ContactsAutocomplete/Performance.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 209715200
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.contacts.ContactsAutocomplete/Debug.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 209715200
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.contacts.ContactsAutocomplete
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.corespotlight
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/com.apple.corespotlight.asl
+Oct 21 12:28:39: Finished processing module com.apple.corespotlight
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.HealthKit
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/HealthKit/HealthKit.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 20971520
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.HealthKit
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.HomeKit
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/HomeKit.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 5242880
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.HomeKit
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.iad.logging
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/iAd/com.apple.iad.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 8388608
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/iAd/com.apple.iad.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 5 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 8388608
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.iad.logging
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.icloud.fmfd
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/FMFD/FMFD.asl
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 3 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.icloud.fmfd
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.iclouddriveapp
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/iCloudDriveApp.asl
+Oct 21 12:28:39: Finished processing module com.apple.iclouddriveapp
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.mobileme.fmf1
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/FindMyFriendsApp/FindMyFriendsApp.asl
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 3 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.mobileme.fmf1
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.mobileme.fmip1
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/FindMyiPhoneApp/FindMyiPhoneApp.asl
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.mobileme.fmip1
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.nano-fmld
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/com.apple.nano-fmld.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.nano-fmld
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.NanoFindMy-UserStudy
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/com.apple.NanoFindMy-UserStudy.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.NanoFindMy-UserStudy
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.NanoRegistry
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/com.apple.NanoRegistry.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.NanoRegistry
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.nanosetup
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/com.apple.nanosetup.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.nanosetup
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.networking.IPMonitor
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/com.apple.networking.IPMonitor.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.networking.IPMonitor
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.PassKit
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/Wallet/Wallet.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     src files
+Oct 21 12:28:39:       Wallet.20151021T122337-05.log
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       Wallet.20151021T122337-05.log
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       Wallet.20151021T122337-05.log (age 00:05:02)
+Oct 21 12:28:39: - Check total storage used - MAX = 20971520
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       Wallet.20151021T122337-05.log size 374
+Oct 21 12:28:39: Finished processing module com.apple.PassKit
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.persistentphotos
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /var/mobile/Media/PhotoData/Logs/com.apple.persistentphotos
+Oct 21 12:28:39: Finished processing module com.apple.persistentphotos
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.photobackend
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/com.apple.photobackend
+Oct 21 12:28:39: Finished processing module com.apple.photobackend
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.photoprivate
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /var/mobile/Media/PhotoData/Logs/com.apple.photoprivate
+Oct 21 12:28:39: Finished processing module com.apple.photoprivate
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.photos
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing data store /var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/com.apple.photos
+Oct 21 12:28:39: Finished processing module com.apple.photos
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.securityd
+Oct 21 12:28:39: Checking file /var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/security.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 20971520
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.securityd
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.serverdocs
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/ServerDocuments/serverdocs.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 104857600
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.serverdocs
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.softwareupdateservices
+Oct 21 12:28:39: Checking file /private/var/mobile/Library/Logs/CrashReporter/DiagnosticLogs/SoftwareUpdateServices.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     no src files
+Oct 21 12:28:39: - Check for expired files - TTL = 5 days
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: - Check total storage used - MAX = 10485760
+Oct 21 12:28:39:     no dst files
+Oct 21 12:28:39: Finished processing module com.apple.softwareupdateservices
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: Processing module com.apple.wcd
+Oct 21 12:28:39: Checking file /Users/acre/Library/Logs/CoreSimulator/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/CrashReporter/DiagnosticLogs/WatchConnectivity/WatchConnectivity.log
+Oct 21 12:28:39: - Rename, move to destination directory, and compress as required
+Oct 21 12:28:39:     src files
+Oct 21 12:28:39:       WatchConnectivity.20151021T122337-05.log
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       WatchConnectivity.20151021T122337-05.log
+Oct 21 12:28:39: - Check for expired files - TTL = 7 days
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       WatchConnectivity.20151021T122337-05.log (age 00:05:02)
+Oct 21 12:28:39: - Check total storage used - MAX = 20971520
+Oct 21 12:28:39:     dst files
+Oct 21 12:28:39:       WatchConnectivity.20151021T122337-05.log size 3695
+Oct 21 12:28:39: Finished processing module com.apple.wcd
+Oct 21 12:28:39: ----------------------------------------
+Oct 21 12:28:39: aslmanager finished

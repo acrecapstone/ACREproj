@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/LoginDataProvider.swift",
+  "offset": 448,
+  "remove": 1276,
+  "text": "let urlString = \"https://www.lmwisdom.com/publisher-dev/api/publisher/user/currentUser\"\n        \n        let url = NSURL(string: urlString)\n        var authenticated: Bool = false\n        var loggedin: String = \"failed\"\n        var tenants: NSDictionary!\n        var tenantId: String = \"\"\n        var userRole: AnyObject!\n        var appUser: User!\n        \n        let PasswordString = \"\\(username):\\(password)\"\n        let PasswordData = PasswordString.dataUsingEncoding(NSUTF8StringEncoding)\n        let base64EncodedCredential = PasswordData!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)\n        \n        let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)\n        request.setValue(\"Basic \\(base64EncodedCredential)\", forHTTPHeaderField: \"Authorization\")\n        request.HTTPMethod = \"GET\"\n        \n        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil\n        let dataVal: NSData =  try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)\n        var err: NSError\n        \n        if let jsonResult: NSDictionary = (try? NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers)) as? NSDictionary{\n            let",
+ }
+]

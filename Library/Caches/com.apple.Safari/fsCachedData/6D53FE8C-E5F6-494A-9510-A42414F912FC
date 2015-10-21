@@ -1,0 +1,551 @@
+/**
+ * @fileoverview Scream V3 javascript.
+ */
+
+var elements = {
+  product1MCImage: {
+    type: 'product',
+    node_id: 'product-image',
+  },
+  text1TFText: {
+    type: 'headline',
+    node_id: 'headline',
+    font_color_id: 'text1TFTextColor',
+    auto_font_color_id: 'autoText1Color',
+    auto_background_color_id: 'autoBack1Color'
+  },
+  text2TFText: {
+    type: 'description',
+    node_id: 'description',
+    font_color_id: 'text3TFTextColor',
+    auto_font_color_id: 'autoText3Color',
+    auto_background_color_id: 'autoBack2Color'
+  },
+  displayUrl: {
+    type: 'url',
+    node_id: 'display-url',
+    font_color_id: 'text3TFTextColor',
+    auto_font_color_id: 'autoText3Color',
+    auto_background_color_id: 'autoBack2Color'
+  },
+  clickTFText1: {
+    field_name: 'clickTFText',
+    type: 'button',
+    node_id: 'button1',
+    background_color_ids: 'clickTFBackColor',
+    auto_background_color_id: 'autoButton1Color',
+    weight: 1 / 28.0
+  },
+  clickTFText2: {
+    field_name: 'clickTFText',
+    type: 'button',
+    node_id: 'button2',
+    background_color_ids: 'clickTFBackColor',
+    auto_background_color_id: 'autoButton2Color',
+    weight: 1 / 28.0
+  }
+};
+
+var spec = {
+  styles: 'scream_V3_animation_default.css',
+  elements: elements,
+  font_scale_strategy: 'mega_title',
+  variations: {
+    square1: {
+      calibrations: [
+        'AspectRatioGE 2 0',
+        'AspectRatioLE 0.5 0'
+      ],
+      styles: {
+        clickTFText1: {
+          displayType: 'nessieButton'
+        },
+        text1TFText: {
+          padding: '15px 0%'
+        },
+        text2TFText: {
+          padding: '10% 0%'
+        }
+      },
+      logo: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'top left',
+        right: '30%',
+        bottom: '65%'
+      },
+      text1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        alignments: 'left top',
+        top: 'logo',
+        bottom: 'text1 30%'
+      },
+      text2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        alignments: 'left',
+        top: 'text1 5px',
+        right: 'button',
+        bottom: 'url 0'
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        alignments: 'left bottom',
+        top: 'url 30px',
+        bottom: '5px',
+        right: 'button',
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText1'
+        },
+        alignments: 'right',
+        top: 'text1 5px',
+        left: '50%',
+        bottom: '5px'
+      }
+    },
+    square2: {
+      calibrations: [
+        'AspectRatioGE 2.5 0',
+        'AspectRatioLE 1.5 0'
+      ],
+      styles: {
+        clickTFText1: {
+          displayType: 'nessieButton'
+        },
+        text1TFText: {
+          padding: '0% 10px'
+        },
+        text2TFText: {
+          padding: '10px 0 0 0'
+        }
+      },
+      logo: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'top left',
+        right: '50%',
+        bottom: 'min(30%, 60px)'
+      },
+      text1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        alignments: 'left right top bottom',
+        left: 'logo',
+        bottom: 'logo bottom 0px'
+      },
+      text2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        alignments: 'left',
+        top: 'logo',
+        right: 'button',
+        bottom: 'url 5px'
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        alignments: 'left bottom',
+        top: 'url 30px',
+        bottom: '5px',
+        right: 'button',
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText1'
+        },
+        alignments: 'right',
+        top: 'logo',
+        left: '50%',
+        bottom: '0px'
+      }
+    },
+    banner: {
+      calibrations: [
+        'AspectRatioLE 2 0'
+      ],
+      styles: {
+        clickTFText2: {
+          displayType: 'nessieButton'
+        },
+        text1TFText: {
+          padding: '10% 5%'
+        },
+        text2TFText: {
+          padding: '0 15px 0 15px'
+        }
+      },
+      logo: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'left',
+        left: '10px',
+        right: '70%'
+      },
+      text1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        alignments: 'left top bottom',
+        left: 'logo 20px',
+        right: '40%'
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText2'
+        },
+        alignments: 'top bottom',
+        top: '5%',
+        bottom: '5%',
+        left: 'text2'
+      },
+      text2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        alignments: 'top bottom left',
+        left: 'text1 10px',
+        right: '70px',
+        bottom: 'url 2%'
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        alignments: 'left bottom',
+        top: 'url 30px',
+        left: 'text1 25px',
+        right: '70px',
+        bottom: '5px'
+      }
+    },
+    tower: {
+      calibrations: [
+        'AspectRatioGE 0.8 0'
+      ],
+      styles: {
+        clickTFText1: {
+          displayType: 'nessieButton'
+        },
+        text1TFText: {
+          padding: '20% 0%'
+        }
+      },
+      logo: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'top',
+        bottom: '70%'
+      },
+      text1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        alignments: 'left right top',
+        top: 'logo',
+        bottom: '40%',
+        left: '10%',
+        right: '10%'
+      },
+      text2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        alignments: 'left right top bottom',
+        top: 'text1 2%',
+        bottom: 'button 2%',
+        left: '10%',
+        right: '10%'
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText1'
+        },
+        alignments: 'left right bottom',
+        bottom: 'url 5%',
+        top: '70%'
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        alignments: 'bottom',
+        top: 'url 30px',
+        bottom: '5%'
+      }
+    }
+  }
+};
+
+var smallSizeSpec = {
+  styles: 'scream_V3_display_url_animation_small_size.css',
+  elements: elements,
+  variations: {
+    tower_small: {
+      calibrations: [
+        'AspectRatioGE 2 0'
+      ],
+      styles: {
+        clickTFText2: {
+          displayType: 'nessieButton'
+        }
+      },
+      product1MCImage: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'top left right bottom',
+        top: '3%',
+        bottom: '63%'
+      },
+      textBox1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        top: '43%',
+        bottom: 'button 3%',
+        left: '7%',
+        right: '7%'
+      },
+      textBox2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        top: '43%',
+        bottom: 'button 3%',
+        left: '7%',
+        right: '7%',
+        z_index: 1
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        top: '43%',
+        bottom: 'button 3%',
+        left: '7%',
+        right: '7%',
+        z_index: 2
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText2'
+        },
+        alignments: 'bottom',
+        top: '70%'
+      }
+    },
+    banner_small: {
+      calibrations: [
+        'AspectRatioLE 0.5 0'
+      ],
+      styles: {
+        clickTFText2: {
+          displayType: 'nessieButton'
+        },
+      },
+      product1MCImage: {
+        type: 'element',
+        spec: {
+          element: 'product1MCImage'
+        },
+        alignments: 'top left right bottom',
+        left: '0%',
+        right: '75%'
+      },
+      text1: {
+        type: 'element',
+        spec: {
+          element: 'text1TFText'
+        },
+        top: '10px',
+        bottom: '10px',
+        left: '27%',
+        right: 'button 2%'
+      },
+      text2: {
+        type: 'element',
+        spec: {
+          element: 'text2TFText'
+        },
+        top: '2%',
+        bottom: '2%',
+        left: '27%',
+        right: 'button 2%',
+        z_index: 1
+      },
+      url: {
+        type: 'element',
+        spec: {
+          element: 'displayUrl'
+        },
+        top: '12px',
+        bottom: '12px',
+        left: '30%',
+        right: 'button 5%',
+        z_index: 2
+      },
+      button: {
+        type: 'element',
+        spec: {
+          element: 'clickTFText2'
+        },
+        alignments: 'right',
+        left: '70%'
+      }
+    }
+  }
+};
+
+function onAdData(adData) {
+  var ccm = adData['google_template_data']['adData'][0];
+  // Setup default value of intentful click delay.
+  if (ccm['siriusFlagIntentfulClickDelay'] == null) {
+    ccm['siriusFlagIntentfulClickDelay'] = 0;
+  }
+
+  // TODO(zhangguannan): Remove this after we unified field names for preview
+  // and serving.
+  if (!ccm['product1MCImage'] && ccm['logoMCImage']) {
+    ccm['product1MCImage'] = ccm['logoMCImage'];
+  }
+  resetColorFields(ccm);
+
+  if (isSmallSizeAd(adData)) {
+    renderAd(adData, smallSizeSpec, function() {
+      decorateLayoutForSmallSizes(adData);
+    });
+  } else {
+    renderAd(adData, spec, function(layoutInfo) {
+      decorateLayout(adData);
+    });
+  }
+}
+
+function resetColorFields(ccm) {
+  ccm['autoBack1Color'] = ccm['textBackDarkColor'];
+  ccm['autoBack2Color'] = ccm['textBackLightColor'];
+  ccm['autoButton1Color'] = ccm['textBackDarkColor'];
+  ccm['autoButton2Color'] = ccm['logoBackColor'];
+  ccm['autoText1Color'] = undefined;
+  ccm['autoText3Color'] = undefined;
+}
+
+function decorateLayout(adData) {
+  var adContent = document.getElementById('adContent');
+  var variation = adContent.getAttribute('data-variation');
+  var adWidth = parseInt(adContent.style.width);
+  var adHeight = parseInt(adContent.style.height);
+  var colorSlot1 = document.getElementById('color-slot1');
+  var colorSlot2 = document.getElementById('color-slot2');
+  var product = document.getElementById('product-image');
+  var button = variation == 'banner' ?
+      document.getElementById('button2') : document.getElementById('button1');
+  var headline = document.getElementById('headline');
+  var description = document.getElementById('description');
+
+  if (variation == 'square1' || variation == 'tower') {
+    colorSlot1.style.width = adWidth + 'px';
+    colorSlot1.style.height = headline.style.top;
+    colorSlot2.style.width = adWidth + 'px';
+    colorSlot2.style.top = headline.style.top;
+    colorSlot2.style.height = headline.style.height;
+  } else if (variation == 'square2') {
+    var colorSlot1Height =
+        (parseInt(product.style.height) + parseInt(product.style.top) * 2);
+    var colorSlot1Width =
+        (parseInt(product.style.width) + parseInt(product.style.left) * 2);
+    colorSlot1.style.width = colorSlot1Width + 'px';
+    colorSlot1.style.height = colorSlot1Height + 'px';
+    colorSlot2.style.left = colorSlot1Width + 'px';
+    colorSlot2.style.width = (adWidth - colorSlot1Width) + 'px';
+    colorSlot2.style.height = colorSlot1.style.height;
+  } else if (variation == 'banner') {
+    var colorSlot1Width =
+        (parseInt(product.style.left) * 2 + parseInt(product.style.width));
+    colorSlot1.style.width = colorSlot1Width + 'px';
+    colorSlot1.style.height = adHeight + 'px';
+    colorSlot2.style.left = colorSlot1Width + 'px';
+    colorSlot2.style.height = adHeight + 'px';
+
+    var headlineRight =
+        parseInt(headline.style.left) + parseInt(headline.style.width);
+    colorSlot2.style.width = (headlineRight - colorSlot1Width) + 'px';
+  }
+
+  // Fill color for C1, C2 and C3.
+  var ccm = adData['google_template_data']['adData'][0];
+  colorSlot1.style.background = ccm['logoBackColor'];
+  colorSlot2.style.background = ccm['textBackDarkColor'];
+  adContent.style.background = ccm['textBackLightColor'];
+
+  if (variation == 'tower') {
+    headline.style.textAlign = 'center';
+    description.style.textAlign = 'center';
+  }
+
+  if (parseInt(ccm['logoColorType']) == 2) {
+     product.className += ' photo';
+  }
+}
+
+function decorateLayoutForSmallSizes(adData) {
+  var adContent = document.getElementById('adContent');
+  var variation = adContent.getAttribute('data-variation');
+  var adContent = document.getElementById('adContent');
+  var button = document.getElementById('button2');
+  var headline = document.getElementById('headline');
+  var description = document.getElementById('description');
+  var product = document.getElementById('product-image');
+  var colorSlot1 = document.getElementById('color-slot1');
+  var displayUrl = document.getElementById('display-url');
+  var ccm = adData['google_template_data']['adData'][0];
+
+  adContent.style.background = ccm['textBackDarkColor'];
+  colorSlot1.className += ' color-slot1-' + variation;
+  colorSlot1.style.background = ccm['logoBackColor'];
+  description.style.color = getSiriusTextColor(elements['text1TFText'], adData);
+  displayUrl.style.color = getSiriusTextColor(elements['text1TFText'], adData);
+
+  if (parseInt(ccm['logoColorType']) == 2) {
+     product.className += ' photo';
+  }
+}

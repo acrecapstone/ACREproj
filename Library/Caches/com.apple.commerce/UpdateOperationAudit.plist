@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>osUpdates</key>
+	<dict>
+		<key>031-34808</key>
+		<dict>
+			<key>abortAppNames</key>
+			<array>
+				<string>Safari</string>
+			</array>
+			<key>abortBundleID</key>
+			<string>com.apple.Safari</string>
+			<key>abortCode</key>
+			<integer>100</integer>
+			<key>abortReason</key>
+			<string>the Update requires com.apple.Safari to be quit but it is immortal ((null))</string>
+			<key>productKey</key>
+			<string>031-34808</string>
+			<key>shouldInstall</key>
+			<false/>
+		</dict>
+		<key>zzzz031-36002</key>
+		<dict>
+			<key>abortAppNames</key>
+			<array>
+				<string>Xcode</string>
+			</array>
+			<key>abortBundleID</key>
+			<string>com.apple.dt.Xcode</string>
+			<key>abortCode</key>
+			<integer>100</integer>
+			<key>abortReason</key>
+			<string>the Update requires com.apple.dt.Xcode to be quit but it is immortal ((null))</string>
+			<key>productKey</key>
+			<string>zzzz031-36002</string>
+			<key>shouldInstall</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>runDate</key>
+	<date>2015-10-21T18:35:05Z</date>
+</dict>
+</plist>

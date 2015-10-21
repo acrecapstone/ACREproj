@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+<script async src="/js/ads.js?"></script>
+
+<link rel="stylesheet" href="/static/theme/css/fonts.css">
+<link rel="stylesheet" href="/static/theme/lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/theme/lib/bootstrap/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="/static/theme/dist/theme.css">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','/js/counter.js?','ga');
+  ga('create', 'UA-62673428-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    <title>We trust in code...</title>
+
+<script>
+if(!Histats_variables){var Histats_variables=[];}
+Histats_variables.push("tags","sc-answers");
+Histats_variables.push("tags","CodeGur");
+Histats_variables.push("site","www.codegur.net");
+</script>
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="website statistics" ><script  type="text/javascript" >
+try {Histats.start(1,3177308,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com"><img  src="http://sstatic1.histats.com/0.gif?3177308&101" alt="website statistics" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67822620-1', 'auto');
+  ga('send', 'pageview');
+
+</script></HEAD>
+
+<body role="document">
+	<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/">
+                    <div class="pull-left brand-text">
+                        <strong>CodeGur</strong>
+                        <span>in code we trust</span>
+                    </div>
+                </a>
+
+                <div class="menu-text text-center">
+                    <a href="/tags">Explore tags</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="header-formline">
+                    <form method="get" action="/answers.sc/search.php">
+                        <input type="text" name="search" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container" role="main">
+    <div class="list-dc list-questions">
+		            <p><a href="/33084669/visual-studio-2015-continuous-delivery">Visual Studio 2015 - Continuous Delivery</a></p>            <p><a href="/33084668/how-to-get-a-const-reference-to-data-held-by-boostany">How to get a const reference to data held by boost::any?</a></p>            <p><a href="/33084662/allowbypasskey-based-on-password">AllowBypassKey based on password</a></p>            <p><a href="/33084660/how-can-i-run-protractor-tests-against-ie11-during-a-tfs-build">How can I run protractor tests against IE11 during a TFS Build</a></p>            <p><a href="/33084653/find-new-indices-after-rotation-of-3d-matrix-on-one-axis">Find new indices after rotation of 3d matrix on one axis</a></p>            <p><a href="/33084651/python-exit-a-loop">Python exit a loop</a></p>            <p><a href="/33084649/custom-uinavigationcontroller-with-xamarin">Custom UINavigationController with Xamarin</a></p>            <p><a href="/33084647/postgresql-select-when-parameters-for-search-in-another-table-string">PostgreSQL select when parameters for search in another table string</a></p>            <p><a href="/33084645/avaudioplayer-wont-play-sound">AVAudioPlayer won&#39;t play sound</a></p>            <p><a href="/33084644/access-diagonal-in-multi-index">Access diagonal in multi-index</a></p>            <p><a href="/33084643/extjs-3-4-ajax-call-being-cancelled-automatically">Extjs 3.4 - Ajax call being cancelled automatically</a></p>            <p><a href="/33084640/receive-github-issue-notifications-but-not-pushes">Receive github issue notifications but not pushes</a></p>            <p><a href="/33084639/program-hangs-when-trying-to-populate-tlistbox-from-database">Program hangs when trying to populate TListbox from Database</a></p>            <p><a href="/33084637/trouble-connecting-to-mysql-server-from-outside-lan">Trouble connecting to MySQL server from outside LAN</a></p>            <p><a href="/33084635/undefined-type-when-i-turned-my-code-to-object-javascript-ajax">undefined type when i turned my code to Object Javascript AJAX</a></p>            <p><a href="/33084633/flurry-integration-in-phone-gap-project-causing-issues">Flurry integration in phone-gap project causing issues</a></p>            <p><a href="/33084631/java-statements-else-without-if">Java statements: else without if</a></p>            <p><a href="/33084626/cmake-do-not-buid-java-inner-classes-in-mixed-c-java-project">Cmake do not buid java inner classes in mixed C++/Java project</a></p>            <p><a href="/33084625/how-to-retrieve-the-id-from-link-url-to-div-using-get">how to retrieve the id from link URL to div using $_GET</a></p>            <p><a href="/33084624/python-json-keyerror-for-key-that-is-not-missing-in-object-being-parsed">Python JSON KeyError for key that is not missing in object being parsed</a></p>            <p><a href="/33084615/select-cells-between-first-blank-row-and-third-blank-row-then-paste-into-anothe">Select cells between first blank row and third blank row, then paste into another sheet</a></p>            <p><a href="/33084612/kendo-ui-numeric-textbox-culture-not-translating-correctly">kendo UI numeric textbox culture not translating correctly</a></p>            <p><a href="/33084611/google-cloud-error-mount-you-must-specify-the-filesystem-type">google cloud error &quot;mount: you must specify the filesystem type&quot;</a></p>            <p><a href="/33084609/react-0-14-migration-error">React 0.14 migration error</a></p>            <p><a href="/33084607/translate-odata-uri-string-to-hibernate-for-mysql-database">Translate odata URi string to HIbernate for MYSQL database</a></p>            <p><a href="/33084604/dash-mpd-streaming-drm-support">DASH-MPD Streaming DRM Support</a></p>            <p><a href="/33084601/session-cannot-remain-for-a-long-time-its-automatically-destroyed">Session cannot remain for a long time its automatically destroyed</a></p>            <p><a href="/33084600/how-to-disregard-a-negative-value-in-a-set-of-input">How to disregard a negative value in a set of input</a></p>            <p><a href="/33084598/using-xaml-map-control-to-add-a-heatmap-layer-on-a-map-based-on-openstreetmap-fr">using XAML Map Control to add a heatmap layer on a map based on OpenStreetMap from C# VS2013 WPF</a></p>            <p><a href="/33084597/why-i-cannot-open-gauge-solution-that-i-found-and-got-unsupported-version">Why i cannot open Gauge solution that i found and got unsupported version</a></p>            <p><a href="/33084596/how-to-get-query-details-from-webmasters-tools-api">How to get query details FROM webmasters tools api</a></p>            <p><a href="/33084592/pdo-exception-error-with-sqlstate23000">pdo exception error with SQLSTATE[23000]</a></p>            <p><a href="/33084591/apply-a-condition-in-html-based-on-a-boundfield">apply a condition in html based on a boundfield</a></p>            <p><a href="/33084590/position-change-of-char-in-a-string">Position change of char in a String</a></p>            <p><a href="/33084589/how-does-spark-compute-number-of-partitions">How does Spark compute number of partitions?</a></p>            <p><a href="/33084587/mysql-order-large-database-by-decimal-10-10">MYSQL order large database by decimal 10,10</a></p>            <p><a href="/33084585/configure-apache-jena-rdf-reasoner">Configure Apache Jena RDF reasoner</a></p>            <p><a href="/33084583/how-do-i-use-cognito-purely-to-authenticate-users-for-s3-use">How do I use Cognito purely to authenticate users for S3 use</a></p>            <p><a href="/33084582/how-can-i-save-repeatable-form-array-data-into-defined-objects">How can I save repeatable form array data into defined objects?</a></p>            <p><a href="/33084581/azure-request-to-external-web-service">Azure request to external web service</a></p>            <p><a href="/33084580/how-does-laravel-session-control-works-with-google-oauth-tokens">How does Laravel Session Control works with Google oAuth Tokens?</a></p>            <p><a href="/33084577/301-redirect-urls-with-a-slash-in-querystring">301 redirect urls with a slash in querystring</a></p>            <p><a href="/33084575/how-js-differentiates-between-getters-and-setters">How js differentiates between getters and setters</a></p>            <p><a href="/33084574/svm-opencv-example-questions">SVM OpenCV example questions</a></p>            <p><a href="/33084572/convert-8bit-color-image-to-gray-for-vga">Convert 8bit Color image to Gray For VGA</a></p>            <p><a href="/33084566/checkstyle-doesnt-know-the-javascript-function-is-defined">Checkstyle doesn&#39;t know the Javascript function is defined</a></p>            <p><a href="/33084564/how-to-read-a-exit-code-of-python-file-from-other-python-file">How to read a exit code of python file from other python file</a></p>            <p><a href="/33084563/r-regular-expression-scientific-notation">R regular expression scientific notation</a></p>            <p><a href="/33084561/angular-filter-on-array-of-strings-in-controller">angular filter on array of strings in controller</a></p>            <p><a href="/33084560/sorting-a-collection-in-a-generic-method-in-java-8">Sorting a collection in a generic method in Java 8</a></p>            <p><a href="/33084558/sample-code-for-a-validation-report-button-in-lotusscript">Sample Code for a Validation Report Button in Lotusscript</a></p>            <p><a href="/33084557/doesnt-copy-all-sheets">Doesn&#39;t copy all sheets</a></p>            <p><a href="/33084555/laravel5-assign-middleware-to-route-patterns">Laravel5 assign Middleware to route patterns</a></p>            <p><a href="/33084554/embed-doppler-weather-map">Embed Doppler Weather Map</a></p>            <p><a href="/33084551/is-there-a-z-index-for-the-tableview-selection-in-javafx">Is there a z-index for the TableView Selection in JavaFx</a></p>            <p><a href="/33084550/avoid-twig-block-output">Avoid twig block output</a></p>            <p><a href="/33084548/does-apache-cordova-and-or-phonegap-support-client-certificates">Does Apache Cordova and/or PhoneGap support Client Certificates?</a></p>            <p><a href="/33084546/android-parse-push-notification-not-working-outdated-device">Android Parse Push Notification not working - &quot;Outdated device&quot;</a></p>            <p><a href="/33084544/abstract-django-model-doesnt-have-a-model-attribute">Abstract Django model doesn&#39;t have a &quot;model&quot; attribute?</a></p>            <p><a href="/33084543/login-to-popads-net">Login to PopAds.net</a></p>            <p><a href="/33084542/java-code-to-deal-cards-to-various-number-of-people">JAVA code to deal cards to various number of people</a></p>            <p><a href="/33084540/print-every-nth-element-of-a-string">Print every nth element of a string</a></p>            <p><a href="/33084538/get-a-specific-section-from-a-html-doc">get a specific section from a html doc</a></p>            <p><a href="/33084537/getting-data-out-of-a-tinder-style-list-of-lis-jtinder">Getting data out of a tinder style list of li&#39;s (jTinder)</a></p>            <p><a href="/33084536/save-video-stream-from-multiple-ip-cameras">Save Video Stream From multiple IP Cameras</a></p>            <p><a href="/33084535/ckeditor-set-cursor-behind-inserted-html">CkEditor set cursor behind inserted Html</a></p>            <p><a href="/33084534/running-bash-command-within-script">running bash command within script</a></p>            <p><a href="/33084531/repeat-gif-file-animation-using-mediaelement-control-in-wpf-application">Repeat gif file animation using MediaElement control in WPF application</a></p>            <p><a href="/33084528/how-to-open-xcode-in-10-11-os-x-ei-capitan">How to open Xcode in 10.11 OS X EI Capitan</a></p>            <p><a href="/33084525/ngcordova-linked-contact">ngCordova linked contact</a></p>            <p><a href="/33084524/proceed-from-server-response-system-collections-generic-list">proceed from server response &quot;System.Collections.Generic.List&quot;</a></p>            <p><a href="/33084523/variables-not-displaying-in-rails-blog-post">Variables not displaying in rails blog post</a></p>            <p><a href="/33084520/fatal-exseption-main">FATAL EXSEPTION MAIN</a></p>            <p><a href="/33084518/ngtable-filter-by-date">ngTable filter by date</a></p>            <p><a href="/33084512/sql-check-multiple-values-from-string-array">Sql check multiple values from string array</a></p>            <p><a href="/33084507/open-powerpoint-select-slide-number-3-and-copy-table-from-excel-to-slide">Open PowerPoint, select slide number 3 and copy table from Excel to slide</a></p>            <p><a href="/33084504/how-to-prevent-updating-a-focused-textbox">How to prevent updating a focused TextBox</a></p>            <p><a href="/33084502/jsonccp-array-itteration">jsonccp Array itteration</a></p>            <p><a href="/33084498/execute-nightmarejs-crawler-from-specific-ip">execute Nightmarejs crawler from specific IP</a></p>            <p><a href="/33084492/using-query-builder-to-return-an-average-in-a-single-query">Using query builder to return an average in a single query</a></p>            <p><a href="/33084493/localization-not-working-on-device">Localization not working on device</a></p>            <p><a href="/33084489/selected-option-doesnt-post-with-form-if-its-been-changed">Selected option doesn&#39;t post with form if it&#39;s been changed</a></p>            <p><a href="/33084488/socket-io-pass-array-to-client">Socket.io pass array to client</a></p>            <p><a href="/33084486/can-i-overwrite-a-class-function-in-typescript">Can I overwrite a class function in Typescript?</a></p>            <p><a href="/33084485/any-web-polls-that-will-display-crosstab-results-to-visitors">Any web polls that will display crosstab results to visitors?</a></p>            <p><a href="/33084484/how-do-i-get-google-calendar-public-data-of-another-id-in-android">how do i get google calendar public data of another id in android</a></p>            <p><a href="/33084483/why-is-my-angular-interceptor-not-properly-minified">Why is my Angular interceptor not properly minified?</a></p>            <p><a href="/33084481/how-to-embed-google-maps-to-a-site-that-reads-coordinates-which-change-in-a-dyna">How to embed Google maps to a site that reads coordinates which change in a dynamic way</a></p>            <p><a href="/33084480/scrapy-error-can-t-find-callback">Scrapy Error: Can’t Find Callback</a></p>            <p><a href="/33084479/checking-if-number-is-a-palindrome-or-not">Checking if number is a palindrome or not</a></p>            <p><a href="/33084477/android-merchant-account">Android Merchant Account</a></p>            <p><a href="/33084476/how-to-return-a-pre-populated-rate-from-an-if-ifand-statement">How to Return a pre-populated rate from an if, if(and statement</a></p>            <p><a href="/33084469/begin-tran-commit-in-sql-server-error-handling">Begin Tran, Commit in SQL Server Error handling</a></p>            <p><a href="/33084468/how-to-compare-two-non-primitive-long-in-java">How to compare two non-primitive Long in Java?</a></p>            <p><a href="/33084466/adding-css-class-to-image-in-lightbox">Adding CSS class to image in lightbox</a></p>            <p><a href="/33084463/orientdb-is-it-possible-to-define-a-vertex-which-is-instance-of-multiple-classe">OrientDB: Is it possible to define a vertex which is instance of multiple classes?</a></p>            <p><a href="/33084462/if-0-equals-to-false-true">if(&#39;+&#39; == 0) equals to FALSE true</a></p>            <p><a href="/33084460/parse-installation-object-acl">Parse Installation object ACL</a></p>            <p><a href="/33084457/vectorise-for-loop">Vectorise for-loop</a></p>            <p><a href="/33084456/how-to-write-an-array-data-base-on-polymorphism-subclass-detail-in-c">How to write an array data base on polymorphism subclass detail in c#</a></p>    </div>
+
+    <nav class="text-center visible-lg-block visible-md-block">
+        <ul class="pagination">																												<li class="active"><a href="/new/1">1</a></li>
+						        <li><a href="/new/2">2</a></li>			        <li><a href="/new/3">3</a></li>			        <li><a href="/new/4">4</a></li>			        <li><a href="/new/5">5</a></li>			        <li><a href="/new/6">6</a></li>			        <li><a href="/new/7">7</a></li>			        <li><a href="/new/8">8</a></li>			        <li><a href="/new/9">9</a></li>	</ul>
+    </nav>
+    <nav class="text-center visible-sm-block">
+        <ul class="pagination">																			<li class="active"><a href="/new/1">1</a></li>
+						        <li><a href="/new/2">2</a></li>			        <li><a href="/new/3">3</a></li>			        <li><a href="/new/4">4</a></li>			        <li><a href="/new/5">5</a></li>			        <li><a href="/new/6">6</a></li>	</ul>
+    </nav>
+    <nav class="text-center visible-xs-block">
+        <ul class="pagination">										<li class="active"><a href="/new/1">1</a></li>
+						        <li><a href="/new/2">2</a></li>			        <li><a href="/new/3">3</a></li>	</ul>
+    </nav>
+</div>
+
+	<footer class="footer">
+    <div class="text-center">www.codegur.net is StackOverFlow proxy site</div>
+</footer></body>
+</html>

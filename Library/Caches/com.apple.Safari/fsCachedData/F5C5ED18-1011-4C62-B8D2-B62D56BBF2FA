@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Basic -->
+<meta charset="utf-8">
+<title>SQLite - Commands</title>
+<meta name="description" content="SQLite Commands - Learn SQLite from basic to advanced covering database programming clauses command functions administration queries and usage along with PHP, PERL, C, C++ and JAVA in simple steps. This tutorial takes you starting from basic to advance SQLite concepts." />
+<meta name="keywords" content="Learning, SQLite, Programming, Database, Clauses, Commands, Functions, Administration, Queries, Simple, Steps, Basic, Advanced, Concepts." />
+<base href="http://www.tutorialspoint.com/" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="fb:app_id" content="471319149685276" />
+<meta property="og:site_name" content="www.tutorialspoint.com" />
+<meta name="robots" content="index, follow"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="/theme/js/script-min-v4.js"></script>
+<link rel="stylesheet" href="/theme/css/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #003b57 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #003b57 !important;}
+.submenu-item{ border-bottom: 2px solid #003b57 !important; border-top: 2px solid #003b57 !important }
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img  src="/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="/sqlite/images/logo.png">
+      </a>
+      </h1>			
+      <div class="search" id="searchBar">
+         <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="www.tutorialspoint.com">
+            <div class="input-group">
+               <input type="text" class="form-control search" name="q" autocomplete="off" placeholder="Search your tutorials..." onfocus="if (this.value == 'Search your tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your tutorials...';}">
+               <input value="FORID:11" name="cof" type="hidden">
+               <input type="hidden" name="ie" value="ISO-8859-1">
+               <span class="input-group-btn"> <button class="btn btn-default" type="submit" onclick="javascript:void(0);"><i class="icon icon-search"></i></button> </span>
+            </div>
+         </form>
+      </div>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li> <a href="/questions_and_answers.htm"><i class="fa fa-question"></i> &nbsp;Quizzes</a> </li>
+            <li> <a href="/shared-tutorials.php"><i class="icon icon-user"></i> &nbsp;Shared</a> </li>
+            <li> <a href="/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>
+            <li class="top-icons" style="display:none;"> <a href="about/about_careers.htm"><i class="fa fa-send"></i> &nbsp;Jobs</a> </li>
+
+            <li class="top-icons" style="display:none;">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button>
+   </div>
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library  <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown" id="liCG"><a class="dropdown" href="javascript:void(0);"><i class="fa-code"></i> Coding Ground <i class="fa-caret-down"></i> </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu">  Dev Tools</span></a>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="/sqlite/images/sqlite-mini-logo.jpg" alt="SQLite Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">SQLite Tutorial</li>
+<li><a target="_top" href="/sqlite/index.htm" >SQLite - Home</a></li>
+<li><a target="_top" href="/sqlite/sqlite_overview.htm" >SQLite - Overview</a></li>
+<li><a target="_top" href="/sqlite/sqlite_installation.htm" >SQLite - Installation</a></li>
+<li><a target="_top" href="/sqlite/sqlite_commands.htm" >SQLite - Commands</a></li>
+<li><a target="_top" href="/sqlite/sqlite_syntax.htm" >SQLite - Syntax</a></li>
+<li><a target="_top" href="/sqlite/sqlite_data_types.htm" >SQLite - Data Types</a></li>
+<li><a target="_top" href="/sqlite/sqlite_create_database.htm" >SQLite - Create Database</a></li>
+<li><a target="_top" href="/sqlite/sqlite_attach_database.htm" >SQLite - Attach Database</a></li>
+<li><a target="_top" href="/sqlite/sqlite_detach_database.htm" >SQLite - Detach Database</a></li>
+<li><a target="_top" href="/sqlite/sqlite_create_table.htm" >SQLite - Create Table</a></li>
+<li><a target="_top" href="/sqlite/sqlite_drop_table.htm" >SQLite - Drop Table</a></li>
+<li><a target="_top" href="/sqlite/sqlite_insert_query.htm" >SQLite - Insert Query</a></li>
+<li><a target="_top" href="/sqlite/sqlite_select_query.htm" >SQLite - Select Query</a></li>
+<li><a target="_top" href="/sqlite/sqlite_operators.htm" >SQLite - Operators</a></li>
+<li><a target="_top" href="/sqlite/sqlite_expressions.htm" >SQLite - Expressions</a></li>
+<li><a target="_top" href="/sqlite/sqlite_where_clause.htm" >SQLite - Where Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_and_or_clauses.htm" >SQLite - AND &amp; OR Clauses</a></li>
+<li><a target="_top" href="/sqlite/sqlite_update_query.htm" >SQLite - Update Query</a></li>
+<li><a target="_top" href="/sqlite/sqlite_delete_query.htm" >SQLite - Delete Query</a></li>
+<li><a target="_top" href="/sqlite/sqlite_like_clause.htm" >SQLite - Like Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_glob_clause.htm" >SQLite - Glob Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_limit_clause.htm" >SQLite - Limit Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_order_by.htm" >SQLite - Order By</a></li>
+<li><a target="_top" href="/sqlite/sqlite_group_by.htm" >SQLite - Group By</a></li>
+<li><a target="_top" href="/sqlite/sqlite_having_clause.htm" >SQLite - Having Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_distinct_keyword.htm" >SQLite - Distinct Keyword</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">Advanced SQLite</li>
+<li><a target="_top" href="/sqlite/sqlite_pragma.htm" >SQLite - PRAGMA</a></li>
+<li><a target="_top" href="/sqlite/sqlite_constraints.htm" >SQLite - Constraints</a></li>
+<li><a target="_top" href="/sqlite/sqlite_using_joins.htm" >SQLite - Joins</a></li>
+<li><a target="_top" href="/sqlite/sqlite_unions_clause.htm" >SQLite - Unions Clause</a></li>
+<li><a target="_top" href="/sqlite/sqlite_null_values.htm" >SQLite - NULL Values</a></li>
+<li><a target="_top" href="/sqlite/sqlite_alias_syntax.htm" >SQLite - Alias Syntax</a></li>
+<li><a target="_top" href="/sqlite/sqlite_triggers.htm" >SQLite - Triggers</a></li>
+<li><a target="_top" href="/sqlite/sqlite_indexes.htm" >SQLite - Indexes</a></li>
+<li><a target="_top" href="/sqlite/sqlite_indexed_by.htm" >SQLite - Indexed By</a></li>
+<li><a target="_top" href="/sqlite/sqlite_alter_command.htm" >SQLite - Alter Command</a></li>
+<li><a target="_top" href="/sqlite/sqlite_truncate_table.htm" >SQLite - Truncate Table</a></li>
+<li><a target="_top" href="/sqlite/sqlite_views.htm" >SQLite - Views</a></li>
+<li><a target="_top" href="/sqlite/sqlite_transactions.htm" >SQLite - Transactions</a></li>
+<li><a target="_top" href="/sqlite/sqlite_sub_queries.htm" >SQLite - Sub Queries</a></li>
+<li><a target="_top" href="/sqlite/sqlite_using_autoincrement.htm" >SQLite -  Autoincrement</a></li>
+<li><a target="_top" href="/sqlite/sqlite_injection.htm" >SQLite - Injection</a></li>
+<li><a target="_top" href="/sqlite/sqlite_explain.htm" >SQLite - Explain</a></li>
+<li><a target="_top" href="/sqlite/sqlite_vacuum.htm" >SQLite - Vacuum</a></li>
+<li><a target="_top" href="/sqlite/sqlite_date_time.htm" >SQLite - Date &amp; Time</a></li>
+<li><a target="_top" href="/sqlite/sqlite_useful_functions.htm" >SQLite - Useful Functions</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">SQLite Interfaces</li>
+<li><a target="_top" href="/sqlite/sqlite_c_cpp.htm" >SQLite - C/C++</a></li>
+<li><a target="_top" href="/sqlite/sqlite_java.htm" >SQLite - Java</a></li>
+<li><a target="_top" href="/sqlite/sqlite_php.htm" >SQLite - PHP</a></li>
+<li><a target="_top" href="/sqlite/sqlite_perl.htm" >SQLite - Perl</a></li>
+<li><a target="_top" href="/sqlite/sqlite_python.htm" >SQLite - Python</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">SQL Useful Resources</li>
+<li><a target="_top" href="/sqlite/sqlite_quick_guide.htm" >SQLite - Quick Guide</a></li>
+<li><a target="_top" href="/sqlite/sqlite_useful_resources.htm" >SQLite - Useful Resources</a></li>
+<li><a target="_top" href="/sqlite/sqlite_discussion.htm" >SQLite - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>SQLite - Commands</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr />
+<div class="pre-btn">
+<a href="/sqlite/sqlite_installation.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/sqlite/sqlite_syntax.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<p>This chapter will take you through simple and useful commands used by SQLite programmers. These commands are called SQLite dot commands and exception with these commands is that they should not be terminated by a semi-colon (;).</p>
+<p>Let's start with typing a simple <b>sqlite3</b> command at command prompt which will provide you SQLite command prompt where you will issue various SQLite commands.</p>
+<pre class="prettyprint notranslate">
+$sqlite3
+SQLite version 3.3.6
+Enter ".help" for instructions
+sqlite&gt;
+</pre>
+<p>For a listing of the available dot commands, you can enter ".help" at any time. For example:</p>
+<pre class="prettyprint notranslate">
+sqlite&gt;.help
+</pre>
+<p>Above command will display a list of various important SQLite dot commands, which are as follows:</p>
+<table class="table table-bordered">
+<tr>
+<th style="width:30%">Command</th><th style="width:70%">Description</th>
+</tr>
+<tr><td>.backup ?DB? FILE</td><td>Backup DB (default "main") to FILE</td></tr>
+<tr><td>.bail ON|OFF</td><td>Stop after hitting an error.  Default OFF</td></tr>
+<tr><td>.databases</td><td>List names and files of attached databases</td></tr>
+<tr><td>.dump ?TABLE?</td><td>Dump the database in an SQL text format. If TABLE specified, only dump tables matching LIKE pattern TABLE.</td></tr>
+<tr><td>.echo ON|OFF</td><td>Turn command echo on or off</td></tr>
+<tr><td>.exit</td><td>Exit SQLite prompt</td></tr>
+<tr><td>.explain ON|OFF</td><td>Turn output mode suitable for EXPLAIN on or off. With no args, it turns EXPLAIN on.</td></tr>
+<tr><td>.header(s) ON|OFF</td><td>Turn display of headers on or off</td></tr>
+<tr><td>.help</td><td>Show this message</td></tr>
+<tr><td>.import FILE TABLE</td><td>Import data from FILE into TABLE</td></tr>
+<tr><td>.indices ?TABLE?</td><td>Show names of all indices.  If TABLE specified, only show indices for tables matching LIKE pattern TABLE.</td></tr>
+<tr><td>.load FILE ?ENTRY?</td><td>Load an extension library</td></tr>
+<tr><td>.log FILE|off</td><td>Turn logging on or off.  FILE can be stderr/stdout</td></tr>
+<tr><td>.mode MODE</td><td>Set output mode where MODE is one of:
+<ul class="list">
+<li><p><b>csv</b> Comma-separated values</p></li>
+<li><p><b>column</b>   Left-aligned columns.</p></li>
+<li><p><b>html</b>     HTML &lt;table&gt; code</p></li>
+<li><p><b>insert</b>   SQL insert statements for TABLE</p></li>
+<li><p><b>line</b>     One value per line</p></li>
+<li><p><b>list</b>     Values delimited by .separator string</p></li>
+<li><p><b>tabs</b>     Tab-separated values</p></li>
+<li><p><b>tcl</b>      TCL list elements</p></li>
+</ul>
+</td></tr>
+<tr><td>.nullvalue STRING</td><td>Print STRING in place of NULL values</td></tr>
+<tr><td>.output FILENAME</td><td>Send output to FILENAME</td></tr>
+<tr><td>.output stdout</td><td> Send output to the screen</td></tr>
+<tr><td>.print STRING...</td><td>Print literal STRING</td></tr>
+<tr><td>.prompt MAIN CONTINUE</td><td>Replace the standard prompts</td></tr>
+<tr><td>.quit</td><td>Exit SQLite prompt</td></tr>
+<tr><td>.read FILENAME</td><td>Execute SQL in FILENAME</td></tr>
+<tr><td>.schema ?TABLE?</td><td>Show the CREATE statements. If TABLE specified, only show tables matching LIKE pattern TABLE.</td></tr>
+<tr><td>.separator STRING</td><td>Change separator used by output mode and .import</td></tr>
+<tr><td>.show</td><td>Show the current values for various settings</td></tr>
+<tr><td>.stats ON|OFF</td><td>Turn stats on or off</td></tr>
+<tr><td>.tables ?PATTERN?</td><td>List names of tables matching a LIKE pattern</td></tr>
+<tr><td>.timeout MS</td><td>Try opening locked tables for MS milliseconds</td></tr>
+<tr><td>.width NUM NUM</td><td>Set column widths for "column" mode</td></tr>
+<tr><td>.timer ON|OFF </td><td>Turn the CPU timer measurement on or off</td></tr>
+</table>
+<p>Let's try <b>.show</b> command to see default setting for your SQLite command prompt.</p>
+<pre class="prettyprint notranslate">
+sqlite&gt;.show
+     echo: off
+  explain: off
+  headers: off
+     mode: column
+nullvalue: ""
+   output: stdout
+separator: "|"
+    width:
+sqlite&gt;
+</pre>
+<blockquote>Make sure there is no space in between sqlite&gt; prompt and dot command, otherwise it will not work.</blockquote>
+<h2>Formatting output</h2>
+<p>You can use the following sequence of dot commands to format your output the way I have listed down in this tutorial:</p>
+<pre class="prettyprint notranslate">
+sqlite&gt;.header on
+sqlite&gt;.mode column
+sqlite&gt;.timer on
+sqlite&gt;
+</pre>
+<p>Above setting will produce the output in the following format:</p>
+<pre class="prettyprint notranslate">
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+1           Paul        32          California  20000.0
+2           Allen       25          Texas       15000.0
+3           Teddy       23          Norway      20000.0
+4           Mark        25          Rich-Mond   65000.0
+5           David       27          Texas       85000.0
+6           Kim         22          South-Hall  45000.0
+7           James       24          Houston     10000.0
+CPU Time: user 0.000000 sys 0.000000
+</pre>
+<h2>The sqlite_master Table</h2>
+<p>The master table holds the key information about your database tables and it is called <b>sqlite_master</b>. You can see its schema as follows:</p>
+<pre class="prettyprint notranslate">
+sqlite&gt;.schema sqlite_master
+</pre>
+<p>This will produce the following result:</p>
+<pre class="prettyprint notranslate">
+CREATE TABLE sqlite_master (
+  type text,
+  name text,
+  tbl_name text,
+  rootpage integer,
+  sql text
+);
+</pre>
+<hr />
+<div class="pre-btn">
+<a href="/sqlite/sqlite_installation.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="pdf-btn">
+<a href="/sqlite/pdf/sqlite_commands.pdf" title="SQLite - Commands" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a>
+</div>
+<div class="nxt-btn">
+<a href="/sqlite/sqlite_syntax.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/sqlite/sqlite_commands.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/facebookIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/sqlite/sqlite_commands.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/twitterIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/sqlite/sqlite_commands.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/linkedinIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/sqlite/sqlite_commands.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/googlePlusIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/sqlite/sqlite_commands.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/StumbleUponIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/sqlite/sqlite_commands.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/reddit.jpg" alt="img" />
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="/about/faq.htm">FAQ's</a></li>
+         <li><a href="/about/about_helping.htm">Helping</a></li>
+         <li><a href="/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>&copy; Copyright 2015. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="/theme/js/custom-min.js"></script>
+<script src="http://www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+</div>
+</body>
+</html>

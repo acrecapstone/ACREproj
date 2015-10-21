@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+<head>
+
+<title>ios - Swift 2 / OSX 10.11 / Xcode 7.0.1 / Cocoapods 0.38.2 Can&#39;t Build Project - Stack Overflow</title>
+    <link rel="shortcut icon" href="//cdn.sstatic.net/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Swift 2 / OSX 10.11 / Xcode 7.0.1 / Cocoapods 0.38.2 Can&#39;t Build Project" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I have the release versions of El Capitan, Xcode 7, and Cocoapods and am getting an issue when I try to build my sample app for this pod:
+https://github.com/AttilaTheFun/SwiftToolKit
+
+The error I g..." />
+    <meta property="og:url" content="http://stackoverflow.com/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project"/>
+    <link rel="canonical" href="http://stackoverflow.com/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" />
+
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=4e67e00a5514"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/stackoverflow/all.css?v=84b4063570ef">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Swift 2 / OSX 10.11 / Xcode 7.0.1 / Cocoapods 0.38.2 Can&#39;t Build Project&#39;" href="/feeds/question/32877445">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:32877445});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '32877445');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1445440354,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"globalAuthDisabled":true,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"b8e5c5768acc5f7cb0b9f0073751554e","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"anon_popups":{"v":"d","g":1},"profile_integration_signup":{"v":"b","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"f80376afe9b1","js/moderator.en.js":"fa05d92dbab5","js/full-anon.en.js":"69d0d7b4a017","js/full.en.js":"36ba15ef48d9","js/wmd.en.js":"a92fcd8009f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"f9007a314275","js/help.en.js":"8971d5a1711c","js/tageditor.en.js":"9c54855bf167","js/tageditornew.en.js":"6b9e46017592","js/inline-tag-editing.en.js":"de80429b1816","js/revisions.en.js":"9e897f24d78d","js/review.en.js":"97cdae9df6c7","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"f70111a675e5","js/explore-qlist.en.js":"09aaffd40eb0","js/events.en.js":"94958d0edf9b","js/keyboard-shortcuts.en.js":"48e0995325a1","js/external-editor.en.js":"e14f51ab6446","js/external-editor.en.js":"e14f51ab6446","js/snippet-javascript.en.js":"1034ef6a3153","js/snippet-javascript-codemirror.en.js":"6fdd6c4ccc74"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+</head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackoverflow.com">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+
+
+
+
+    <a href="//stackoverflow.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="1"
+       data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="552"
+       data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track"
+                       href="//careers.stackoverflow.com?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=multicollider"
+                            data-gps-track="site_switcher.click({ item_type:9 })"
+>
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="//stackexchange.com"
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 150 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="#"
+       class="topbar-icon icon-inbox yes-hover js-inbox-button"
+       title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="#"
+       class="topbar-icon icon-achievements yes-hover js-achievements-button "
+       data-unread-class=""
+       title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" class="login-link">log in</a>
+
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="//careers.stackoverflow.com?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="/" >
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="/tags">Tags</a></li>
+                        <li><a id="nav-users" href="/users">Users</a></li>
+                        <li><a id="nav-badges" href="/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion"  href="/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="//cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+                <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" id="tell-me-more" class="button">Sign up</a>
+            <span id="close"><a title="click to dismiss">&times;</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a question and answer site for professional and enthusiast programmers. It&#39;s 100% free.
+        </div>        
+    </div>
+    <script>
+        StackExchange.ready(function() {
+            var clickSource = $("body").attr("class") + '-mini';
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+                location = 2;
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+                location = 2;
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+                location = 4;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox-mini #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "close", location: location }, true);
+                });
+                $.cookie("hero", "none", { path: "/", expires: 365 });
+                var $hero = $("#herobox-mini");
+                $hero.slideUp('fast', function () { $hero.remove(); });
+                return false;
+            });
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<div id="question-header">
+                <h1 itemprop="name"><a href="/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project" class="question-hyperlink">Swift 2 / OSX 10.11 / Xcode 7.0.1 / Cocoapods 0.38.2 Can&#39;t Build Project</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="32877445"  id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk783260465",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk783260465">
+            </div>    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="32877445">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I have the release versions of El Capitan, Xcode 7, and Cocoapods and am getting an issue when I try to build my sample app for this pod:
+<a href="https://github.com/AttilaTheFun/SwiftToolKit" rel="nofollow">https://github.com/AttilaTheFun/SwiftToolKit</a></p>
+
+<p>The error I get is:</p>
+
+<pre><code>ProcessInfoPlistFile /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/Info.plist Tests/Info.plist
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    builtin-infoPlistUtility /Users/Logan/Documents/Development/Services/SwiftToolKit/Example/Tests/Info.plist -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/Info.plist
+
+PhaseScriptExecution Check\ Pods\ Manifest.lock /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Script-707B1AF3217AA4B9513CA00A.sh
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    /bin/sh -c /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Script-707B1AF3217AA4B9513CA00A.sh
+
+CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name SwiftToolKit_Tests -Onone -D COCOAPODS -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.0.sdk -target x86_64-apple-ios8.3 -g -module-cache-path /Users/Logan/Library/Developer/Xcode/DerivedData/ModuleCache -Xfrontend -serialize-debugging-options -enable-testing -I /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator -F /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -parse-as-library -c -j8 /Users/Logan/Documents/Development/Services/SwiftToolKit/Example/Tests/Tests.swift -output-file-map /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftmodule -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/SwiftToolKit_Tests-generated-files.hmap -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/SwiftToolKit_Tests-own-target-headers.hmap -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/SwiftToolKit_Tests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/SwiftToolKit_Tests-project-headers.hmap -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/DerivedSources/x86_64 -Xcc -I/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -DDEBUG=1 -Xcc -DCOCOAPODS=1 -emit-objc-header -emit-objc-header-path /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests-Swift.h -Xcc -working-directory/Users/Logan/Documents/Development/Services/SwiftToolKit/Example -Xfrontend -serialize-debugging-options
+
+Ditto /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/DerivedSources/SwiftToolKit_Tests-Swift.h /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests-Swift.h
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /usr/bin/ditto -rsrc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests-Swift.h /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/DerivedSources/SwiftToolKit_Tests-Swift.h
+
+Ditto /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.swiftmodule/x86_64.swiftdoc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftdoc
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /usr/bin/ditto -rsrc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftdoc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.swiftmodule/x86_64.swiftdoc
+
+Ditto /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.swiftmodule/x86_64.swiftmodule /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftmodule
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /usr/bin/ditto -rsrc /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftmodule /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.swiftmodule/x86_64.swiftmodule
+
+Ld /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/SwiftToolKit_Tests normal x86_64
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export IPHONEOS_DEPLOYMENT_TARGET=8.3
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.0.sdk -L/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator -F/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -filelist /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -mios-simulator-version-min=8.3 -bundle_loader /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Example.app/SwiftToolKit_Example -Xlinker -objc_abi_version -Xlinker 2 -framework SwiftToolKit -framework XCTest -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -Xlinker -add_ast_path -Xlinker /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests.swiftmodule -weak_framework Pods_SwiftToolKit_Tests -Xlinker -dependency_info -Xlinker /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Objects-normal/x86_64/SwiftToolKit_Tests_dependency_info.dat -o /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/SwiftToolKit_Tests
+
+GenerateDSYMFile /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest.dSYM /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/SwiftToolKit_Tests
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/SwiftToolKit_Tests -o /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest.dSYM
+
+PhaseScriptExecution Embed\ Pods\ Frameworks /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Script-B1DCFB915331FD5EFCE1096D.sh
+    cd /Users/Logan/Documents/Development/Services/SwiftToolKit/Example
+    /bin/sh -c /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Intermediates/SwiftToolKit.build/Debug-iphonesimulator/SwiftToolKit_Tests.build/Script-B1DCFB915331FD5EFCE1096D.sh
+
+mkdir -p /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/Frameworks
+rsync -av --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/Pods-SwiftToolKit_Tests/SwiftToolKit.framework" "/Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/Frameworks"
+building file list ... done
+
+sent 93 bytes  received 20 bytes  226.00 bytes/sec
+total size is 0  speedup is 0.00
+error: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/otool: can't open file: /Users/Logan/Library/Developer/Xcode/DerivedData/SwiftToolKit-akzjacxhtospytamwfcyrphcsoar/Build/Products/Debug-iphonesimulator/SwiftToolKit_Tests.xctest/Frameworks/SwiftToolKit.framework/SwiftToolKit (No such file or directory)
+</code></pre>
+
+<p>I am not sure what it is looking for - the SwiftToolKit framework compiles just fine. Any suggestions?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/ios" class="post-tag" title="show questions tagged &#39;ios&#39;" rel="tag">ios</a> <a href="/questions/tagged/xcode" class="post-tag" title="show questions tagged &#39;xcode&#39;" rel="tag">xcode</a> <a href="/questions/tagged/osx" class="post-tag" title="show questions tagged &#39;osx&#39;" rel="tag">osx</a> <a href="/questions/tagged/swift" class="post-tag" title="show questions tagged &#39;swift&#39;" rel="tag">swift</a> <a href="/questions/tagged/cocoapods" class="post-tag" title="show questions tagged &#39;cocoapods&#39;" rel="tag">cocoapods</a> 
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/q/32877445" title="short permalink to this question" class="short-link" id="link-post-32877445">share</a><span class="lsep">|</span><a href="/posts/32877445/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2015-09-30 23:59:51Z" class="relativetime">Sep 30 at 23:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/3138917/attilathefun"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/d9446840a6d0781d2b7dcdfa9e90e230?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/3138917/attilathefun">AttilaTheFun</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">137</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-32877445" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-32877445" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>        </table>
+</div>
+
+			<div id="answers" class="no-answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+						</h2>
+						<div style="display:none;">
+							<div id="tabs">
+        <a href="/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">active</a>
+        <a href="/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">oldest</a>
+        <a class="youarehere" href="/questions/32877445/swift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+											<h2 class="bottom-notice bottom-share-links" style="padding-top: 8px; margin-bottom: -8px;">
+								Know someone who can answer? 
+								Share a link to this <a href="/q/32877445">question</a> via <a href="mailto:?subject=Stack%20Overflow%20Question&amp;body=Swift%202%20%2f%20OSX%2010.11%20%2f%20Xcode%207.0.1%20%2f%20Cocoapods%200.38.2%20Can%27t%20Build%20Project%0Ahttp%3a%2f%2fstackoverflow.com%2fq%2f32877445%3fsem%3d2">email</a>, <a href="https://plus.google.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f32877445%3fsgp%3d2">Google+</a>, <a href="http://twitter.com/share?url=http%3a%2f%2fstackoverflow.com%2fq%2f32877445%3fstw%3d2">Twitter</a>, or <a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fstackoverflow.com%2fq%2f32877445%3fsfb%3d2">Facebook</a>.
+							</h2>
+					<a name='new-answer'></a>
+						<form id="post-form" action="/questions/32877445/answer/submit" method="post"  class="post-form">
+						    <input type="hidden" id="post-id" value="32877445" />
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                            <input type="hidden" name="referrer" value="https://www.google.com/"/>
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="b8e5c5768acc5f7cb0b9f0073751554e">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item dno new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                                    
+                                var $window = $(window),
+                                    onScroll = function(e) {
+                                        var $elem = $('.new-login-left'),
+                                            docViewTop = $window.scrollTop(),
+                                            docViewBottom = docViewTop + $window.height(),
+                                            elemTop = $elem.offset().top,
+                                            elemBottom = elemTop + $elem.height();							
+                                        if ((docViewTop < elemTop) && (docViewBottom > elemBottom))  {
+                                            StackExchange.using('gps', function() { StackExchange.gps.track('embedded_signup_form.view', { location: 'question_page' }); });
+                                            $window.unbind('scroll', onScroll);
+                                        }
+                                    };
+                                $window.on('scroll', onScroll);
+                                    
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid" />
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false" />
+                    <input type="hidden" name="use-google" class="use-google" value="false" />
+                    <input type="button" class="submit-openid" value="Submit" style="display:none" />
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f32877445%2fswift-2-osx-10-11-xcode-7-0-1-cocoapods-0-38-2-cant-build-project%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href='http://stackexchange.com/legal/privacy-policy' target='_blank'>privacy policy</a> and <a href='http://stackexchange.com/legal/terms-of-service' target='_blank'>terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1" />								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+							Browse other questions tagged <a href="/questions/tagged/ios" class="post-tag" title="show questions tagged &#39;ios&#39;" rel="tag">ios</a> <a href="/questions/tagged/xcode" class="post-tag" title="show questions tagged &#39;xcode&#39;" rel="tag">xcode</a> <a href="/questions/tagged/osx" class="post-tag" title="show questions tagged &#39;osx&#39;" rel="tag">osx</a> <a href="/questions/tagged/swift" class="post-tag" title="show questions tagged &#39;swift&#39;" rel="tag">swift</a> <a href="/questions/tagged/cocoapods" class="post-tag" title="show questions tagged &#39;cocoapods&#39;" rel="tag">cocoapods</a>  or <a href="/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2015-09-30 23:59:51Z"><b>20 days ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>250 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			        </table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1397349724",[17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1397349724">
+            </div>
+        <div id="hireme">
+            <script>
+(function(){function f(t,r,f,e){var s=(r.cl||[]).join(" "),o=i.getElementById(t);o&&(s&&(o.className+=" "+s),o.innerHTML=r.cn.replace("&pt=0","&pt="+(e||"0")),o.onmousedown=function(t){var i,s,e,h,c,l;for(console.log(),i=t.target;i.tagName!=="A"&&i!==o;)i=i.parentNode;if(i!=o){for(s=n.enc,e=f,r.an&&(e+="?an="+r.an),h=0;h<i.attributes.length;++h)c=i.attributes[h],l=c.name.match(/^data-(.*)$/),l&&(e+="&"+s(l[1])+"="+s(c.value));e+="&utm="+s(u+r.utm);i.href=e}})}function e(){return[].map.call(n.qsa(".post-taglist .post-tag"),function(n){return n.innerText}).join(";")||null}if(!window.clc){var t=window,i=document,r=i.getElementsByTagName("head")[0],u="&utm_source="+location.hostname+"&utm_medium=ad&utm_campaign=",n={doc:i,head:r,enc:encodeURIComponent,dec:decodeURIComponent,se:t.StackExchange,ts:function(){return(new Date).getTime()},st:setTimeout,ct:clearTimeout,qsa:function(n){return document.querySelectorAll(n)}};n.as=function(n){var t=i.createElement("link");t.type="text/css";t.rel="stylesheet";t.href=n;r.appendChild(t)};n.ls=function(n,t,u){var f=i.createElement("script"),e=!1;f.async=!0;f.src=n;t&&(f.onload=f.onreadystatechange=function(){e||this.readyState&&this.readyState!=="loaded"&&this.readyState!=="complete"||(e=!0,t(f),f.onload=f.onreadystatechange=null,u&&f.parentNode.removeChild(f))});r.appendChild(f)};n.init=function(i){function o(){i.st.forEach(n.as);u.forEach(function(n){f(n,i.cr[n],r,e)});typeof t.clc_after_init=="function"&&t.clc_after_init()}var u=Object.keys(i.cr),r="//"+i.h+i.ct,e=n.cps?n.ts()-n.cps:0;i.an&&(r+="?an="+i.an);o()};n.lo=function(i){var u,f=t.location.hash,s=n.dec,r=n.se,o;i=i||{};switch(f){case"#large":opts.l=1;break;case"#abort":opts.abort=1;break;default:f.length>0&&f.substr(1).split("&").forEach(function(n){var t=n.split("=",2);this[s(t[0])]=s(t[1])},i)}return o=i.ac||i.accountid||r&&r.options&&r.options.user&&r.options.user.accountId,o&&(i.ac=o),i.tags||(u=e(),u&&(i.tags=u)),i};n.o2q=function(t,i){var r=n.enc;return Object.keys(t).filter(function(n){return i.indexOf(n)!==-1}).map(function(n){return r(n)+"="+r(t[n])}).join("&")};n.load=function(i,r,u){n.ls(i+"?"+n.o2q(r,u),function(){typeof t.clc_loaded=="function"&&t.clc_loaded()});n.cps=n.ts()};n.el=function(t){var i=n.qsa(t);return i.length>0?i[0]:null};n.hc=function(n){return n&&n.innerHTML&&n.innerHTML.replace(/\s+/g,"").length>0};n.wfc=function(t,i,r,u){function c(){n.hc(s)?(f(o),f(e),u(!0)):e=h(c,i)}function l(){f(e);u(!1)}var s=n.el(t),h=n.st,f=n.ct,o,e;if(s!==null)return c(),r&&(o=h(l,r)),function(){e&&f(e);o&&f(o)}};t.clc=n}})();;(function(n){function c(){var n=t.el(f);t.hc(n)||(n.parentNode.removeChild(n),typeof u=="function"&&u())}function l(u){if(!e){e=!0;var f=t.qsa("#"+i.d);f.length!==0&&(u||(i.azt=!0),i.lw=t.ts()-s,i.l||document.getElementById("careersadsdoublehigh")===null||(i.l=1),typeof r.innerWidth=="number"&&(i.bw=r.innerWidth),t.load(n.adurl,i,["d","l","ip","ac","eng","prov","tags","theme","remote","seed","lw","azt","sysadmin","fresh","bw"]))}}var r=window,t=r.clc,s=t.ts(),h=t.st,v=t.ct,f="#sidebar [id^='adzerk'].everyonelovesstackoverflow",i=t.lo({d:"hireme"}),e,u,o,a;i.abort||(o=null,u=t.wfc(f,20,o,l),a=h(c,2e3))}).call(null, {"bg":false,"adurl":"//clc.stackoverflow.com/j/p.js"});            </script>
+        </div>
+			  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer">
+<a href="/q/12786858" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="/questions/12786858/xcode-with-single-view-application-monodevelop-fails-build-undefined-symbols" class="question-hyperlink">XCode with Single View Application (MonoDevelop) Fails Build - Undefined symbols for architecture i386</a>
+</div>
+<div class="spacer">
+<a href="/q/23749704" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">-5
+    </div>
+</a><a href="/questions/23749704/whats-wrong-with-my-xcode-project-library-not-found-for-lmp3lame" class="question-hyperlink">What&#39;s wrong with my Xcode project? ( Library not found for -lmp3lame )</a>
+</div>
+<div class="spacer">
+<a href="/q/27219115" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="/questions/27219115/random-error-with-exit-code-1-xcode-6-1-swift" class="question-hyperlink">Random Error with Exit Code 1 - XCODE 6.1 Swift</a>
+</div>
+<div class="spacer">
+<a href="/q/28843863" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="/questions/28843863/2-duplicate-symbols-for-architecture-x86-64-further-help-needed" class="question-hyperlink">2 duplicate symbols for architecture x86_64, further help needed</a>
+</div>
+<div class="spacer">
+<a href="/q/29059858" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="/questions/29059858/xcode-6-2-force-load-ios-frameworks-in-osx-projects" class="question-hyperlink">Xcode 6.2 force_load iOS frameworks in OSX projects</a>
+</div>
+<div class="spacer">
+<a href="/q/30022831" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="/questions/30022831/clang-error-linker-command-failed-with-exit-code-1-use-v-to-see-invocation" class="question-hyperlink">clang: error: linker command failed with exit code 1 (use -v to see invocation) ID file not found</a>
+</div>
+<div class="spacer">
+<a href="/q/30338988" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="/questions/30338988/is-there-a-way-to-link-the-3rd-part-static-library-via-a-static-library" class="question-hyperlink">Is there a way to link the 3&#39;rd part static library via a static library?</a>
+</div>
+<div class="spacer">
+<a href="/q/31427833" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="/questions/31427833/clang-error-linker-command-failed-with-exit-code-1-use-v-to-see-invocation" class="question-hyperlink">clang: error: linker command failed with exit code 1 (use -v to see invocation) in swift application</a>
+</div>
+<div class="spacer">
+<a href="/q/31691503" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="/questions/31691503/xcode-cocoapods-library-not-found-error" class="question-hyperlink">xcode cocoapods library not found error</a>
+</div>
+<div class="spacer">
+<a href="/q/32540495" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">5
+    </div>
+</a><a href="/questions/32540495/xcode-plugin-template-cocoapods" class="question-hyperlink">Xcode plugin template cocoapods</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/30469/did-the-nazis-kill-jews-with-gas-chambers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did the Nazis kill Jews with gas chambers?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/55088/robocall-claiming-to-be-irs-saying-they-are-about-to-sue-is-it-legit" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Robocall claiming to be IRS saying they are about to sue - Is it legit?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/56621/recreating-images-from-a-source" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Recreating images from a source
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/281279/common-phrase-for-to-name-the-issue-exactly" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Common phrase for &quot;to name the issue exactly&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/221431/tiling-the-plane-with-incongruent-isosceles-triangles" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Tiling the plane with incongruent isosceles triangles
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/240422/is-the-steam-family-sharing-user-cap-a-life-time-limitation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the steam family sharing user cap a life time limitation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/281562/what-makes-this-sentence-clunky" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What makes this sentence &#39;clunky&#39;?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/33258627/how-many-object-will-be-eligible-for-the-garbage-collector-after-executing-m1-nu" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How many object will be eligible for the garbage collector after executing m1=null;m2=null;
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/687977/adding-number-to-text-file-with-loop" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    adding number to text file with loop
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/237635/using-telnet-to-get-website-header" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Using telnet to get website header
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/237531/why-does-ls-all-show-year-or-time" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does &quot;ls -all&quot; show year or time?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/27285/damage-distribution-with-banding-and-trample" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Damage distribution with Banding and Trample
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-photo" title="Photography Stack Exchange"></div><a href="http://photo.stackexchange.com/questions/70228/how-do-i-keep-track-of-many-many-clients-in-a-single-shoot-like-a-school-portr" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:61 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I keep track of many, many clients in a single shoot (like a school portrait day)?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/71270/should-i-say-she-is-no-student-or-she-is-not-a-student" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I say: She is &#39;no&#39; student or She is &#39;not&#39; a student?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/33238345/are-c-applications-cross-platform" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are C++ applications cross-platform?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/274139/drawing-two-identical-tubes-to-illustrate-a-math-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    drawing two identical tubes to illustrate a math problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/22232/is-this-a-wing-tip-device-on-the-a-10-warthog" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is this a wing-tip device on the A-10 &quot;Warthog&quot;?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/688107/problem-extracting-data-from-file-using-awk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Problem extracting data from file using awk
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/281461/why-is-wheres-it-grammatically-incorrect" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is &#39;Where&#39;s it&#39; Grammatically incorrect?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/42550/what-happened-to-the-child-of-professor-remus-lupin-and-tonks" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What happened to the child of Professor Remus Lupin and Tonks?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/23370/scrabble-impossibilities" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Scrabble Impossibilities
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/240426/am-i-subject-to-any-disadvantages-when-sharing-steam-games" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Am I subject to any disadvantages when sharing Steam games?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/108244/locking-mechanism-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Locking mechanism in C#
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/22237/what-is-the-bullet-like-appendage-on-the-t-6-texan" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the bullet-like appendage on the T-6 Texan?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="/feeds/question/32877445" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/32877445/ivc/8136');});
+</script>
+<noscript>
+    <div><img src="/posts/32877445/ivc/8136" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="/tour">tour</a>
+                    <a href="/help">help</a>
+                    <a href="http://blog.stackoverflow.com?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com">chat</a>
+                    <a href="http://data.stackexchange.com">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tr>
+            <th colspan=3>
+                Technology
+            </th>
+            <th >
+                Life / Arts
+            </th>
+            <th >
+                Culture / Recreation
+            </th>
+            <th >
+                Science
+            </th>
+            <th >
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo &#169; 2015 Stack Exchange Inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.10.21.2892
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('ios,xcode,osx,swift,cocoapods');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');
+                        ga('set', 'dimension2', '|ios|xcode|osx|swift|cocoapods|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
+    </body>
+</html>

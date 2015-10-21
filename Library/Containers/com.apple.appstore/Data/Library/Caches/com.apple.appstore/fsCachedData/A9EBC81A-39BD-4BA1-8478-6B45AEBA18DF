@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.apple.com/itms/" lang="en">
+
+
+  <head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="Mac App Store" /><meta name="description" content="Mac App Store" /><meta name="platform-cache-id" content="13" />
+
+
+<title>Search Results</title>
+
+
+
+
+
+
+<script>
+if (!window.its) {
+    window.its = {};
+}
+its.markupLoadStartTime = new Date().getTime();
+
+if (!window.onerror) window.onerror = function(message, url, lineNumber) {
+    if (!window._earlyOnerrorException) {
+        window._earlyOnerrorException = {message: message,
+                                         url: url,
+                                         lineNumber: lineNumber};
+    }
+};
+</script>
+
+
+    
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="https://s.mzstatic.com/htmlResources/418A/da-storefront-base.css" />
+<link charset="utf-8" rel="stylesheet" type="text/css" href="https://s.mzstatic.com/htmlResources/418A/da-storefront-search.css" />
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript" charset="utf-8" src="/htmlResources/418A/frameworks-primaryinit01.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">its.serverData={"storePlatformData":{},"constants":{"fetchSoftwareUpdatesUrl":"https://su.itunes.apple.com/WebObjects/MZSoftwareUpdate.woa/wa/fetchSoftwareUpdates","Urls":{"upgradeITunesUrl":"http://www.apple.com/itunes/download/","upgradeSafariUrl":"http://www.apple.com/safari/download/"},"MZMediaType":{"MobileSoftware":{"id":8,"name":"MobileSoftwareApplications"},"MacSoftware":{"id":12,"name":"DesktopApps"},"Audiobooks":{"id":3,"name":"Audiobooks"},"MusicVideos":{"id":5,"name":"MusicVideos"},"iTunesU":{"id":10,"name":"iTunesU"},"EBooks":{"id":11,"name":"EBooks"},"Music":{"id":1,"name":"Music"},"Podcasts":{"id":2,"name":"Podcasts"},"ClassicSoftware":{"id":7,"name":"iPodGames"},"TVShows":{"id":4,"name":"TVShows"},"Movies":{"id":6,"name":"Movies"},"Ringtones":{"id":9,"name":"Ringtones"},"Textbooks":{"id":13,"name":"Textbooks"}},"SFSortOrder":{"PlaylistName":{"id":9},"RecentBestSellers":{"id":18},"SeriesOrder":{"id":17},"CmcRecommended":{"id":10},"Popularity":{"id":3},"ArtistName":{"id":8},"Featured":{"id":1},"TopRated":{"id":5},"Duration":{"id":11},"ReleaseDate":{"id":2},"TrackNumber":{"id":13},"Name":{"id":0},"AllTimeBestSellers":{"id":14},"ExpirationDate":{"id":6},"Price":{"id":7},"MostRecent":{"id":16},"PurchaseDate":{"id":4},"DateAdded":{"id":15},"DiscNumber":{"id":12}},"SFEntityType":{"Artist":{"id":1},"Playlist":{"id":4},"TopContents":{"id":7},"MultiRoom":{"id":3},"Search":{"id":6},"WeMix":{"id":8},"Cmc":{"id":2},"Work":{"id":10},"Wishlist":{"id":9},"TopAuthors":{"id":12},"Room":{"id":5},"TheyMix":{"id":11}},"countryCode":"usa","languageCode":"en","SFCustomComponentCountryCode":"usa","IXDisplayableKind":{"Artist":{"id":20,"cssClasses":[],"name":"artist"},"MobileSoftware":{"id":11,"cssClasses":["application"],"name":"iosSoftware","mtId":"8"},"Album":{"id":2,"cssClasses":["album","music"],"name":"album","mtId":"1"},"ShortFilm":{"id":8,"cssClasses":["short-film","movie","video"],"name":"shortFilm","mtId":"6"},"PodcastEpisode":{"id":15,"cssClasses":["podcast-episode"],"name":"podcastEpisode","mtId":"2"},"ApplePubEBook":{"id":36,"cssClasses":["ebook"],"name":"ibook","mtId":"13"},"Song":{"id":1,"cssClasses":["song","music"],"name":"song","mtId":"1"},"MovieBundle":{"id":24,"cssClasses":["bundle","movie","video"],"name":"movieBundle","mtId":"6"},"RingtoneAlbum":{"id":22,"cssClasses":[],"name":"ringtoneAlbum","mtId":"9"},"Book":{"id":3,"cssClasses":["audiobook"],"name":"book","mtId":"3"},"ToneAlbum":{"id":32,"cssClasses":[],"name":"toneAlbum","mtId":"9"},"TVEpisode":{"id":6,"cssClasses":["tv-episode","tv","video"],"name":"tvEpisode","mtId":"4"},"TVSeason":{"id":7,"cssClasses":["tv-season","tv","video"],"name":"tvSeason","mtId":"4"},"Course":{"id":34,"cssClasses":["course","itunes-u"],"name":"course","mtId":"10"},"ClassicSoftwarePackage":{"id":18,"cssClasses":["ipod-game"],"name":"gamePackage","mtId":"7"},"Movie":{"id":9,"cssClasses":["movie","video"],"name":"movie","mtId":"6"},"Booklet":{"id":13,"cssClasses":["booklet","music"],"name":"booklet","mtId":"1"},"SocialArtist":{"id":28,"cssClasses":[],"name":"socialArtist"},"EBook":{"id":25,"cssClasses":["ebook"],"name":"epubBook","mtId":"11"},"MacSoftware":{"id":30,"cssClasses":["application","mac-application"],"name":"desktopApp","mtId":"12"},"MusicVideo":{"id":5,"cssClasses":["music-video","music","video"],"name":"musicVideo","mtId":"5"},"Ringtone":{"id":21,"cssClasses":[],"name":"ringtone","mtId":"9"},"Podcast":{"id":4,"cssClasses":["podcast"],"name":"podcast","mtId":"2"},"Concert":{"id":26,"cssClasses":[],"name":"concert","mtId":"1"},"ApplePubTextbook":{"id":37,"cssClasses":["ebook"],"name":"ibookTextbook","mtId":"11"},"SoftwareAddOn":{"id":16,"cssClasses":["software-add-on","application"],"name":"softwareAddOn","mtId":"8"},"Tone":{"id":31,"cssClasses":[],"name":"tone","mtId":"9"},"WeMix":{"id":19,"cssClasses":["wemix","music"],"name":"itunesMix","mtId":"1"},"SocialPerson":{"id":27,"cssClasses":[],"name":"socialPerson"},"ClassicSoftware":{"id":10,"cssClasses":["ipod-game"],"name":"ipodGame","mtId":"7"},"MetaEBook":{"id":35,"cssClasses":["ebook"],"name":"metaEbook","mtId":"13"},"iTunesPass":{"id":12,"cssClasses":["itunes-pass","album","music"],"name":"itunesPass","mtId":"1"},"Mix":{"id":14,"cssClasses":["mix","music"],"name":"mix","mtId":"1"},"TheyMix":{"id":33,"cssClasses":[],"name":"thirdPartyMix"}},"AddToWishlistResult":{"ItemIsFree":{"id":6},"ListFull":{"id":3},"SomeContentAlreadyOwnedButUnfulfilled":{"id":5},"SomeContentAlreadyInWishlist":{"id":1},"Success":{"id":0},"Failure":{"id":2},"SomeContentAlreadyOwned":{"id":4}},"getEmailUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/generateEmail?cc=us","resourceImagePathFrameworks":"https://s.mzstatic.com/htmlResources/418A/frameworks/images/","resourceBasePath":"https://s.mzstatic.com/htmlResources/418A"},"pageData":{},"properties":{"DAH.SharingMenu.WhitelistedServiceIds":["com.apple.share.Twitter.post","com.apple.share.Facebook.post","com.apple.share.Messages.compose"],"DAH.SharingMenu.HashTag":"#MacAppStore","DAH.SharingMenu.ServiceInfo":{"com.apple.share.Facebook.post":{"locKey":"DAH.SharingMenu.Facebook"},"com.apple.share.Twitter.post":{"locKey":"DAH.SharingMenu.Twitter"},"com.apple.share.Messages.compose":{"locKey":"DAH.SharingMenu.iChat"}},"clientStatsLoadTimeGroup":"4019","MZHtmlResourcesUtil.allowDeferJsLoad":true,"ITSServerEnvironment":"prod","ITSServerInstance":"105301","ITSResourceRevNum":"418A","resourceUrlPrefix":"https://s.mzstatic.com","ITSLogger.ServerReportingProtocol":"https","ITSLogger.ServerReportingDomain":"metrics.mzstatic.com","ITSLogger.ServerReportingApp":"MZUserXP","ITSLogger.RecordStatsAction":"recordStats","ITSLogger.SenderName":"ITSClient","ITSLogger.mirrorToServerByDefaultOnErrors":true,"DynaLoader.allowDynaLoading":true,"itsLoggerQueueProcessingInterval":10000,"cobaltBundleId":"com.apple.itunesu","getCobaltAppLink":"https://itunes.apple.com/us/app/id490217893","iTunesUEnrollLink":"https://itunes.apple.com/WebObjects/DZR.woa/wa/iTunesEnrollPopover?cc=us","cobaltLearnMore":"https://itunes.apple.com/us/learn-more?about=iTunesUUpgradePage&type=2","isCobaltEnabled":true,"isCobaltJavascriptRedirectEnabled":true,"isCobaltUpsellPageEnabled":true,"isRadioHistoryEnabled":true,"personalizedButtonsEnabled":true,"SF6.Personalization.isCMAEnabled":true,"SF6.Personalization.isCMSEnabled":true,"SFJ.isNFAEnabledInStorefront":true,"SFJ.isRecommendationsSwooshEnabledInStorefront":true,"SF6.StorePlatform.whitelistParams":["caller","dsid","id","p"],"vendLastSupportedVersionIfAvailable":true,"vendLastSupportedVersionMacOs":true,"isBookGiftingEnabled":true,"metrics":{"metricsUrl":"https://xp.apple.com/report","compoundSeparator":"_","tokenSeparator":"|","postFrequency":60000,"blacklistedFields":["capacitySystem","capacitySystemAvailable","capacityDisk","capacityData","capacityDataAvailable"],"fieldsMap":{"single":{"targetId":["id","adamId","contentId","type","fcId","userPreference","label","station-hash","linkIdentifier"]},"custom":{"location":["id","adamId","dataSetId","name","fcKind","kindIds","type","station-hash","core-seed-name"],"impressions":["id","adamId","station-hash"]},"cookies":["itcCt","itscc"],"multi":{}},"metricsBase":{"storeFrontHeader":"143441-1,13","language":"1","platformId":"13","platformName":"MacAppStore","storeFront":"143441","environmentDataCenter":"NWK"}},"MZStore.shouldAttemptToEvaluateXpathSecondTime":true,"MZStore.shouldCacheElementTypeProtoObjects":true,"isStoweUpgradeDialogEnabled":false,"stoweUpgradeSize":1600000000}}</script>
+<script type="text/javascript" charset="utf-8">
+if (!window.iTSLocalization) { iTSLocalization = {}; }
+iTSLocalization._strings = {"Js.MyAlerts.GeniusActivationNeeded.Button":"Go to Genius", "DABuyButton.aria.accept":"Accept, @@name@@, Free", "DAH.SharingMenu.Twitter":"Share on Twitter", "Js.Wishlist.RemoveTooltip":"Remove from Wish List", "DABuyButtonAlreadyInstalledExplanation":"Do you want to buy @@name@@ @@version@@?", "MHJavascriptLocalizations.DIBuyButtonDownloading":"Downloading", "Js.Showcase.Next":"Next Item", "Js.DA.BuyButton.Installed":"Installed", "Js.PreflightCheckWarning.Continue":"Continue", "DABuyButtonInstall":"Install App", "DABuyButtonNewerVersionAlreadyInstalledMessage":"A newer version of this app is already installed on this computer", "Js.CNConnections.Dialog.GetStarted":"Get Started", "Js.ReportAConcern.SigninMessage":"Enter your Apple ID and password, then click Sign In.", "DIBuyButtonDownloadingAria":"Downloading, @@name@@", "Js.TextTruncation.More":"More", "Js.QuickView.Unavailable.Title":"Quick View is currently unavailable for this item.", "CNConnections.Dialog.Post.Review.SignIn.Title":"Sign in to post.", "CNConnections.Upload.UploadErrorHeading":"There is a Problem With Your Upload", "CNConnections.Dialog.StopFollowing.Message":"CNConnections.Dialog.StopFollowing.Message", "CNConnections.Dialog.OptIn.Title":"Ping Will No Longer Be Available as of September 30", "DIBuyButtonDownloadedAria":"Downloaded, @@name@@", "Js.MyAlerts.GeniusActivationNeeded.Explanation":"Alerts based on your library content will not be enabled until you have turned on Genius. To learn more, click Go to Genius.", "_thousandsSeparator":",", "InAppPurchases":"In-App Purchases", 
+"Js.CNConnections.LoginRequired.Message":"This requires Ping. Ping will no longer be available as of September 30, and we are not accepting new members. If you are already a Ping member, sign in below to continue.", "Js.Pagination.PreviousPage":"Previous Page", "Js.TellAFriend.SigninTitle":"Sign in to tell a friend.", "Js.InlineReview.RateThis":"Rate this", "Js.InlineReview.5":"it's great", "Js.InlineReview.4":"it's good", "Js.InlineReview.3":"it's ok", "Js.InlineReview.2":"don't like it", "Js.InlineReview.1":"hate it", "Js.InlinePreview.StopPreview":"Stop preview of @@title@@", "DABuyButtonAlreadyInstalledNoVersionMessage":"@@installedname@@ is already installed and was not purchased from the Mac App Store.", "Close":"Close", "CNConnections.Dialog.OptIn.Message":"CNConnections.Dialog.OptIn.Message", "Js.DA.BuyButton.Open":"Open", "Js.CreateAccount":"Create Apple ID", "Js.CNConnections.OptInRequired.Title":"Ping", "Cancel":"Cancel", "DABuyButton.aria.installed":"Installed, @@name@@", "Js.ManageArtistAlerts.CheckAll.Actors":"Check All Actors", "SF.AskToBuy.PermissionBannerText":"Your request was sent and is awaiting approval from a parent. They can also @@bannerLinkText@@ on this device.", "DABuyButtonSameVersionAlreadyInstalledExplanation":"Do you want to buy @@name@@ @@version@@ again?", "More":"More", "Js.Pagination.DisabledButtonText":"disabled @@button_text@@", "Js.DA.BuyButton.Installing":"Installing", "Js.MyAlerts.CancelEmailSignUp.Message":"Are you sure you want to stop receiving email alerts?", "JS.errors.requiredLite":"Please fill in all required fields.", "CNConnections.Dialog.Post.Review.SignIn.Message":"CNConnections.Dialog.Post.Review.SignIn.Message", "SF.AskToBuy.PermissionBannerText.Free.bannerLinkText":"approve it in person", "Js.ManageArtistAlerts.UncheckAll.Artists":"Uncheck All Artists", "Buy":"Buy", "Js.InlineRating.SigninTitle":"Sign in to rate this item.", "Js.ManageArtistAlerts.UncheckAll.Actors":"Uncheck All Actors", "MHJavascriptLocalizations.DIBuyButtonDownload":"Download", 
+"Js.CNConnections.OptInRequired.Message":"This requires Ping. Ping will no longer be available as of September 30, and we are not accepting new members. If you are already a Ping member, sign in below to continue.", "DABuyButtonLearnMoreURL.Mavericks":"http://support.apple.com/kb/ht5842", "DABuyButtonLearnMoreURL.Lion":"http://support.apple.com/kb/ht4949", "Js.Search.HintsTitle":"Suggestions", "DABuyButtonLearnMoreURL.MtnLion":"http://support.apple.com/kb/ht5444", "Js.InlinePreview.PlayPreview":"Play preview of @@title@@", "SignIn":"Sign In", "Js.ManageArtistAlerts.UncheckAll":"Uncheck All", "Js.iTunesStoreError.Message":"We could not complete your request.", "DVHMusicPurchasesPage.Restored":"Unhidden", "Done":"Done", "DABuyButton.aria.open":"Open, @@name@@", "Js.Pagination.NextPage":"Next Page", "Js.CNConnections.RequestSent":"Request sent", "MHJavascriptLocalizations.DIBuyButtonDownloaded":"Downloaded", "DABuyButton.aria.install":"Install, @@name@@, Free", "DABuyButtonLearnMore":"Learn More", "DAH.SharingMenu.iChat":"Share in Messages", "CNConnections.Upload.UploadErrorMessage":"Sorry, there was an error during upload.", "Js.PreflightCheckFailedError.UpdateTitle":"We could not complete your update.", "Js.InlineReview.SigninMessage":"Enter your Apple ID and password, then click Sign In.", "Js.PreflightCheckFailedError.Message":"This computer does not meet the minimum install requirements for the app", "Software.HasAddOns":"Offers In-App Purchases", "Less":"Less", "Js.MyAlerts.GeniusActivationNeeded.Message":"This requires Genius.", "Js.ManageArtistAlerts.CheckAll.Artists":"Check All Artists", "Js.TellAFriend.SigninMessage":"Enter your Apple ID and password, then click Sign In.", "CNConnections.Dialog.StopFollowing.Title":"Are you sure you want to stop following @@fullName@@?", "Js.PreflightCheckFailedErrorWithAppName.Title":"We could not complete your purchase of @@appName@@", "DTHBuyInfo.actionText.Accept":"Accept", "Js.PreflightCheckFailedError.Title":"We could not complete your purchase.", "Js.InlineReview.SigninTitle":"Sign in to write a review.", "Js.InlineRating.SigninMessage":"Sign in to continue.", "Js.DA.BuyButton.Install":"Install", "DABuyButton.aria.confirm.buy":"Confirm, Buy, @@name@@, @@price@@", "Js.Pagination.Back":"Back", "DABuyButton.aria.installing":"Installing, @@name@@", "DTHBuyInfo.actionText.Gratis":"Free", "CNConnections.Dialog.PrivateUser.IllegalAction.Message":"If you would like to perform this action, please change your privacy settings.", "DVHMusicPurchasesPage.Restore":"Unhide", "DABuyButton.aria.confirm.install":"Confirm, Install, @@name@@, Free", "Js.QuickView.Unavailable.Text":"Please try again later.", "Js.MyAlerts.ConfirmEmailSignUp.Explanation":"You can change this preference at any time from your My Alerts page.", "Js.CNConnections.Dialog.Cancel":"Cancel", "Js.CNConnections.PeoplePopupMore":"and @@count@@ other@@s@@...", "Js.CNConnections.Confirmed":"Confirmed", "Js.CNConnections.UserReview.YouLiked":"You Liked", "MHJavascriptLocalizations.DIBuyButtonUpdate":"Update", "Yes":"Yes", "Js.Pagination.Next":"Next", "Js.ManageArtistAlerts.CheckAll":"Check All", "Js.ReportAConcern.SigninTitle":"Sign in to report a concern.", "Js.MyAlerts.CancelEmailSignUp.Explanation":"You can change this preference at any time from your My Alerts page.", "CNConnections.Dialog.PrivateUser.LeakyAction.Message":"This action will make your profile photo and name visible to others.", "Js.TextLimit.Remaining":"@@count@@ characters remaining", "CNConnections.Dialog.PrivateUser.LeakyAction.Title":"Are you sure you want to perform this action?", "DABuyButtonBuyNow":"Buy App", "Js.Pagination.PageNumberTitle":"page @@num@@", "SF.AskToBuy.PermissionBannerText.bannerLinkText":"approve it in person", "OK":"OK", "Js.InlineReview.Thanks":"Thanks!", "Js.InlineReview.Error":"Error", "CNConnections.Dialog.Like.Review.SignIn.Message":"CNConnections.Dialog.Like.Review.SignIn.Message", "Js.List.Item":"item", "DABuyButtonAlreadyInstalledMessage":"@@installedname@@ @@installedversion@@ is already installed and was not purchased from the Mac App Store.", "No":"No", "Js.iTunesStoreError.Explanation":"There was an error in the App Store. Please try again later.  (@@errorNum@@)", "Js.InlineReview.ClickToRate":"Click to rate", "DABuyButtonNewerVersionAlreadyInstalledExplanation":"If you want to replace it with this version, move the existing app to the trash.", "CNConnections.Dialog.PrivateUser.IllegalAction.Title":"Private users may not perform this action.", "DABuyButton.aria.buy":"Buy, @@name@@, @@price@@", "Js.MyAlerts.ConfirmEmailSignUp.Message":"Are you sure you want to receive email alerts?", "CNConnections.Dialog.OptIn.ButtonSubmit":"Learn More", "_decimalSeparator":".", "CNConnections.Dialog.OptIn.ButtonCancel":"Cancel", "DIBuyButtonRedownloadAria":"Download, @@name@@: Free", "Js.CNConnections.LoginRequired.Title":"Sign in to access Ping.", "CNConnections.Dialog.OptIn.ButtonSignIn":"Sign In", "Js.Pagination.PageNumber":"Page @@num@@", "DAH.SharingMenu.Facebook":"Share to Facebook", "DIBuyButtonUpdateAria":"Update, @@name@@", "CNConnections.Dialog.Like.Review.SignIn.Title":"Sign in to like a review.", "Js.PreflightCheckWarning.Title":"Would you like to continue?", "CNConnections.Upload.MaxPhotosErrorMessage":"You can have no more than 20 photos in one post."}
+</script>
+
+<script type="text/javascript" charset="utf-8" src="/htmlResources/418A/da-storefront-base.js"></script>
+<script type="text/javascript" charset="utf-8" src="/htmlResources/418A/da-storefront-sharing.js"></script>
+
+
+
+
+
+
+
+</head>
+
+  <body data-country="usa" buy-button-metadata-url="https://se.itunes.apple.com/WebObjects/MZStoreElements.woa/wa/buyButtonMetaData" class="usa en search">
+  <script type="text/javascript">
+    if (window['iTSKit']) { iTSKit.preLoad(); }
+    if (window.its && its.kit) { its.kit.preload(); }
+  </script>
+
+  
+
+  
+  <div id="page">
+    <div id="wrapper">
+
+      <div id="content">
+
+        <div class="background"></div>
+
+        
+
+        
+
+        
+
+    <div class="columns">
+      <div class="main">
+
+        
+          
+
+          
+          <div display-page-number-separately="true" page-number-parameter="page" pill-identifier-parameter="pill" sort-key-parameter="sortOrdering" goto-page-href="https://itunes.apple.com/WebObjects/MZSearch.woa/wa/search?cc=us&pageCount=120&q=learn%20swifrt" class="lockup-container paginate application mac-application numbered">
+  <div class="title">
+    <h2>Search Results for “learn swifrt”</h2>
+    
+    
+    	
+	  
+    
+    <div class="select sort-controls">
+  <label>
+    <span>Sort By:</span>
+    <select metrics-loc="Selector">
+      
+        <option value="10" metrics-loc="Relevance">
+          Relevance
+        </option>
+      
+        <option value="6" metrics-loc="Most Popular">
+          Most Popular
+        </option>
+      
+        <option value="2" metrics-loc="Release Date">
+          Release Date
+        </option>
+      
+        <option value="13" metrics-loc="Customer Rating">
+          Customer Rating
+        </option>
+      
+    </select>
+  </label>
+</div>
+    
+  </div>
+  <div class="content-and-controls">
+    <div class="paginated-container">
+      <div page-number="1" sort-key pill-identifier="0" total-number-of-pages="1" class="paginated-content"><div rating-software="100,itunes-games" parental-rating="1" metrics-loc="Lockup_" role="group" aria-label="Learn PhalconPHP" adam-id="888286150" class="lockup small detailed option application mac-application">
+  
+  <a href="https://itunes.apple.com/us/app/learn-phalconphp/id888286150?mt=12" class="artwork-link"><div class="artwork"><img width="75" height="75" alt="Learn PhalconPHP" src-load-auto-after-page-load-if-not-onscreen="" src-swap-high-dpi="http://a4.mzstatic.com/us/r30/Purple2/v4/d3/5f/e1/d35fe1da-50d5-a846-694a-ecca74df0167/icon256.png" src-swap="http://a5.mzstatic.com/us/r30/Purple2/v4/d3/5f/e1/d35fe1da-50d5-a846-694a-ecca74df0167/icon128.png" class="artwork" src="https://s.mzstatic.com/htmlResources/41C8/frameworks/images/p.png" /></div></a>
+  <ul class="list"><li class="name"><a href="https://itunes.apple.com/us/app/learn-phalconphp/id888286150?mt=12">Learn PhalconPHP</a></li><li class="genre">Developer Tools</li><li><div rating-software="100,itunes-games" parental-rating="1" class="multi-button action small application mac-application detailed">
+  <button update-buy-params="productType=C&amp;price=0&amp;salableAdamId=888286150&amp;pricingParameters=SWUPD&amp;appExtVrsId=600983536" share-message-data="{&#34;tinyUrl&#34;:&#34;https://macappsto.re/us/gVI80.m&#34;}" minimumOSVersion="10.7" bundle-id="com.eletronica.PhalconPHPMac" original-price="$2.99" preflight="http://a402.phobos.apple.com/us/r1000/055/Purple1/v4/06/c7/b7/06c7b750-6436-4059-eb57-746989e0697f/signed.dcr.2203542880811848574.pfpkg" versionID="600983536" adam-id="888286150" dk-id="30" item-name="Learn PhalconPHP" buy-params="productType=C&amp;price=2990&amp;salableAdamId=888286150&amp;pricingParameters=STDQ&amp;appExtVrsId=600983536" version-string="1.0" large-icon="http://a4.mzstatic.com/us/r30/Purple2/v4/d3/5f/e1/d35fe1da-50d5-a846-694a-ecca74df0167/icon256.png" metrics-leaf="1" metrics-loc="Buy" class="button-area">
+    <span class="price">$2.99</span>
+    <span class="left-cap"></span>
+    <div class="inner"><span>$2.99</span></div>
+    <span class="right-cap"></span>
+  </button>
+  
+    <select aria-label="Actions for Learn PhalconPHP">
+      
+        <option action="copy-link" href="https://itunes.apple.com/us/app/learn-phalconphp/id888286150?mt=12" metrics-loc="CopyLink" metrics-leaf="1">Copy Link</option>
+      
+        <option taf-body-url="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/tellAFriendBody?name=s&amp;type=14&amp;id=888286150&amp;displayable-kind=30" action="tell-a-friend" metrics-loc="TellAFriend" metrics-leaf="1">Tell a Friend</option>
+      
+    </select>
+    <span class="arrow"></span>
+  
+</div></li></ul>  
+</div>
+<div rating-software="100,itunes-games" parental-rating="1" metrics-loc="Lockup_" role="group" aria-label="Tutorials for Xcode and Swift" adam-id="1008621710" class="lockup small detailed option application mac-application">
+  
+  <a href="https://itunes.apple.com/us/app/tutorials-for-xcode-and-swift/id1008621710?mt=12" class="artwork-link"><div class="artwork"><img width="75" height="75" alt="Tutorials for Xcode and Swift" src-load-auto-after-page-load-if-not-onscreen="" src-swap-high-dpi="http://a2.mzstatic.com/us/r30/Purple7/v4/58/3b/ec/583beca6-ee7b-2866-4314-be5a255a197a/icon256.png" src-swap="http://a3.mzstatic.com/us/r30/Purple7/v4/58/3b/ec/583beca6-ee7b-2866-4314-be5a255a197a/icon128.png" class="artwork" src="https://s.mzstatic.com/htmlResources/41C8/frameworks/images/p.png" /></div></a>
+  <ul class="list"><li class="name"><a href="https://itunes.apple.com/us/app/tutorials-for-xcode-and-swift/id1008621710?mt=12">Tutorials for Xcode and Swift</a></li><li class="genre">Developer Tools</li><li><div rating-software="100,itunes-games" parental-rating="1" class="multi-button action small application mac-application detailed">
+  <button update-buy-params="productType=C&amp;price=0&amp;salableAdamId=1008621710&amp;pricingParameters=SWUPD&amp;appExtVrsId=812673779" share-message-data="{&#34;tinyUrl&#34;:&#34;https://macappsto.re/us/oILh8.m&#34;}" minimumOSVersion="10.6" bundle-id="com.bluewater.tutorialsnew" original-price="$24.99" preflight="http://a1411.phobos.apple.com/us/r1000/141/Purple7/v4/ab/02/1f/ab021f3c-4c3b-e6ed-47d9-8044ebbae637/signed.dcr.3268584602356916036.pfpkg" versionID="812673779" adam-id="1008621710" dk-id="30" item-name="Tutorials for Xcode and Swift" buy-params="productType=C&amp;price=24990&amp;salableAdamId=1008621710&amp;pricingParameters=STDQ&amp;appExtVrsId=812673779" version-string="1.0" large-icon="http://a2.mzstatic.com/us/r30/Purple7/v4/58/3b/ec/583beca6-ee7b-2866-4314-be5a255a197a/icon256.png" metrics-leaf="1" metrics-loc="Buy" class="button-area">
+    <span class="price">$24.99</span>
+    <span class="left-cap"></span>
+    <div class="inner"><span>$24.99</span></div>
+    <span class="right-cap"></span>
+  </button>
+  
+    <select aria-label="Actions for Tutorials for Xcode and Swift">
+      
+        <option action="copy-link" href="https://itunes.apple.com/us/app/tutorials-for-xcode-and-swift/id1008621710?mt=12" metrics-loc="CopyLink" metrics-leaf="1">Copy Link</option>
+      
+        <option taf-body-url="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/tellAFriendBody?name=s&amp;type=14&amp;id=1008621710&amp;displayable-kind=30" action="tell-a-friend" metrics-loc="TellAFriend" metrics-leaf="1">Tell a Friend</option>
+      
+    </select>
+    <span class="arrow"></span>
+  
+</div></li></ul>  
+</div>
+<div rating-software="100,itunes-games" parental-rating="1" metrics-loc="Lockup_" role="group" aria-label="Tutorials for Swift Programming" adam-id="1009150830" class="lockup small detailed option application mac-application">
+  
+  <a href="https://itunes.apple.com/us/app/tutorials-for-swift-programming/id1009150830?mt=12" class="artwork-link"><div class="artwork"><img width="75" height="75" alt="Tutorials for Swift Programming" src-load-auto-after-page-load-if-not-onscreen="" src-swap-high-dpi="http://a4.mzstatic.com/us/r30/Purple5/v4/b8/a1/08/b8a10897-e8fc-0c00-7520-6cc974796d0c/icon256.png" src-swap="http://a2.mzstatic.com/us/r30/Purple5/v4/b8/a1/08/b8a10897-e8fc-0c00-7520-6cc974796d0c/icon128.png" class="artwork" src="https://s.mzstatic.com/htmlResources/41C8/frameworks/images/p.png" /></div></a>
+  <ul class="list"><li class="name"><a href="https://itunes.apple.com/us/app/tutorials-for-swift-programming/id1009150830?mt=12">Tutorials for Swift Programming</a></li><li class="genre">Developer Tools</li><li><div rating-software="100,itunes-games" parental-rating="1" class="multi-button action small application mac-application detailed">
+  <button update-buy-params="productType=C&amp;price=0&amp;salableAdamId=1009150830&amp;pricingParameters=SWUPD&amp;appExtVrsId=812682223" share-message-data="{&#34;tinyUrl&#34;:&#34;https://macappsto.re/us/UTMj8.m&#34;}" minimumOSVersion="10.6" bundle-id="com.bluewater.swiftprogramming2" original-price="$11.99" preflight="http://a384.phobos.apple.com/us/r1000/023/Purple7/v4/69/12/23/691223fd-3ea1-55fc-17a1-0c645530bca3/signed.dcr.2284021178054699066.pfpkg" versionID="812682223" adam-id="1009150830" dk-id="30" item-name="Tutorials for Swift Programming" buy-params="productType=C&amp;price=11990&amp;salableAdamId=1009150830&amp;pricingParameters=STDQ&amp;appExtVrsId=812682223" version-string="1.0" large-icon="http://a4.mzstatic.com/us/r30/Purple5/v4/b8/a1/08/b8a10897-e8fc-0c00-7520-6cc974796d0c/icon256.png" metrics-leaf="1" metrics-loc="Buy" class="button-area">
+    <span class="price">$11.99</span>
+    <span class="left-cap"></span>
+    <div class="inner"><span>$11.99</span></div>
+    <span class="right-cap"></span>
+  </button>
+  
+    <select aria-label="Actions for Tutorials for Swift Programming">
+      
+        <option action="copy-link" href="https://itunes.apple.com/us/app/tutorials-for-swift-programming/id1009150830?mt=12" metrics-loc="CopyLink" metrics-leaf="1">Copy Link</option>
+      
+        <option taf-body-url="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/tellAFriendBody?name=s&amp;type=14&amp;id=1009150830&amp;displayable-kind=30" action="tell-a-friend" metrics-loc="TellAFriend" metrics-leaf="1">Tell a Friend</option>
+      
+    </select>
+    <span class="arrow"></span>
+  
+</div></li></ul>  
+</div>
+<div rating-software="100,itunes-games" parental-rating="1" metrics-loc="Lockup_" role="group" aria-label="Tutorial for Sprite Kit - using Xcode 6.3 and Swift" adam-id="1005799576" class="lockup small detailed option application mac-application">
+  
+  <a href="https://itunes.apple.com/us/app/tutorial-for-sprite-kit-using/id1005799576?mt=12" class="artwork-link"><div class="artwork"><img width="75" height="75" alt="Tutorial for Sprite Kit - using Xcode 6.3 and Swift" src-load-auto-after-page-load-if-not-onscreen="" src-swap-high-dpi="http://a4.mzstatic.com/us/r30/Purple7/v4/3c/2e/08/3c2e089a-ae3b-5a6f-5438-5e0be51a051e/icon256.png" src-swap="http://a2.mzstatic.com/us/r30/Purple7/v4/3c/2e/08/3c2e089a-ae3b-5a6f-5438-5e0be51a051e/icon128.png" class="artwork" src="https://s.mzstatic.com/htmlResources/41C8/frameworks/images/p.png" /></div></a>
+  <ul class="list"><li class="name"><a href="https://itunes.apple.com/us/app/tutorial-for-sprite-kit-using/id1005799576?mt=12">Tutorial for Sprite Kit - using Xcode 6.3 and Swift</a></li><li class="genre">Developer Tools</li><li><div rating-software="100,itunes-games" parental-rating="1" class="multi-button action small application mac-application detailed">
+  <button update-buy-params="productType=C&amp;price=0&amp;salableAdamId=1005799576&amp;pricingParameters=SWUPD&amp;appExtVrsId=812637594" share-message-data="{&#34;tinyUrl&#34;:&#34;https://macappsto.re/us/yI087.m&#34;}" minimumOSVersion="10.6" bundle-id="com.bluewater.spritekittuts" original-price="$19.99" preflight="http://a413.phobos.apple.com/us/r1000/020/Purple5/v4/02/12/4e/02124ec1-7d79-aa6f-d8b6-d88aa69a2c74/signed.dcr.5654316873608022786.pfpkg" versionID="812637594" adam-id="1005799576" dk-id="30" item-name="Tutorial for Sprite Kit - using Xcode 6.3 and Swift" buy-params="productType=C&amp;price=19990&amp;salableAdamId=1005799576&amp;pricingParameters=STDQ&amp;appExtVrsId=812637594" version-string="1.0" large-icon="http://a4.mzstatic.com/us/r30/Purple7/v4/3c/2e/08/3c2e089a-ae3b-5a6f-5438-5e0be51a051e/icon256.png" metrics-leaf="1" metrics-loc="Buy" class="button-area">
+    <span class="price">$19.99</span>
+    <span class="left-cap"></span>
+    <div class="inner"><span>$19.99</span></div>
+    <span class="right-cap"></span>
+  </button>
+  
+    <select aria-label="Actions for Tutorial for Sprite Kit - using Xcode 6.3 and Swift">
+      
+        <option action="copy-link" href="https://itunes.apple.com/us/app/tutorial-for-sprite-kit-using/id1005799576?mt=12" metrics-loc="CopyLink" metrics-leaf="1">Copy Link</option>
+      
+        <option taf-body-url="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/tellAFriendBody?name=s&amp;type=14&amp;id=1005799576&amp;displayable-kind=30" action="tell-a-friend" metrics-loc="TellAFriend" metrics-leaf="1">Tell a Friend</option>
+      
+    </select>
+    <span class="arrow"></span>
+  
+</div></li></ul>  
+</div>
+<div rating-software="100,itunes-games" parental-rating="1" metrics-loc="Lockup_" role="group" aria-label="iTheory CH Premium" adam-id="886110128" class="lockup small detailed option application mac-application">
+  
+  <a href="https://itunes.apple.com/us/app/itheory-ch-premium/id886110128?mt=12" class="artwork-link"><div class="artwork"><img width="75" height="75" alt="iTheory CH Premium" src-load-auto-after-page-load-if-not-onscreen="" src-swap-high-dpi="http://a5.mzstatic.com/us/r30/Purple5/v4/78/98/4f/78984fab-0466-79a6-1481-815c640d11d6/icon256.png" src-swap="http://a3.mzstatic.com/us/r30/Purple5/v4/78/98/4f/78984fab-0466-79a6-1481-815c640d11d6/icon128.png" class="artwork" src="https://s.mzstatic.com/htmlResources/41C8/frameworks/images/p.png" /></div></a>
+  <ul class="list"><li class="name"><a href="https://itunes.apple.com/us/app/itheory-ch-premium/id886110128?mt=12">iTheory CH Premium</a></li><li class="genre">Education</li><li><div rating-software="100,itunes-games" parental-rating="1" class="multi-button action small application mac-application detailed">
+  <button update-buy-params="productType=C&amp;price=0&amp;salableAdamId=886110128&amp;pricingParameters=SWUPD&amp;appExtVrsId=764312743" share-message-data="{&#34;tinyUrl&#34;:&#34;https://macappsto.re/us/WEp00.m&#34;}" minimumOSVersion="10.9" bundle-id="ch.swift.osx.itheory.ch.asa" original-price="$18.99" preflight="http://a719.phobos.apple.com/us/r1000/163/Purple5/v4/bb/17/c7/bb17c79b-01c2-b1d0-9b5e-5a6343ae24ac/signed.dcr.5612950644989182796.pfpkg" versionID="764312743" adam-id="886110128" dk-id="30" item-name="iTheory CH Premium" buy-params="productType=C&amp;price=18990&amp;salableAdamId=886110128&amp;pricingParameters=STDQ&amp;appExtVrsId=764312743" version-string="1.1.12" large-icon="http://a5.mzstatic.com/us/r30/Purple5/v4/78/98/4f/78984fab-0466-79a6-1481-815c640d11d6/icon256.png" metrics-leaf="1" metrics-loc="Buy" class="button-area">
+    <span class="price">$18.99</span>
+    <span class="left-cap"></span>
+    <div class="inner"><span>$18.99</span></div>
+    <span class="right-cap"></span>
+  </button>
+  
+    <select aria-label="Actions for iTheory CH Premium">
+      
+        <option action="copy-link" href="https://itunes.apple.com/us/app/itheory-ch-premium/id886110128?mt=12" metrics-loc="CopyLink" metrics-leaf="1">Copy Link</option>
+      
+        <option taf-body-url="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/tellAFriendBody?name=s&amp;type=14&amp;id=886110128&amp;displayable-kind=30" action="tell-a-friend" metrics-loc="TellAFriend" metrics-leaf="1">Tell a Friend</option>
+      
+    </select>
+    <span class="arrow"></span>
+  
+</div></li></ul>  
+</div>
+</div>
+    </div>
+    
+  </div>
+</div>
+
+        
+
+        
+
+      </div>
+    </div>
+
+  
+
+      </div>
+
+
+      
+      
+
+    </div>
+  </div>
+
+  <footer>
+  <div class="legal">
+    <span class="copyright">Copyright © 2015 Apple Inc. <a target="_blank" href="https://www.apple.com/legal/">All rights reserved.</a></span>
+    <ul class="list" role="presentation">
+      <li><a target="_blank" href="https://www.apple.com/legal/privacy/">Privacy Policy</a></li>
+      <li><a target="_blank" href="http://www.apple.com/legal/itunes/us/terms.html">Terms and Conditions</a></li>
+      
+      <li><a href="https://itunes.apple.com/us/faq">FAQ</a></li>
+    </ul>
+    
+    <div class="intl" metrics-loc="CountryPicker">
+      <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/countrySelectorPage"><img src-load-auto-after-dom-load="" width="30" height="30" src-swap-high-dpi="https://s.mzstatic.com/images/flags/-dsi-30/usa.png" alt="My Store: United States, Choose Store" src-swap="https://s.mzstatic.com/images/flags/30/usa.png"></img></a>
+    </div>
+    
+  </div>
+</footer>
+
+
+  <script language="JavaScript" type="text/javascript"><!--
+
+    var iTSMetricsCallbackFunction = function() {
+	    ITSMetrics.reportingSuite = "appleitmswwwap,appleitmsusap";
+	    ITSMetrics.omniture = ITSMetrics.createBaselineOmnitureObject();
+	    
+	    ITSMetrics.isPageMetricsEnabled=true;
+	    
+	    ITSMetrics.isBuyMetricsEnabled=true;
+	    
+	
+	    /* Page Metrics */
+	    ITSMetrics.omniture.pageName="Search-US-Desktop Apps";
+ITSMetrics.omniture.channel="Media Search Pages";
+ITSMetrics.omniture.prop22="HTML";
+ITSMetrics.omniture.eVar22="HTML";
+ITSMetrics.omniture.prop2="learn swifrt";
+ITSMetrics.omniture.eVar2="learn swifrt";
+
+	    
+	    
+	    
+	    /* User Agent */
+	    var userAgentForMetrics = ITSMetrics.userAgentForMetrics();
+	    ITSMetrics.omniture.prop12 = userAgentForMetrics;
+	    ITSMetrics.omniture.eVar12 = userAgentForMetrics;
+	    
+	    // check if Game Center
+	    var gcUserAgent = "GameCenter";
+	    var isGameCenter = userAgentForMetrics.length >= gcUserAgent.length && userAgentForMetrics.substr(0, gcUserAgent.length) == gcUserAgent;
+	    if (isGameCenter) {
+	        // prepend "GameCenter" to page and channel name
+	        if (ITSMetrics.omniture.pageName) ITSMetrics.omniture.pageName = "GameCenter-" + ITSMetrics.omniture.pageName;
+	        if (ITSMetrics.omniture.channel) ITSMetrics.omniture.channel = "GameCenter-" + ITSMetrics.omniture.channel;
+	    }
+	    
+	    
+	    /* Browser Plugins */
+	    ITSMetrics.shouldTrackBrowserPlugins = false;
+	    
+	    /* Pass-thru query params */
+	    ITSMetrics.processQueryParameterInfoInCurrentRequest(ITSMetrics.omniture);
+	    
+	    if (ITSMetrics.isPageMetricsEnabled && ITSMetrics.isOmnitureSupportedOnClient()) {
+	        ITSMetrics.emitPagePing = function() {
+	            var s_code=ITSMetrics.omniture.t();
+                // Make a second ping to Figaro for Preview
+                if (window.webPreview) {
+                    var queryParams = {};
+                    queryParams.responseType="image";
+                    queryParams.eventVersion = 1;  // begin query parameters
+                    queryParams.eventType = "page";  // hardcoded
+
+                    var time = new Date();
+                    queryParams.eventTime = time.getTime();
+                    queryParams.pageName = ITSMetrics.omniture.pageName;
+                    queryParams.pageUrl = window.location.href;  // current page url
+                    queryParams.refUrl = document.referrer; //Refer
+                    queryParams.pageType = ITSMetrics.omniture.channel; //Channel
+
+                    queryParams.userAgent = window.navigator.userAgent; //User agent
+
+                    queryParams.screenWidth = screen.width;
+                    queryParams.screenHeight = screen.height; // screen size
+
+                    queryParams.windowInnerWidth = window.innerWidth;  // browser width
+                    queryParams.windowInnerHeight = window.innerHeight;  // browser height
+
+                    queryParams.app = navigator.appName;
+
+                    var url = "https://xp.apple.com/report/2/xp_its_preview";
+
+                    url = its.url.appendUrlParameters(url, queryParams);
+                    var image = new Image();
+                    image.src = url;
+                }
+                if (s_code) {
+	                var containingDiv = document.createElement('div');
+	                containingDiv.innerHTML = s_code;
+	                document.body.appendChild(containingDiv);
+	            }
+	        };
+	        its.x.addEventListener(window, 'load', function() { window.setTimeout(ITSMetrics.emitPagePing, 1) }, false );
+	    }
+    };
+
+    if (!window["ITSMetrics"]){ 
+	    iTSDefer.register(function() {
+	        iTSMetricsCallbackFunction();
+	    });
+    } else {
+        iTSMetricsCallbackFunction();
+    }
+--></script>
+    <script>
+        if (!window.its) {
+            window.its = {};
+        }
+        window.its.markupLoadEndTime = new Date().getTime();
+    </script>
+
+
+
+</body>
+
+
+</html>

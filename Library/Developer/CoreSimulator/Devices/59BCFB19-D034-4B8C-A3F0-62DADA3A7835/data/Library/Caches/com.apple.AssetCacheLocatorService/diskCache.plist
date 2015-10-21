@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cache</key>
+	<array>
+		<dict>
+			<key>networkIdentifiers</key>
+			<array>
+				<string>C2pRrdi2L/7Md8s1hFZ+ZMcUOeEGqzcDcmG+hHcPc4A=</string>
+			</array>
+			<key>servers</key>
+			<array/>
+			<key>validUntil</key>
+			<date>2015-10-22T17:24:27Z</date>
+		</dict>
+	</array>
+	<key>dnsPublicAddressRanges</key>
+	<array>
+		<dict>
+			<key>networkIdentifiers</key>
+			<array>
+				<string>C2pRrdi2L/7Md8s1hFZ+ZMcUOeEGqzcDcmG+hHcPc4A=</string>
+			</array>
+			<key>ranges</key>
+			<array/>
+			<key>validUntil</key>
+			<date>2015-10-22T17:24:27Z</date>
+		</dict>
+	</array>
+	<key>serversRecentlySeen</key>
+	<array>
+		<dict>
+			<key>networkIdentifiers</key>
+			<array>
+				<string>localhost</string>
+				<string>::1</string>
+				<string>127.0.0.1</string>
+			</array>
+			<key>recentlySeen</key>
+			<false/>
+			<key>validUntil</key>
+			<date>2015-10-22T17:24:27Z</date>
+		</dict>
+		<dict>
+			<key>networkIdentifiers</key>
+			<array>
+				<string>C2pRrdi2L/7Md8s1hFZ+ZMcUOeEGqzcDcmG+hHcPc4A=</string>
+			</array>
+			<key>recentlySeen</key>
+			<false/>
+			<key>validUntil</key>
+			<date>2015-10-22T17:24:27Z</date>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>6</integer>
+</dict>
+</plist>

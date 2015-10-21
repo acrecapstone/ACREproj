@@ -1,0 +1,7 @@
+[note]  [15/10/21 12:23:56.970] GSDaemon.m:221 revisiond starting, built @ Jul 28 2015 14:46:40 (on main-thread)
+[note]  [15/10/21 12:24:02.679] GSManager.m:834 device 1000004 has no metainfo file (on revisiond.volumeManager)
+[note]  [15/10/21 12:24:07.092] GSSystemResourcesManager.m:193 Power level really becomes good (on revisiond.system-resources)
+[note]  [15/10/21 12:24:07.092] GSSystemResourcesManager.m:90 [GSSystemResourcesManager] has been initialized (on revisiond.volumeManager)
+[note]  [15/10/21 12:24:07.092] GSManager.m:124 Quitting throttled mode on device 16777220 (on revisiond.library)
+[note]  [15/10/21 12:24:07.112] GSManager.m:2583 Library on device 1000004, non Syrah+ status, do not trust the DB state (on revisiond.library)
+[ERROR] [15/10/21 12:24:08.150] GSManager.m:325 Received bogus event on device 1000004: .docid (flags:10 id:12236094) (on revisiond.library)

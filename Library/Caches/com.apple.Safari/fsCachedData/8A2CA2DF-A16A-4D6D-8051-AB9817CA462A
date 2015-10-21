@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" data-amd-enabled="true" xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="canonical" href="https://www.visualstudio.com/en-us/get-started/code/share-your-code-in-git-xcode" />
+    <title>Share your code in Git using Xcode | Visual Studio Online</title>
+    
+
+<meta name="AmbientContext" content="{&quot;layout.limit_max_width&quot;:true,&quot;AmbientContextId&quot;:&quot;D66157AC-0FCB-401D-8725-55DA57FABC5D&quot;,&quot;display.use_large_font&quot;:true,&quot;AmbientContextDownstream&quot;:{},&quot;display.high_contrast&quot;:false}" />
+
+<meta name="DCS.dcsuri" content="/en-us/get-started/code/share-your-code-in-git-xcode" />
+
+<meta name="MN" content="FB361392-11:58:22 AM" />
+
+<meta name="ms.assetid" content="" />
+
+<meta name="ms.auth" content="0" />
+
+<meta name="ms.ContentId" content="f1fedd72-d9b9-45cf-99aa-2e624c899c45" />
+
+<meta name="ms.lang" content="EN" />
+
+<meta name="ms.loc" content="US" />
+
+<meta name="Ms.Locale" content="en-us" />
+
+<meta name="ms.normalizedurl" content="https://www.visualstudio.com/en-us/get-started/code/share-your-code-in-git-xcode" />
+
+<meta name="ms.sitever" content="2015.10.05.2" />
+
+<meta name="NormalizedUrl" content="https://www.visualstudio.com/en-us/get-started/code/share-your-code-in-git-xcode" />
+
+<meta name="VotingContextUrl" content="https://www.visualstudio.com/en-us/get-started/code/share-your-code-in-git-xcode" />
+
+    
+    
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+        
+    
+    
+
+
+    <script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        window.appInsightsId = 'b38f73a4-bfba-4c1f-a0ce-aed40ec13745';
+        //]]>
+    </script>
+    
+    
+    
+    
+
+<link rel="stylesheet" type="text/css" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="https://i-vso.sec.s-msft.com/Combined.css?resources=0:OverridesForBootstrap,1:Layout,2:OALayout,1:OA_VStudio,1:Header.1,1:ImageSprite,2:LinkList,2:TocNavigation,3:SimpleLeftNav.1,0:vs,0:OverridesForHighlightJs,1:Footer.1,2:FooterSock;/Areas/Epx/Content/Css:0,/Areas/VisualStudio/Themes/VStudio/Content:1,/Areas/Epx/Themes/Base/Content:2,/Areas/VisualStudio/Themes/VStudio//Content:3&amp;amp;v=1CB07916C0D9DC354258C18DA7801D1F" /><script type="text/javascript" src="https://i2-vso.sec.s-msft.com/Areas/Global/Content/Loader.js" class="mtps-injected"></script><script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function() {
+	window.mtpsAmd = true;
+	var amdCombinedUrl = "https://i2-vso.sec.s-msft.com/Combined.js?resources=0:AppInsightsPerf,1:SearchBox,1:Header,0:Toc_Fixed,2:TocNavigationVerticalNoLevel1Links,0:apiRunner,0:Utilities,0:highlight.min,0:OACodeSnippet,0:Telemetry,0:InteractionTracker,2:Rating,1:ThemeSpecificBanner;/Areas/Epx/Content/Scripts:0,/Areas/VisualStudio/Themes/VStudio/Content:1,/Areas/Epx/Themes/Base/Content:2&amp;hashKey=7287D16B3B492733812531242554FB36&amp;v=55C1C21AE9093C8691DC774BF7CD968D";
+
+	require.config({ paths: { jquery: "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js", bootstrapJs: "https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.0/bootstrap.min.js", appInsightsPerf: amdCombinedUrl, searchBox: amdCombinedUrl, searchBoxJss: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox&btnid=HeaderSearchButton&pgArea=header&brand=Msdn&loc=en-us&Refinement=198&focusOnInit=false&iroot=vscom&emptyWatermark=true&searchButtonTooltip=Search here", header: amdCombinedUrl, tocFixed: amdCombinedUrl, tocNavigationVerticalNoLevel1Links: amdCombinedUrl, apiRunner: amdCombinedUrl, utilities: amdCombinedUrl, highlightJs: amdCombinedUrl, oACodeSnippet: amdCombinedUrl, telemetry: amdCombinedUrl, interactionTracker: amdCombinedUrl, rating: amdCombinedUrl, themeSpecificBanner: amdCombinedUrl, bootstrap: "https://nexus.ensighten.com/msvscs/Bootstrap.js" }, ignoreDuplicateModules: ["jquery"] });
+
+	require.config({ shim: { "bootstrapJs": { deps: ["jquery"], exports: "bootstrapJs" }, "searchBoxJss": { exports: "searchBoxJss" }, "highlightJs": { exports: "highlightJs" }, "bootstrap": { deps: ["jquery"], exports: "bootstrap" }} });
+
+	require(["bootstrapJs"], function() {});
+	require(["appInsightsPerf"], function() {});
+	require(["searchBox"], function() {});
+	require(["searchBoxJss"], function() {});
+	require(["header"], function() {});
+	require(["tocFixed"], function() {});
+	require(["tocNavigationVerticalNoLevel1Links"], function() {});
+	require(["apiRunner"], function() {});
+	require(["utilities"], function() {});
+	require(["highlightJs"], function() {});
+	require(["oACodeSnippet"], function() {});
+	require(["telemetry"], function() {});
+	require(["interactionTracker"], function() {});
+	require(["rating"], function() {});
+	require(["themeSpecificBanner"], function() {});
+	require(["bootstrap"], function() {});
+}());
+/*]]>*/
+</script></head>
+<body class="Safari">
+    
+    <div>
+    
+
+        
+
+    <input type="hidden" id="theme" value="visualstudio" />
+    <input type="hidden" id="isHeaderBleeding" value="true" />
+    <div id="ux-header" class="Safari ltr">
+        
+
+        <div class="upperBand">
+            <div class="upperBandContent">
+                <div class="left">
+                    <div data-fragmentName="SiteLogoLink" id="Fragment_SiteLogoLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://www.visualstudio.com" title="Visual Studio" id="SiteLogoLink_43189_1" xmlns="http://www.w3.org/1999/xhtml">https://www.visualstudio.com</a>
+</div>
+            </div>
+                <div class="right">
+                    <div data-fragmentName="SubscriptionsLink" id="Fragment_SubscriptionsLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" title="Click to access your MSDN subscription benefits" id="SubscriptionsLink_43189_3" xmlns="http://www.w3.org/1999/xhtml">MSDN Subscriptions</a>
+</div>
+                    <div id="signIn">
+
+<a class="scarabLink" href="https://app.vssps.visualstudio.com/profile/view" title="Sign in">Sign in</a></div>
+
+    
+
+                    <div data-fragmentName="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+      <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(this, this.title, 'SearchBoxOnFocus')" onblur="return Epx.Controls.SearchBox.watermarkBlur(this, this.title, 'SearchBoxOnFocus')" />
+      <input id="RefinementId" name="refinement" type="hidden" value="198" />
+      <button id="HeaderSearchButton" value="" type="submit" class="header-search-button"></button>
+    </form>
+    <a tabindex="0" class="metroSearchButton" onclick="Epx.Controls.SearchBox.metroButtonClick(this)" title="Search here"></a>
+  </div>
+  
+  
+</div>
+            </div>
+        </div>
+                </div>
+
+        <div class="lowerBand">
+            <div class="lowerBandContent">
+                    <div data-fragmentName="HeaderToc" id="Fragment_HeaderToc" xmlns="http://www.w3.org/1999/xhtml">
+  <nav>
+    <ul class="dev-navigation">
+      <li class="nav-expander">
+        <a class="trigger" href="#">Products</a>
+        <div class="nav-exdpander-wrapper">
+          <div class="nav-expander-div">
+            <div>
+              <ul>
+                <li class="nav-has-submenu default">
+                  <a href="#">
+                    <span>Top Products</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/products/vs-2015-product-editions" id="HeaderToc_1062_313" xmlns="http://www.w3.org/1999/xhtml">Visual Studio 2015 Products</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-enterprise-vs" id="HeaderToc_1062_294" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Enterprise</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-professional-with-msdn-vs" id="HeaderToc_1062_312" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Professional</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-community-vs" id="HeaderToc_1062_204" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Community</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/code-vs.aspx" id="HeaderToc_1062_279" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Code</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/what-is-visual-studio-online-vs" id="HeaderToc_1062_208" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/tfs-overview-vs" id="HeaderToc_1062_206" xmlns="http://www.w3.org/1999/xhtml">Team Foundation Server</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>Other Products</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-test-professional-with-msdn-vs" id="HeaderToc_1062_302" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Test Professional</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/team-explorer-everywhere-vs" id="HeaderToc_1062_303" xmlns="http://www.w3.org/1999/xhtml">Team Explorer Everywhere</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/application-insights-vs" id="HeaderToc_1062_307" xmlns="http://www.w3.org/1999/xhtml">Application Insights</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/msdn-platforms-vs" id="HeaderToc_1062_306" xmlns="http://www.w3.org/1999/xhtml">MSDN Platforms</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/products/visual-studio-express-vs" id="HeaderToc_1062_300" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Express</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>How to Buy</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/products/how-to-buy-vs" id="HeaderToc_1062_308" xmlns="http://www.w3.org/1999/xhtml">Visual Studio and MSDN Subscriptions</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/pricing/visual-studio-online-pricing-vs" id="HeaderToc_1062_310" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>Compare</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs" id="HeaderToc_1062_305" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Offerings</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/visual-studio-online-feature-matrix-vs" id="HeaderToc_1062_306" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online Features</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-expander">
+        <a class="trigger" href="#">Features</a>
+        <div class="nav-exdpander-wrapper">
+          <div class="nav-expander-div">
+            <div>
+              <ul>
+                <li class="nav-has-submenu default">
+                  <a href="#">
+                    <span>Application Development</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/features/mobile-app-development-vs" id="HeaderToc_1062_251" xmlns="http://www.w3.org/1999/xhtml">Mobile</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/modern-web-tooling-vs" id="HeaderToc_1062_249" xmlns="http://www.w3.org/1999/xhtml">Web</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/azure-tools-vs" id="HeaderToc_1062_293" xmlns="http://www.w3.org/1999/xhtml">Cloud</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/windows-apps-games-vs" id="HeaderToc_1062_248" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/office-tools-vs" id="HeaderToc_1062_250" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/game-development-vs" id="HeaderToc_1062_311" xmlns="http://www.w3.org/1999/xhtml">Games</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/node-js-vs" id="HeaderToc_1062_276" xmlns="http://www.w3.org/1999/xhtml">Node.js</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/python-vs" id="HeaderToc_1062_312" xmlns="http://www.w3.org/1999/xhtml">Python</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/net-development-vs" id="HeaderToc_1062_317" xmlns="http://www.w3.org/1999/xhtml">.NET</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>Lifecycle Management</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/features/alm-devops-vs" title="DevOps and Application Lifecycle Management" id="HeaderToc_1062_296" xmlns="http://www.w3.org/1999/xhtml">DevOps and ALM</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/agiletools-vs" id="HeaderToc_1062_293" xmlns="http://www.w3.org/1999/xhtml">Agile Software Development</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/version-control-vs" id="HeaderToc_1062_294" xmlns="http://www.w3.org/1999/xhtml">Version Control</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/java-vs" id="HeaderToc_1062_295" xmlns="http://www.w3.org/1999/xhtml">Tools for Java Teams</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/release-management-vs" id="HeaderToc_1062_314" xmlns="http://www.w3.org/1999/xhtml">Release Management</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/reporting-vs" id="HeaderToc_1062_315" xmlns="http://www.w3.org/1999/xhtml">Reporting</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/vso-cloud-load-testing-vs" id="HeaderToc_1062_297" xmlns="http://www.w3.org/1999/xhtml">Cloud-Based Load Testing</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/continuous-integration-vs" title="Continuous Integration" id="HeaderToc_1062_318" xmlns="http://www.w3.org/1999/xhtml">Continuous Integration</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/testing-tools-vs" id="HeaderToc_1062_298" xmlns="http://www.w3.org/1999/xhtml">Testing Tools</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>Extend and Integrate</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/integrate" id="HeaderToc_1062_308" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/integrate/explore/explore-vso-vsi" id="HeaderToc_1062_309" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-expander">
+        <a class="trigger" href="#">Downloads</a>
+        <div class="nav-exdpander-wrapper">
+          <div class="nav-expander-div">
+            <div>
+              <ul>
+                <li class="nav-has-submenu default">
+                  <a href="#">
+                    <span>Top Downloads</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://go.microsoft.com/fwlink/?LinkId=615437&amp;clcid=0x409" id="HeaderToc_1062_304" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Enterprise</a>
+                            </li>
+                            <li>
+                              <a href="https://go.microsoft.com/fwlink/?LinkId=532606&amp;clcid=0x409" id="HeaderToc_1062_254" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Community</a>
+                            </li>
+                            <li>
+                              <a href="https://code.visualstudio.com/download" id="HeaderToc_1062_280" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Code</a>
+                            </li>
+                            <li>
+                              <a href="https://go.microsoft.com/fwlink/?LinkId=615439&amp;clcid=0x409" id="HeaderToc_1062_256" xmlns="http://www.w3.org/1999/xhtml">Team Foundation Server</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" id="HeaderToc_1062_73" xmlns="http://www.w3.org/1999/xhtml">All Downloads</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-has-submenu">
+                  <a href="#">
+                    <span>Extensions and Integrations</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://www.visualstudio.com/features/cordova-vs" id="HeaderToc_1062_296" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Tools for Apache Cordova</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/unitytools-vs" id="HeaderToc_1062_297" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Tools for Unity</a>
+                            </li>
+                            <li>
+                              <a href="https://nodejstools.codeplex.com/" id="HeaderToc_1062_298" xmlns="http://www.w3.org/1999/xhtml">Node.js Tools for Visual Studio</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/python-vs" id="HeaderToc_1062_299" xmlns="http://www.w3.org/1999/xhtml">Python Tools for Visual Studio</a>
+                            </li>
+                            <li>
+                              <a href="http://blogs.msdn.com/b/dotnet/p/nugetpackages.aspx" id="HeaderToc_1062_300" xmlns="http://www.w3.org/1999/xhtml">.NET Nuget Packages</a>
+                            </li>
+                            <li>
+                              <a href="https://visualstudiogallery.msdn.microsoft.com/" id="HeaderToc_1062_301" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Gallery</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/features/vso-integrations-directory-vs" id="HeaderToc_1062_302" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online Integrations</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-expander">
+        <a href="https://www.visualstudio.com/news/news-overview-vs">News</a>
+      </li>
+      <li class="nav-expander">
+        <a href="https://www.visualstudio.com/support/support-overview-vs">Support</a>
+      </li>
+      <li class="nav-expander">
+        <a class="current trigger" href="#">Documentation</a>
+        <div class="nav-exdpander-wrapper">
+          <div class="nav-expander-div">
+            <div>
+              <ul>
+                <li class="nav-has-submenu default">
+                  <a href="#">
+                    <span>Documentation</span>
+                  </a>
+                  <div class="nav-submenu">
+                    <div class="ListOfLinkLists">
+                      <div class="listItems">
+                        
+                        <div class="linkList">
+                          <ul class="links">
+                            <li>
+                              <a href="https://msdn.microsoft.com/library/dd831853.aspx" id="HeaderToc_1062_273" xmlns="http://www.w3.org/1999/xhtml">Visual Studio on MSDN</a>
+                            </li>
+                            <li>
+                              <a href="https://www.visualstudio.com/get-started/overview-of-get-started-tasks-vs" id="HeaderToc_1062_272" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+                            </li>
+                            <li>
+                              <a href="https://code.visualstudio.com/docs" id="HeaderToc_1062_281" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Code</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+                    <div data-fragmentName="GetStartedLink" id="Fragment_GetStartedLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://www.visualstudio.com/products/free-developer-offers-vs.aspx" title="Free Visual Studio" id="GetStartedLink_43189_6" xmlns="http://www.w3.org/1999/xhtml">
+    <span lang="EN-US" style="line-height:107%;font-family:'Calibri',sans-serif;font-size:11pt;" xmlns="">Free Visual Studio</span>
+  </a>
+</div>
+                </div>
+            </div>
+    </div>
+    
+
+        
+        <div id="content">
+            
+
+
+
+
+
+
+<div class="simpleLeftNav">
+    <div class="leftNavigation">
+        
+
+<div class="TocNavigationVertical">
+    <ul class="tocLevel1">
+            <li>
+                <a class="normal" href="javascript:void(0)">Set up</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/set-up-vs">Set up Visual Studio</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/sign-up-for-visual-studio-online">Sign up for Visual Studio Online</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/connect-to-visual-studio-online">Connect to Visual Studio Online</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/add-team-members-vs">Add team members</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/migrate-team-projects-vs">Migrate team projects from on-premises TFS</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/try-additional-features-vs">Try additional features for free</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/assign-licenses-to-users-vs">Add users and assign licenses</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/set-up-billing-for-your-account-vs">Set up billing for your account</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/change-application-access-policies-vs">Change application access policies</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/get-more-user-licenses-vs">Pay for users accessing your account</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/get-more-build-or-load-testing-vs">Pay for Visual Studio Online additional services</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/manage-organization-access-for-your-account-vs">Manage work access for your account</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/manage-visual-studio-online-access-azure-active-directory-groups">Manage account access with Azure AD groups</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/link-msdn-subscription-to-organizational-account-vs">Add a work account to your MSDN subscription</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/change-account-ownership-vs">Change account owner</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/rename-vso-account-vs">Rename your account</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/setup/delete-or-recover-your-account-vs">Delete or restore your account</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="active" href="javascript:void(0)">Code</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/code/share-your-code-in-git-eclipse">Eclipse: Share code in Git</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/share-your-code-in-tfvc-eclipse">Eclipse: Share code in TFVC</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/share-your-code-in-git-vs">Visual Studio: Share code in Git</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/share-your-code-in-tfvc-vs">Visual Studio: Share code in TFVC</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/get-code-reviewed-vs">Visual Studio: Get code reviewed</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/create-and-run-unit-tests-vs">Visual Studio: Create and run unit tests</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/debug-your-app-vs">Visual Studio: Debug your app</a>
+
+            </li>
+            <li>
+                <a class="active" href="/en-us/get-started/code/share-your-code-in-git-xcode">Xcode: Share code in Git</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/code/share-your-code-in-tfvc-xcode">Xcode: Share code in TFVC</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Work</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/work/create-your-backlog-vs">Create your backlog</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/work/work-from-the-kanban-board-vs">Kanban</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/work/work-in-sprints-vs">Scrum</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Report</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/report/connect-vso-pbi-vs">Connect to Power BI</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/report/report-on-vso-with-power-bi-vs">Create dashboards and reports</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/report/vso-pbi-whats-available-vs">What's available</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Build</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/build/build-your-app-eclipse">Eclipse: Build your app</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/build/build-your-app-vs">Visual Studio: Build your app</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/build/hosted-agent-pool">Hosted pool</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/build/hosted-build-controller-vs">Hosted build controller</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Test</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/test/create-a-test-plan-vs">Create test plans</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/test/create-tests-vs">Create tests</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/test/run-tests-vs">Run tests</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/test/track-test-status-vs">Track test status</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/test/load-test-your-app-vs">Load test in the cloud</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/test/get-performance-data-for-load-tests">Get app performance data with load tests</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Release</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/release/manage-your-release-vs">Manage your release</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/release/rm-for-vs2015-vs">Visual Studio 2015</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/release/rm-for-vs2013-vs">Visual Studio 2013</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/release/release-management-vs">VSO and TFS 2015</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Insights</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="/en-us/get-started/insights/application-insights">What is Application Insights?</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/insights/app-insights-asp-net">Application Insights for ASP.NET</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/insights/app-insights-java">Application Insights for Java</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/insights/app-insights-ios-android">Application Insights for devices</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="javascript:void(0)">Integrate</a>
+
+    <ul class="tocLevel2">
+            <li>
+                <a class="normal" href="javascript:void(0)">Integrate with service hooks</a>
+
+    <ul class="tocLevel3">
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/appveyor-and-vso-vs">AppVeyor</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/azure-service-bus-and-vso-vs">Azure Service Bus</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/azurestorage-and-vso-vs">Azure Storage</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/bamboo-and-vso-vs">Bamboo</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/campfire-and-vso-vs">Campfire</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/flowdock-and-vso-vs">Flowdock</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/hipchat-and-vso-vs">HipChat</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/hubot-and-vso-vs">Hubot</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/jenkins-and-vso-vs">Jenkins</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/myget-and-vso-vs">MyGet</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/slack-and-vso-vs">Slack</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/trello-and-vso-vs">Trello</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/uservoice-and-vso-vs">UserVoice</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/webhooks-and-vso-vs">WebHooks</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/zapier-and-vso-vs">Zapier</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/service-hooks/zendesk-and-vso-vs">ZenDesk</a>
+
+            </li>
+    </ul>
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/authorize-other-services-vs">Authorize</a>
+
+            </li>
+            <li>
+                <a class="normal" href="/en-us/get-started/integrate/troubleshoot-service-hooks-vs">Troubleshoot</a>
+
+            </li>
+    </ul>
+            </li>
+    </ul>
+
+</div>
+
+
+    
+
+
+    </div>
+
+    <div class="mainContent">
+        <div id="oaContent"><div class="content"><h1>Share your code in Git using Xcode</h1><p>Share your Xcode projects in Visual Studio Online using a Git repository. 
+If you want to share your Xcode projects using TFVC instead, 
+then read <a href="https://www.visualstudio.com/get-started/code/share-your-code-in-tfvc-xcode">Share your code in TFVC using Xcode</a>.</p><h2>Clone the repository</h2><ol><li><p>If your team doesn't already have a team project that uses a Git repository for version control, create one.</p></li><li><p>Go to your repositories root and clone your team project repository.</p><pre><code> cd ~/repositories 
+ git clone https://[account].visualstudio.com/DefaultCollection/_git/[team project]
+</code></pre></li><li><p>You'll be prompted for credentials. </p><p> To authenticate access to your Visual Studio Online account, 
+ create a <a href="https://www.visualstudio.com/get-started/code/share-your-code-in-git-xcode#pat">personal access token</a>. Then, enter a username that 
+ does not contain an @ character (for example, Jamal, not fabrikamfiber4@hotmail.com).
+ Use the token that you created as your password.</p></li></ol><p>Now you have a local clone of the Git repository in your team project. 
+You can add your code to the local repository, 
+and push your commits to share them in Visual Studio Online.</p><h2>Add your code to the repository</h2><ol><li><p>Move your code into the local Git repository.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_img/share-your-code-in-git-xcode/move-code.png" alt="In Finder, moving code folder to repos/team project" /></p></li><li><p>In Xcode, commit your changes locally.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_img/share-your-code-in-git-xcode/commit.png" alt="Source control menu, commit" /></p></li><li><p>Push your changes to your team project's repository.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_img/share-your-code-in-git-xcode/push.png" alt="Source control menu, push" /></p></li></ol><h2>Q&amp;A</h2><div class="m-qanda"><h4>Q: Where can I find the URL for my Git repository?</h4><p>A: You'll find it in the code hub in your team project.</p><ol><li>Sign in to your Visual Studio Online account and browse to your team project or type the team project URL directly in your browser. </li></ol><ul><li><p>The URL will look like <code>https://{your_account}.visualstudio.com/DefaultCollection/{your_team_project}</code></p></li><li><p>If you are not sure about your team project URL, <a href="http://go.microsoft.com/fwlink/?LinkID=309329">Sign in to your Visual Studio</a> and select your account.</p></li></ul><ol><li><p>Open the code hub from your you team project's home page.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/code-explorer.png" alt="Team project home page, code explorer" /></p></li><li><p>Select the the repository and click on the <strong>clone</strong> action to get the URL.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/clone-url.png" alt="Team project home page, code explorer, clone selected to show the URL" /></p></li></ol><h4>Q: Can I add my local Git repository to the team project?</h4><p>A: Yes, as long as your team project is set up to use Git for version control (instead of TFVC), you can add as many repositories as you need.</p><ol><li><p>Go to the repository you want to add and define the remote origin.</p><pre><code>  cd ~/repos/[repository] 
+  git remote add origin http://[account].visualstudio.com/DefaultCollection/_git/[repository]
+</code></pre></li><li><p>Push your repository to your team project.</p><pre><code>  git push -u origin --all
+</code></pre></li></ol><h4>Q: Can I use my GitHub repository instead of Visual Studio?</h4><p>A:  Yes.  Provide the name of your GitHub repository in Step 2 under "Clone the repository" above instead of the name of your VSO repository.</p><h4>Q: Should I use Git or TFVC for my team project?</h4><p>A: That depends on a <a href="https://msdn.microsoft.com/en-us/Library/vs/alm/Code/overview#tfvc_or_git_summary">number of factors</a>,
+like the size of your codebase and the size and distribution of your team.</p><h4>Q: If my team project uses Team Foundation Version control, can I still share my Xcode projects in Visual Studio Online?</h4><p>A: Yes, use the Git-tf command line tool to push your changes from the local Git repotory to TFVC.  See <a href="https://www.visualstudio.com/get-started/code/share-your-code-in-tfvc-xcode">Share your code in TFVC using Xcode</a></p><h4>Q: Why should I use personal access tokens?</h4><p>A: Personal access tokens are a more convenient and secure replacement for alternate authentication credentials.</p><p><a name="pat"></a></p><h4>Q: Why can't I connect to Xcode?</h4><p>A: You can't sign in to Xcode with an account that contains an @ character, so you'll have to create and use a personal access token. 
+You can use any username, for example, Jamal, rather than fabrikamfiber4@hotmail.com.</p><ol><li><p>Sign in to your Visual Studio Online account (<code>http://[youraccount].visualstudio.com</code>).</p></li><li><p>Go to your team project's home page and open your profile.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/my-profile.png" alt="Team project home page, my profile" /></p></li><li><p>Create a new personal access token for this account.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/add-personal-access-token.png" alt="Add a personal access token on the security page " /></p></li><li><p>Enter the details for this token.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/setup-personal-access-token.png" alt="Enter token details" /></p></li><li><p>Select the <a href="https://www.visualstudio.com/integrate/get-started/auth/oauth#scopes">scopes</a> that this token authorizes.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/select-personal-access-token-scopes.png" alt="Select scopes for this token" /></p></li><li><p>After you finish creating the token, make sure to copy the token. You'll use this token as your password for your Git tools or application.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/create-personal-access-token.png" alt="Use token as password for your git tools or application" /></p><p><strong>Note: Remember that these tokens are your identity. 
+When used, the token is acting as you. 
+Keep your tokens secret and treat them like your password.
+To help keep your token more secure, consider using the 
+<a href="http://gitcredentialstore.codeplex.com">Windows Credential Store for Git</a>
+so that you don't have to enter your credentials every time you push.</strong></p><p>For example, if you use the Git command prompt to run a Git command, you'll be prompted for a username and password.</p><pre><code>git clone https://[account].visualstudio.com/DefaultCollection/_git/[team project]
+</code></pre><p>Enter a username that does not contain an @ character (for example, Jamal, not fabrikamfiber4@hotmail.com). 
+Use the token that you created as your password.</p><pre><code>Username for 'https://fabrikam-inc.visualstudio.com': Jamal
+Password for 'https://fabrikam-inc.visualstudio.com': [COPY THE TOKEN HERE]
+</code></pre></li><li><p>When you don't need your token anymore, just revoke the token to remove its access from this account.</p></li></ol><h4>Q: Can I still use alternate authentication credentials?</h4><p>A:  Yes, use the secondary username from your account's alternate credentials, for example, Jamal, not fabrikamfiber4@hotmail.com.</p><ol><li><p>Sign in to your Visual Studio Online account (<code>http://[youraccount].visualstudio.com</code>).</p></li><li><p>Go to your team project's home page and open your profile.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/my-profile.png" alt="Team project home page, my profile" /></p></li><li><p>Enable alternate authentication credentials for this account. Then provide a secondary username and password.</p><p><img src="https://i3-vso.sec.s-msft.com/get-started/code/_shared/_img/enable-alternate-credentials.png" alt="Enable alternate authentication credentials link on the user profile page" /></p></li></ol></div></div></div>
+    </div>
+
+    
+
+<input type="hidden" id="proxyUrl" value="" />
+<input type="hidden" id="playgroundUrl" value="" />
+<input type="hidden" id="ajaxTimeout" value="10000" />
+<input type="hidden" id="supportedLanguagesForPlayground" value="javascript;c#" />
+<input type="hidden" id="authorizationHeader" value="Bearer {token:{resourceName}}" />
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+                     
+        
+<input name="__RequestVerificationToken" type="hidden" value="ofA08QgESQLrRm2p6N4bjXUE7fhYyyYu2YAlCJO7RWV1yQZ12c6Jlp30nTP_dJdnhcqWdW_szUMrBYBhlHnmhipmV7w1" />
+<input id="ratingSubmitUrl" type="hidden" value="https://www.visualstudio.com/en-us/feedback/add/151" />
+<input id="isTopicRated" type="hidden" value="false" />
+<input id="onePubTopicId" type="hidden" value="151" />
+
+
+        
+
+    <div id="ux-footer" class="ltr">
+            
+            <div id="footerSock" class="">
+                <div id="footerSockInner">
+                        <a name="feedback"></a>
+
+<div class="rating">
+    <div id="ratingSection1">
+        <div class="title">
+            Was this page helpful?
+        </div>
+        <div class="description">
+            Your feedback about this content is important.<br />Let us know what you think.
+        </div>
+        <div class="buttons">
+            <button class="button" id="ratingYes" aria-label="Yes, this page was helpful">Yes</button>
+            <button class="button" id="ratingNo" aria-label="No, this page was not helpful">No</button>
+        </div>
+        <input id="ratingValue" type="hidden" value="" />
+    </div>
+    <div id="ratingSection2">
+        <div class="title">
+            Additional feedback?
+        </div>
+        <textarea id="ratingText" rows="6" cols="" maxlength="1500"></textarea>
+        <div class="counter right">
+            <span id="feedbackTextCounter">1500</span> characters remaining
+        </div>
+        <div class="buttons left">
+            <button class="button" id="ratingSubmit" aria-label="Submit my additional feedback">Submit</button>
+            <button class="button" id="ratingSkipThis" aria-label="Skip additional feedback">Skip this</button>
+        </div>
+    </div>
+    <div id="ratingSection3">
+        <div class="title">
+            Thank you!
+        </div>
+        <div class="description">
+            We appreciate your feedback.
+        </div>
+    </div>
+    
+    
+    <div id="contentFeedbackQAContainer" style="display: none;"></div>
+</div>
+    
+                                        <div class="clear"></div>
+                </div>
+            </div>
+     
+        <div class="footerContainer">
+            <div id="fourColumnFooter">
+                <div data-fragmentName="Column1" id="Fragment_Column1" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="ListOfLinkLists">
+    <div class="listItems">
+      
+      <div class="linkList">
+        <div class="linkListTitle">Visual Studio</div>
+        <div class="linkListDescription">
+          <div class="RichText">
+            <style xmlns="">.linkList ul {margin: 0 !important; }
+</style>
+          </div>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="https://www.visualstudio.com/vs-2015-product-editions" id="Column1_1063_165" xmlns="http://www.w3.org/1999/xhtml">Visual Studio 2015 Products</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/visual-studio-enterprise-vs" id="Column1_1063_166" xmlns="http://www.w3.org/1999/xhtml">Enterprise</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/visual-studio-professional-with-msdn-vs" id="Column1_1063_167" xmlns="http://www.w3.org/1999/xhtml">Professional</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/visual-studio-test-professional-with-msdn-vs" id="Column1_1063_168" xmlns="http://www.w3.org/1999/xhtml">Test Professional</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/visual-studio-community-vs" id="Column1_1063_169" xmlns="http://www.w3.org/1999/xhtml">Community</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/code-vs.aspx" id="Column1_1063_243" xmlns="http://www.w3.org/1999/xhtml">Code</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx" id="Column1_1063_170" xmlns="http://www.w3.org/1999/xhtml">Express</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/what-is-visual-studio-online-vs" id="Column1_1063_241" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/tfs-overview-vs" id="Column1_1063_171" xmlns="http://www.w3.org/1999/xhtml">Team Foundation Server</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/en-us/products/compare-visual-studio-products-vs.aspx" id="Column1_1063_230" xmlns="http://www.w3.org/1999/xhtml">Compare Offerings</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Additional Products</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.visualstudio.com/products/msdn-platforms-vs" id="Column1_1063_176" xmlns="http://www.w3.org/1999/xhtml">MSDN Platforms</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/msdn-os-vs" id="Column1_1063_177" xmlns="http://www.w3.org/1999/xhtml">MSDN OS</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/release-management-for-microsoft-visual-studio-vs" id="Column1_1063_178" xmlns="http://www.w3.org/1999/xhtml">Release Management</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/team-explorer-everywhere-vs" id="Column1_1063_179" xmlns="http://www.w3.org/1999/xhtml">Team Explorer Everywhere</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>              
+                <div data-fragmentName="Column2" id="Fragment_Column2" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="ListOfLinkLists">
+    <div class="listItems">
+      
+      <div class="linkList">
+        <div class="linkListTitle">How to Buy</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.visualstudio.com/products/msdn-subscriptions-vs" id="Column2_1063_180" xmlns="http://www.w3.org/1999/xhtml">MSDN Subscriptions</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/how-to-buy-vs" id="Column2_1063_181" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/pricing/visual-studio-online-pricing-vs" id="Column2_1063_182" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Resources</div>
+        <ul class="links">
+          <li>
+            <a href="https://msdn.microsoft.com/vstudio" target="_blank" id="Column2_1063_188" xmlns="http://www.w3.org/1999/xhtml">Visual Studio on MSDN</a>
+          </li>
+          <li>
+            <a href="https://msdn.microsoft.com/library" target="_blank" id="Column2_1063_190" xmlns="http://www.w3.org/1999/xhtml">MSDN Library</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/msdn-subscriptions-vs" id="Column2_1063_191" xmlns="http://www.w3.org/1999/xhtml">MSDN Subscriptions</a>
+          </li>
+          <li>
+            <a href="http://channel9.msdn.com/" target="_blank" id="Column2_1063_192" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Related Sites</div>
+        <ul class="links">
+          <li>
+            <a href="https://msdn.microsoft.com" target="_blank" id="Column2_1063_214" xmlns="http://www.w3.org/1999/xhtml">MSDN</a>
+          </li>
+          <li>
+            <a href="https://www.microsoft.com/net" target="_blank" id="Column2_1063_215" xmlns="http://www.w3.org/1999/xhtml">Microsoft .NET</a>
+          </li>
+          <li>
+            <a href="https://www.microsoft.com/server-cloud" target="_blank" id="Column2_1063_216" xmlns="http://www.w3.org/1999/xhtml">Server and Cloud Platform</a>
+          </li>
+          <li>
+            <a href="http://azure.microsoft.com" target="_blank" id="Column2_1063_217" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Jobs</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.visualstudio.com/vso-jobs-vs" id="Column2_1063_247" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>              
+                <div data-fragmentName="Column3" id="Fragment_Column3" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="ListOfLinkLists">
+    <div class="listItems">
+      
+      <div class="linkList">
+        <div class="linkListTitle">Programs</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.dreamspark.com/" target="_blank" id="Column3_1063_211" xmlns="http://www.w3.org/1999/xhtml">DreamSpark for Students</a>
+          </li>
+          <li>
+            <a href="https://www.microsoft.com/bizspark/" target="_blank" id="Column3_1063_212" xmlns="http://www.w3.org/1999/xhtml">BizSpark for Startups</a>
+          </li>
+          <li>
+            <a href="https://vsipprogram.com/" target="_blank" id="Column3_1063_213" xmlns="http://www.w3.org/1999/xhtml">VSIP Program</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/integrate/default-vsi" target="_blank" id="Column3_1063_218" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online Integrate</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/products/free-tools-for-student-developers-vs" id="Column3_1063_219" xmlns="http://www.w3.org/1999/xhtml">GitHub Student Pack</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Recent Developer Events</div>
+        <ul class="links">
+          <li>
+            <a href="https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2015-Final-Release-Event" id="Column3_1063_249" xmlns="http://www.w3.org/1999/xhtml">Visual Studio 2015 Release Event</a>
+          </li>
+          <li>
+            <a href="https://channel9.msdn.com/Events/dotnetConf/2015" target="_blank" id="Column3_1063_239" xmlns="http://www.w3.org/1999/xhtml">.NET Conf 2015</a>
+          </li>
+          <li>
+            <a href="http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014" target="_blank" id="Column3_1063_220" xmlns="http://www.w3.org/1999/xhtml">Connect(); 2014</a>
+          </li>
+          <li>
+            <a href="http://channel9.msdn.com/Events/Ignite/2015" id="Column3_1063_244" xmlns="http://www.w3.org/1999/xhtml">Ignite 2015</a>
+          </li>
+          <li>
+            <a href="http://channel9.msdn.com/Events/Build/2015" target="_blank" id="Column3_1063_223" xmlns="http://www.w3.org/1999/xhtml">Build 2015</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">News</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.visualstudio.com/news/news-overview-vs" id="Column3_1063_227" xmlns="http://www.w3.org/1999/xhtml">Overview</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/news/release-archive-vso" id="Column3_1063_231" xmlns="http://www.w3.org/1999/xhtml">VSO Features Timeline</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/en-us/news/feature-timeline-vs" id="Column3_1063_242" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Features Timeline</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>              
+                <div data-fragmentName="Column4" id="Fragment_Column4" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="ListOfLinkLists">
+    <div class="listItems">
+      
+      <div class="linkList">
+        <div class="linkListTitle">Connect</div>
+        <ul class="links">
+          <li>
+            <a href="https://www.facebook.com/visualstudio" target="_blank" id="Column4_1063_194" xmlns="http://www.w3.org/1999/xhtml">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/visualstudio" target="_blank" id="Column4_1063_195" xmlns="http://www.w3.org/1999/xhtml">Twitter</a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/+visualstudio" target="_blank" id="Column4_1063_197" xmlns="http://www.w3.org/1999/xhtml">Google+</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/VisualStudio" target="_blank" id="Column4_1063_196" xmlns="http://www.w3.org/1999/xhtml">YouTube</a>
+          </li>
+          <li>
+            <a href="https://channel9.msdn.com/VisualStudio" id="Column4_1063_246" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Blogs</div>
+        <ul class="links">
+          <li>
+            <a href="http://blogs.msdn.com/b/visualstudio/" target="_blank" id="Column4_1063_199" xmlns="http://www.w3.org/1999/xhtml">The Visual Studio blog</a>
+          </li>
+          <li>
+            <a href="http://blogs.msdn.com/b/somasegar/" target="_blank" id="Column4_1063_200" xmlns="http://www.w3.org/1999/xhtml">S. Somasegar</a>
+          </li>
+          <li>
+            <a href="http://blogs.msdn.com/b/bharry/" target="_blank" id="Column4_1063_201" xmlns="http://www.w3.org/1999/xhtml">Brian Harry</a>
+          </li>
+          <li>
+            <a href="http://blogs.msdn.com/b/stevengu/" target="_blank" id="Column4_1063_202" xmlns="http://www.w3.org/1999/xhtml">Steve Guggenhiemer</a>
+          </li>
+          <li>
+            <a href="http://blogs.msdn.com/b/developer-tools/" target="_blank" id="Column4_1063_204" xmlns="http://www.w3.org/1999/xhtml">Developer Tools Blogs</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="linkList">
+        <div class="linkListTitle">Support</div>
+        <ul class="links">
+          <li>
+            <a href="http://azure.microsoft.com/en-us/support/legal/sla/visual-studio-online/v1_0/" target="_blank" id="Column4_1063_232" xmlns="http://www.w3.org/1999/xhtml">Visual Studio Online SLAs</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/support/support-overview-vs" id="Column4_1063_233" xmlns="http://www.w3.org/1999/xhtml">Support Options</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/support/faq-vs" id="Column4_1063_234" xmlns="http://www.w3.org/1999/xhtml">Support FAQs</a>
+          </li>
+          <li>
+            <a href="https://www.visualstudio.com/support/support-overview-vs" id="Column4_1063_235" xmlns="http://www.w3.org/1999/xhtml">Service Status</a>
+          </li>
+          <li>
+            <a href="https://connect.microsoft.com/visualstudio" target="_blank" id="Column4_1063_236" xmlns="http://www.w3.org/1999/xhtml">Submit a Bug</a>
+          </li>
+          <li>
+            <a href="https://visualstudio.uservoice.com/forums/121579-visual-studio" target="_blank" id="Column4_1063_237" xmlns="http://www.w3.org/1999/xhtml">Submit an Idea</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>              
+            </div>
+            <div id="baseFooter">     
+                    <div id="leftBaseFooter">     
+                        
+    <form class="selectLocale" id="selectLocaleForm" action="https://www.visualstudio.com/en-us/selectlocale-vs">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2fwww.visualstudio.com%2fen-us%2fget-started%2fcode%2fshare-your-code-in-git-xcode" />
+        <a href="#" onclick="$('#selectLocaleForm').submit();return false;" title="Change your language">United States (English)</a>
+    </form>
+
+
+                    </div>  
+                <div data-fragmentName="BaseFooterLinks" id="Fragment_BaseFooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://www.visualstudio.com/support/support-overview-vs" id="BaseFooterLinks_1063_144" xmlns="http://www.w3.org/1999/xhtml">Contact us</a>
+      </li>
+      <li>
+        <a href="https://go.microsoft.com/fwlink/?LinkID=264782&amp;clcid=0x409" id="BaseFooterLinks_1063_145" xmlns="http://www.w3.org/1999/xhtml">Privacy</a>
+      </li>
+      <li>
+        <a href="https://go.microsoft.com/fwlink/?LinkID=266231&amp;clcid=0x409" id="BaseFooterLinks_1063_146" xmlns="http://www.w3.org/1999/xhtml">Terms of use</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" id="BaseFooterLinks_1063_147" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+      </li>
+    </ul>
+  </div>
+</div>  
+                <div id="rightBaseFooter">
+                    © 2015 Microsoft
+                    <span class="microsoftLogo" title="Microsoft"></span>
+                </div>
+                <div class="clear"></div>
+            </div> 
+        </div>                
+    </div> 
+
+    </div>
+
+
+    
+    
+
+<![CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]>
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i3-vso.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-vso.sec.s-msft.com\", \r\n\t\"css\": \"https://i-vso.sec.s-msft.com\", \r\n\t\"xap\": \"https://i-vso.sec.s-msft.com\"\r\n});\r\n/**/" }
+]);
+
+/*]]>*/
+</script></body>
+</html>

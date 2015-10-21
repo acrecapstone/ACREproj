@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <link rel="shortcut icon" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/apple-touch-icon-144x144.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="Ox8sqMcC1pTkpbIGF8d8JB9kqA5MjRUGk32HnY7fKm0" />
+    <title>Specifying the Build Configuration for Xcode Project Dependencies | RaizException - Raizlabs developer blogRaizException &#8211; Raizlabs developer blog</title>
+    <link rel="pingback" href="//www.raizlabs.com/dev/xmlrpc.php" />
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
+<link rel="canonical" href="//www.raizlabs.com/dev/2014/03/specifying-the-build-configuration-for-xcode-project-dependencies/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Specifying the Build Configuration for Xcode Project Dependencies - RaizException - Raizlabs developer blog" />
+<meta property="og:description" content="Despite the regrettable omission of a native Xcode option to specify subprojects&#039; build configurations, it&#039;s still possible to do so with a bit of scripting. " />
+<meta property="og:url" content="http://www.raizlabs.com/dev/2014/03/specifying-the-build-configuration-for-xcode-project-dependencies/" />
+<meta property="og:site_name" content="RaizException - Raizlabs developer blog" />
+<meta property="article:tag" content="Cocoa Touch" />
+<meta property="article:tag" content="Raiz Exception" />
+<meta property="article:tag" content="Scripting" />
+<meta property="article:tag" content="Subproject dependencies" />
+<meta property="article:tag" content="Xcode" />
+<meta property="article:section" content="iOS" />
+<meta property="article:published_time" content="2014-03-28T18:59:58+00:00" />
+<meta property="article:modified_time" content="2015-02-07T04:39:10+00:00" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/implicit_dependencies.png" />
+<meta property="og:image" content="http://www.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/build_config.png" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Feed" href="//www.raizlabs.com/dev/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Comments Feed" href="//www.raizlabs.com/dev/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RaizException - Raizlabs developer blog &raquo; Specifying the Build Configuration for Xcode Project Dependencies Comments Feed" href="//www.raizlabs.com/dev/2014/03/specifying-the-build-configuration-for-xcode-project-dependencies/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.raizlabs.com\/dev\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='crayon-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-github-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/themes/github/github.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=2.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-checkbox-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css?ver=2.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-form-css'  href='http://cdn.raizlabs.com/dev/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css?ver=2.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.9","is_admin":"0","ajaxurl":"http:\/\/www.raizlabs.com\/dev\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.6.9'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/modernizr.min.js?ver=2.6.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.raizlabs.com/dev/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.raizlabs.com/dev/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='//www.raizlabs.com/dev/?p=42' />
+<style type="text/css">.mc4wp-form input[name="_mc4wp_required_but_not_really"] { display: none !important; }</style>    <link rel="stylesheet" href="http://cdn.raizlabs.com/assets/v1431546750/style.css"/>
+
+    <script>
+        var _prum = [['id', '52325603abe53d5353000000'],
+            ['mark', 'firstbyte', (new Date()).getTime()]];
+        (function() {
+            var s = document.getElementsByTagName('script')[0]
+                , p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-67114-2', 'raizlabs.com');
+        ga('send', 'pageview');
+    </script>
+    <script src="//use.typekit.net/zou1wce.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="single single-post postid-42 single-format-standard">
+<header id="header">
+    <div class="container">
+        <h1 class="site-name"><a href="/" rel="home">Raizlabs</a></h1>
+
+        <a href="#" id="nav-toggle">&bull;<br>&bull;<br>&bull;</a><ul id="nav" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://www.raizlabs.com">Home</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="/news">Company News</a></li>
+<li id="menu-item-303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-303"><a href="http://www.raizlabs.com/company/jobs/">Careers</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="/dev">Developer Blog</a></li>
+</ul>
+    </div><!-- .container -->
+
+</header><!-- #header -->
+
+<div id="page-wrapper">
+
+    <div id="page">
+        <div class="container">
+
+    <section id="content" class="col-main" role="main">
+
+    
+        <article id="post-42" class="post-item post-42 post type-post status-publish format-standard hentry category-ios tag-cocoa-touch tag-raiz-exception tag-scripting tag-subproject-dependencies tag-xcode">
+
+            <h1>Specifying the Build Configuration for Xcode Project Dependencies</h1>
+
+            <p class="entry-meta">Posted&nbsp; <a href="http://www.raizlabs.com/dev/2014/03/"><time class="entry-date" datetime="2014-03-28T18:59:58+00:00" pubdate>March 28, 2014</time></a><span class="byline">&nbsp;by&nbsp; <span class="author vcard"><a class="url fn n" href="http://www.raizlabs.com/dev/author/ndonaldson/" title="View all posts by Nick Donaldson" rel="author">Nick Donaldson</a></span></span></p>
+
+            
+            <div class="entry-content">
+                <p>When working with multiple Xcode project dependencies, such as during the development of a Cocoa Touch static Library, it can be convenient to add the dependencies&#8217; project files as subprojects of a &#8220;host&#8221; or &#8220;parent&#8221; project, or to use Xcode workspaces to work with multiple projects in parallel. However, when dealing with these types of project configurations, one quickly becomes aware of the limitations of the way Xcode handles building dependencies.</p>
+<p>Xcode&#8217;s implicit building of subproject dependencies will always look for a build configuration in the subproject with the same name as the one in the parent project. This means that building the parent project in the <code>Debug</code> configuration will result in each dependency being implicitly built using its <code>Debug</code> configuration. In the case where a dependency doesn&#8217;t have a configuration with the same name, Xcode will attempt to fall back to building the dependency using its <code>Release</code> configuration.</p>
+<p>This can be annoying when developing a static library if there is a reason to specify one of a number of configurations for the library&#8217;s build settings, such as switching between server environments. The reasons for this behavior not being easily overridden completely elude me. I don&#8217;t find it intuitive, nor can I think of any security-related reason for limiting this feature.</p>
+<p>Furthermore, Xcode will automatically build static library products from subproject dependencies if the <code>.a</code> file is included in the &#8220;Link Binary With Libraries&#8221; section of the parent project&#8217;s Build Phases by default. This occurs even if the subproject target isn&#8217;t included in &#8220;Target Dependencies,&#8221; which I personally find more confusing than intuitive or convenient.</p>
+<p>When setting up a project with a dependency that has multiple configurations, there are two basic approaches: one which relies on the limited, implicit behavior of Xcode&#8217;s build system, and the other which uses build scripts to bypass it.</p>
+<h3>The Implicit Approach</h3>
+<p>The easiest way to ensure that a subproject is built with the correct configuration is to create an identically-named configuration in the parent project. That&#8217;s all well and good if your build configuration strategy is dead simple, or if the names happen to match between the projects by mere coincidence.</p>
+<p>But, for those of us who dare to venture beyond the confines <code>Debug</code> and <code>Release</code>, things tend to get complicated.</p>
+<p>If the parent project also has its own set of configurations, all of which must be matched up with a subproject configuration, this can quickly spiral out of control. Which leads us to&#8230;</p>
+<h3>The Scripting Approach</h3>
+<p>The second method is more difficult to configure as it requires a custom build script and build settings, but it&#8217;s much more flexible.</p>
+<p>In order to specify an arbitrary configuration for a subproject dependency, the first step is to disable Xcode&#8217;s implicit detection of dependencies from linked library files. This can be accomplished in the build scheme settings for the parent project. Under the <strong>Build</strong> action of the scheme settings, there is an option labeled &#8220;Find Implicit Dependencies.&#8221; Uncheck this for any scheme that is building the subproject using a custom configuration.</p>
+<p><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/implicit_dependencies.png"><img class="alignnone size-full wp-image-44" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/implicit_dependencies.png" alt="Implicit Dependencies" width="782" height="492" /></a></p>
+<p>Next, ensure that the &#8220;Link Binary With Libraries&#8221; section of the Build Phases for the parent project contains the subproject&#8217;s target, but that the &#8220;Target Dependencies&#8221; section <strong>does not</strong> contain the subproject&#8217;s target. This will prevent Xcode from automatically building the subproject target, but still attempt to link to the subproject&#8217;s resulting product in the link phase.</p>
+<p><strong>NOTE:</strong> Alternatively, a linker flag can be added to the &#8220;Additional Linker Flags&#8221; build setting to link to the resulting library instead of adding it to the &#8220;Link Binary With Libraries&#8221; section (for example <code>-lMyLib</code>). When using a manual linker flag, it&#8217;s not necessary to disable the &#8220;Find Implicit Dependencies&#8221; checkbox, since Xcode won&#8217;t be aware of the linkage, but be sure to remove the product from the &#8220;Link Binary With Libraries&#8221; section since linking is being handled manually.</p>
+<p>Finally, add a &#8220;Run Script&#8221; to the parent app&#8217;s Build Phases. In its simplest form, this script will simply invoke <code>xcodebuild</code> for the dependency, which allows any build configuration of the subproject to be specified. The only caveat is that the build products directory for the subproject must be set to the parent project&#8217;s build products directory, so Xcode&#8217;s implicit linking settings will know where to find the resulting <code>.a</code> file.</p>
+<p>Here is an example script to build a subproject named &#8220;MyLib&#8221; with a configuration &#8220;Debug-Staging.&#8221;</p>
+<!-- Crayon Syntax Highlighter v2.6.9 -->
+
+		<div id="crayon-5627c78a1f08e590036664" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-always wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea  class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+xcodebuild \
+    -project "path/to/MyLib.xcodeproj" \
+    -target "MyLib" \
+    -configuration "Debug-Staging" \
+    -sdk "${SDK_NAME}" \
+    BUILD_DIR="${BUILD_DIR}" \
+    BUILD_ROOT="${BUILD_ROOT}" \
+    CONFIGURATION_BUILD_DIR="${CONFIGURATION_BUILD_DIR}" \
+    OBJROOT="${OBJROOT}" \
+    SYMROOT="${SYMROOT}" \
+    VALID_ARCHS="i386 x86_64 armv7 armv7s arm64"</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f08e590036664-2">2</div><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f08e590036664-4">4</div><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f08e590036664-6">6</div><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f08e590036664-8">8</div><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f08e590036664-10">10</div><div class="crayon-num" data-line="crayon-5627c78a1f08e590036664-11">11</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5627c78a1f08e590036664-1"><span class="crayon-i">xcodebuild</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f08e590036664-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">project</span><span class="crayon-h"> </span><span class="crayon-s">"path/to/MyLib.xcodeproj"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f08e590036664-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">target</span><span class="crayon-h"> </span><span class="crayon-s">"MyLib"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f08e590036664-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">configuration</span><span class="crayon-h"> </span><span class="crayon-s">"Debug-Staging"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f08e590036664-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">sdk</span><span class="crayon-h"> </span><span class="crayon-s">"${SDK_NAME}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f08e590036664-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">BUILD_DIR</span><span class="crayon-o">=</span><span class="crayon-s">"${BUILD_DIR}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f08e590036664-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">BUILD_ROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${BUILD_ROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f08e590036664-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">CONFIGURATION_BUILD_DIR</span><span class="crayon-o">=</span><span class="crayon-s">"${CONFIGURATION_BUILD_DIR}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f08e590036664-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">OBJROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${OBJROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f08e590036664-10"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">SYMROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${SYMROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f08e590036664-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">VALID_ARCHS</span><span class="crayon-o">=</span><span class="crayon-s">"i386 x86_64 armv7 armv7s arm64"</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0057 seconds] -->
+
+<p>The build environment variables for the subproject must be set to the same value as the parent project in order to ensure that all build artifacts end up in the parent project&#8217;s derived data directory, and Xcode knows where to find the resulting <code>.a</code> file to link.</p>
+<p>The one really ugly thing about this script is that the <code>VALID_ARCHS</code> variable must be set to all architectures for both the device and simulator, otherwise the subproject will not consistently build correctly when switching between device and simulator. It&#8217;s possible that there is a better solution for this, but at the time of publishing this article, it escapes me.</p>
+<h4>Switching Configurations</h4>
+<p>It is also possible to specify one of any number of build configurations for the subproject, depending on the parent project&#8217;s configuration, effectively creating a &#8220;mapping&#8221; between configurations for the parent and subproject.</p>
+<p>This is accomplished by creating a custom Build Setting in the parent project that will cause the script to provide a different configuration when building the subproject.</p>
+<p>For example, by creating a custom build setting called SUBPROJECT_CONFIG, the value of which is the name of the build configuration of the subproject, the script can reference the build setting when invoking xcodebuild.</p>
+<p><a href="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/build_config.png"><img class="alignnone size-full wp-image-43" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/03/build_config.png" alt="Custom Build Setting" width="515" height="113" /></a></p>
+<!-- Crayon Syntax Highlighter v2.6.9 -->
+
+		<div id="crayon-5627c78a1f0af076312639" class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-always wrap" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea  class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+xcodebuild \
+    -project "path/to/MyLib.xcodeproj" \
+    -target "MyLib" \
+    -configuration "${SUBPROJECT_CONFIG}" \
+    -sdk "${SDK_NAME}" \
+    BUILD_DIR="${BUILD_DIR}" \
+    BUILD_ROOT="${BUILD_ROOT}" \
+    CONFIGURATION_BUILD_DIR="${CONFIGURATION_BUILD_DIR}" \
+    OBJROOT="${OBJROOT}" \
+    SYMROOT="${SYMROOT}" \
+    VALID_ARCHS="i386 x86_64 armv7 armv7s arm64"</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f0af076312639-2">2</div><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f0af076312639-4">4</div><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f0af076312639-6">6</div><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f0af076312639-8">8</div><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5627c78a1f0af076312639-10">10</div><div class="crayon-num" data-line="crayon-5627c78a1f0af076312639-11">11</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5627c78a1f0af076312639-1"><span class="crayon-i">xcodebuild</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f0af076312639-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">project</span><span class="crayon-h"> </span><span class="crayon-s">"path/to/MyLib.xcodeproj"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f0af076312639-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">target</span><span class="crayon-h"> </span><span class="crayon-s">"MyLib"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f0af076312639-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">configuration</span><span class="crayon-h"> </span><span class="crayon-s">"${SUBPROJECT_CONFIG}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f0af076312639-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">-</span><span class="crayon-i">sdk</span><span class="crayon-h"> </span><span class="crayon-s">"${SDK_NAME}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f0af076312639-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">BUILD_DIR</span><span class="crayon-o">=</span><span class="crayon-s">"${BUILD_DIR}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f0af076312639-7"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">BUILD_ROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${BUILD_ROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f0af076312639-8"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">CONFIGURATION_BUILD_DIR</span><span class="crayon-o">=</span><span class="crayon-s">"${CONFIGURATION_BUILD_DIR}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f0af076312639-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">OBJROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${OBJROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line crayon-striped-line" id="crayon-5627c78a1f0af076312639-10"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">SYMROOT</span><span class="crayon-o">=</span><span class="crayon-s">"${SYMROOT}"</span><span class="crayon-h"> </span><span class="crayon-sy">\</span></div><div class="crayon-line" id="crayon-5627c78a1f0af076312639-11"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">VALID_ARCHS</span><span class="crayon-o">=</span><span class="crayon-s">"i386 x86_64 armv7 armv7s arm64"</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0053 seconds] -->
+
+<p>&nbsp;</p>
+<p>Thus, for each configuration in the parent project, the subproject has a mapping to one of its own configurations.</p>
+<h4>Drawbacks</h4>
+<p>There are a few disadvantages with using the <code>xcodebuild</code> technique which must be weighed against the importance of building a subproject with a different configuration.</p>
+<h5>1. Warnings in the subproject will not show up consistently.</h5>
+<p>This is a big one. For a clean build of the subproject, all warnings will show up in the Xcode warnings tab. In certain scenarios, building again will make these warnings disappear, and only warnings from the files that changed since the last build will show up. For this reason, I would only recommend using this technique when testing particular configurations, and not during regular debugging, as it can be easy to lose track of outstanding warnings in the subproject.</p>
+<h5>2. Cleaning the parent project will not clean the subproject.</h5>
+<p>For this reason, I would recommend creating a new aggregate target in the parent project&#8217;s build settings that runs the same script as above, but with the <code>clean</code> action as its first argument (<code>xcodebuild clean ...</code>). You can build this target when you need to clean the subproject. This is certainly inconvenient, but I don&#8217;t know of a better way to do it.</p>
+<h5>3. It can potentially be confusing when working with a team.</h5>
+<p>Since this is not a &#8220;standard&#8221; Xcode workflow, anyone else working on the project may have questions (and/or stern words) for you as to what the @$%! is going on in the build settings.</p>
+<h5>4. Not CI-friendly.</h5>
+<p>Since cleaning the parent project does not clean the subproject, this technique is not very CI-friendly. Practically anything can be done with careful scripting, but depending on how important it is that you build the subproject with multiple configurations, it may or may not be worth the extra effort.</p>
+<h3>Summary</h3>
+<p>Despite the regrettable omission of a native Xcode option to specify subprojects&#8217; build configurations, it&#8217;s still possible to do so with a bit of scripting. This technique can be useful when doing iterative development on a static library when there is a reason to provide different build configurations. However, it is not without drawbacks, and these should be carefully weighed when choosing whether or not to bypass Xcode&#8217;s implicit dependency system.</p>
+                            </div><!-- .entry-content -->
+
+        </article><!-- #post-42 -->
+
+        
+
+    <div id="comments" class="comments-area">
+
+    
+            <h3 class="comments-title">
+            One response to &ldquo;Specifying the Build Configuration for Xcode Project Dependencies&rdquo;        </h3>
+
+        <ol class="commentlist">
+                <li class="comment even thread-even depth-1 group" id="comment-11281">
+                <div class="entry-meta">
+                    <img alt='' src='//2.gravatar.com/avatar/e634e02646d909ce006da694a9deec28?s=50&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e634e02646d909ce006da694a9deec28?s=100&amp;d=mm&amp;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />                    Cédric Luthi &nbsp;
+                    <time pubdate datetime="2015-06-17T16:50:16+00:00">
+                    June 17, 2015 at 4:50 pm                    </time>
+                     &nbsp; <a rel='nofollow' class='comment-reply-link' href='http://www.raizlabs.com/dev/2014/03/specifying-the-build-configuration-for-xcode-project-dependencies/?replytocom=11281#respond' onclick='return addComment.moveForm( "comment-11281", "11281", "respond", "42" )' aria-label='Reply to Cédric Luthi'>Reply</a>                </div><!-- .commentmetadata -->
+
+            <div class="entry-content">
+                                <p>I have another solution which seems to address all of the drawbacks you mention, see <a href="http://stackoverflow.com/a/30884779/21698" rel="nofollow">http://stackoverflow.com/a/30884779/21698</a></p>
+            </div>
+    </li><!-- #comment-## -->
+        </ol><!-- .commentlist -->
+
+        
+    
+    
+    						<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/dev/2014/03/specifying-the-build-configuration-for-xcode-project-dependencies/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="//www.raizlabs.com/dev/wp-comments-post.php?wpe-comment-post=raizlabs" method="post" id="commentform" class="comment-form">
+																										<p class="comment-form-author">
+                            <label for="author">Name</label>
+                            <input id="author" class="req" name="author" type="text" value="" size="30" /></p>
+<p class="comment-form-email">
+                            <label for="email">Email</label>
+                            <input id="email" class="req" name="email" type="text" value="" size="30" /></p>
+<p class="comment-form-url">
+                            <label for="url">Website</label>
+                            <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment">
+                                        <label for="comment">Comment</label>
+                                        <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						
+						<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='42' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9e1b1aface" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="147"/></p>					</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area -->
+
+    
+    </section><!-- #content -->
+
+        <div class="col-sidebar" role="complementary">
+            <div id="text-2" class="widget widget_text">			<div class="textwidget"><a href="/dev/"><img border="0" src="http://cdn.raizlabs.com/dev/wp-content/uploads/sites/10/2014/04/raiz_exception.png" height="128" width="128"></a><p>
+RaizException is the developer blog for 
+ <a href="http://www.raizlabs.com">Raizlabs,</a> a company dedicated to improving the world through great software. Follow us on <a href="http://www.twitter.com/raizlabs">twitter</a> or learn about our <a href="http://www.raizlabs.com/company/jobs/">open jobs</a>.</div>
+		</div><div id="search-2" class="widget widget_search">    <form method="get" id="searchform" action="//www.raizlabs.com/dev/" role="search">
+        <label for="s">Search</label>
+        <input type="text" class="field" id="s" name="s" value="" />
+    </form>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/08/advanced-ios-typography/">iOS Typography: Stop Saying “No” to Designers</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/06/protocol-extensions-swift-2-0/">Protocol Extensions in Swift 2.0</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/">Spicing Up Xcode</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/02/how-to-script-os-x-keyboard-shortcuts/">How to Script OS X Keyboard Shortcuts</a>
+						</li>
+					<li>
+				<a href="http://www.raizlabs.com/dev/2015/02/kvo-and-data-binding-in-ios-made-simple/">KVO and Data Binding in iOS Made Simple</a>
+						</li>
+				</ul>
+		</div><div id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href='http://www.raizlabs.com/dev/2015/08/'>August 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/06/'>June 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/03/'>March 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/02/'>February 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2015/01/'>January 2015</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/12/'>December 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/03/'>March 2014</a></li>
+	<li><a href='http://www.raizlabs.com/dev/2014/02/'>February 2014</a></li>
+		</ul>
+</div><div id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://www.raizlabs.com/dev/category/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.raizlabs.com/dev/category/ios/" >iOS</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="http://www.raizlabs.com/dev/category/mac/" >Mac</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.raizlabs.com/dev/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+</div><div id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a rel="nofollow" href="http://www.raizlabs.com/dev/wp-login.php">Log in</a></li>
+			<li><a href="http://www.raizlabs.com/dev/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.raizlabs.com/dev/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div>        </div><!-- #secondary .widget-area -->
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div><!-- #page-wrapper -->
+
+
+<footer id="footer" role="contentinfo">
+    <div class="container">
+
+        <div class="footer_col_1">
+            <h3>Raizlabs</h3>
+                    </div>
+
+        <div class="footer_col_2">
+            <h3>Recently at RaizException &#8211; Raizlabs developer blog</h3>
+
+            <ul class="recent_posts">
+            <li><a href="http://www.raizlabs.com/dev/2015/08/advanced-ios-typography/">iOS Typography: Stop Saying “No” to Designers</a><br />
+                August 25, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/06/protocol-extensions-swift-2-0/">Protocol Extensions in Swift 2.0</a><br />
+                June 30, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/03/spicing-up-xcode/">Spicing Up Xcode</a><br />
+                March 13, 2015</li>
+
+    
+            <li><a href="http://www.raizlabs.com/dev/2015/02/how-to-script-os-x-keyboard-shortcuts/">How to Script OS X Keyboard Shortcuts</a><br />
+                February 10, 2015</li>
+
+    </ul>        </div>
+
+        <div class="footer_col_3">
+            <p class="footer_address">
+                <span>Boston, MA - HQ</span><br />
+                50 Milk Street, 19th Floor<br />
+                Boston, MA 02109<br />
+                <a href="tel:1-617-383-9007">(617) 383.9007</a>
+            </p>
+            <p class="footer_address">
+                <span>San Francisco Area</span><br />
+                360 22nd Street, Suite 501<br />
+                Oakland, CA 94612<br />
+                <a href="tel:1-415-935-3390">(415) 935.3390</a>
+            </p>
+
+                    </div>
+
+        <div class="clear"></div>
+        <p class="copyright">
+            <span>© 2015 Raizlabs</span><br>
+            <span>All rights reserved.</span>
+        </p>
+    </div><!-- .container -->
+</footer><!-- #footer -->
+
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/plugins/akismet/_inc/form.js?ver=3.1.5'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-includes/js/comment-reply.min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/plugins.js?ver=1.0'></script>
+<script type='text/javascript' src='http://cdn.raizlabs.com/dev/wp-content/themes/raizlabs/js/scripts.js?ver=1.1'></script>
+
+</body>
+</html>

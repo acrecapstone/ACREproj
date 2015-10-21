@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="mask-icon" href="/apple-logo.svg" color="#333333">
+
+<link rel="stylesheet" href="/assets/styles/global.css" type="text/css" />
+
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/assets/styles/oldie.css" type="text/css" />
+	<script src="/assets/scripts/html5.js"></script>
+<![endif]-->
+<script src="/assets/scripts/lg-search.js"></script>
+<script src="/assets/scripts/global.js"></script>
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&v=1" type="text/css" />
+
+	<title>Swift - Overview - Apple Developer</title>
+	<meta name="omni_page" content="Swift - Overview" />
+	<meta name="Description" content="Swift is an innovative new programming language for iOS and OS X with concise yet expressive syntax that produces lightning-fast apps. It makes writing code interactive and fun, and works side-by-side with Objective-C." />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="feed://developer.apple.com/swift/blog/news.rss" />
+	<link rel="shortcut icon" href="https://developer.apple.com/swift/favicon.ico" />
+	<link rel="icon" href="https://developer.apple.com/swift/favicon.ico" />
+	<link rel="mask-icon" href="https://developer.apple.com/swift/swift-logo.svg" color="#fd6e33">
+	<link rel="apple-touch-icon" href="https://developer.apple.com/swift/images/swift-touch-icon.png" />
+	<meta property="og:title" content="Swift - Apple Developer" />
+	<meta property="og:url" content="https://developer.apple.com/swift/" />
+	<meta property="og:description" content="Swift is an innovative new programming language for iOS and OS X with concise yet expressive syntax that produces lightning-fast apps. It makes writing code interactive and fun, and works side-by-side with Objective-C." />
+	<meta property="og:image" content="https://developer.apple.com/swift/images/swift-og.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:image" content="https://developer.apple.com/swift/images/swift-og.png" />
+	<meta name="twitter:site" content="@SwiftLang" />
+	<meta name="twitter:creator" content="@SwiftLang" />
+	<meta name="twitter:title" content="Swift - Apple Developer" />
+	<meta name="twitter:description" content="Swift is an innovative new programming language for iOS and OS X with concise yet expressive syntax that produces lightning-fast apps. It makes writing code interactive and fun, and works side-by-side with Objective-C." />
+	<link href="/swift/styles/swift.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<nav id="globalheader" role="navigation" aria-label="Global Navigation">
+	<div id="gh-content" class="gh-content">
+		<ul class="gh-menu">
+			<li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+				<button id="gh-svg-icons" class="gh-svg-wrapper">
+					<span class="text-replace">Menu</span>
+					<svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+					<svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+				</button>
+			</li>
+			<li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+				<a href="/"><span class="text-replace">Apple Developer</span></a>
+			</li>
+		</ul>
+		<div class="gh-nav">
+			<div class="gh-nav-view">
+				<ul class="gh-nav-list">
+					<li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="/"><span class="text-replace">Apple Developer</span></a></li>
+					<li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="/platforms/">Platforms</a></li>
+					<li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="/resources/">Resources</a></li>
+					<li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="/programs/">Program</a></li>
+					<li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="/support/">Support</a></li>
+					<li class="gh-tab gh-nav-account gh-nav-membercenter"><a class="gh-tab-link" href="/membercenter/">Member Center</a></li>
+					<li class="gh-tab gh-nav-search">
+						<div id="gh-search" class="gh-search" role="search">
+							<form action="/search/" method="get" class="gh-search-form" id="gh-search-form" role="search">
+								<div class="gh-search-input-wrapper">
+									<label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+									<input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off">
+								</div>
+								<button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+								<button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+							</form>
+						</div>
+						<a class="gh-search-magnify" href="/search/"><span class="text-replace">Search Apple Developer</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+	<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+	<div class="orange-cover"></div>
+
+	<section class="sticky">
+		<nav class="subnav" role="navigation" aria-label="Local Navigation" data-hires="true">
+			<section class="sub-title"><h2><a href="/swift/">Swift</a></h2></section>
+			<ul>
+				<li><a class="active" href="/swift/">Overview</a></li>
+				<li><a href="/swift/blog/">Blog</a></li>
+				<li><a href="/swift/resources/">Resources</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<main id="main" class="main" role="main">
+
+		<section class="grid">
+
+			<section class="row">
+				<section class="col-100 center text-center">
+					<img class="block center" src="/assets/elements/icons/128x128/swift.png" width="128" height="128" alt="" />
+					<h2 class="width-85 center">Swift. A modern programming language that is safe, fast, and interactive.</h2>
+					<p class="intro width-85 margin-bottom-small center">Swift is a powerful and intuitive programming language for iOS, OS X, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and apps run lightning-fast. Swift is ready for your next project — or addition into your current app — because Swift code works side-by-side with Objective-C.</p>
+
+					<figure class="swift-hero-image"></figure>
+
+					<h2>Introducing Swift 2</h2>
+					<p class="width-80 center">Swift has been refined from the ground up. It generates faster code across the board, both for release and debug builds. The Swift compiler is also faster, even while adding new Fix-it suggestions such as where you can use <span class="keyword">let</span> instead of <span class="keyword">var</span>. Comments can include Markdown syntax to add rich text and embedded images that display in Xcode’s Quick Help. A new assistant shows your Swift API in a “header-like” view. And new syntax features combined with improvements to the Cocoa frameworks and Objective-C will make your code more expressive, and even safer.</p>
+				</section>
+			</section>
+
+			<section class="row smaller">
+				<section class="col-50">
+					<h4>Error handling model</h4>
+					<p>An advanced error handling model provides clear, expressive syntax for catching and throwing errors. It’s also easy to create your own custom error types so you can describe error cases with clear, meaningful names. The new error model was designed to work seamlessly with <span class="keyword">NSError</span> and the Cocoa frameworks. Error handling code now looks like:</p>
+
+					<pre><code><span class="key">func</span> loadData() throws { }
+
+<span class="key">func</span> test() {
+	<span class="key">do</span> {
+		<span class="key">try</span> loadData()
+	<span></span>} <span class="key">catch</span> {
+<span class="method">		<span></span>print</span>(error)
+	<span></span>}
+}</code></pre>
+
+					<h4>Availability</h4>
+					<p>You should always use the latest SDK to get access to the latest features, documentation, and API changes, but sometimes your app needs to run on an older OS. Swift 2.0 has built-in availability checking to make it easy to build the best possible app for each target OS version. The compiler will give you an error when using an API too new for your minimum target OS, and a new keyword lets you wrap blocks of code in a conditional version check to run only on specific OS releases.</p>
+
+
+				</section>
+				<section class="col-50">
+					<h4>Syntax improvements</h4>
+					<p>New syntax features let you write more expressive code while improving consistency across the language. The SDKs have employed new Objective-C features such as generics and nullability annotation to make Swift code even cleaner and safer. Here is just a sampling of Swift 2.0 enhancements.</p>
+					<ul>
+						<li>Powerful control flow with <span class="keyword">do</span>, <span class="keyword">guard</span>, <span class="keyword">defer</span>, and <span class="keyword">repeat</span></li>
+						<li>Keyword naming rules unified for functions and methods</li>
+						<li>Protocol extensions and default implementations</li>
+						<li>Extended pattern matching to work in if clauses and for loops</li>
+					</ul>
+
+					<p>Xcode 7 includes a powerful migrator that will help convert your application and playground code to work with the latest syntax improvements in Swift 2.0.</p>
+
+					<h4>Open Source</h4>
+					<p>Later this year Swift will be released as open source. Swift’s unique combination of elegance, power, and safety has the opportunity to move the entire software industry forward. It is exciting to imagine what we will build together.</p>
+				</section>
+			</section>
+
+			<section class="row divider-top">
+				<section class="col-100 padding-top smaller">
+					<h4>Modern</h4>
+					<p>Swift is the result of the latest research on programming languages, combined with decades of experience building Apple platforms. Named parameters brought forward from Objective-C are expressed in a clean syntax that makes APIs in Swift even easier to read and maintain. Inferred types make code cleaner and less prone to mistakes, while modules eliminate headers and provide namespaces. Memory is managed automatically, and you don’t even need to type semi-colons. All this modern thinking results in a language that is easy and fun to use.</p>
+
+					<pre><code><span class="key">extension</span> <span class="title">String</span> {
+    <span class="key">var</span> banana : <span class="title">String</span> {
+    	<span class="key">let</span> shortName = <span class="title">String</span>(<span class="title">characters</span>.<span class="method">dropFirst</span>(<span class="number">1</span>))
+    	<span class="key">return</span> <span class="string">"</span>\<span class="string">(</span><span class="key">self</span><span class="string">)</span> \<span class="string">(</span><span class="key">self</span><span class="string">) Bo B</span>\<span class="string">(</span>shortName<span class="string">) Banana Fana Fo F</span>\<span class="string">(</span>shortName<span class="string">)"</span>
+	<span></span>}
+}
+
+<span class="key">let</span> bananaName = <span class="string">"Jimmy"</span>.<span class="pointer">banana</span>		<span class="comment">// "Jimmy Jimmy Bo Bimmy Banana Fana Fo Fimmy"</span></code></pre>
+
+					<p>Swift has many other features to make your code more expressive:</p>
+					<div class="row">
+					<section class="col-50 no-padding-top">
+						<ul>
+							<li>Closures unified with function pointers</li>
+							<li>Tuples and multiple return values</li>
+							<li>Generics</li>
+							<li>Fast and concise iteration over a range or collection</li>
+						</ul>
+					</section>
+					<section class="col-50 no-padding-top">
+						<ul>
+							<li>Structs that support methods, extensions, and protocols</li>
+							<li>Functional programming patterns, e.g., map and filter</li>
+							<li>Native error handling using <span class="keyword">try</span> / <span class="keyword">catch</span> / <span class="keyword">throw</span></li>
+						</ul>
+					</section>
+				</div>
+				</section>
+			</section>
+			<section class="row smaller" id="playgrounds">
+				<section class="col-50">
+
+					<img class="block no-margin-top" src="https://devimages.apple.com.edgekey.net/swift/images/playgrounds.png" width="64" height="64" alt="Playgrounds" />
+					<h4>Interactive Playgrounds</h4>
+					<p>Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. You can then Quick Look the result from the side of your code, or pin that result directly below. The result view can display graphics, lists of results, or graphs of a value over time. You can open the Timeline Assistant to watch a complex view evolve and animate, great for experimenting with new UI code, or to play an animated SpriteKit scene as you code it. When you’ve perfected your code in the playground, simply move that code into your project.</p>
+
+					<p>And new in Xcode 7, playgrounds can contain comments that use rich text with bold, italic, and bullet lists in addition to embedded images and links. You can even embed resources and supporting Swift source code in the playground to make the experience incredibly powerful and engaging, while the visible code remains simple. Playgrounds let you:</p>
+
+					<ul>
+						<li>Share curriculum to teach programming with beautiful text and interactive code.</li>
+						<li>Design a new algorithm and watch its results every step of the way.</li>
+						<li>Create new tests and verify they work before promoting into your test suite.</li>
+						<li>Experiment with new APIs to hone your Swift coding skills.</li>
+						<li>Turn your experiments into documentation with example code that runs within the playground.</li>
+					</ul>
+
+					<p><b>Read-Eval-Print-Loop (REPL)</b>. The LLDB debugging console in Xcode includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment. Available from within the Xcode console or in Terminal.</p>
+				</section>
+				<section class="col-50">
+					<h4>Designed for Safety</h4>
+					<p>Swift eliminates entire classes of unsafe code. Variables are always initialized before use, arrays and integers are checked for overflow, and memory is managed automatically. Syntax is tuned to make it easy to define your intent — for example, simple three-character keywords define a variable ( <span class="keyword">var</span> ) or constant ( <span class="keyword">let</span> ).</p>
+
+					<p>Another safety feature is that by default Swift objects can never be <span class="keyword">nil</span>. In fact, the Swift compiler will stop you from trying to make or use a <span class="keyword">nil</span> object with a compile-time error. This makes writing code much cleaner and safer, and prevents a huge category of runtime crashes in your apps. However, there are cases where <span class="keyword">nil</span> is valid and appropriate. For these situations Swift has an innovative feature known as <i>optionals</i>. An optional may contain nil, but Swift syntax forces you to safely deal with it using the <span class="keyword">?</span> syntax to indicate to the compiler you understand the behavior and will handle it safely.</p>
+
+					<h4>Fast and Powerful</h4>
+					<p>From its earliest conception, Swift was built to be fast. Using the incredibly high-performance LLVM compiler, Swift code is transformed into optimized native code that gets the most out of modern hardware. The syntax and standard library have also been tuned to make the most obvious way to write your code also perform the best.</p>
+
+					<p>Swift is a successor to both the C and Objective-C languages. It includes low-level primitives such as types, flow control, and operators. It also provides object-oriented features such as classes, protocols, and generics giving Cocoa and Cocoa Touch developers the performance and power they demand.</p>
+
+					<br>
+					<img class="block" src="https://devimages.apple.com.edgekey.net/assets/elements/icons/64x64/xcode.png" width="64" height="64" alt="Xcode" />
+					<h4>Objective-C Interoperability</h4>
+					<p>You can create an entirely new application with Swift today, or begin using Swift code to implement new features in your app, or enhance existing ones. Swift code co-exists along side your existing Objective-C files in the same project, with full access to your Objective-C API, making it easy to adopt.</p>
+					<p>To get started with Swift, download Xcode and follow the tutorials available on the <a href="/swift/resources/">Resources</a> tab.</p>
+				</section>
+			</section>
+
+
+			<section class="row divider-top">
+				<section class="col-100 padding-top text-center">
+					<p class="footnote">Looking for the Swift parallel scripting language? Please visit <a href="http://swift-lang.org" class="external">http://swift-lang.org</a></p>
+				</section>
+			</section>
+
+		</section>
+
+	</main>
+
+	<section class="footer-wrapper bg-light">
+		<footer id="globalfooter" role="contentinfo">
+			<nav class="footer-breadory">
+				<a href="/" class="home breadcrumbs-home"><span aria-hidden="true"></span><span class="breadcrumbs-home-label">Developer</span></a>
+				<section class="breadcrumbs">
+					<ol class="breadcrumbs-list">
+						<li>Swift</li>
+					</ol>
+				</section>
+				<div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="/platforms/">Platforms</a></h3>
+		<ul>
+			<li><a href="/ios/">iOS</a></li>
+			<li><a href="/osx/">OS X</a></li>
+			<li><a href="/watchos/">watchOS</a></li>
+			<li><a href="/tvos/">tvOS</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="/resources/">Resources</a></h3>
+		<ul>
+			<li><a href="/xcode/">Xcode</a></li>
+			<li><a href="/swift/">Swift</a></li>
+			<li><a href="/library/">Documentation</a></li>
+			<li><a href="/videos/">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="/programs/">Programs</a></h3>
+		<ul>
+			<li><a href="/programs/">Developer Program</a></li>
+			<li><a href="/programs/enterprise/">Enterprise Program</a></li>
+			<li><a href="/programs/ios/university/">iOS University Program</a></li>
+			<li><a href="/programs/mfi/">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="/support/">Support</a></h3>
+		<ul>
+			<li><a href="/support/development/">Development</a></li>
+			<li><a href="/support/distribution/">Distribution</a></li>
+			<li><a href="/support/membership/">Membership</a></li>
+			<li><a href="/system-status/">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="/membercenter/">Member Center</a></h3>
+		<ul>
+			<li><a href="/membercenter/">Developer Account</a></li>
+			<li><a href="/account/overview.action">Certs, IDs, &amp; Profiles</a></li>
+			<li><a href="/terms/">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+			</nav>
+			<ul class="gf-links piped footer-links">
+  <li><a href="/news/" class="first">News</a></li>
+  <li><a href="/bug-reporting/">Report Bugs</a></li>
+  <li><a href="/contact/">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2015 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Updated Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+		</footer><!-- globalfooter -->
+	</section><!-- footer-wrapper -->
+
+</body>
+</html>

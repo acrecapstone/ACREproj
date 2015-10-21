@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Features in Xcode 7</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <meta id="book-resource-type" name="book-resource-type" content="Release Note">
+    <meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40004626">
+    <meta id="document-version" name="document-version" content="20.1.0">
+    <meta id="build" name="build" content="2e614130868cb199a056d4ae817e31eb" />
+    <meta id="chapterId" name="chapterId" content="TP40015242">
+    <meta id="date" name="date" content="2015-09-16">
+    <meta id="description" name="description" content="Describes the new features introduced with each release of Xcode.">
+    <meta id="book-title" name="book-title" content="What&rsquo;s New in Xcode">
+    <meta id="book-root" name="book-root" content="../">
+    <meta id="book-json" name="book-json" content="../book.json">
+    <meta id="devcenter" name="devcenter" content="iOS Dev Center">
+    <meta id="devcenter-url" name="devcenter-url" content="http://developer.apple.com/devcenter/ios">
+    <meta id="reflib" name="reflib" content="watchOS Developer Library">
+    <meta id="book-assignments" name="book-assignments" content="{Type/Release Note}, {Topic/Xcode/IDEs}">
+    <meta name="pdf" contents="../WhatsNewXcode.pdf" /><link id="book-pdf" media="print" rel="alternate" type="application/pdf" href="../WhatsNewXcode.pdf" />
+    
+    <meta id="copyright" name="copyright" content="Copyright 2015 Apple Inc. All Rights Reserved.">
+    <meta id="xcode-display" name="xcode-display" content="render">
+    <meta id="IndexTitle" name="IndexTitle" content="What’s New in Xcode: New Features in Xcode 7">
+    <meta id="resources-uri" name="resources-uri" content="../../../../../Resources/1119">
+    <link id="book-index-page" rel="Start" title="What&rsquo;s New in Xcode" type="text/html" href="../index.html">
+    <link id="next-page" rel="Next" type="text/html" href="xcode_6_0.html">
+    <link id="previous-page" rel="Prev" type="text/html" href="Introduction.html">
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1119/CSS/screen.css">
+    
+    <!-- xcode_css -->
+    <link rel="stylesheet" type="text/css" href="../../../../../Resources/1119/CSS/feedback.css">
+</head>    
+<body><a name="//apple_ref/doc/uid/TP40015242" title="New Features in Xcode 7"></a>
+    <div id="_omniture_top">
+    <!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+    <script type="text/javascript">
+    /* RSID: */
+    var s_account="appleglobal,appleusdeveloper"
+    </script>
+
+    <script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+    <script type="text/javascript">
+    s.pageName=AC.Tracking.pageName();
+    s.channel="www.us.developer"
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)</script>
+    <!-- End SiteCatalyst code version: H.8. -->
+    </div>
+
+    <div id="adcHeader" class="hideOnPrint hideInXcode">
+        <div id='ssi_Header' class="hideInXcode watchOS">
+            <a id="ssi_LibraryTitle" href='../../../../../navigation/'>watchOS Developer Library</a>
+            <a id="ssi_AppleDeveloperConnection" href='https://developer.apple.com/'>Developer</a>
+            <div id='ssi_SearchButton' role="button" title="Search">Search</div>
+        </div>
+        <form id='ssi_SearchMenu' method='get' action='../../../../../search/' accept-charset='utf-8'>
+            <label for='adcsearch'>Search watchOS Developer Library</label>
+            <input type='search' id='ssi_SearchField' name='q' accesskey='s' results='5' />
+        </form>
+    </div>
+
+    <header id="header">
+        <div id="title" role="banner">
+            <h1>What&rsquo;s New in Xcode</h1>
+            <span id="file_links">
+                <a id="PDF_link" role="button" tabindex='4' rel="alternate" title="Download PDF"><span id="pdf_icon"></span>PDF</a>
+                <a id="Companion_link" role="button" tabindex='3' title="Download Companion File"><span id="companion_icon"></span>Companion File</a>
+            </span>
+        </div>
+        <ul id="headerButtons" class="hideOnPrint" role="toolbar">
+            <li id="toc_button" style="display:none">
+                <button tabindex="5" id="table_of_contents" class="open" role="checkbox" aria-label="Show Table of Contents"><span class="disclosure"></span>Table of Contents</button>
+            </li>
+            <li id="jumpto_button" style="display:none" role="navigation"><select tabindex="6" id="jumpTo"><option value="top">Jump To&#133;</option></select></li>
+            <li id="downloadSample_button" style="display:none">
+                <a id="Sample_link"><button id="Sample_button">Download Sample Code</button></a>
+            </li>
+        </ul>
+    </header>
+    <nav id="tocContainer" tabindex="7">
+        <ul id="toc" role="tree"></ul>
+    </nav>
+
+    <article id="contents" tabindex="0" role="main">
+        <div id="pageNavigationLinks_top" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='xcode_6_0.html'>Next</a><a class='previousLink' rel='prev' href='Introduction.html'>Previous</a>
+        </div>
+        <a id="top" name="top"></a>
+        <a id="INDEX" href="../index.html" style="display:none;"></a>
+        
+        <a name="//apple_ref/doc/uid/TP40015242-SW1" title="New Features in Xcode 7"></a><h1 id="pageTitle">New Features in Xcode 7</h1><p></p><ul class="ul"><li class="li"><p><span class="content_text"><a href="#//apple_ref/doc/uid/TP40015242-SW9" data-renderer-version="1">Xcode 7.0</a></span> adds support for watchOS 2 in addition to iOS 9 and OS X version 10.11.</p></li><li class="li"><p><span class="content_text"><a href="#//apple_ref/doc/uid/TP40015242-SW10" data-renderer-version="1">Xcode 7.0.1</a></span> is a maintenance release that includes refinements to support app thinning.</p></li></ul><section><a name="//apple_ref/doc/uid/TP40015242-SW9" title="Xcode 7.0"></a><h2 class="jump">Xcode 7.0</h2><p>With Xcode 7, the Xcode development tools have expanded to support the new watchOS 2 platform in addition to iOS 9 and OS X El Capitan, with a host of new features to support making your development, testing, debugging, and deployment more seamless and efficient. Xcode 7 allows you to achieve things that weren’t possible before, such as enabling you to detect memory corruption just before it happens, test your app UI while reporting on the testing coverage, or ensure that apps and products downloaded to users’ devices have a sensible footprint and do not consume too many precious resources unnecessarily.</p><p>Xcode 7 enables you to to create products that are tailored for each Apple device’s unique platform. Whether that’s implementing glances to help your users stay up to date right from their Apple Watch, or size classes, which let you take advantage of the wide array of configurations of a MacBook Air, an iPhone, or an iPad, Xcode provides the tools to quickly translate your ideas into a reality that fits the target perfectly.</p><p>Xcode 7 requires a Mac running OS X version 10.10.4 or later. It includes SDKs for watchOS 2.0, iOS 9, and OS X version 10.11. </p><p>Xcode 7 includes the following highlighted features.</p><section><a name="//apple_ref/doc/uid/TP40015242-DontLinkElementID_4" title="Free On-Device Development"></a><h3 class="jump">Free On-Device Development</h3><p><strong>Now everyone can run and test their own app on a device—for free.</strong> You can run and debug your own creations on a Mac, iPhone, iPad, iPod touch, or Apple Watch without any fees, and no programs to join. All you need to do is enter your free Apple ID into Xcode. You can even use the same Apple ID you already use for the App Store or iTunes. Once you’ve perfected your app the Apple Developer Program can help you get it on the App Store.</p><p>See <span class="content_text"><a href="../../../../IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html#//apple_ref/doc/uid/TP40012582-CH27" data-renderer-version="1" target="_self">Launching Your App on Devices</a></span> for detailed information about installing and running on devices.</p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW2" title="Swift Language"></a><h3 class="jump">Swift Language</h3><p>Swift 2.0 takes the advanced object-oriented Swift programming language to the next level. </p><figure class="figure"><img src="../Art/xc7-swiftlogo_2x.png" alt="../Art/xc7-swiftlogo.shot/Resources/shot_2x.png" width="175" height="175"></figure><p>Swift 2.0 is modern, powerful, expressive, and easy to use. It extends Swift 1.2 with:</p><ul class="ul"><li class="li"><p><strong>Error handling.</strong> Now you can create routines that throw, catch, and manage errors in Swift. You can surface and deal with recoverable errors, such as “file-not-found” or network timeouts. Swift 2.0 error handling interoperates transparently with <code>NSError</code>.</p><p></p></li><li class="li"><p><strong>Availability.</strong> Availability features enable you to mark up methods with the OS that they are available on, providing compile time checking and preventing unavailable methods from being used. You can adopt new APIs while still deploying back to older OS versions. Compile-time errors are provided when you’re using an API that isn’t guaranteed to be available on the deployment target. </p><p></p></li><li class="li"><p><strong>Testability.</strong> With testability, you are now able to write tests of Swift 2.0 frameworks and apps without having to make all of your internal routines public. Use <code>@testable import {ModuleName}</code> in your test source code to make all public and internal routines usable by XCTest targets, but not by other framework and app targets.</p></li><li class="li"><p><strong>Protocol extensions.</strong> You can now add methods and properties to any class that conforms to a particular protocol, allowing you to reuse more of your code. For example, in the standard library, instead of having to use global functions for all of the generic algorithms in the standard library (such as map, filter, and sort), those generic algorithms are now available as methods on all of the collection types.</p><p></p></li></ul><p>The <strong>Swift 1.2 to 2.0 migrator</strong> in Xcode 7 enables you to efficiently upgrade your existing Swift source code to take advantage of Swift 2.0. </p><figure class="figure"><img src="../Art/xc7-swiftmigrator_2x.png" class="wide-image" alt="../Art/xc7-swiftmigrator.shot/Resources/shot_2x.png" width="680" height="440"><img src="../Art/xc7-swiftmigrator_2x.png" class="ipad-scaled-image" alt="../Art/xc7-swiftmigrator.shot/Resources/shot_2x.png" width="670" height="433"></figure><p>The Swift migrator works with both projects and playgrounds. </p><p>See <em><a href="../../../../Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097" data-renderer-version="1" target="_self">The Swift Programming Language (Swift 2)</a></em> to learn more about the Swift programming language, and check the Revision History chapter for pointers to the updated Swift features.</p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW3" title="Objective-C Language"></a><h3 class="jump">Objective-C Language</h3><p>Objective-C has been updated to enable it and Swift to work together more easily and efficiently. The new Objective-C language features include:</p><ul class="ul"><li class="li"><p><strong>Generics. </strong> Allow you to specify type information for collection classes such as <code>NSArray</code>, <code>NSSet</code>, and <code>NSDictionary</code>. The type information improves Swift access when you bridge from Objective-C and simplifies the code you have to write. </p></li><li class="li"><p><strong>Nullability annotation. </strong> Lets you indicate in Objective-C source when to expect a value to be nil or non-nil, smoothing the use of Objective-C frameworks and modules from Swift code. </p></li><li class="li"><p><strong>KindOf. </strong> Objects declared as <code>__kindof</code> types express “some kind of <code>X</code>” to the compiler and can be used within generic parameters to constrain types to a particular class or its subclasses. Using <code>__kindof</code> allows constraints to be more flexible than an explicit class, and more explicit than just using <code>id</code>.</p></li></ul><p>These new language features help the Objective-C/Swift interaction. They express more information to the compiler about your expectations in the code rather than in documentation, which provides a means for Xcode to inform you of problems earlier in the development cycle, before your code is run. </p><p>See <em><a href="../../../../Swift/Conceptual/BuildingCocoaApps/index.html#//apple_ref/doc/uid/TP40014216" data-renderer-version="1" target="_self">Using Swift with Cocoa and Objective-C (Swift 2)</a></em> for detailed information on Objective-C language features and how they interact with Swift.</p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW4" title="Playgrounds"></a><h3 class="jump">Playgrounds</h3><figure class="figure"><img src="../Art/xc7-playground_mandelbrot_2x.png" alt="../Art/xc7-playground_mandelbrot.shot/Resources/shot_2x.png" width="450" height="354"></figure><p>Playgrounds, since their introduction with Swift in Xcode 6, have proven a great way to explore and prototype Swift code. With Swift 2.0, you can use playgrounds to help explain how to use an API or demonstrate a concept. </p><ul class="ul"><li class="li"><p><strong>Playground authoring.</strong> Rich-text comments let you explain what is going on in your Swift code. They provide a simple markdown-like syntax to let you control their appearance and are visually differentiated from the code, making a playground appear to the user in smaller, more easily consumable pieces. For details on playground rich-text comments, see <em><a href="../../../../Swift/Reference/Playground_Ref/Chapters/XCPlayground.html#//apple_ref/doc/uid/TP40014789" data-renderer-version="1" target="_self">Playground Reference</a></em> and look at the <em>Playground Markup Format Reference</em>.</p></li><li class="li"><p><strong>Inline results.</strong> You can move the display of your code’s results from the timeline area to directly below the code that produces them. This makes the result of a line of code clearer to your audience. Inline results are also more configurable than the display in the timeline.</p></li><li class="li"><p><strong>Resources.</strong> With the resource bundle, you can easily add images, sounds, and other data to your playground using the project navigator. </p></li><li class="li"><p><strong>Auxiliary sources.</strong> Auxiliary sources let you move supporting code out of a playground, which helps you keep the message of the playground clearer. Additionally, auxiliary sources are compiled and execute more quickly.</p></li><li class="li"><p><strong>Playground pages.</strong> New in Xcode 7, pages enable you to bundle related concepts together. A single playground can contain multiple, targeted pages, which lets you thread a narrative together. </p></li></ul><p>See <span class="content_text"><a href="../../../../../recipes/Playground_Help/_index.html#//apple_ref/doc/uid/TP40015166" data-renderer-version="1" target="_self">Playground Help</a></span> for more information about using playground features. </p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW5" title="App Thinning"></a><h3 class="jump">App Thinning</h3><p>With Xcode 7, you are developing apps for three diverse platforms that run on a variety of devices and configurations. </p><p>The devices can have widely different storage and display capabilities. You can deliver an optimized app to each platform device, supplying the functionality you intend without including unneeded resources, using new features supported in Xcode 7 and used by the iTunes App Store.</p><ul class="ul"><li class="li"><p><strong>Bitcode.</strong> When you archive for submission to the App Store, Xcode compiles your app into an intermediate representation. The App Store then compiles the bitcode down into the 64- or 32-bit executables as necessary. </p></li><li class="li"><p><strong>Slicing.</strong> Your artwork incorporated into the asset catalog can be tagged to indicate its suitability for the device that is targeted for installation when a user purchases and downloads your app into his or her device. Xcode supports organizing and tagging in the asset catalog so that the App Store can perform the slicing operation automatically. End users get just the resources needed for their device.</p></li><li class="li"><p><strong>On-demand resources.</strong> For apps that need some content only after the initial download and installation, you can host the additional content for the app on the iTunes App Store repository. You tag these resources for their appropriate categories and control when these assets are downloaded. Xcode builds your app with information that allows it to fetch the resources when are needed, using asynchronous download and installation. See <em><!--a target="_self" -->On Demand Resources Guide<!--/a--></em> for more information.</p></li></ul><p>See <span class="content_text"><a href="../../../../IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html#//apple_ref/doc/uid/TP40012582-CH35" data-renderer-version="1" target="_self">App Thinning (iOS, watchOS)</a></span> in <em>App Distribution Guide</em> for detailed information.</p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW6" title="Debugging"></a><h3 class="jump">Debugging</h3><p>Xcode 7 includes new debugging and profiling features targeted at helping you make better apps for your customers.</p><ul class="ul"><li class="li"><p><strong>Energy gauge for iOS.</strong> Xcode 7 brings insight into the energy usage of your iOS app with the energy gauge. iOS 9 has plumbed in the ability to track energy on a per-process basis, which is surfaced in the energy report. This is a great way to gain insight into how your app is affecting battery life. You can see unexpected behavior, shuch as high energy usage while your app should be just sitting idle or anomalous spikes in power consumption when you’re expecting a steady profile. Learn more about how to manage power for iOS apps in <em><!--a target="_self" -->Energy Efficiency Guide for iOS Apps<!--/a--></em>.</p><figure class="item-figure"><img src="../Art/xc7-energy_report_2x.png" alt="../Art/xc7-energy_report.shot/Resources/shot_2x.png" width="500" height="223"></figure><p>The debug gauges and their reports provide quick insight into your running app. When you see situations occur that require more detailed analysis, each gauge’s report includes a means to launch your running app into Instruments. With Xcode 7, the Instruments redesigned track view and UI are natural and easy to interact with. Gestures like “pinch-to-zoom” make navigating through your data smooth and informative. More information on the latest Instruments is available from <em><a href="../../InstrumentsUserGuide/index.html#//apple_ref/doc/uid/TP40004652" data-renderer-version="1" target="_self">Instruments User Guide</a></em>.</p></li><li class="li"><p><strong>Address sanitizer.</strong> Xcode 7 can build your app with instrumentation designed to catch and debug memory corruption using the address sanitizer.</p><p>Objective-C and C code is susceptible to memory corruption issues such as stack and heap buffer overruns and use-after-free issues. When these memory violations occur, your app can crash unpredictably or display odd behavior. Memory corruption issues are difficult to track down because the crashes and odd behavior are often hard to reproduce, and the cause can be far from the origin of the problem.</p><figure class="item-figure"><img src="../Art/xc7-asan_2x.png" alt="../Art/xc7-asan.shot/Resources/shot_2x.png" width="474" height="176"></figure><p>You enable the address sanitizer in the build scheme. Once enabled, added instrumentation is built into the app to catch memory violations immediately, enabling you to inspect the problem right at the place where it occurs. Other diagnostic information is provided as well, such as the relationship between the faulty address and a valid object on the heap and allocation/deallocation information, which helps you pinpoint and fix the problem quickly. </p><p>The address sanitizer is efficient—fast enough to be used regularly as well as with interactive applications. It is supported in OS X, in the Simulator, and on iOS devices.</p></li></ul></section><section><a name="//apple_ref/doc/uid/TP40015242-SW7" title="Testing"></a><h3 class="jump">Testing</h3><p>Xcode 7 introduces UI testing as a major new feature of the existing XCTest framework. UI testing is implemented as an extension to the existing APIs and concepts in XCTest, making it easy to adopt for developers who have familiarity with Xcode’s testing features.</p><ul class="ul"><li class="li"><p><strong>UI recording.</strong> Create your first UI test method by recording an interaction with your app. As you interact with your app, Xcode emits source code into your test method to find elements in the UI of your app, to access their properties, and to send them events.</p></li><li class="li"><p><strong>Correctness and performance.</strong> XCTest now offers a rich set of features for locating elements in the UI of your app, for accessing elements’ properties, and for synthesizing events. The UI testing support in XCTest integrates with existing features for asserting conditions that must be true and in using baselines to monitor the performance of your app over time and across different devices.</p></li><li class="li"><p><strong>Code coverage.</strong> Visualize the completeness of your test suite by enabling code coverage for your scheme. The code coverage pane in the test report shows which files, functions, and lines of code were exercised and, more importantly, which were not exercised. The source code editor can also show code coverage information inline, allowing you to see at a glance which lines—and parts of a line—the tests exercised.</p><figure class="item-figure"><img src="../Art/xc7-codecover-enable_2x.png" alt="../Art/xc7-codecover-enable.shot/Resources/shot_2x.png" width="450" height="160"></figure></li><li class="li"><p><strong>Xcode Server.</strong> Xcode testing features are designed to integrate completely with Xcode Server, with which you can run tests on multiple devices, repeatedly, in a hands-off environment that allows consistency and better evaluation of both correctness and performance. New Xcode Server report formatting shows trends and regressions over repeated tests of a project throughout your development process.</p></li></ul><p>See <em><a href="../../testing_with_xcode/chapters/01-introduction.html#//apple_ref/doc/uid/TP40014132" data-renderer-version="1" target="_self">Testing with Xcode</a></em> for more information about testing your app using Xcode testing features.</p></section><section><a name="//apple_ref/doc/uid/TP40015242-SW8" title="Crash Logs"></a><h3 class="jump">Crash Logs</h3><p>Xcode provides a way to analyze and use crash data submitted by users, with all the facilities of the debugger and your source code at hand.</p><figure class="figure"><img src="../Art/xc7-crashreport_2x.png" alt="../Art/xc7-crashreport.shot/Resources/shot_2x.png" width="500" height="225"></figure><p>Now, in Xcode 7, this feature is extended to include crash data from OS X apps, in addition to watchOS and iOS.</p><ul class="ul"><li class="li"><p><strong>TestFlight.</strong> You distribute your app for beta testing to selected testers before you ship to customers, giving you the ability to get real-world feedback. Users can also elect to share reports on crashes with the App Store, where they are collected and symbolicated. </p></li><li class="li"><p><strong>Crash reports.</strong> In the Xcode 7 Organizer window, click the Crashes tab to display a coalesced list of crash logs organized by the apps you’ve submitted. Each entry in the crash report tells you how often this crash was reported and where in the code it occurred. Click items in the crash report to present a historical backtrace of the crashed app, which you can transfer to the debug navigator and use to navigate directly to your source code in Xcode where the problem can be inspected and fixed. </p></li></ul><p>See <span class="content_text"><a href="../../../../IDEs/Conceptual/AppDistributionGuide/AnalyzingCrashReports/AnalyzingCrashReports.html#//apple_ref/doc/uid/TP40012582-CH21" data-renderer-version="1" target="_self">Analyzing Crash Reports</a></span> in <em>App Distribution Guide</em> for more information.</p></section></section><section><a name="//apple_ref/doc/uid/TP40015242-SW10" title="Xcode 7.0.1"></a><h2 class="jump">Xcode 7.0.1</h2><p>Xcode 7.0.1 is a maintenance release responding to reported developer issues. It includes refinements to support app thinning.</p><p> </p><p>For additional details on the Xcode 7.0.1 release, see <em><a href="../../../../../releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051" data-renderer-version="1" target="_self">Xcode Release Notes</a></em>. </p></section>
+        <div id="pageNavigationLinks_bottom" class="pageNavigationLinks">
+            <a class='nextLink' rel='next' href='xcode_6_0.html'>Next</a><a class='previousLink' rel='prev' href='Introduction.html'>Previous</a>
+        </div><br/>
+        <div class="copyright"><br/><hr /><div align="center"><p class="content_text" lang="en" dir="ltr"> Copyright &#x00a9; 2015 Apple Inc. All Rights Reserved. <a href="http://www.apple.com/legal/internet-services/terms/site.html" target="_blank">Terms of Use</a>   |  <a href="http://www.apple.com/privacy/" target="_blank">Privacy Policy</a>  |  Updated: 2015-09-16</p></div></div>
+
+        <div id="pediaWindow">
+            <div id="pediaHeader"></div>
+            <div id="pediaBody"></div>
+        </div>
+    </article>
+
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+    
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>     
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="1" /> 
+                    Very helpful
+                </label>
+                <label> 
+                    <input class="radio" type="radio" name="helped" value="2" /> 
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" /> 
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" /> 
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" /> 
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" /> 
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" /> 
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" /> 
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p> 
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the 
+                <a href="https://developer.apple.com/bugreporter/" target="_blank">Bug Reporter</a> 
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a> 
+                before you send us your feedback.
+            </p> 
+        </section>
+    </form>
+</div>
+
+    
+    <script charset="utf-8" src="../../../../../Resources/1119/JavaScript/lib/prototype.js"></script>
+    <script src="../../../../../Resources/1119/JavaScript/library.js"></script>
+    <script src="../../../../../Resources/1119/JavaScript/feedback.js"></script>
+</body>
+<script type="text/javascript" src="/library/webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

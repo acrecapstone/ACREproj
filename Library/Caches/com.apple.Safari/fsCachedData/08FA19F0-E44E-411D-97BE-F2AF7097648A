@@ -1,0 +1,1451 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>SwiftyJSON/SwiftyJSON</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="SwiftyJSON/SwiftyJSON" name="twitter:title" /><meta content="SwiftyJSON - The better way to deal with JSON data in Swift" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/8858017?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/8858017?v=3&amp;s=400" property="og:image" /><meta content="SwiftyJSON/SwiftyJSON" property="og:title" /><meta content="https://github.com/SwiftyJSON/SwiftyJSON" property="og:url" /><meta content="SwiftyJSON - The better way to deal with JSON data in Swift" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTUyMDE3MzA6OWIxODNmZDk3OTM1OTEyNTJkODUyYWRkNmMxMjc3ODg6ZjBiZmQ2OTI0OGJkYTEwNTQxOTg2NGYyMmEwZTVmZGZjOGRiYzVlZDAwOTFlZDkwMGFiOGEzZThlMWRjNzFiZQ==--a6233bd2d858e26242e9a6a09d756dffccc11a58">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="82A0C313:0D19:1553F432:56255B64" name="octolytics-dimension-request_id" /><meta content="15201730" name="octolytics-actor-id" /><meta content="acrecapstone" name="octolytics-actor-login" /><meta content="53a526a8d8bbbe2f7a0d6f4d5022dee846e531fefbbb5d88b0e12730b7690bde" name="octolytics-actor-hash" />
+
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+    <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+
+
+
+
+    <meta name="is-dotcom" content="true">
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="acrecapstone">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="8959ed46a90c0e2f6aa4406572b710705f886440" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-60348b331fa450b2228c6d7901d9afe1921385ec9f6f544047e84a4073d825c1.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-9e83ef1ecc7ceba3d66e3033dd980274ecac3fac0bc5b987cf82d42c663f6f8a.css" media="all" rel="stylesheet" />
+    
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="ef4817c743444ed4205f254c8a1a8b49">
+
+      
+  <meta name="description" content="SwiftyJSON - The better way to deal with JSON data in Swift">
+  <meta name="go-import" content="github.com/SwiftyJSON/SwiftyJSON git https://github.com/SwiftyJSON/SwiftyJSON.git">
+
+  <meta content="8858017" name="octolytics-dimension-user_id" /><meta content="SwiftyJSON" name="octolytics-dimension-user_login" /><meta content="20965586" name="octolytics-dimension-repository_id" /><meta content="SwiftyJSON/SwiftyJSON" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="20965586" name="octolytics-dimension-repository_network_root_id" /><meta content="SwiftyJSON/SwiftyJSON" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/SwiftyJSON/SwiftyJSON/commits/master.atom" rel="alternate" title="Recent Commits to SwiftyJSON:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_in   env-production macintosh vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/SwiftyJSON/SwiftyJSON/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content"
+        data-channel="notification-changed:acrecapstone"
+        data-url="/notifications/header">
+      <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+          <span class="mail-status all-read"></span>
+          <span class="octicon octicon-bell"></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="SwiftyJSON/SwiftyJSON">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/SwiftyJSON/SwiftyJSON/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-s js-menu-target" href="/acrecapstone"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@acrecapstone" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/15201730?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">acrecapstone</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/acrecapstone" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="vOxTThiDh4t6rqqvaeUs2z+eSVtmc+G0XRj4eCsXSHzKn4sOE/czWU70igOdNHelxhcADcD+4vNIDlDvhtSTlg==" /></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+
+      <div class="container">
+
+        <div class="clearfix">
+          
+
+<ul class="pagehead-actions">
+
+  <li>
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XOu1yN2i363MFrEgMzoc8ccX7hsANeIalwEBS8eTlvxG8+V1gaM4oUn7BibTy/zilYhvyWE2mP8AV6MfwKnmTQ==" /></div>    <input id="repository_id" name="repository_id" type="hidden" value="20965586" />
+
+      <div class="select-menu js-menu-container js-select-menu">
+        <a href="/SwiftyJSON/SwiftyJSON/subscription"
+          class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+          data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+          <span class="js-select-button">
+            <span class="octicon octicon-eye"></span>
+            Watch
+          </span>
+        </a>
+        <a class="social-count js-social-count" href="/SwiftyJSON/SwiftyJSON/watchers">
+          386
+        </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span class="select-menu-title">Notifications</span>
+              <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+            </div>
+
+            <div class="select-menu-list js-navigation-container" role="menu">
+
+              <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                  <span class="select-menu-item-heading">Not watching</span>
+                  <span class="description">Be notified when participating or @mentioned.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Watch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                  <span class="select-menu-item-heading">Watching</span>
+                  <span class="description">Be notified of all conversations.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Unwatch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_ignore" name="do" type="radio" value="ignore" />
+                  <span class="select-menu-item-heading">Ignoring</span>
+                  <span class="description">Never be notified.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-mute"></span>
+                    Stop ignoring
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/unstar" class="js-toggler-form starred js-unstar-button" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="6z6KmgYtic6g3qmLEsTus8OtD/9Mw7439UOK2p6OyeuClknbbMyl3sEl22NybFk11ocrYBdD+ZHDppZ/h+1qIw==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar SwiftyJSON/SwiftyJSON"
+        data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/SwiftyJSON/SwiftyJSON/stargazers">
+          6,755
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/star" class="js-toggler-form unstarred js-star-button" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="eS+bKtluiwHqfH7wSnCxDAB9kpNB0h5Y+argcDuAtfMWhSv6NUXPPtl/+ctvuN0KyqinKgs8E6SyQvuZl650JQ==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star SwiftyJSON/SwiftyJSON"
+        data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/SwiftyJSON/SwiftyJSON/stargazers">
+          6,755
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/fork" class="btn-with-count" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="QSSlitqbf3y+Fv5PHL+91BGdqANZHe/wD/7RPqVHvO3ozCngqO41f7Qs9lcQeelhZeWMrgj9qAG17/lvdDupHQ==" /></div>
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork"
+                title="Fork your own copy of SwiftyJSON/SwiftyJSON to your account"
+                aria-label="Fork your own copy of SwiftyJSON/SwiftyJSON to your account">
+              <span class="octicon octicon-repo-forked"></span>
+              Fork
+            </button>
+</form>
+    <a href="/SwiftyJSON/SwiftyJSON/network" class="social-count">
+      1,140
+    </a>
+  </li>
+</ul>
+
+          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="mega-octicon octicon-repo"></span>
+  <span class="author"><a href="/SwiftyJSON" class="url fn" itemprop="url" rel="author"><span itemprop="title">SwiftyJSON</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/SwiftyJSON/SwiftyJSON" data-pjax="#js-repo-pjax-container">SwiftyJSON</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+          
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/SwiftyJSON/SwiftyJSON/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/SwiftyJSON/SwiftyJSON" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /SwiftyJSON/SwiftyJSON">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/SwiftyJSON/SwiftyJSON/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /SwiftyJSON/SwiftyJSON/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="/SwiftyJSON/SwiftyJSON/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /SwiftyJSON/SwiftyJSON/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/SwiftyJSON/SwiftyJSON/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /SwiftyJSON/SwiftyJSON/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/SwiftyJSON/SwiftyJSON/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /SwiftyJSON/SwiftyJSON/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+            <div class="only-with-full-nav">
+                
+<div class="js-clone-url clone-url open"
+  data-protocol-type="http">
+  <h3 class="text-small text-muted"><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/SwiftyJSON/SwiftyJSON.git" readonly="readonly" aria-label="HTTPS clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="ssh">
+  <h3 class="text-small text-muted"><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="git@github.com:SwiftyJSON/SwiftyJSON.git" readonly="readonly" aria-label="SSH clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="subversion">
+  <h3 class="text-small text-muted"><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/SwiftyJSON/SwiftyJSON" readonly="readonly" aria-label="Subversion checkout URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="clone-options text-small text-muted">You can clone with
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="uRfZZfPnQiOE0HBMjDWB/CsqH+Tk41swjrsGEWH90wnDcZgNr6Pc3f5vRZaT1ZQAUp4I5eAF2MQY9Kx0iUvk3A==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="9a1mp6OFTclXv9ApZUaevwoFzm5ETuEaC7wNloiWHuVmcIxOCQk0znebcQX5MbK3fGqK1WQrVVzcz1W+aCZ08Q==" /></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="YZVodjLgBOPZrDcMQV1i1SaR7UR5kw5sTJ4KziJtZtHj4RcfHgfZ+1Iit3A/iZzBR+pfQ+QKVp8MFrNVZuqSHg==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</div>
+  <a href="https://mac.github.com" class="btn btn-sm sidebar-button" title="Save SwiftyJSON/SwiftyJSON to your computer and use it in GitHub Desktop." aria-label="Save SwiftyJSON/SwiftyJSON to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-desktop-download"></span>
+    Clone in Desktop
+  </a>
+
+              <a href="/SwiftyJSON/SwiftyJSON/archive/master.zip"
+                 class="btn btn-sm sidebar-button"
+                 aria-label="Download the contents of SwiftyJSON/SwiftyJSON as a zip file"
+                 title="Download the contents of SwiftyJSON/SwiftyJSON as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div>
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+          
+<span id="js-show-full-navigation"></span>
+
+  <div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      The better way to deal with JSON data in Swift
+    </div>
+
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/SwiftyJSON/SwiftyJSON/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              327
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/SwiftyJSON/SwiftyJSON/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            2
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/SwiftyJSON/SwiftyJSON/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            10
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/SwiftyJSON/SwiftyJSON/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      59
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/SwiftyJSON/SwiftyJSON/search?l=swift">
+                <span class="color-block language-color" style="background-color:#ffac45;"></span>
+                <span class="lang">Swift</span>
+                <span class="percent">98.4%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/SwiftyJSON/SwiftyJSON/search?l=objective-c">
+                <span class="color-block language-color" style="background-color:#438eff;"></span>
+                <span class="lang">Objective-C</span>
+                <span class="percent">1.1%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/SwiftyJSON/SwiftyJSON/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">0.5%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="Swift 98.4%" style="width:98.4%; background-color:#ffac45;" itemprop="keywords">Swift</span>
+    <span class="language-color" aria-label="Objective-C 1.1%" style="width:1.1%; background-color:#438eff;" itemprop="keywords">Objective-C</span>
+    <span class="language-color" aria-label="Ruby 0.5%" style="width:0.5%; background-color:#701516;" itemprop="keywords">Ruby</span>
+  </div>
+
+<include-fragment src="/SwiftyJSON/SwiftyJSON/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+  <div class="file-navigation in-mid-page">
+  <a href="/SwiftyJSON/SwiftyJSON/find/master"
+        class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s right"
+        data-pjax
+        data-hotkey="t"
+        aria-label="Quickly jump between files"
+        data-ga-click="Repository, find file, location:repo overview">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="/SwiftyJSON/SwiftyJSON/compare" aria-label="Compare, review, create a pull request" class="btn btn-sm btn-primary tooltipped tooltipped-se left compare-button" aria-label="Compare &amp; review" data-pjax data-ga-click="Repository, go to compare view, location:repo overview; icon:git-compare">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/SwiftyJSON/SwiftyJSON/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/SwiftyJSON/SwiftyJSON/tree/xcode7.1"
+               data-name="xcode7.1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="xcode7.1">
+                xcode7.1
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.3.0"
+                 data-name="2.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.3.0">2.3.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.2.1"
+                 data-name="2.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.2.1">2.2.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.2.0"
+                 data-name="2.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.2.0">2.2.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.3"
+                 data-name="2.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.3">2.1.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.2"
+                 data-name="2.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.2">2.1.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.1"
+                 data-name="2.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.1">2.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.0"
+                 data-name="2.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.0">2.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.0.0"
+                 data-name="2.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.0.0">2.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/1.1.0"
+                 data-name="1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="1.1.0">1.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/1.0.0"
+                 data-name="1.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="1.0.0">1.0.0</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/SwiftyJSON/SwiftyJSON" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">SwiftyJSON</span></a></span></span><span class="separator">/</span>
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/new/master" class="js-new-blob-form inline-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="eNZWzvou6EX4HSEgKpdtK4ekmdMmkOnV/EMLLhdmUIOWXe30KT5XVsHss2YC0tMWY9CJlNutrIV1gfBvdrdiVQ==" /></div>
+    <button class="btn-link tooltipped tooltipped-e" type="submit"
+      data-disable-with="working…" aria-label="Fork this project and create a new file">
+      <span class="js-new-blob-submit octicon octicon-plus"></span>
+    </button>
+</form></div>
+</div>
+
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/SwiftyJSON/SwiftyJSON/commit/83dc3138b14571200ea7f070933a2a510491e997" data-pjax>
+        83dc313
+      </a>
+      <time datetime="2015-10-14T09:30:25Z" is="relative-time">Oct 14, 2015</time>
+    </span>
+
+
+    <span>
+      <img alt="@tangplin" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/272929?v=3&amp;s=40" width="20" />
+      <a href="/tangplin" class="user-mention" rel="contributor">tangplin</a></span>
+
+
+        <a href="/SwiftyJSON/SwiftyJSON/commit/83dc3138b14571200ea7f070933a2a510491e997" class="message" data-pjax="true" title="Merge pull request #169 from skywinder/add-change-log-file
+
+Add automatically generated change log file.">Merge pull request</a> <a href="https://github.com/SwiftyJSON/SwiftyJSON/pull/169" class="issue-link" title="Add automatically generated change log file.">#169</a> <a href="/SwiftyJSON/SwiftyJSON/commit/83dc3138b14571200ea7f070933a2a510491e997" class="message" data-pjax="true" title="Merge pull request #169 from skywinder/add-change-log-file
+
+Add automatically generated change log file.">from skywinder/add-change-log-file</a>
+          <span class="hidden-text-expander inline">
+            <a href="#" class="js-details-target">…</a>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">Add automatically generated change log file.</pre></div>
+  </div>
+
+
+<div class="file-wrap">
+  <a href="/SwiftyJSON/SwiftyJSON/tree/83dc3138b14571200ea7f070933a2a510491e997" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/Example" class="js-directory-link js-navigation-open" id="0a52730597fb4ffa01fc117d9e71e3a9-5a80e9b1abba4329e9f77cf4bd554c251c07d5a2" title="Example">Example</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/f269523ac572979245baa99c8475eab73caf1e9b" class="message" data-pjax="true" title="Fix xcode beta5 warning.">Fix xcode beta5 warning.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-08-21T08:53:51Z" is="time-ago">Aug 21, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/Source" class="js-directory-link js-navigation-open" id="f31bbdd1b3e85bccd652680e16935819-a888af247987eb2332e2933f9b61382e61a432f9" title="Source">Source</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" class="message" data-pjax="true" title="Merge branch &#39;xcode7&#39;">Merge branch 'xcode7'</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T09:26:42Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/SwiftyJSON.xcodeproj" class="js-directory-link js-navigation-open" id="4911a93e632b377693ab135e11cc6112-2ad459853b8a15d50d13859e2677bbe358771d60" title="SwiftyJSON.xcodeproj">SwiftyJSON.xcodeproj</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" class="message" data-pjax="true" title="Merge branch &#39;xcode7&#39;">Merge branch 'xcode7'</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T09:26:42Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/SwiftyJSON.xcworkspace" class="js-directory-link js-navigation-open" id="193253c4eebbab74ffc096a92bafd67d-ddd09366326506eaa6de630020538a0ea64ea069" title="SwiftyJSON.xcworkspace">SwiftyJSON.xcworkspace</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/11f1be4af08b8fbcc7af8834be4d8b8844b33d88" class="message" data-pjax="true" title="Change example path for carthage. #276">Change example path for carthage.</a> <a href="https://github.com/SwiftyJSON/SwiftyJSON/issues/276" class="issue-link" title="Carthage with XCode7 beta 3 skips building SwiftyJSON altogether">#276</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-07-28T16:19:48Z" is="time-ago">Jul 29, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/Tests" class="js-directory-link js-navigation-open" id="90792de52961c34118f976ebe4af3a75-304f7632bca2ae8331c6de6e3c2051dc16c5c748" title="Tests">Tests</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" class="message" data-pjax="true" title="Merge branch &#39;xcode7&#39;">Merge branch 'xcode7'</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T09:26:42Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/.gitignore" class="js-directory-link js-navigation-open" id="a084b794bc0759e7a6b77810e01874f2-2731938e4b5cbb2f6deb426fdcb39f6340f3eace" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/af9b44cea4d639d7a677df80ea383e5e7f044159" class="message" data-pjax="true" title="Add Carthage/Build to .gitignore">Add Carthage/Build to .gitignore</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-05-13T21:52:31Z" is="time-ago">May 13, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/.travis.yml" class="js-directory-link js-navigation-open" id="354f30a63fb0907d4ad57269548329e3-ef88a8695b78b98e623959e9acaef416a27bd4ce" title=".travis.yml">.travis.yml</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/b6ef388434914e08b12c74a7c799cb001202d5e1" class="message" data-pjax="true" title="fix travis ci">fix travis ci</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-28T08:45:03Z" is="time-ago">Jan 28, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/CHANGELOG.md" class="js-directory-link js-navigation-open" id="4ac32a78649ca5bdd8e0ba38b7006a1e-7b15b869cd76a0b22c874221ab41fcdb687d2561" title="CHANGELOG.md">CHANGELOG.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/2c96a3e69b5936b8abc34c776309936d5fa7fb6f" class="message" data-pjax="true" title="update change log">update change log</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-05-04T06:12:31Z" is="time-ago">May 4, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/LICENSE" class="js-directory-link js-navigation-open" id="9879d6db96fd29134fc802214163b95a-a7af196875ec68b64f30963189392f71ab9ecf79" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/8ba9154aaa23d74f729c27579ced20dd3e121a4f" class="message" data-pjax="true" title="Rename LISCENSE to LICENSE">Rename LISCENSE to LICENSE</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-08-06T18:08:53Z" is="time-ago">Aug 6, 2014</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-20058d1b4570e38577ede9774f9cf949f6c26141" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/77941cb2dee3351ca044bbf4bc9a6c7e42335223" class="message" data-pjax="true" title="Merge pull request #353 from apiyron/master
+
+println -&gt; print in README.md">Merge pull request</a> <a href="https://github.com/SwiftyJSON/SwiftyJSON/pull/353" class="issue-link" title="println -&gt; print in README.md">#353</a> <a href="/SwiftyJSON/SwiftyJSON/commit/77941cb2dee3351ca044bbf4bc9a6c7e42335223" class="message" data-pjax="true" title="Merge pull request #353 from apiyron/master
+
+println -&gt; print in README.md">from apiyron/master</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T09:09:04Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/SwiftyJSON.podspec" class="js-directory-link js-navigation-open" id="7b1e8725e9ab68f8289387a27b456069-01441a151381ee335044dfaadd41dce33d674588" title="SwiftyJSON.podspec">SwiftyJSON.podspec</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/a5a861b6e090efc1ddc7c434d6e76f31ca9a1dca" class="message" data-pjax="true" title="Adding watchOS.">Adding watchOS.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T08:51:06Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-swiftyjson-中文介绍" class="anchor" href="#swiftyjson-中文介绍" aria-hidden="true"><span class="octicon octicon-link"></span></a>SwiftyJSON <a href="http://tangplin.github.io/swiftyjson/">中文介绍</a></h1>
+
+<p>SwiftyJSON makes it easy to deal with JSON data in Swift.</p>
+
+<ol>
+<li><a href="#why-is-the-typical-json-handling-in-swift-not-good">Why is the typical JSON handling in Swift NOT good</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#integration">Integration</a></li>
+<li><a href="#usage">Usage</a>
+
+<ul>
+<li><a href="#initialization">Initialization</a></li>
+<li><a href="#subscript">Subscript</a></li>
+<li><a href="#loop">Loop</a></li>
+<li><a href="#error">Error</a></li>
+<li><a href="#optional-getter">Optional getter</a></li>
+<li><a href="#non-optional-getter">Non-optional getter</a></li>
+<li><a href="#setter">Setter</a></li>
+<li><a href="#raw-object">Raw object</a></li>
+<li><a href="#literal-convertibles">Literal convertibles</a></li>
+</ul></li>
+<li><a href="#work-with-alamofire">Work with Alamofire</a></li>
+</ol>
+
+<h2><a id="user-content-why-is-the-typical-json-handling-in-swift-not-good" class="anchor" href="#why-is-the-typical-json-handling-in-swift-not-good" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why is the typical JSON handling in Swift NOT good?</h2>
+
+<p>Swift is very strict about types. But although explicit typing is good for saving us from mistakes, it becomes painful when dealing with JSON and other areas that are, by nature, implicit about types.</p>
+
+<p>Take the Twitter API for example. Say we want to retrieve a user's "name" value of some tweet in Swift (according to Twitter's API <a href="https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline">https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline</a>).</p>
+
+<p>The code would look like this:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> JSONObject: <span class="pl-c1">AnyObject</span>? <span class="pl-k">=</span> NSJSONSerialization<span class="pl-k">.</span>JSONObjectWithData(data, options: <span class="pl-c1">nil</span>, error: <span class="pl-c1">nil</span>)
+
+<span class="pl-k">if</span> <span class="pl-k">let</span> statusesArray <span class="pl-k">=</span> JSONObject <span class="pl-k">as?</span> [<span class="pl-c1">AnyObject</span>],
+   <span class="pl-k">let</span> status <span class="pl-k">=</span> statusesArray[<span class="pl-c1">0</span>] <span class="pl-k">as?</span> [<span class="pl-c1">String</span>: <span class="pl-c1">AnyObject</span>],
+   <span class="pl-k">let</span> user <span class="pl-k">=</span> status[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>] <span class="pl-k">as?</span> [<span class="pl-c1">String</span>: <span class="pl-c1">AnyObject</span>],
+   <span class="pl-k">let</span> username <span class="pl-k">=</span> user[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>] <span class="pl-k">as?</span> <span class="pl-c1">String</span> {
+    <span class="pl-c">// Finally we got the username</span>
+}
+</pre></div>
+
+<p>It's not good.</p>
+
+<p>Even if we use optional chaining, it would be messy:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> JSONObject: <span class="pl-c1">AnyObject</span>? <span class="pl-k">=</span> NSJSONSerialization<span class="pl-k">.</span>JSONObjectWithData(data, options: <span class="pl-c1">nil</span>, error: <span class="pl-c1">nil</span>)
+
+<span class="pl-k">if</span> <span class="pl-k">let</span> username <span class="pl-k">=</span> (((JSONObject <span class="pl-k">as?</span> [<span class="pl-c1">AnyObject</span>])?[<span class="pl-c1">0</span>] <span class="pl-k">as?</span> [<span class="pl-c1">String</span>: <span class="pl-c1">AnyObject</span>])?[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>] <span class="pl-k">as?</span> [<span class="pl-c1">String</span>: <span class="pl-c1">AnyObject</span>])?[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>] <span class="pl-k">as?</span> <span class="pl-c1">String</span> {
+    <span class="pl-c">// What a disaster</span>
+}
+</pre></div>
+
+<p>An unreadable mess--for something that should really be simple!</p>
+
+<p>With SwiftyJSON all you have to do is:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(data: dataFromNetworking)
+<span class="pl-k">if</span> <span class="pl-k">let</span> userName <span class="pl-k">=</span> json[<span class="pl-c1">0</span>][<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string {
+  <span class="pl-c">//Now you got your value</span>
+}
+</pre></div>
+
+<p>And don't worry about the Optional Wrapping thing. It's done for you automatically.</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(data: dataFromNetworking)
+<span class="pl-k">if</span> <span class="pl-k">let</span> userName <span class="pl-k">=</span> json[<span class="pl-c1">999999</span>][<span class="pl-s"><span class="pl-pds">"</span>wrong_key<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>wrong_name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string {
+    <span class="pl-c">//Calm down, take it easy, the ".string" property still produces the correct Optional String type with safety</span>
+} <span class="pl-k">else</span> {
+    <span class="pl-c">//Print the error</span>
+    <span class="pl-c1">print</span>(json[<span class="pl-c1">999999</span>][<span class="pl-s"><span class="pl-pds">"</span>wrong_key<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>wrong_name<span class="pl-pds">"</span></span>])
+}
+</pre></div>
+
+<h2><a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>iOS 7.0+ / Mac OS X 10.9+</li>
+<li>Xcode 7</li>
+</ul>
+
+<h2><a id="user-content-integration" class="anchor" href="#integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integration</h2>
+
+<h4><a id="user-content-cocoapods-ios-8-os-x-109" class="anchor" href="#cocoapods-ios-8-os-x-109" aria-hidden="true"><span class="octicon octicon-link"></span></a>CocoaPods (iOS 8+, OS X 10.9+)</h4>
+
+<p>You can use <a href="http://cocoapods.org/">Cocoapods</a> to install <code>SwiftyJSON</code>by adding it to your <code>Podfile</code>:</p>
+
+<div class="highlight highlight-source-ruby"><pre>platform <span class="pl-c1">:ios</span>, <span class="pl-s"><span class="pl-pds">'</span>8.0<span class="pl-pds">'</span></span>
+use_frameworks!
+
+target <span class="pl-s"><span class="pl-pds">'</span>MyApp<span class="pl-pds">'</span></span> <span class="pl-k">do</span>
+    pod <span class="pl-s"><span class="pl-pds">'</span>SwiftyJSON<span class="pl-pds">'</span></span>, <span class="pl-c1">:git</span> =&gt; <span class="pl-s"><span class="pl-pds">'</span>https://github.com/SwiftyJSON/SwiftyJSON.git<span class="pl-pds">'</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<p>Note that this requires CocoaPods version 36, and your iOS deployment target to be at least 8.0:</p>
+
+<h4><a id="user-content-carthage-ios-8-os-x-109" class="anchor" href="#carthage-ios-8-os-x-109" aria-hidden="true"><span class="octicon octicon-link"></span></a>Carthage (iOS 8+, OS X 10.9+)</h4>
+
+<p>You can use <a href="https://github.com/Carthage/Carthage">Carthage</a> to install <code>SwiftyJSON</code> by adding it to your <code>Cartfile</code>:</p>
+
+<pre><code>github "SwiftyJSON/SwiftyJSON"
+</code></pre>
+
+<h4><a id="user-content-manually-ios-7-os-x-109" class="anchor" href="#manually-ios-7-os-x-109" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manually (iOS 7+, OS X 10.9+)</h4>
+
+<p>To use this library in your project manually you may:  </p>
+
+<ol>
+<li>for Projects, just drag SwiftyJSON.swift to the project tree</li>
+<li>for Workspaces, include the whole SwiftyJSON.xcodeproj</li>
+</ol>
+
+<h2><a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4><a id="user-content-initialization" class="anchor" href="#initialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initialization</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">import</span> <span class="pl-c1">SwiftyJSON</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(data: dataFromNetworking)</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(jsonObject)</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">if</span> <span class="pl-k">let</span> dataFromString <span class="pl-k">=</span> jsonString<span class="pl-k">.</span>dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: <span class="pl-c1">false</span>) {
+    <span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(data: dataFromString)
+}</pre></div>
+
+<h4><a id="user-content-subscript" class="anchor" href="#subscript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subscript</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Getting a double from a JSON Array</span>
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-c1">0</span>]<span class="pl-k">.</span>double</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Getting a string from a JSON Dictionary</span>
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span><span class="pl-c1">stringValue</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Getting a string using a path to the element</span>
+<span class="pl-k">let</span> path <span class="pl-k">=</span> [<span class="pl-c1">1</span>,<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>,<span class="pl-c1">2</span>,<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[path]<span class="pl-k">.</span>string
+<span class="pl-c">//Just the same</span>
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-c1">1</span>][<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>][<span class="pl-c1">2</span>][<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string
+<span class="pl-c">//Alternatively</span>
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-c1">1</span>,<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>,<span class="pl-c1">2</span>,<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//With a hard way</span>
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[]<span class="pl-k">.</span>string</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//With a custom way</span>
+<span class="pl-k">let</span> keys:[SubscriptType] <span class="pl-k">=</span> [<span class="pl-c1">1</span>,<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>,<span class="pl-c1">2</span>,<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]
+<span class="pl-k">let</span> name <span class="pl-k">=</span> json[keys]<span class="pl-k">.</span>string</pre></div>
+
+<h4><a id="user-content-loop" class="anchor" href="#loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loop</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If json is .Dictionary</span>
+<span class="pl-k">for</span> (key,subJson):(<span class="pl-c1">String</span>, JSON) <span class="pl-k">in</span> json {
+   <span class="pl-c">//Do something you want</span>
+}</pre></div>
+
+<p><em>The first element is always a String, even if the JSON is an Array</em></p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If json is .Array</span>
+<span class="pl-c">//The `index` is 0..&lt;json.count's string value</span>
+<span class="pl-k">for</span> (key,subJson):(<span class="pl-c1">String</span>, JSON) <span class="pl-k">in</span> json {
+    <span class="pl-c">//Do something you want</span>
+}</pre></div>
+
+<h4><a id="user-content-error" class="anchor" href="#error" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error</h4>
+
+<p>Use a subscript to get/set a value in an Array or Dictionary</p>
+
+<p>If the JSON is:</p>
+
+<ul>
+<li> an array, the app may crash with "index out-of-bounds."</li>
+<li> a dictionary, it will be assigned <code>nil</code> without a reason.</li>
+<li> not an array or a dictionary, the app may crash with an "unrecognised selector" exception.</li>
+</ul>
+
+<p>This will never happen in SwiftyJSON.</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON([<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>])
+<span class="pl-k">if</span> <span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-c1">999</span>]<span class="pl-k">.</span>string {
+    <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+    <span class="pl-c1">print</span>(json[<span class="pl-c1">999</span>]<span class="pl-k">.</span>error) <span class="pl-c">// "Array[999] is out of bounds"</span>
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON([<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Jack<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>: <span class="pl-c1">25</span>])
+<span class="pl-k">if</span> <span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string {
+    <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+    <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>error) <span class="pl-c">// "Dictionary["address"] does not exist"</span>
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> json <span class="pl-k">=</span> JSON(<span class="pl-c1">12345</span>)
+<span class="pl-k">if</span> <span class="pl-k">let</span> age <span class="pl-k">=</span> json[<span class="pl-c1">0</span>]<span class="pl-k">.</span>string {
+    <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+    <span class="pl-c1">print</span>(json[<span class="pl-c1">0</span>])       <span class="pl-c">// "Array[0] failure, It is not an array"</span>
+    <span class="pl-c1">print</span>(json[<span class="pl-c1">0</span>]<span class="pl-k">.</span>error) <span class="pl-c">// "Array[0] failure, It is not an array"</span>
+}
+
+<span class="pl-k">if</span> <span class="pl-k">let</span> name <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string {
+    <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+    <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>])       <span class="pl-c">// "Dictionary[\"name"] failure, It is not an dictionary"</span>
+    <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>error) <span class="pl-c">// "Dictionary[\"name"] failure, It is not an dictionary"</span>
+}</pre></div>
+
+<h4><a id="user-content-optional-getter" class="anchor" href="#optional-getter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optional getter</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//NSNumber</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> id <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>favourites_count<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>number {
+   <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+   <span class="pl-c">//Print the error</span>
+   <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>favourites_count<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>error)
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//String</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> id <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string {
+   <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+   <span class="pl-c">//Print the error</span>
+   <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>])
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Bool</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> id <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>is_translator<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>bool {
+   <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+   <span class="pl-c">//Print the error</span>
+   <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>is_translator<span class="pl-pds">"</span></span>])
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Int</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> id <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>int {
+   <span class="pl-c">//Do something you want</span>
+} <span class="pl-k">else</span> {
+   <span class="pl-c">//Print the error</span>
+   <span class="pl-c1">print</span>(json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>][<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>])
+}
+<span class="pl-k">...</span></pre></div>
+
+<h4><a id="user-content-non-optional-getter" class="anchor" href="#non-optional-getter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-optional getter</h4>
+
+<p>Non-optional getter is named <code>xxxValue</code></p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If not a Number or nil, return 0</span>
+<span class="pl-k">let</span> id: <span class="pl-c1">Int</span> <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>intValue</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If not a String or nil, return ""</span>
+<span class="pl-k">let</span> name: <span class="pl-c1">String</span> <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span><span class="pl-c1">stringValue</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If not a Array or nil, return []</span>
+<span class="pl-k">let</span> list: <span class="pl-c1">Array</span><span class="pl-k">&lt;</span>JSON<span class="pl-k">&gt;</span> <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>arrayValue</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//If not a Dictionary or nil, return [:]</span>
+<span class="pl-k">let</span> user: <span class="pl-c1">Dictionary</span><span class="pl-k">&lt;</span><span class="pl-c1">String</span>, JSON<span class="pl-k">&gt;</span> <span class="pl-k">=</span> json[<span class="pl-s"><span class="pl-pds">"</span>user<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>dictionaryValue</pre></div>
+
+<h4><a id="user-content-setter" class="anchor" href="#setter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setter</h4>
+
+<div class="highlight highlight-source-swift"><pre>json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> JSON(<span class="pl-s"><span class="pl-pds">"</span>new-name<span class="pl-pds">"</span></span>)
+json[<span class="pl-c1">0</span>] <span class="pl-k">=</span> JSON(<span class="pl-c1">1</span>)</pre></div>
+
+<div class="highlight highlight-source-swift"><pre>json[<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>int <span class="pl-k">=</span>  <span class="pl-c1">1234567890</span>
+json[<span class="pl-s"><span class="pl-pds">"</span>coordinate<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>double <span class="pl-k">=</span>  <span class="pl-c1">8766</span><span class="pl-k">.</span><span class="pl-c1">766</span>
+json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>string <span class="pl-k">=</span>  <span class="pl-s"><span class="pl-pds">"</span>Jack<span class="pl-pds">"</span></span>
+json<span class="pl-k">.</span>arrayObject <span class="pl-k">=</span> [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>,<span class="pl-c1">4</span>]
+json<span class="pl-k">.</span>dictionary <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>Jack<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>:<span class="pl-c1">25</span>]</pre></div>
+
+<h4><a id="user-content-raw-object" class="anchor" href="#raw-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Raw object</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> jsonObject: <span class="pl-c1">AnyObject</span> <span class="pl-k">=</span> json<span class="pl-k">.</span>object</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">if</span> <span class="pl-k">let</span> jsonObject: <span class="pl-c1">AnyObject</span> <span class="pl-k">=</span> json<span class="pl-k">.</span><span class="pl-c1">rawValue</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//convert the JSON to raw NSData</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> data <span class="pl-k">=</span> json<span class="pl-k">.</span>rawData() {
+    <span class="pl-c">//Do something you want</span>
+}</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//convert the JSON to a raw String</span>
+<span class="pl-k">if</span> <span class="pl-k">let</span> string <span class="pl-k">=</span> json<span class="pl-k">.</span>rawString() {
+    <span class="pl-c">//Do something you want</span>
+}
+
+####Existance
+```swift
+<span class="pl-c">//shows you whether value specified in JSON or not</span>
+<span class="pl-k">if</span> json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>]<span class="pl-k">.</span>isExists()</pre></div>
+
+<pre><code>####Literal convertibles
+For more info about literal convertibles: [Swift Literal Convertibles](http://nshipster.com/swift-literal-convertible/)
+```swift
+//StringLiteralConvertible
+let json: JSON = "I'm a json"
+</code></pre>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//IntegerLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  <span class="pl-c1">12345</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//BooleanLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  <span class="pl-c1">true</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//FloatLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  <span class="pl-c1">2</span><span class="pl-k">.</span><span class="pl-c1">8765</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//DictionaryLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  [<span class="pl-s"><span class="pl-pds">"</span>I<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>am<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>json<span class="pl-pds">"</span></span>]</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//ArrayLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  [<span class="pl-s"><span class="pl-pds">"</span>I<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>am<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>json<span class="pl-pds">"</span></span>]</pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//NilLiteralConvertible</span>
+<span class="pl-k">let</span> json: JSON <span class="pl-k">=</span>  <span class="pl-c1">nil</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//With subscript in array</span>
+<span class="pl-k">var</span> json: JSON <span class="pl-k">=</span>  [<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>]
+json[<span class="pl-c1">0</span>] <span class="pl-k">=</span> <span class="pl-c1">100</span>
+json[<span class="pl-c1">1</span>] <span class="pl-k">=</span> <span class="pl-c1">200</span>
+json[<span class="pl-c1">2</span>] <span class="pl-k">=</span> <span class="pl-c1">300</span>
+json[<span class="pl-c1">999</span>] <span class="pl-k">=</span> <span class="pl-c1">300</span> <span class="pl-c">//Don't worry, nothing will happen</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//With subscript in dictionary</span>
+<span class="pl-k">var</span> json: JSON <span class="pl-k">=</span>  [<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Jack<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>: <span class="pl-c1">25</span>]
+json[<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Mike<span class="pl-pds">"</span></span>
+json[<span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>25<span class="pl-pds">"</span></span> <span class="pl-c">//It's OK to set String</span>
+json[<span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>L.A.<span class="pl-pds">"</span></span> <span class="pl-c">// Add the "address": "L.A." in json</span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">//Array &amp; Dictionary</span>
+<span class="pl-k">var</span> json: JSON <span class="pl-k">=</span>  [<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Jack<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>age<span class="pl-pds">"</span></span>: <span class="pl-c1">25</span>, <span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>, [<span class="pl-s"><span class="pl-pds">"</span>what<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>this<span class="pl-pds">"</span></span>]]]
+json[<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>][<span class="pl-c1">3</span>][<span class="pl-s"><span class="pl-pds">"</span>what<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>that<span class="pl-pds">"</span></span>
+json[<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>,<span class="pl-c1">3</span>,<span class="pl-s"><span class="pl-pds">"</span>what<span class="pl-pds">"</span></span>] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>that<span class="pl-pds">"</span></span>
+<span class="pl-k">let</span> path <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">"</span>list<span class="pl-pds">"</span></span>,<span class="pl-c1">3</span>,<span class="pl-s"><span class="pl-pds">"</span>what<span class="pl-pds">"</span></span>]
+json[path] <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>that<span class="pl-pds">"</span></span></pre></div>
+
+<h2><a id="user-content-work-with-alamofire" class="anchor" href="#work-with-alamofire" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work with Alamofire</h2>
+
+<p>SwiftyJSON nicely wraps the result of the Alamofire JSON response handler:</p>
+
+<div class="highlight highlight-source-swift"><pre>Alamofire<span class="pl-k">.</span>request(<span class="pl-k">.</span>GET, url, parameters: parameters)
+  <span class="pl-k">.</span>responseJSON { (req, res, json, error) <span class="pl-k">in</span>
+    <span class="pl-k">if</span>(error <span class="pl-k">!=</span> <span class="pl-c1">nil</span>) {
+      NSLog(<span class="pl-s"><span class="pl-pds">"</span>Error: <span class="pl-pse">\(</span><span class="pl-s1">error</span><span class="pl-pse">)</span><span class="pl-pds">"</span></span>)
+      <span class="pl-c1">print</span>(req)
+      <span class="pl-c1">print</span>(res)
+    }
+    <span class="pl-k">else</span> {
+      NSLog(<span class="pl-s"><span class="pl-pds">"</span>Success: <span class="pl-pse">\(</span><span class="pl-s1">url</span><span class="pl-pse">)</span><span class="pl-pds">"</span></span>)
+      <span class="pl-k">var</span> json <span class="pl-k">=</span> JSON(json<span class="pl-k">!</span>)
+    }
+  }</pre></div>
+</article>
+  </div>
+
+
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+  </div>
+
+
+    </div>
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.09439s from github-fe125-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-080f1c155a28f5a4315d4a6862aeafb7e27bca0a74db6f7ae9e0048e321369d1.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-d93d228828812b57da6aabbd4454c639406e0d694d2b8f6584a190548afdf5d5.js"></script>
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  </body>
+</html>
+

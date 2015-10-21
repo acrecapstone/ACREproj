@@ -1,0 +1,61 @@
+(function(){TS.registerModule("web.services",{onStart:function(){e=boot_data.services;
+f=boot_data.all_services;
+b=$("#service_filter").find("input");
+h=$("#service_filter").find(".icon_search_close");
+a=$(".tab_set.selected").data("tab");
+c()
+}});
+var b=null;
+var h=null;
+var e=null;
+var f=null;
+var a=null;
+var c=function(){b.on("textchange",TS.utility.debounce(function(){var i=$.trim($(this).val());
+g(i);
+h.toggleClass("hidden",i.length===0)
+},50));
+h.on("click",d);
+$(".clear_filter").on("click",d);
+if(e.length>0){b.removeClass("disabled").removeAttr("disabled").trigger("textchange").focus()
+}$('a[data-tab="mutes"]').on("click",function(){if($('a[data-tab="new"].selected').length){return
+}$(".tab_actions").addClass("hidden")
+});
+$('a[data-tab="existing"]').on("click",function(){$(".tab_actions").removeClass("hidden")
+});
+if($('a[data-tab="auths"].selected').length||$('a[data-tab="mutes"].selected').length){$(".tab_actions").addClass("hidden")
+}};
+var g=function(k){$(".hide_when_filtered").toggleClass("hidden",k.length>0);
+$(".show_when_filtered").toggleClass("hidden",k.length===0||a==="existing");
+var i=new RegExp("(^|-|_|\\s|\\.|@)"+TS.utility.regexpEscape(k),"i");
+var j=$.grep(e,function(o){return o.name.match(i)
+});
+$(".service, .no_results").addClass("hidden");
+$(".unconfigured_matches").empty();
+var n="";
+if(j.length>0){$.each(j,function(p,o){$('.service[data-service-id="'+o.id+'"]').removeClass("hidden")
+})
+}if(f){var m=$.grep(f,function(o){return o.name.match(i)&&!o.hidden&&$('.service[data-service-id="'+o.id+'"]').hasClass("hidden")
+});
+if(m.length){var l="";
+$.each(m,function(q,o){if(j.length>0){var p=$.grep(j,function(r){return r.id===o.id
+});
+if(p.length){return
+}}if(o.external_url){l+='<div class="plastic_row service align_left clearfix"><a href="'+TS.utility.htmlEntities(o.external_url)+'"><img src="'+TS.utility.htmlEntities(o.icon_128)+'" class="icon" /></a><h4 class="inline_block"><a href="'+TS.utility.htmlEntities(o.external_url)+'">'+TS.utility.htmlEntities(o.name)+'</a></h4><span class="description">'+TS.utility.htmlEntities(o.description)+'</span><a class="btn" href="'+TS.utility.htmlEntities(o.external_url)+'"><i class="ts_icon ts_icon_cog small_right_margin"></i> Add</a></div>'
+}else{l+='<form method="POST" action="/services/new" class="plastic_row service align_left clearfix">'+boot_data.crumb_key_html+'<input type="hidden" name="add_service" value="1" /><input type="hidden" name="service_id" value="'+TS.utility.htmlEntities(o.id)+'" /><a href="'+TS.utility.htmlEntities(o.external_url)+'"><img src="'+TS.utility.htmlEntities(o.icon_128)+'" class="icon" /></a><h4 class="inline_block"><a href="'+TS.utility.htmlEntities(o.external_url)+'">'+TS.utility.htmlEntities(o.name)+'</a></h4><span class="description">'+TS.utility.htmlEntities(o.description)+'</span><button type="submit" class="btn"><i class="ts_icon ts_icon_plus_circle small_right_margin"></i> Add</button></form>'
+}});
+if(l){$(".unconfigured_matches").html(l)
+}}if(!j.length&&m.length){n="No configured integrations found matching <strong>"+TS.utility.htmlEntities(k)+'</strong>.<br /><a class="bold" href="https://surveyplanet.com/54570ff1968d6e492b0e4ac9" target="new">Take this short survey to request new integrations</a>'
+}else{if(!j.length){n="We don't have an integration that matches <strong>"+TS.utility.htmlEntities(k)+'</strong>.<br /><a class="bold" href="https://surveyplanet.com/54570ff1968d6e492b0e4ac9" target="new">Take this short survey to request new integrations</a>'
+}}}else{if(!j.length){n="We don't have an integration that matches <strong>"+TS.utility.htmlEntities(k)+'</strong>.<br /><a class="bold" href="https://surveyplanet.com/54570ff1968d6e492b0e4ac9" target="new">Take this short survey to request new integrations</a>'
+}}if(n){$(".unconfigured_matches").empty();
+$(".no_results").html(n).removeClass("hidden")
+}};
+var d=function(){b.val("");
+h.addClass("hidden");
+$(".service").removeClass("hidden");
+$(".hide_when_filtered").removeClass("hidden");
+$(".show_when_filtered").addClass("hidden");
+setTimeout(function(){b.focus()
+},0)
+}
+})();

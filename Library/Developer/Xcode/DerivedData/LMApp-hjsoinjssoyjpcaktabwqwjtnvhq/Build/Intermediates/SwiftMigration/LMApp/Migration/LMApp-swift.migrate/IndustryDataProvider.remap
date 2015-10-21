@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/IndustryDataProvider.swift",
+  "offset": 1070,
+  "remove": 1052,
+  "text": "let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)\n        var session = NSURLSession.sharedSession()\n        request.setValue(\"Basic \\(base64EncodedCredential)\", forHTTPHeaderField: \"Authorization\")\n        request.HTTPMethod = \"GET\"\n        request.setValue(\"application/json, text/plain\", forHTTPHeaderField: \"Accept\")\n        \n        let response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil\n        let dataVal: NSData =  try! NSURLConnection.sendSynchronousRequest(request, returningResponse: response)\n        var responseStr:NSString = NSString(data:dataVal, encoding:NSUTF8StringEncoding)!\n        \n        var err: NSError\n        let jsonResult: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers)\n        \n        if let vendorResults = jsonResult as? NSArray {\n            for industry in vendorResults {\n                let i = industry as! NSDictionary\n                let code = i[\"code\"] as AnyObject? as! String\n                let",
+ }
+]

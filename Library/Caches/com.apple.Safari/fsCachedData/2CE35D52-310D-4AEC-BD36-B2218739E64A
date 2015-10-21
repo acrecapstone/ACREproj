@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?><document><annotations>
+<annotation id="annotation_1587368703" type="highlight" log_data="a-type=3&amp;a-id=annotation_1587368703&amp;len-sec=33&amp;l-class=3&amp;link=http%3A%2F%2Fwww.youtube.com%2Fuser%2Fbadlipreading&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="13.62900" y="80.83100" w="4.55600" h="8.63700" t="4:19.771"/>
+      <rectRegion x="13.62900" y="80.83100" w="4.55600" h="8.63700" t="4:52.803"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="16777215" highlightWidth="3" borderAlpha="0.2"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="current" value="https://www.youtube.com/user/badlipreading" link_class="3"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_1624834515" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_287998179">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_287998179" state="rollOver"/>
+  </trigger>
+</annotation>
+
+<annotation id="annotation_1912699191" type="highlight" log_data="a-type=3&amp;a-id=annotation_1912699191&amp;len-sec=33&amp;l-class=7&amp;link=https%3A%2F%2Fitunes.apple.com%2Fus%2Falbum%2Fcarl-poppa-feat.-carl-g.-single%2Fid922609151&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="63.55000" y="4.77500" w="33.90600" h="60.45100" t="4:19.771"/>
+      <rectRegion x="63.55000" y="4.77500" w="33.90600" h="60.45100" t="4:52.861"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="16777215" highlightWidth="3" borderAlpha="0.2"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="new" value="https://itunes.apple.com/us/album/carl-poppa-feat.-carl-g.-single/id922609151" link_class="7"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_2060049035" type="highlight" log_data="a-type=3&amp;a-id=annotation_2060049035&amp;len-sec=33&amp;l-class=1&amp;link=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5Krz-dyD-UQ%26list%3DUU67f2Qf7FYhtoUIF4Sf29cA&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="68.78000" y="67.60600" w="28.48700" h="27.77500" t="4:19.771"/>
+      <rectRegion x="68.78000" y="67.60600" w="28.48700" h="27.77500" t="4:52.826"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="0" highlightWidth="0" borderAlpha="0.0"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="current" value="https://www.youtube.com/watch?v=5Krz-dyD-UQ&amp;list=UU67f2Qf7FYhtoUIF4Sf29cA" link_class="1"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_2276807073" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_1587368703">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_1587368703" state="rollOver"/>
+  </trigger>
+</annotation>
+
+<annotation id="annotation_2342613105" type="highlight" log_data="a-type=3&amp;a-id=annotation_2342613105&amp;len-sec=33&amp;l-class=7&amp;link=https%3A%2F%2Fitunes.apple.com%2Fus%2Fartist%2Fbad-lip-reading%2Fid428350649&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="32.33000" y="80.83100" w="4.55600" h="8.91900" t="4:19.771"/>
+      <rectRegion x="32.33000" y="80.83100" w="4.55600" h="8.91900" t="4:52.822"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="16777215" highlightWidth="3" borderAlpha="0.2"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="new" value="https://itunes.apple.com/us/artist/bad-lip-reading/id428350649" link_class="7"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_274545347" type="highlight" log_data="a-type=3&amp;a-id=annotation_274545347&amp;len-sec=33&amp;l-class=1&amp;link=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjR4lLJu_-wE%26list%3DUU67f2Qf7FYhtoUIF4Sf29cA&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="40.25400" y="67.60600" w="27.69400" h="27.77500" t="4:19.771"/>
+      <rectRegion x="40.25400" y="67.60600" w="27.69400" h="27.77500" t="4:52.822"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="0" highlightWidth="0" borderAlpha="0.0"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="current" value="https://www.youtube.com/watch?v=jR4lLJu_-wE&amp;list=UU67f2Qf7FYhtoUIF4Sf29cA" link_class="1"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_287998179" type="highlight" log_data="a-type=3&amp;a-id=annotation_287998179&amp;len-sec=33&amp;l-class=5&amp;link=http%3A%2F%2Fwww.youtube.com%2Fuser%2Fbadlipreading%3Fsub_confirmation%3D1&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="12.67800" y="40.56300" w="23.73200" h="9.46500" t="4:19.771"/>
+      <rectRegion x="12.67800" y="40.56300" w="23.73200" h="9.46500" t="4:52.822"/>
+    </movingRegion>
+  </segment>
+  <appearance bgColor="16777215" highlightWidth="3" borderAlpha="0.2"/>
+  
+  <action type="openUrl" trigger="click">
+    <url target="new" value="https://www.youtube.com/user/badlipreading?sub_confirmation=1" link_class="5"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_3036378817" type="text" style="popup" log_data="a-type=1&amp;a-id=annotation_3036378817&amp;len-sec=33&amp;l-class=1&amp;link=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQ9aM9Ch97U8&amp;xble=1&amp;a-v=-6BsMzc9mMs">
+  <TEXT>Click here for the full &quot;Carl Poppa&quot; song and lyric video!</TEXT>
+  <segment>
+    <movingRegion type="rect">
+      <rectRegion x="64.02500" y="34.08500" w="29.04900" h="23.53500" t="4:18.979"/>
+      <rectRegion x="64.02500" y="34.08500" w="29.04900" h="23.53500" t="4:52.606"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0.600000023842" bgColor="0" fgColor="16777215" textSize="4.814266666666667" effects="">
+    
+  </appearance>
+  
+  <action type="openUrl" trigger="click">
+    <url target="current" value="https://www.youtube.com/watch?v=Q9aM9Ch97U8" link_class="1"/>
+  </action>
+
+</annotation>
+
+<annotation id="annotation_3043163731" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_1912699191">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_1912699191" state="rollOver"/>
+  </trigger>
+</annotation>
+
+<annotation id="annotation_3104812469" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_274545347">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="28.16900" w="25.63400" h="4.22500" t="never"/>
+      <rectRegion x="0.00000" y="28.16900" w="25.63400" h="4.22500" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_274545347" state="rollOver"/>
+  </trigger>
+</annotation>
+
+<annotation id="annotation_3119892679" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_2342613105">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+      <rectRegion x="0.00000" y="29.72200" w="25.00000" h="6.00000" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_2342613105" state="rollOver"/>
+  </trigger>
+</annotation>
+
+<annotation id="annotation_3808754281" type="text" style="highlightText" logable="false">
+  
+  <segment spaceRelative="annotation_2060049035">
+    <movingRegion type="rect">
+      <rectRegion x="0.00000" y="28.16900" w="30.38800" h="4.22500" t="never"/>
+      <rectRegion x="0.00000" y="28.16900" w="30.38800" h="4.22500" t="never"/>
+    </movingRegion>
+  </segment>
+  <appearance bgAlpha="0" textSize="3.911599999999999" highlightFontColor="0"/>
+  <trigger>
+    <condition ref="annotation_2060049035" state="rollOver"/>
+  </trigger>
+</annotation>
+</annotations></document>

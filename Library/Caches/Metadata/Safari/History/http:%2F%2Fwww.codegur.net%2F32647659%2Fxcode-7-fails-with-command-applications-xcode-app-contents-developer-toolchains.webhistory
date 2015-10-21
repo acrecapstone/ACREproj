@@ -1,0 +1,316 @@
+bplist00”SURLTName^Full Page Text_ohttp://www.codegur.net/32647659/xcode-7-fails-with-command-applications-xcode-app-contents-developer-toolchains_êXcode 7 fails with Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1_CjCodeGur
+IN CODE WE TRUST
+Explore tags
+
+Related questions
+Problems with push notification on Enterprise environment
+how to get only date and compare with only two dates in iOS?
+Current GPS location using ArcGIS in IOS
+How to use lldb "memory find" command?
+'Google/Analytics.h' file not found - XCode 7
+How to make UIImage navigate to another ViewController?
+How to position child SKSpriteNodes inside their parents
+Why can't I use a relationship in a NSManagedObject subclass computed property? (CoreData, swift)
+Google Maps doesn't provide GMSCircle's animation
+Empty variables in xcode's variable view while debugging cocoapod pod
+DBAccess linker warnings & errors using XCode 7 and cocopods
+Unable to find a specification for private pod
+Xcode 7 fails with Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
+
+ 
+2015-09-18 08:45 Luis Delgado imported from Stackoverflow
+ios xcode swift cocoapods
+I am going through the process of updating my swift project to Swift 2.0 on Xcode 7. The following error is being reported by xcode on building the project:
+
+Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc failed with exit code 1
+
+This happens on either SwiftyJSON or SwiftSpinner frameworks (the compiler seems to pick one first at random and fail, so the error gets reported intermittently on either or the other). I have updated these frameworks to their xcode7/swift2 compatible branches but the project still fails to compile.
+
+Just wondering if this is a situation other people are seeing when upgrading their project with cocoa pods framework dependencies, or if this is a compiler bug
+
+See also questions close to this topic
+Problems with push notification on Enterprise environment
+I am facing a problem with Push notification, and the problem occurs only on clients Enterprise environment.
+
+The problem is as follows: when I am testing on my side (development and not distribution) I receive notification and - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo is called every time and works perfectly through the following cases:
+
+When app is not opened (not in memory or suspended apps), and not in background nor foreground
+When app is opened but in background.
+When app is in foreground.
+But when the client tries it on his environment (after mdm wrapping), the following happens in each case:
+
+Case 1: Works successfully, and didReceiveRemoteNotification method gets called fine.
+
+Case 2: Receives notification, but didReceiveRemoteNotification is not called.
+
+Case 3: I don't see any notification neither in notification centre and didReceiveRemoteNotification is not called also.
+
+I searched for anything that could help, and I only found that there is this - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler maybe be a better replacement.
+
+Any other suggestions? Any thing to check or to consider? Is it maybe an iOS related issue? Caused by MDM configuration (a long shot I know)?.
+
+Thanks in advance.
+
+how to get only date and compare with only two dates in iOS?
+how to get only date and compare with only two dates in iOS ? Actually i have date which is coming from server
+
+for example : 2015-9-23
+
+_offerEnd.text = [_offers valueForKeyPath:@"offer_valid_upto"]
+And this date is compare with current date. i have tried for current date by using this.
+
+NSDate *today = [NSDate date];
+NSLog(@" total date %@",today);
+
+unsigned int flags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay ;
+NSCalendar* calendar = [NSCalendar currentCalendar];
+
+NSDateComponents* components = [calendar components:flags fromDate:today];
+NSDate* dateOnly = [calendar dateFromComponents:components];
+NSLog(@" the date only o/p :%@",dateOnly);
+but o/p is getting in different
+
+the date only o/p :2015-10-12 18:30:00 +0000
+please help me with this and comparison
+
+Thanks in Advance
+
+Current GPS location using ArcGIS in IOS
+I understand that
+
+mapView.locationDisplay.startDataSource()
+will position the current location marker in the arcGIS map and the image of the current location marker can be changed by adding a image file named LocationDisplay.png inside the project.
+
+By default, the current location icon is a blue circle icon. This icon is by default enclosed within a circle (that has animation). When we enlarge the map to the maximum scale, the enclosed circle around the blue circle icon also increases. Changing the icon image is of no help as it changes only the blue circle icon to the image we change but the enclosed circle remains. Please suggest if there is any option for us to remove that animation around the current location icon.
+
+P.S: I am aware that we can get the current location from coreLocation and can place custom marker. Any other better possibilities are welcome.
+
+Thanks.
+
+How to use lldb "memory find" command?
+According to the lldb online help, memory find should work like this:
+
+Find a value in the memory of the process being debugged.
+
+Syntax: memory find <cmd-options> <address> <value> [<value> [...]]
+
+Command Options Usage:
+  memory find <address> <value> [<value> [...]]
+  memory find [-e <expr>] [-s <name>] [-c <count>] [-o <offset>] <address> <value> [<value> [...]]
+
+       -c <count> ( --count <count> )
+            How many times to perform the search.
+
+       -e <expr> ( --expression <expr> )
+            Evaluate an expression to obtain a byte pattern.
+
+       -o <offset> ( --dump-offset <offset> )
+            When dumping memory for a match, an offset from the match location
+            to start dumping from.
+
+       -s <name> ( --string <name> )
+            Use text to find a byte pattern.
+
+     This command takes options and free-form arguments.  If your arguments
+     resemble option specifiers (i.e., they start with a - or --), you must use
+     ' -- ' between the end of the command options and the beginning of the
+     arguments.
+I suspect that the implementation does not match the help info, as whatever syntax I use I seem to get one of various cryptic error messages, e.g.:
+
+error: two addresses needed for memory find
+or
+
+error: do not know how to deal with larger than 8 byte result types. pass a string instead
+or
+
+error: please pass either a block of text, or an expression to evaluate.
+I've Googled for usage examples and come up with nothing. If anyone has an example that works I'd be grateful. In particular I want to search from the start of a block identified by a pointer, for a given no of bytes, to find the first occurrence of a particular (byte) value (255 in this case).
+
+I'm using Xcode 7.0.1 on OS X and the lldb version is lldb-340.4.70.
+
+UPDATE
+I've found that the -s option can be made to work, e.g. like this:
+
+(lldb) me fi -s "f" -- ptr ptr+8192*256
+Your data was found at location: 0x11033e20c
+0x11033e20c: 66 bb 58 07 d0 b7 32 7d ff 7f 00 00 66 5b e7 82  f.X...2}....f[..
+It may just be that the -e option (which is what I need in this instance) is broken, e.g.:
+
+(lldb) me fi -e 255 -- ptr ptr+8191*256
+error: expression evaluation failed. pass a string instead?
+Trying to coax the -s option into accepting an escaped hex or decimal value doesn't seem to work either, unfortunately:
+
+(lldb) me fi -s "\xff" -- ptr ptr+8191*256
+Your data was not found within the range.
+
+(lldb) me fi -s "\255" -- ptr ptr+8191*256
+Your data was not found within the range.
+'Google/Analytics.h' file not found - XCode 7
+I am having much trouble integrating Google Analytics SDK into my iOS project. I am using XCode 7 and targeting iOS 7. Using Swift.
+
+I've tried both install via CocoaPods and by copying the files manually from:
+
+https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download
+
+When installing via CocoaPods I've tried both
+
+pod 'Google/Analytics'
+,
+
+pod 'GoogleAnalytics'
+and
+
+pod 'Google/Analytics', '~> 1.0.0'
+Either case the XCode build fails with error
+
+BridgingHeader.h:2:9: 'Google/Analytics.h' file not found
+
+Failed to import bridging header '/Users/jonas.andersson/Projects/MyAppName/MyAppName/Supporting files/BridgingHeader.h'
+This on row:
+
+#import <Google/Analytics.h>
+I've also tried to add
+
+$(SRCROOT)/Pods/GoogleAnalytics
+and the rest of the suggestions from Google/Analytics.h file not found when adding to AppDelegate
+
+Update
+
+Using pod 'GoogleAnalytics' and then #import <Google/Analytics.h> worked better. However then I get the following error:
+
+Use of unresolved identifier 'GGLContext'
+when I try setup GA from according to Google documentation:
+
+var configureError:NSError?
+GGLContext.sharedInstance().configureWithError(&configureError)
+How to make UIImage navigate to another ViewController?
+Is it possible to make UIImage navigate to another ViewController when I tap on it ? Just like UIButton.
+
+Thanks.
+
+How to position child SKSpriteNodes inside their parents
+I don't really understand the logic of positioning child nodes. Lets say I have a rectangle. And if I haven't changed its anchor point, child node will appear exactly in the middle by default. But how to position it on the upper-left edge of rectangle for example? Or down-right? I tried
+
+ child.zPosition = 1
+ child.position.y = rect.size.height / 2   
+ rect.addChild(child)
+But it is not positioned in the middle by Y axis. It's somewhere on top. What instruments should I use to position child nodes regarding/inside their parents?
+
+Why can't I use a relationship in a NSManagedObject subclass computed property? (CoreData, swift)
+I'm using CoreData and I have a Book entity and a ReadingSession entity. Each Book has many ReadingSessions.
+
+If I add this computed property to the Book class, it works:
+
+var sessions: [ReadingSession] {
+    let request = NSFetchRequest(entityName: "ReadingSession")
+    let predicate = NSPredicate(format: "book = %@", self)
+    request.predicate = predicate
+    return try! DataController.sharedInstance.managedObjectContext.executeFetchRequest(request) as! [ReadingSession]
+}
+But if I add this one, it doesn't:
+
+var sessions: [ReadingSession] {
+    return readingSession?.allObjects as! [ReadingSession]
+}
+This last example sometimes returns the correct array and sometimes just returns an empty array. I tried the same thing with other relationships inside computed properties and the results are the same.
+
+Why is that? Is there a reason why I shouldn't try doing this? Is my first example a valid workaround, or will it cause me problems later on? Should I give up using computed properties for this and just repeat the code when I need it?
+
+Thanks in advance!
+
+Daniel
+
+Google Maps doesn't provide GMSCircle's animation
+My app uses Google Maps iOS SDK and I create 2 custom GMSMarkers: one with colorful default pin image and another with text label. These markers after changing a position moves smoothly with animation by means of Google Maps SDK. But I also create GMSCircle and I change it's position simultaneously with the markers but circle doesn't moves animated. Instead of this circle just appears at a next position.
+
+I was trying to animate a circle with this approach, but it consumes too much performance resources and the application begins to lag.
+
+class TCCircle : GMSCircle {
+
+  var from : CLLocationCoordinate2D!
+  var to : CLLocationCoordinate2D!
+  var duration : NSTimeInterval!
+  var begin : NSDate!
+
+  func beginCircleAnimation(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D, duration: NSTimeInterval) {
+    self.from = from
+    self.to = to
+    self.duration = duration
+    self.begin = NSDate()
+    self.performSelectorOnMainThread(Selector("updateSelf"), withObject: nil, waitUntilDone: false)
+  }
+
+  func updateSelf() {
+    let i : NSTimeInterval = NSDate().timeIntervalSinceDate(self.begin)
+    if (i >= self.duration) {
+      self.position = self.to
+      return
+    } else {
+      let lat = (self.to.latitude - self.from.latitude) * i / self.duration + self.from.latitude;
+      let lng = (self.to.longitude - self.from.longitude) * i / self.duration + self.from.longitude;
+      self.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+      self.performSelectorOnMainThread(Selector("updateSelf"), withObject: nil, waitUntilDone: false)
+    }
+  }
+}
+So I find 2 kinds of solution:
+
+Animate a circle more safety without critical impact to system resources.
+Remove marker's animation for synchronizing non-animated appearing of bunch "2 markers & circle"
+I would be grateful for your help!
+
+Empty variables in xcode's variable view while debugging cocoapod pod
+I have a problem debugging swift pods in my project. We've created a swift pod and integrated that into one of our projects as a development pod. Everything runs great. However, when we try to debug the code in the pod, we don't see any values.
+
+I've checked and we don't strip debug symbols in the Pods project nor in the main project. What else can be wrong. How do we fix this?
+
+
+
+DBAccess linker warnings & errors using XCode 7 and cocopods
+I've been successfully using DBAccess as a cocoapod in my project for several months. A lot of changes have taken place in my tool chain in the last few weeks and now my build is failing. pod install indicates it installed DBAccess (1.6.9). XCode version is 7.0.1. pod --version is 0.39.0.
+
+On building my app in XCode I see the linker warning: ld: warning: directory not found for option '-F/proj/DBAccess'
+
+the framework actually lives in /proj/Pods/DBAccess
+
+This warning isn't a problem (other than perhaps an indication of a bad installation) and I can build, run, and test app fine.
+
+However, when I try to archive the app for submission to the app store, using jenkins/fastlane/pilot/xcode CLI, I get the following linker error:
+
+ld: bitcode bundle could not be generated because '/Users/jenkins/.jenkins/jobs/proj/workspace/Pods/DBAccess/DBAccess.framework/DBAccess' was built without full bitcode. All object files and libraries for bitcode must be generated from Xcode Archive or Install build for architecture armv7
+
+Here is the command line call that Jenkins made to arrive at this error: set -o pipefail && xcodebuild -workspace './proj.xcworkspace' -scheme 'proj' -destination 'generic/platform=iOS' -archivePath '/Users/jenkins/Library/Developer/Xcode/Archives/2015-10-12/proj 2015-10-12 16.33.37.xcarchive' archive | tee '/Users/jenkins/Library/Logs/gym/proj.log' | xcpretty
+
+This error has me stumped because the DBAccess website claims 1.6.9 was built to fix this problem (http://www.db-access.org/downloads). Is anyone else having issues with DBAccess installed with cocoapods?
+
+Unable to find a specification for private pod
+I am trying to create a private pod using a bitbucket URL , but it is giving me this error.
+
+[!] Unable to find a specification for 'LoaderAnimation'.
+
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/external_sources/abstract_external_source.rb:111:in `block in pre_download'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/user_interface.rb:80:in `titled_section'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/external_sources/abstract_external_source.rb:106:in `pre_download'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/external_sources/downloader_source.rb:13:in `fetch'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:457:in `fetch_external_source'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:434:in `block (2 levels) in fetch_external_sources'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:433:in `each'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:433:in `block in fetch_external_sources'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/user_interface.rb:59:in `section'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:432:in `fetch_external_sources'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer/analyzer.rb:69:in `analyze'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer.rb:213:in `analyze'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer.rb:136:in `block in resolve_dependencies'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/user_interface.rb:59:in `section'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer.rb:135:in `resolve_dependencies'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/installer.rb:105:in `install!'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/command/project.rb:71:in `run_install_with_update'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/command/project.rb:101:in `run'
+/Library/Ruby/Gems/2.0.0/gems/claide-0.9.1/lib/claide/command.rb:312:in `run'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/lib/cocoapods/command.rb:47:in `run'
+/Library/Ruby/Gems/2.0.0/gems/cocoapods-0.39.0/bin/pod:44:in `<top      (required)>'
+/usr/local/bin/pod:23:in `load'
+/usr/local/bin/pod:23:in `<main>'
+Thanks in advance !!
+
+www.codegur.net is StackOverFlow proxy site     ' ô,                           Dö

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>FeedURL</key>
+		<string>https://github.com/acrecapstone/ACREproj/commits/master.atom</string>
+		<key>SiteIconURLs</key>
+		<array>
+			<string>https://github.com/apple-touch-icon-144.png</string>
+			<string>https://github.com/apple-touch-icon-114.png</string>
+			<string>https://github.com/apple-touch-icon-144.png</string>
+			<string>https://github.com/apple-touch-icon-114.png</string>
+			<string>https://github.com/apple-touch-icon-precomposed.png</string>
+			<string>https://github.com/apple-touch-icon.png</string>
+			<string>https://github.com/favicon.ico</string>
+		</array>
+		<key>SourceURL</key>
+		<string>https://github.com/acrecapstone/ACREproj</string>
+		<key>State</key>
+		<integer>2</integer>
+		<key>SubscribedWhenSyncWasOff</key>
+		<false/>
+		<key>Title</key>
+		<string>Recent Commits to ACREproj:master</string>
+	</dict>
+	<dict>
+		<key>FeedURL</key>
+		<string>https://github.com/acrecapstone/ACREproject/commits/master.atom</string>
+		<key>SiteIconURLs</key>
+		<array>
+			<string>https://github.com/apple-touch-icon-144.png</string>
+			<string>https://github.com/apple-touch-icon-precomposed.png</string>
+			<string>https://github.com/apple-touch-icon.png</string>
+			<string>https://github.com/favicon.ico</string>
+		</array>
+		<key>SourceURL</key>
+		<string>https://github.com/acrecapstone/ACREproject</string>
+		<key>State</key>
+		<integer>2</integer>
+		<key>SubscribedWhenSyncWasOff</key>
+		<false/>
+		<key>Title</key>
+		<string>Recent Commits to ACREproject:master</string>
+	</dict>
+	<dict>
+		<key>FeedURL</key>
+		<string>https://github.com/acrecapstone/ACREproj/commits/master.atom</string>
+		<key>SiteIconURLs</key>
+		<array>
+			<string>https://github.com/apple-touch-icon-144.png</string>
+			<string>https://github.com/apple-touch-icon-precomposed.png</string>
+			<string>https://github.com/apple-touch-icon.png</string>
+			<string>https://github.com/favicon.ico</string>
+		</array>
+		<key>SourceURL</key>
+		<string>https://github.com/acrecapstone/ACREproj</string>
+		<key>State</key>
+		<integer>2</integer>
+		<key>SubscribedWhenSyncWasOff</key>
+		<false/>
+		<key>Title</key>
+		<string>Recent Commits to ACREproj:master</string>
+	</dict>
+</array>
+</plist>

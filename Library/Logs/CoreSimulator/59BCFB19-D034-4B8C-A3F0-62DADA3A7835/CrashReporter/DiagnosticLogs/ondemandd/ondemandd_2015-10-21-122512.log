@@ -1,0 +1,56 @@
+Oct 21 12:25:12  ondemandd[2588] <Notice>: ODR Log file is at /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/Logs/CrashReporter/DiagnosticLogs/ondemandd/ondemandd_2015-10-21-122512.log
+Oct 21 12:25:12  ondemandd[2588] <Debug>: new log file 6
+Oct 21 12:25:12  ondemandd[2588] <Debug>: Going to verify/create all of our library paths.
+Oct 21 12:25:12  ondemandd[2588] <Debug>: Going to verify/create all of our library paths.
+Oct 21 12:25:12  ondemandd[2588] <Debug>:    Check/Creating the base library path.
+Oct 21 12:25:12  ondemandd[2588] <Debug>:    Check/Creating the base library path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Base library path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Base library path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the manifests path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the manifests path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Manifests path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Manifests
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Manifests path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Manifests
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the database path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the database path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Database path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database
+Oct 21 12:25:13  ondemandd[2588] <Debug>:        Database path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the asset packs path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:    Check/Creating the asset packs path.
+Oct 21 12:25:13  ondemandd[2588] <Debug>:         AssetPacks path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/AssetPacks
+Oct 21 12:25:13  ondemandd[2588] <Debug>:         AssetPacks path is: /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/AssetPacks
+Oct 21 12:25:13  ondemandd[2588] <Debug>: Full DB Path [/Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database/odr.sqlite]
+Oct 21 12:25:13  ondemandd[2588] <Debug>: Full DB Path [/Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database/odr.sqlite]
+Oct 21 12:25:13  ondemandd[2588] <Error>: No existing database at /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database/odr.sqlite, signal folks that this one might not be trustworthy IRT files on the device.
+Oct 21 12:25:13  ondemandd[2588] <Error>: No existing database at /Users/acre/Library/Developer/CoreSimulator/Devices/59BCFB19-D034-4B8C-A3F0-62DADA3A7835/data/Library/OnDemandResources/Database/odr.sqlite, signal folks that this one might not be trustworthy IRT files on the device.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for LaunchService's XPC Event.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for LaunchService's XPC Event.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for XPC maintenance task.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for XPC maintenance task.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for the LaunchServices sync maintenance activity.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Registering for the LaunchServices sync maintenance activity.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Starting to handle any queued work.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Starting to handle any queued work.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Running the registered maintenance block.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Running the registered maintenance block.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: XPC Maintenance activity checking in.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: XPC Maintenance activity checking in.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Going to start processing work.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Going to start processing work.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: There are currently [0] things to do.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: There are currently [0] things to do.
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.client'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.client'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.devtools'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.devtools'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.appreview'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.appreview'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.odrctl'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.odrctl'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.itunesstored'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.itunesstored'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.launchservices'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Creating listener for service name: 'com.apple.ondemandd.launchservices'
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Refreshing store bag
+Oct 21 12:25:16  ondemandd[2588] <Debug>: Refreshing store bag
+Oct 21 12:25:28  ondemandd[2588] <Debug>: App did change state : com.apple.mobilecal(2596) 4
+Oct 21 12:25:31  ondemandd[2588] <Debug>: App did change state : com.apple.mobilecal(2596) 2

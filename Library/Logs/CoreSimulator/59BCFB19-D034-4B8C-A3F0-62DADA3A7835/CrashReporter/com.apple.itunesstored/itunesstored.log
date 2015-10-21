@@ -1,0 +1,12 @@
+2015-10-21 12:24:30.797 [2566]: [Download]: Adding download(s): -6537182186817911944
+2015-10-21 12:24:40.611 [2566]: [Download]: Starting task: 1 with priority: 300 for download: -6537182186817911944 in session: com.apple.itunesstored.mobileassetd.wifi.default
+2015-10-21 12:24:41.150 [2566]: [Download]: Download task did finish: 1 for download: -6537182186817911944
+2015-10-21 12:24:41.205 [2566]: [ApplicationWorkspace] Installing download: -6537182186817911944 with step(s): Install
+2015-10-21 12:24:41.236 [2566]: [ApplicationWorkspace] Install complete for download: -6537182186817911944 result: Success
+2015-10-21 12:24:45.733 [2566]: [Download]: Adding download(s): -1708712480774765574
+2015-10-21 12:24:45.863 [2566]: [Download]: Starting task: 2 with priority: 200 for download: -1708712480774765574 in session: com.apple.itunesstored.mobileassetd.wifi.default
+2015-10-21 12:24:47.987 [2566]: [Download]: Download task did finish: 2 for download: -1708712480774765574
+2015-10-21 12:24:47.989 [2566]: [ApplicationWorkspace] Installing download: -1708712480774765574 with step(s): Install
+2015-10-21 12:24:48.088 [2566]: [ApplicationWorkspace] Install complete for download: -1708712480774765574 result: Success
+2015-10-21 12:25:13.963 [2566]: iTunes Store environment is: ST11
+2015-10-21 12:25:17.112 [2566]: UpdateAssetsOperation: Error downloading manifest from URL https://apps.itunes.com/files/ios-music-app/manifest.json: Error Domain=SSErrorDomain Code=109 "Cannot connect to iTunes Store" UserInfo={NSLocalizedDescription=Cannot connect to iTunes Store, SSErrorHTTPStatusCodeKey=503}

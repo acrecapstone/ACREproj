@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>how to set up a remote github Repository in Xcode 5 | jkbdev</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://jkbdev.wordpress.com/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="jkbdev &raquo; Feed" href="https://jkbdev.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="jkbdev &raquo; Comments Feed" href="https://jkbdev.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="jkbdev &raquo; how to set up a remote github Repository in Xcode&nbsp;5 Comments Feed" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://s0.wp.com/_static/??-eJx9j91OwzAMRl+IYHUMJC4Qz5IfL0tn11adEO3tSUEIpqLdWPanc2QburooS8WlAjen1HJZDIwL4VVXmTHW2+kxmj3A/xqVCxrMWNXHi/uadnggyb+C5IxJWnUnIZIOvaSM+x03Upc1+WSQSYKne/dEWXHkrL5uBGMqHgl5YPc01pcfa2vP45n9H3/4roN2IeiKZm5ULo1dPY9Fe+87Bm0BTiXW8oFg9Uq4ge/8Nh2PT4fD9Do9z5/qG5rK' type='text/css' media='all' />
+<link rel='stylesheet' id='fictive-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C400%2C300%2C700&#038;ver=4.3.1-alpha-336649' type='text/css' media='all' />
+<link rel='stylesheet' id='fictive-bitter-css'  href='https://fonts.googleapis.com/css?family=Bitter%3A400%2C700%2C400italic&#038;subset=latin%2Clatin-ext&#038;ver=4.3.1-alpha-336649' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-4' href='https://s2.wp.com/_static/??-eJx9jdEKwjAMRX/IGoZT3IP4LVvJakablDbb8O+dFKEi7iWcS+7hwhqNFVZkhTCb6GdHnMEhY6Lt8QePNucDVK4+MGCGOA8wklVaEIgtZH16NGu0En6Uag6DTFRuqRGwaBn9wJ7vUIwX2ysJfwUz+p7Snppw8OI2dLC1qviW7uHWtO3p0pyvXTe9ACELcD0=' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-5' href='https://s1.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1444132114g' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-6' href='https://s1.wp.com/_static/??/wp-content/mu-plugins/post-flair/sharing/sharing.css,/wp-content/themes/h4/global.css?m=1435590157j' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyFzs0KwjAMAOAXsiub8+BBfJb9ZCW1bWqTrujTW0EP4lAIJCRfQnSJCsPk8gysbY1rhnR7pcbyTv8CyqNJg0DjMbzxREEgyNN6GtGBygxpMLVXDy204SKxeGCuaGP6+RKGFaH8ZRYkDtNFJWC8f10dHRkVXTYYWNfawExZ1ELOUdEFZwNSd87+1Pb9vuvaY3uwD0gZb60='></script>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jkbdev.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='7 important Things to Consider before Submitting your iOS App to the App&nbsp;Store' href='https://jkbdev.wordpress.com/2014/01/14/7-important-things-to-consider-before-submitting-your-ios-app-to-the-app-store/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/' />
+<link rel='shortlink' href='http://wp.me/p4bRFD-6' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fjkbdev.wordpress.com%2F2013%2F12%2F23%2Fhow-to-set-up-a-remote-github-repository-in-xcode-5%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fjkbdev.wordpress.com%2F2013%2F12%2F23%2Fhow-to-set-up-a-remote-github-repository-in-xcode-5%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="how to set up a remote github Repository in Xcode 5" />
+<meta property="og:url" content="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/" />
+<meta property="og:description" content="To start off you will need to set up a repository in github. Then create your Xcode project and select the option to use a local git repository. Once your application has been set up you can naviga..." />
+<meta property="article:published_time" content="2013-12-23T04:04:16+00:00" />
+<meta property="article:modified_time" content="2013-12-23T04:54:12+00:00" />
+<meta property="og:site_name" content="jkbdev" />
+<meta property="og:image" content="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-56-28-pm.png?w=300" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:image" content="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-44-07-pm.png?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://jkbdev.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://jkbdev.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://jkbdev.wordpress.com/osd.xml" title="jkbdev" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://wordpress.com/opensearch.xml" title="WordPress.com" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="jkbdev" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Dev encounters!" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://jkbdev.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="how to set up a remote github Repository in Xcode&nbsp;5 | jkbdev on WordPress.com" />
+<meta name="description" content="To start off you will need to set up a repository in github. Then create your Xcode project and select the option to use a local git repository. Once your application has been set up you can navigate to the source control configuration from the toolbar. select &#039;Configure &lt;application name&gt;&#039; select the &#039;Remotes&#039; tab in&hellip;" />
+		<script type="text/javascript" src="//c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script>
+		<script type="text/javascript">
+		var a9_p = amznads.getKeys(),
+		_ipw_custom = {
+			wordAds: '0',
+			adSafe: '0',
+			domain: 'jkbdev.wordpress.com',
+			pageURL: 'https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/'
+		};
+		if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		</script>		<!-- IPONWEB header script -->
+		<script type="text/javascript">
+			window.__ATA = {
+				scriptSrc: '//s.pubmine.com/showad.js',
+				slotPrefix: 'automattic-id-',
+				initAd: function(o) {
+					var o = o || {},
+						g = window,
+						d = g.document,
+						wr = d.write,
+						id = g.__ATA.id();
+					wr.call(d, '<div id="' + id + '" data-section="' + (o.sectionId || 0) + '"' + (o.type ? ('data-type="' + o.type + '"') : '') + ' ' + (o.forcedUrl ? ('data-forcedurl="' + o.forcedUrl + '"') : '') + ' style="width:' + (o.width || 0) + 'px; height:' + (o.height || 0) + 'px;">');
+					g.__ATA.displayAd(id);
+					wr.call(d, '</div>');
+				},
+				displayAd: function(id) {
+					window.__ATA.ids = window.__ATA.ids || {};
+					window.__ATA.ids[id] = 1;
+				},
+				customParams: _ipw_custom,
+				id: function() {
+					return window.__ATA.slotPrefix + (parseInt(Math.random() * 10000, 10) + 1 + (new Date()).getMilliseconds());
+				}
+			};
+			(function(d, ata) {
+				var pr = "https:" === d.location.protocol ? "https:" : "http:",
+					src = pr + ata.scriptSrc,
+					st = "text/javascript";
+				d.write('<scr' + 'ipt type="' + st + '" src="' + src + '"><\/scr' + 'ipt>');
+			})(window.document, window.__ATA);
+		</script>
+		<script type="text/javascript">
+		jQuery(window).ready(function () {
+			jQuery("a.wpa-about").text("About these ads");
+		});
+		</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script>
+</head>
+
+<body class="single single-post postid-6 single-format-standard mp6 customizer-styles-applied has-header-image highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+				<a href="https://jkbdev.wordpress.com/" rel="home">
+			<img src="https://s0.wp.com/wp-content/themes/pub/fictive/images/header.jpg" width="1112" height="1000" alt="" class="header-image">
+		</a>
+				<div class="site-branding">
+							<div class="header-avatar">
+					<a href="https://jkbdev.wordpress.com/" rel="home">
+						<img src="https://secure.gravatar.com/avatar/2fde52c13333e79858cc48be7ff1b8d9/?s=140&#038;d=identicon" width="70" height="70" alt="">
+					</a>
+				</div>
+						<h1 class="site-title"><a href="https://jkbdev.wordpress.com/" rel="home">jkbdev</a></h1>
+			<h2 class="site-description">Dev encounters!</h2>
+					</div>
+
+		<div class="menu-toggles clear">
+										<h1 id="widgets-toggle" class="menu-toggle"><span class="screen-reader-text">Widgets</span></h1>
+						<h1 id="search-toggle" class="menu-toggle"><span class="screen-reader-text">Search</span></h1>
+		</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+					</nav><!-- #site-navigation -->
+
+			<div id="secondary" class="widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://jkbdev.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="https://jkbdev.wordpress.com/2015/09/22/getting-started-with-opencv-on-ios/">Getting started with OpenCV on&nbsp;iOS</a>
+						</li>
+					<li>
+				<a href="https://jkbdev.wordpress.com/2015/01/19/merge-sort-quicksort-insertion-sort-and-heapsort-using-generics-in-swift/">Generics in Swift: Merge sort, Quicksort, Insertion sort and&nbsp;Heapsort</a>
+						</li>
+					<li>
+				<a href="https://jkbdev.wordpress.com/2015/01/14/swift-emoji-merge-sort/">Swift Emoji Merge&nbsp;Sort</a>
+						</li>
+					<li>
+				<a href="https://jkbdev.wordpress.com/2014/01/14/7-important-things-to-consider-before-submitting-your-ios-app-to-the-app-store/">7 important Things to Consider before Submitting your iOS App to the App&nbsp;Store</a>
+						</li>
+					<li>
+				<a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/">how to set up a remote github Repository in Xcode&nbsp;5</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tr><td title="David Norman (@1DavidNorman)" class="recentcommentsavatartop" style="height:48px; width:48px;"><a href="http://twitter.com/1DavidNorman" rel="nofollow"><img alt='' src='https://i2.wp.com/pbs.twimg.com/profile_images/546182514432167936/lAgE-iZ__normal.jpeg?resize=48%2C48' class='avatar avatar-48' height='48' width='48' /></a></td><td class="recentcommentstexttop" style=""><a href="http://twitter.com/1DavidNorman" rel="nofollow">David Norman (@1Davi&hellip;</a> on <a href="https://jkbdev.wordpress.com/2015/01/19/merge-sort-quicksort-insertion-sort-and-heapsort-using-generics-in-swift/comment-page-1/#comment-15">Generics in Swift: Merge sort,&hellip;</a></td></tr><tr><td title="andylinky" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://andrewlincolndev.wordpress.com" rel="nofollow"><img alt='' src='https://1.gravatar.com/avatar/7052b19bcec716f1e1557bda7f2fc902?s=48&#038;d=identicon&#038;r=G' class='avatar avatar-48' height='48' width='48' /></a></td><td class="recentcommentstextend" style=""><a href="http://andrewlincolndev.wordpress.com" rel="nofollow">andylinky</a> on <a href="https://jkbdev.wordpress.com/2015/01/14/swift-emoji-merge-sort/comment-page-1/#comment-9">Swift Emoji Merge&nbsp;Sort</a></td></tr><tr><td title="Mostafa Khattab" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt='' src='https://0.gravatar.com/avatar/0bb4876b6081e5368d7a699ee7734126?s=48&#038;d=identicon&#038;r=G' class='avatar avatar-48' height='48' width='48' /></td><td class="recentcommentstextend" style="">Mostafa Khattab on <a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-6">how to set up a remote github&hellip;</a></td></tr><tr><td title="Shelagh" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt='' src='https://1.gravatar.com/avatar/abccf247ae8cfd6d5bd3ebbfe9e072cc?s=48&#038;d=identicon&#038;r=G' class='avatar avatar-48' height='48' width='48' /></td><td class="recentcommentstextend" style="">Shelagh on <a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-4">how to set up a remote github&hellip;</a></td></tr><tr><td title="SutoCom" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://www.sutocom.net" rel="nofollow"><img alt='' src='https://1.gravatar.com/avatar/1396112f7db4689ffa5f2595d7b7fccf?s=48&#038;d=identicon&#038;r=G' class='avatar avatar-48' height='48' width='48' /></a></td><td class="recentcommentstextend" style=""><a href="http://www.sutocom.net" rel="nofollow">SutoCom</a> on <a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-2">how to set up a remote github&hellip;</a></td></tr>				</table>
+				</aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+	<li><a href='https://jkbdev.wordpress.com/2015/09/'>September 2015</a></li>
+	<li><a href='https://jkbdev.wordpress.com/2015/01/'>January 2015</a></li>
+	<li><a href='https://jkbdev.wordpress.com/2014/01/'>January 2014</a></li>
+	<li><a href='https://jkbdev.wordpress.com/2013/12/'>December 2013</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-291"><a href="https://jkbdev.wordpress.com/category/apple/" >Apple</a>
+</li>
+	<li class="cat-item cat-item-22974853"><a href="https://jkbdev.wordpress.com/category/development-2/" >Development</a>
+</li>
+	<li class="cat-item cat-item-24194809"><a href="https://jkbdev.wordpress.com/category/programming-2/" >Programming</a>
+</li>
+	<li class="cat-item cat-item-38914425"><a href="https://jkbdev.wordpress.com/category/sort-2/" >Sort</a>
+</li>
+	<li class="cat-item cat-item-35361753"><a href="https://jkbdev.wordpress.com/category/swift-2/" >Swift</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://jkbdev.wordpress.com/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://jkbdev.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://jkbdev.wordpress.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://jkbdev.wordpress.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="http://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>			</ul>
+</aside>	</div><!-- #secondary -->
+
+		<div id="site-search" class="header-search">
+			<form role="search" method="get" class="search-form" action="https://jkbdev.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>		</div>
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<div class="hentry-wrapper">
+		<article id="post-6" class="post-6 post type-post status-publish format-standard hentry category-uncategorized tag-configuration-management tag-git tag-github tag-ios tag-remote-repository tag-repository tag-revision-control tag-version-control tag-xcode tag-xcode5">
+				<header class="entry-header">
+							<h1 class="entry-title">how to set up a remote github Repository in Xcode&nbsp;5</h1>						<div class="entry-meta">
+				<span class="post-date"><a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/" title="4:04 am" rel="bookmark"><time class="entry-date" datetime="2013-12-23T04:04:16+00:00">December 23, 2013</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://jkbdev.wordpress.com/author/jkb7600/" title="View all posts by jkb7600" rel="author">jkb7600</a></span></span>							</div>
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>To start off you will need to set up a repository in github.</p>
+<p>Then create your Xcode project and select the option to use a local git repository.</p>
+<p>Once your application has been set up you can navigate to the source control configuration from the toolbar.</p>
+<p><a href="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-44-07-pm.png"><img class="alignnone size-medium wp-image-7" alt="Screen Shot 2013-12-22 at 10.44.07 PM" src="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-44-07-pm.png?w=300&#038;h=148" width="300" height="148" /></a></p>
+<p>select &#8216;Configure &lt;application name&gt;&#8217;</p>
+<p>select the &#8216;Remotes&#8217; tab in the top center</p>
+<p>select the plus icon in the lower left and select &#8216;add remote&#8217;</p>
+<p><a href="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-52-42-pm.png"><img class="alignnone size-medium wp-image-10" alt="Screen Shot 2013-12-22 at 10.52.42 PM" src="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-52-42-pm.png?w=300&#038;h=97" width="300" height="97" /></a></p>
+<p>use the https address of your repo which is provided by github</p>
+<p><a href="https://github.com/&lt;username&gt;/&lt;repo-name&#038;gt" rel="nofollow">https://github.com/&lt;username&gt;/&lt;repo-name&#038;gt</a>;.git</p>
+<p>where &lt;username&gt; is your username and &lt;repo-name&gt; is your repository name.</p>
+<p>Next, make the initial commit to the remote repository.</p>
+<p><a href="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-56-28-pm.png"><img class="alignnone size-medium wp-image-12" alt="Screen Shot 2013-12-22 at 10.56.28 PM" src="https://jkbdev.files.wordpress.com/2013/12/screen-shot-2013-12-22-at-10-56-28-pm.png?w=300&#038;h=217" width="300" height="217" /></a></p>
+<p>You will be asked to log in with your (github) username and password.</p>
+<p>Voila! There you have it. You can now push your local repository to your remote repo and share / collaborate with others!</p>
+		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<a class="wpa-about" href="https://wordpress.com/about-these-ads/" rel="nofollow"></a>
+				<div class="u">
+					<script type='text/javascript'>
+					(function(g){g.__ATA.initAd({sectionId:26942, width:300, height:250});})(window);
+					</script>
+				</div>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-6" class="share-twitter sd-button share-icon" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-6" class="share-facebook sd-button share-icon" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-6" class="share-google-plus-1 sd-button share-icon" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-6" class="share-linkedin sd-button share-icon" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-61933265-6-56253ed0793ca' data-src='//widgets.wp.com/likes/#blog_id=61933265&amp;post_id=6&amp;origin=jkbdev.wordpress.com&amp;obj_id=61933265-6-56253ed0793ca' data-name='like-post-frame-61933265-6-56253ed0793ca'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-footer entry-meta">
+						<span class="tags-links clear">
+				<a href="https://jkbdev.wordpress.com/tag/configuration-management/" rel="tag">Configuration Management</a><a href="https://jkbdev.wordpress.com/tag/git/" rel="tag">git</a><a href="https://jkbdev.wordpress.com/tag/github/" rel="tag">github</a><a href="https://jkbdev.wordpress.com/tag/ios/" rel="tag">iOS</a><a href="https://jkbdev.wordpress.com/tag/remote-repository/" rel="tag">remote repository</a><a href="https://jkbdev.wordpress.com/tag/repository/" rel="tag">repository</a><a href="https://jkbdev.wordpress.com/tag/revision-control/" rel="tag">Revision control</a><a href="https://jkbdev.wordpress.com/tag/version-control/" rel="tag">version control</a><a href="https://jkbdev.wordpress.com/tag/xcode/" rel="tag">Xcode</a><a href="https://jkbdev.wordpress.com/tag/xcode5/" rel="tag">xcode5</a>			</span>
+					</footer><!-- .entry-footer -->
+	</article><!-- #post-## -->
+</div>
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-next"><a href="https://jkbdev.wordpress.com/2014/01/14/7-important-things-to-consider-before-submitting-your-ios-app-to-the-app-store/" rel="next"><span class="meta-nav screen-reader-text">&rarr;</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			4 thoughts on &ldquo;<span>how to set up a remote github Repository in Xcode&nbsp;5</span>&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-1" class="comment byuser comment-author-sutocom even thread-even depth-1 highlander-comment">
+		<article id="div-comment-1" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt='' src='https://1.gravatar.com/avatar/1396112f7db4689ffa5f2595d7b7fccf?s=70&#038;d=identicon&#038;r=G' class='avatar avatar-70' height='70' width='70' /></span>					<cite class="fn"><a href='http://www.sutocom.net' rel='external nofollow' class='url'>SutoCom</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Reblogged this on <a href="http://sutocom.net/2013/12/27/how-to-set-up-a-remote-github-repository-in-xcode-5/" rel="nofollow">Sutoprise Avenue, A SutoCom Source</a>.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?replytocom=1#respond' onclick='return addComment.moveForm( "div-comment-1", "1", "respond", "6" )' aria-label='Reply to SutoCom'>Reply</a></div>				<a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-1">
+					<time datetime="2013-12-27T12:43:30+00:00">
+						<span class="post-date">December 27, 2013 at 12:43 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-2" class="comment byuser comment-author-sutocom odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-2" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt='' src='https://1.gravatar.com/avatar/1396112f7db4689ffa5f2595d7b7fccf?s=70&#038;d=identicon&#038;r=G' class='avatar avatar-70' height='70' width='70' /></span>					<cite class="fn"><a href='http://www.sutocom.net' rel='external nofollow' class='url'>SutoCom</a></cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Reblogged this on <a href="http://sutocom.net/2013/12/27/how-to-set-up-a-remote-github-repository-in-xcode-5-2/" rel="nofollow">Sutoprise Avenue, A SutoCom Source</a>.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?replytocom=2#respond' onclick='return addComment.moveForm( "div-comment-2", "2", "respond", "6" )' aria-label='Reply to SutoCom'>Reply</a></div>				<a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-2">
+					<time datetime="2013-12-27T18:44:15+00:00">
+						<span class="post-date">December 27, 2013 at 6:44 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-4" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-4" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt='' src='https://1.gravatar.com/avatar/abccf247ae8cfd6d5bd3ebbfe9e072cc?s=70&#038;d=identicon&#038;r=G' class='avatar avatar-70' height='70' width='70' /></span>					<cite class="fn">Shelagh</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thank you. This worked perfectly!</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?replytocom=4#respond' onclick='return addComment.moveForm( "div-comment-4", "4", "respond", "6" )' aria-label='Reply to Shelagh'>Reply</a></div>				<a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-4">
+					<time datetime="2014-05-25T20:59:36+00:00">
+						<span class="post-date">May 25, 2014 at 8:59 pm</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-6" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-6" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt='' src='https://0.gravatar.com/avatar/0bb4876b6081e5368d7a699ee7734126?s=70&#038;d=identicon&#038;r=G' class='avatar avatar-70' height='70' width='70' /></span>					<cite class="fn">Mostafa Khattab</cite> <span class="says">says:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thanks alot</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/?replytocom=6#respond' onclick='return addComment.moveForm( "div-comment-6", "6", "respond", "6" )' aria-label='Reply to Mostafa Khattab'>Reply</a></div>				<a href="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/comment-page-1/#comment-6">
+					<time datetime="2014-07-16T08:08:02+00:00">
+						<span class="post-date">July 16, 2014 at 8:08 am</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="https://jkbdev.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="478ceb69c1" /><input type="hidden" name="_wp_http_referer" value="/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Fjkbdev.wordpress.com" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://s2.wp.com/wp-content/mu-plugins/highlander-comments/images/wplogo.png" alt="WordPress.com Logo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Google+ photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+						
+						<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='6' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="40f47d3675" /></p>
+<input type="hidden" name="genseq" value="1445281488" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="126"/></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>.
+			<span class="sep"> | </span>
+			<a href="https://wordpress.com/themes/fictive/" title="Learn more about this theme">The Fictive Theme</a>.		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- wpcom_wp_footer -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201543y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-2723e5feeee07900ae1d2d805229e1ee">
+	</div>
+	<div class="grofile-hash-map-7052b19bcec716f1e1557bda7f2fc902">
+	</div>
+	<div class="grofile-hash-map-0bb4876b6081e5368d7a699ee7734126">
+	</div>
+	<div class="grofile-hash-map-abccf247ae8cfd6d5bd3ebbfe9e072cc">
+	</div>
+	<div class="grofile-hash-map-1396112f7db4689ffa5f2595d7b7fccf">
+	</div>
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/jkbdev.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/jkbdev.wordpress.com\/wp-login.php?action=logout&_wpnonce=547bfd655a","homeURL":"https:\/\/jkbdev.wordpress.com\/","postID":"6","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1424115551j'></script>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;jkbdev&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+			
+			<p><input type="email" name="email" placeholder="Enter your email address" id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="61933265"/>
+			<input type="hidden" name="source" value="https://jkbdev.wordpress.com/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="78dc7cecb4" /><input type="hidden" name="_wp_http_referer" value="/2013/12/23/how-to-set-up-a-remote-github-repository-in-xcode-5/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/jkbdev.wordpress.com\/2013\/12\/23\/how-to-set-up-a-remote-github-repository-in-xcode-5\/":6};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src='https://widgets.wp.com/likes/master.html?ver=20141028#ver=20141028&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'clickReblogFlair' == event.event ) {
+					wpcom_reblog.toggle_reblog_box_flair( event.obj_id );
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/akismet-3.0/_inc/form.js?m=1404442431g'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyNzd0OgjAMBeAXcjYoGm+Mz4Kjg479NHQDfXtnoka9gavTpN9pYWalY0gYEliBFifSyLetlQ18rVKPHgU4X8GQTjThU7/GdVgGYuUoDMpEnUUZ+nyhoF1uS6UwHb0vR9SI7O5bT+H/us+KXe4oCKCPliDNP7noLSZu9KDW6SXFUZIyrqERpG9GCt07S+niz1Vd19XhuNuf7ANRcIcZ'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "jkbdev.wordpress.com";
+	</script>
+	<script type="text/javascript" src="https://s.skimresources.com/js/725X1342.skimlinks.js"></script><script src="//stats.wp.com/w.js?48" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'61933265','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'61933265','v':'wpcom','tz':'0','user_id':'0','post':'6','subd':'jkbdev'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRVz1bVXJlWWRQcV02enNBQ3MmNStybFExTVRCVVklbHc9T3lwYSVtQWNxYUkxVT15NXcxLFtvTTB6M2c5T1k4LWlRM0lGXU9TfE5SczVFcGI5eUNxaD02emowTkhReWM4ZUFYM2ZnR0dkZE5pR1V+cVd3ajUuPVlTTmN2ZDNvP3dIUjZdYjhRcDY5NjVicXxDVFhiTTBjflZpRitHc3AmUUMvKzRhNixvWGp2L3xOQ1hkOS9hPUo2TyZHOU5iUDZGZWpRMH5fbnE/dzNFJj0sTj9sTW1GbTVOZj9wPVh2M35KQkFhPXxrdTBub1dkVk5WbGN3czU='}]);
+_stq.push([ 'clickTrackerInit', '61933265', '6' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

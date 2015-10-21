@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.CoreSimulator.SimRuntime.iOS-9-0</key>
+	<dict>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPad-2</key>
+		<string>26075AE3-3785-471E-A733-F5A23D938497</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPad-Air</key>
+		<string>23EF11B2-B2BE-45A1-A6FE-16BB02D0E979</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPad-Air-2</key>
+		<string>C89A828F-397D-4268-9747-FDD9F4C3630A</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPad-Retina</key>
+		<string>1346D337-BA28-47F0-9B0A-F123FF7B9C4F</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-4s</key>
+		<string>107AE750-DB7D-48BA-91A3-CCF6540E0C11</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-5</key>
+		<string>BAFD91AE-4BDD-463C-ADA1-8EDD79063677</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-5s</key>
+		<string>EB94BFA1-9FEB-4B40-BAAF-28AB0FEE99C7</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-6</key>
+		<string>89335D72-5CD0-4BAA-95CF-20B8BBE47370</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus</key>
+		<string>CF1E7AAD-3C7B-4BB2-A3B4-BBFA73F6E319</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-6s</key>
+		<string>890E5CB2-1371-435C-B9B1-2A99DE9E08D4</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.iPhone-6s-Plus</key>
+		<string>59BCFB19-D034-4B8C-A3F0-62DADA3A7835</string>
+	</dict>
+	<key>com.apple.CoreSimulator.SimRuntime.watchOS-2-0</key>
+	<dict>
+		<key>com.apple.CoreSimulator.SimDeviceType.Apple-Watch-38mm</key>
+		<string>E46F6A6C-5F3E-41FC-8B4E-40CC55A92A41</string>
+		<key>com.apple.CoreSimulator.SimDeviceType.Apple-Watch-42mm</key>
+		<string>559E8672-321D-48E7-A87F-6EC7F2659E7D</string>
+	</dict>
+	<key>version</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,199 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FavoriteViewController"
+provides-nominal:
+- "C5LMApp22FavoriteViewController"
+provides-member:
+- ["C5LMApp22FavoriteViewController", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "favorite3"
+- "favorite1"
+- "viewDidLoad"
+- "favorite2"
+depends-top-level:
+- "UIButton"
+- "FavoriteViewController"
+- "UIViewController"
+depends-member:
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- ["PSs9AnyObject", "favorite1"]
+- ["PSs9AnyObject", "favorite2"]
+- ["PSs9AnyObject", "favorite3"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "favorite1"]
+- ["PSs11CVarArgType", "favorite2"]
+- ["PSs11CVarArgType", "favorite3"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "favorite1"]
+- ["PSs23CustomStringConvertible", "favorite2"]
+- ["PSs23CustomStringConvertible", "favorite3"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- ["PSs9Equatable", "favorite1"]
+- ["PSs9Equatable", "favorite2"]
+- ["PSs9Equatable", "favorite3"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- ["C5LMApp22FavoriteViewController", "UIButton"]
+- ["C5LMApp22FavoriteViewController", "deinit"]
+- ["C5LMApp22FavoriteViewController", "didReceiveMemoryWarning"]
+- ["C5LMApp22FavoriteViewController", "favorite1"]
+- ["C5LMApp22FavoriteViewController", "favorite2"]
+- ["C5LMApp22FavoriteViewController", "favorite3"]
+- ["C5LMApp22FavoriteViewController", "init"]
+- ["C5LMApp22FavoriteViewController", "viewDidLoad"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- ["PSs8Hashable", "favorite1"]
+- ["PSs8Hashable", "favorite2"]
+- ["PSs8Hashable", "favorite3"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "favorite1"]
+- ["PSo8NSCoding", "favorite2"]
+- ["PSo8NSCoding", "favorite3"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "favorite1"]
+- ["PSo26NSExtensionRequestHandling", "favorite2"]
+- ["PSo26NSExtensionRequestHandling", "favorite3"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "favorite1"]
+- ["CSo8NSObject", "favorite2"]
+- ["CSo8NSObject", "favorite3"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "favorite1"]
+- ["PSo16NSObjectProtocol", "favorite2"]
+- ["PSo16NSObjectProtocol", "favorite3"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "favorite1"]
+- ["PSo21UIAppearanceContainer", "favorite2"]
+- ["PSo21UIAppearanceContainer", "favorite3"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "favorite1"]
+- ["PSo18UIContentContainer", "favorite2"]
+- ["PSo18UIContentContainer", "favorite3"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "favorite1"]
+- ["CSo11UIResponder", "favorite2"]
+- ["CSo11UIResponder", "favorite3"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "favorite1"]
+- ["PSo16UIStateRestoring", "favorite2"]
+- ["PSo16UIStateRestoring", "favorite3"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "favorite1"]
+- ["PSo18UITraitEnvironment", "favorite2"]
+- ["PSo18UITraitEnvironment", "favorite3"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "favorite1"]
+- ["CSo16UIViewController", "favorite2"]
+- ["CSo16UIViewController", "favorite3"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "C5LMApp22FavoriteViewController"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/LMApp-Bridging-Header.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GoogleMaps.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSAddress.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMapView.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMapLayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSCALayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSUISettings.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSCameraPosition.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSCameraUpdate.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSCircle.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSOverlay.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSCoordinateBounds.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSProjection.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSGeocoder.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSGeometryUtils.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPath.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSGroundOverlay.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSIndoorBuilding.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSIndoorDisplay.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSIndoorLevel.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMapView+Animation.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMarker.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMarkerLayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSMutablePath.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSOrientation.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanorama.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaCamera.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaCameraUpdate.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaLayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaLink.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaService.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPanoramaView.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPolygon.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSPolyline.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSServices.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSSyncTileLayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSTileLayer.h"
+- "/Volumes/KINGSTON/LockheedMartin 2/Lockheed%20Martin/./GoogleMaps.framework/Headers/GMSURLTileLayer.h"
+interface-hash: "c1d347f1de8d653f8c32e68b69fbc6ad"

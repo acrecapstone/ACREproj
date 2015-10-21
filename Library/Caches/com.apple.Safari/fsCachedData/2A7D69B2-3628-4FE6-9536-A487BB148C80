@@ -1,0 +1,309 @@
+  
+  <div class="file-navigation">
+    
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/SwiftyJSON/SwiftyJSON/tree/master/SwiftyJSON.xcodeproj"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/SwiftyJSON/SwiftyJSON/tree/xcode7.1/SwiftyJSON.xcodeproj"
+               data-name="xcode7.1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="xcode7.1">
+                xcode7.1
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.3.0/SwiftyJSON.xcodeproj"
+                 data-name="2.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.3.0">2.3.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.2.1/SwiftyJSON.xcodeproj"
+                 data-name="2.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.2.1">2.2.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.2.0/SwiftyJSON.xcodeproj"
+                 data-name="2.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.2.0">2.2.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.3/SwiftyJSON.xcodeproj"
+                 data-name="2.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.3">2.1.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.2/SwiftyJSON.xcodeproj"
+                 data-name="2.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.2">2.1.2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.1/SwiftyJSON.xcodeproj"
+                 data-name="2.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.1">2.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.1.0/SwiftyJSON.xcodeproj"
+                 data-name="2.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.1.0">2.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/2.0.0/SwiftyJSON.xcodeproj"
+                 data-name="2.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="2.0.0">2.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/1.1.0/SwiftyJSON.xcodeproj"
+                 data-name="1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="1.1.0">1.1.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/SwiftyJSON/SwiftyJSON/tree/1.0.0/SwiftyJSON.xcodeproj"
+                 data-name="1.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="1.0.0">1.0.0</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="btn-group right">
+      <a href="/SwiftyJSON/SwiftyJSON/find/master" data-pjax data-hotkey="t" class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s" aria-label="Quickly jump between files">
+        <span class="octicon octicon-list-unordered"></span>
+      </a>
+      <a href="/SwiftyJSON/SwiftyJSON/commits/master/SwiftyJSON.xcodeproj" class="btn btn-sm empty-icon tooltipped tooltipped-s" aria-label="Browse commits for this branch">
+        <span class="octicon octicon-history"></span>
+      </a>
+    </div>
+    <div class="breadcrumb">
+      <span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/SwiftyJSON/SwiftyJSON" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">SwiftyJSON</span></a></span></span><span class="separator">/</span><strong class="final-path">SwiftyJSON.xcodeproj</strong><span class="separator">/</span>
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/SwiftyJSON/SwiftyJSON/new/master/SwiftyJSON.xcodeproj" class="js-new-blob-form inline-form" data-form-nonce="8959ed46a90c0e2f6aa4406572b710705f886440" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="K/QkIrUJL3YxhT2an2w9EMenC6NA6mbL6kuX+HBHGOC9P3P6VajuW1PKxFA5gWlW0p0Gwbj2ingGTxv29iPF3w==" /></div>
+    <button class="btn-link tooltipped tooltipped-e" type="submit"
+      data-disable-with="working…" aria-label="Fork this project and create a new file">
+      <span class="js-new-blob-submit octicon octicon-plus"></span>
+    </button>
+</form>
+    </div>
+  </div>
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" data-pjax>
+        052bc9c
+      </a>
+      <time datetime="2015-10-14T09:26:42Z" is="relative-time">Oct 14, 2015</time>
+    </span>
+
+
+    <span>
+      <img alt="@tangplin" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/272929?v=3&amp;s=40" width="20" />
+      <a href="/tangplin" class="user-mention" rel="contributor">tangplin</a></span>
+
+
+        <a href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" class="message" data-pjax="true" title="Merge branch &#39;xcode7&#39;">Merge branch 'xcode7'</a>
+    </span>
+
+  </div>
+
+
+<div class="file-wrap">
+  <a href="/SwiftyJSON/SwiftyJSON/tree/83dc3138b14571200ea7f070933a2a510491e997/SwiftyJSON.xcodeproj" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+      <tr class="up-tree js-navigation-item">
+        <td></td>
+        <td><a href="/SwiftyJSON/SwiftyJSON" class="js-navigation-open" rel="nofollow" title="Go to parent directory">..</a></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/SwiftyJSON.xcodeproj/project.xcworkspace" class="js-directory-link js-navigation-open" id="ace467211e7b7a43bd4681acabe3cfdd-4824c96ee3d40edc40c2bede9a63eb01ebf67626" title="project.xcworkspace">project.xcworkspace</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/127a5c34d745c4e9cb86b09c41d17496ee5c4291" class="message" data-pjax="true" title="refactor!
+1. Change JSONValue to JSON
+2. Delete the part  of error
+3. change enum&#39; type to ScalarNumber, ScalarString, Sequence, Mapping
+4. implement Comparable
+5. update test">refactor!</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-09-22T06:59:29Z" is="time-ago">Sep 22, 2014</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/tree/master/SwiftyJSON.xcodeproj/xcshareddata/xcschemes" class="js-directory-link js-navigation-open" id="30ad8ce1c4bd3040c610dd27295d9e4a-3ea15af17466a672a84d66d3c182b90409d14c6e" title="This path skips through empty directories"><span class="simplified-path">xcshareddata/</span>xcschemes</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/7cc7dd88223fae5c9f675e79b33f6beb5c502717" class="message" data-pjax="true" title="Updated BuilableName">Updated BuilableName</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-08-31T12:32:32Z" is="time-ago">Aug 31, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/SwiftyJSON/SwiftyJSON/blob/master/SwiftyJSON.xcodeproj/project.pbxproj" class="js-directory-link js-navigation-open" id="19ce7657fd44e8bb65ade72f58a8bfd4-d4c6d402c95f25cca84d125dc13a3ac96b904bbe" title="project.pbxproj">project.pbxproj</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/SwiftyJSON/SwiftyJSON/commit/052bc9cc42ff7d900640d5c2072c93889bd5de4b" class="message" data-pjax="true" title="Merge branch &#39;xcode7&#39;">Merge branch 'xcode7'</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-14T09:26:42Z" is="time-ago">Oct 14, 2015</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  
+
+
+
+
+
+<div id="pjax-head">
+  <title>SwiftyJSON/SwiftyJSON.xcodeproj at master · SwiftyJSON/SwiftyJSON</title>
+  <meta name="selected-link" value="repo_source">
+  <meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+  
+  
+</div>
+
+<div id="js-flash-container">
+</div>
+
+

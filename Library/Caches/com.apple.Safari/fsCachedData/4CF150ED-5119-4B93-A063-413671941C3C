@@ -1,0 +1,253 @@
+  
+<div class="gh-header gh-header-new-pr">
+  <h1 class="gh-header-title">Compare changes</h1>
+  <div class="gh-header-meta">
+    Compare changes across branches, commits, tags, and more below. If you need to, you can also <a href="#" class="js-toggle-range-editor-cross-repo">compare across forks</a>.
+  </div>
+</div>
+
+
+
+<div class="range-editor text-muted js-range-editor ">
+  <span class="octicon octicon-git-compare range-editor-icon"></span>
+  <div class="range-cross-repo-pair">
+    <div class="select-menu js-menu-container js-select-menu fork-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target" type="button" aria-label="Choose a Base Repository" aria-haspopup="true">
+    <i>base fork:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="base: acrecapstone/ACREproject">acrecapstone/ACREproject</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a Base Repository</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="pull-repo-filter-field-base" class="js-filterable-field js-navigation-enable" placeholder="Filter repos" aria-label="Type or choose a repository">
+        </div>
+      </div>
+
+      <div class="select-menu-list">
+        <div data-filterable-for="pull-repo-filter-field-base" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/acrecapstone:master...master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">
+                acrecapstone/ACREproject
+              </div>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    
+<div class="select-menu js-menu-container js-select-menu commitish-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target branch" type="button" aria-label="Choose a base branch" aria-haspopup="true">
+    <i>base:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="base: master">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container"
+    data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a base branch</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="commitish-filter-field-ecbca284-7695-11e5-8c26-e95cec940b8c" class="js-filterable-field js-navigation-enable" placeholder="Branch, tag, commit, or history marker" aria-label="Type or choose a branch, tag, commit, or history marker">
+        </div>
+      </div>
+
+      <div class="select-menu-list" data-pjax>
+        <div data-filterable-for="commitish-filter-field-ecbca284-7695-11e5-8c26-e95cec940b8c" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master...master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">master</div>
+            </a>
+        </div>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/compare/master...master" class="js-commitish-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input type="hidden" name="new_compare_type" value="base">
+          <div class="select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form">
+            <span class="octicon octicon-history select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="js-new-item-name"></span>
+            </div>
+          </div>
+</form>
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <span class="dots">...</span>
+
+  <div class="range-cross-repo-pair">
+    <div class="select-menu js-menu-container js-select-menu fork-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target" type="button" aria-label="Choose a Head Repository" aria-haspopup="true">
+    <i>head fork:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="head: acrecapstone/ACREproject">acrecapstone/ACREproject</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a Head Repository</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="pull-repo-filter-field-head" class="js-filterable-field js-navigation-enable" placeholder="Filter repos" aria-label="Type or choose a repository">
+        </div>
+      </div>
+
+      <div class="select-menu-list">
+        <div data-filterable-for="pull-repo-filter-field-head" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master...acrecapstone:master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">
+                acrecapstone/ACREproject
+              </div>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    
+<div class="select-menu js-menu-container js-select-menu commitish-suggester">
+  <button class="btn btn-sm select-menu-button js-menu-target branch" type="button" aria-label="Choose a head branch" aria-haspopup="true">
+    <i>compare:</i>
+    <span class="js-select-button css-truncate css-truncate-target" title="compare: master">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container"
+    data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Choose a head branch</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" id="commitish-filter-field-ecbcbe4a-7695-11e5-9f1f-2a3a724f544d" class="js-filterable-field js-navigation-enable" placeholder="Branch, tag, commit, or history marker" aria-label="Type or choose a branch, tag, commit, or history marker">
+        </div>
+      </div>
+
+      <div class="select-menu-list" data-pjax>
+        <div data-filterable-for="commitish-filter-field-ecbcbe4a-7695-11e5-9f1f-2a3a724f544d" data-filterable-type="substring" role="menu">
+            <a href="/acrecapstone/ACREproject/compare/master...master" class="select-menu-item js-navigation-item js-navigation-open selected" role="menuitem" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text js-select-button-text">master</div>
+            </a>
+        </div>
+
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/acrecapstone/ACREproject/compare/master...master" class="js-commitish-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <input type="hidden" name="new_compare_type" value="head">
+          <div class="select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form">
+            <span class="octicon octicon-history select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="js-new-item-name"></span>
+            </div>
+          </div>
+</form>
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+
+<div class="compare-pr-placeholder">
+  <button class="btn btn-primary left" type="button" disabled data-ga-click="Repository, go to new pull request form, location:compare page; text:Create pull request">
+    <span class="octicon octicon-git-pull-request"></span>
+    Create pull request
+  </button>
+  <a class="help-link right tooltipped tooltipped-w is-jump-link"
+     href="https://help.github.com/articles/using-pull-requests"
+     target="_blank"
+     aria-label="Guide: Using pull requests">
+     <span class="octicon octicon-question"></span>
+  </a>
+  <p>
+    Choose different branches or forks above to discuss and review changes.
+  </p>
+</div>
+
+<div class="blankslate large-format">
+  <div class="context-loader large-format-loader">
+  <p><img alt="" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" /></p>
+  <p>Loading…</p>
+</div>
+
+
+  <span class="mega-octicon octicon-git-branch"></span>
+  <span class="mega-octicon octicon-git-commit"></span>
+  <span class="mega-octicon octicon-tag"></span>
+
+  <h3>Compare and review just about anything</h3>
+  <p>
+    Branches, tags, commit ranges, and time ranges. In the same repository and across forks.
+  </p>
+
+  <div class="sample-comparisons">
+    <ul class="comparison-list">
+  <li class="title">Example comparisons</li>
+  <li>
+    <span class="octicon octicon-history"></span>
+    <a href="/acrecapstone/ACREproject/compare/master%40%7B1day%7D...master" class="css-truncate css-truncate-target" data-pjax>
+      master@{1day}...master
+    </a>
+    <em>24 hours ago</em>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<div id="pjax-head">
+  <title>Compare · acrecapstone/ACREproject</title>
+  <meta name="selected-link" value="/acrecapstone/ACREproject/compare">
+  <meta content="Rails, view, compare#new" data-pjax-transient="true" name="analytics-event" />
+  
+  
+</div>
+
+<div id="js-flash-container">
+</div>
+
+
