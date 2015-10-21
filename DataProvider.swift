@@ -6,7 +6,7 @@
 //  Copyright © 2015 AcreApp.Practice. All rights reserved.
 //
 
-/**import Foundation
+import Foundation
 import UIKit
 
 class DataProvider
@@ -19,12 +19,32 @@ class DataProvider
     {
         
         //calling the get post for API - request authentication
-        let urlPath : String = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
-        let url: NSURL = NSURL(string: urlPath)!
-        let request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let urlPath = "http://localhost:9207/api/user/1?email=cbboyd2@gmail.com"
+        let url = NSURL(string: urlPath)!
+        let request = NSMutableURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url, completionHandler: {data, resonse, error -> Void in
+            println("Task completed")
+            if(error != nil) {
+                println(error.localizedDescription)
+            }
+        var err: NSError?
+            if let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary {
+                if(err != nil) {
+                    println("JSON Error \ (err!.localizedDescription)")
+                }
+                if let results: NSArray = jsonResult("results") as? NSArray {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.tableData = results
+                        self.appsTableView!.reloadData()
+                    }
+                }
+            }
+            
+            
         var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?>=nil
         var dataVal: NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: nil)
-        var err: NSError
+        
         print(response)
         var jsonResult: NSDictionary = (NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: err) as? NSDictionary)!
         print(Synchronous/(jsonResult))
@@ -35,6 +55,6 @@ class DataProvider
     
     }
 
-}**/
+}
 
 
