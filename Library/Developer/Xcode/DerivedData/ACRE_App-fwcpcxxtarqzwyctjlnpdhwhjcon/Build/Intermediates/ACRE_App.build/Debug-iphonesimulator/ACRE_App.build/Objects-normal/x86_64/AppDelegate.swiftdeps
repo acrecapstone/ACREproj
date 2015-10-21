@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8ACRE_App11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
-- "window"
 - "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
 - "application"
+- "window"
 - "applicationDidBecomeActive"
 - "applicationWillTerminate"
 - "applicationWillResignActive"
 depends-top-level:
-- "NSObject"
-- "AnyObject"
+- "UIApplication"
 - "UIResponder"
+- "NSObject"
 - "Bool"
-- "AppDelegate"
+- "UIWindow"
 - !private "BooleanLiteralType"
 - "UIApplicationDelegate"
-- "UIWindow"
-- "UIApplication"
+- "AppDelegate"
+- "AnyObject"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]

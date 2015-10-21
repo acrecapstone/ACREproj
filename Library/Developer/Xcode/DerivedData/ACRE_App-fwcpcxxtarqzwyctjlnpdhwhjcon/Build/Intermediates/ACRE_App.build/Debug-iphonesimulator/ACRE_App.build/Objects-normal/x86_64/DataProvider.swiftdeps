@@ -7,14 +7,14 @@ provides-member:
 - ["C8ACRE_App12DataProvider", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "StringLiteralType"
-- "String"
-- !private "NSURL"
-- !private "NSURLSession"
+- !private "Void"
 - !private "BooleanLiteralType"
+- !private "NSURL"
+- !private "StringLiteralType"
 - "DataProvider"
 - !private "NSMutableURLRequest"
-- !private "Void"
+- "String"
+- !private "NSURLSession"
 - "Bool"
 depends-member:
 - !private ["PSs9AnyObject", "NSMutableURLRequest"]
