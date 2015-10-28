@@ -8,36 +8,59 @@
 
 import Foundation
 import UIKit
-//import Alamofire
 
-
-class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate
+class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDataSource, NSURLConnectionDataDelegate, UIPickerViewDelegate, UITextFieldDelegate
 {
+
     //variables
     @IBOutlet weak var requestAuthenticationTitleLabel: UILabel!
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var requestToken: UIButton!
+    @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var mlsEmailLabel: UILabel!
     @IBOutlet weak var mlsAreaLabel: UILabel!
-    @IBOutlet weak var mlsEmailTextField: UITextField!
-    @IBOutlet weak var mlsAreaPickerView: UIPickerView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var mlsEmailTextField: UITextField?
+    @IBOutlet weak var mlsAreaPickerView: UIPickerView?
 
-    let dataProvider = DataProvider()
-    var mlsEmail = " "
     
-    @IBAction func requestAuthTokenPassword(sender: AnyObject){
+    let dataProvider = DataProvider()
+    //var mlsEmail = String()
+    
+    @IBAction func requestAuthTokenPassword(sender: AnyObject)
+    {
+        //let authenticated: Bool = true
+        //NSLog("email:%s", mlsEmailTextField.text!)
+        //keep these two
+        print("Mlsarea: \(pickerDataSource[mlsAreaPickerView!.selectedRowInComponent(0)])")
+        print("email: \(mlsEmailTextField!.text!)")
+        print("mlsAreaID: \(mlsAreaPickerView!.selectedRowInComponent(0)+1)")
         
-        var authenticated: Bool
-        (authenticated, mlsEmail) = dataProvider.requestAuthentication(mlsEmailTextField.text!, mlsArea: mlsAreaPickerView.textInputContextIdentifier!)
+        //Hardcoded requestAuth func
+        //print(dataProvider.requestAuthentication("cbboyd2@gmail.com", mlsFeedID: 1))
         
+        //Note that it is selected row + 1 to align the wheel index to the mls values in the databases
+        let authenticated = dataProvider.requestAuthentication(mlsEmailTextField!.text!, mlsFeedID: mlsAreaPickerView!.selectedRowInComponent(0)+1)
+       
         if (authenticated == true){
         //pushes to the login page
-            let thirdViewController: LoginPageViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("loginPageSegue") as AnyObject? as? LoginPageViewController)!
+            print("Authenticated..!")
+            loginButton.hidden = false
+            passwordLabel.hidden = false
+            passwordText.hidden = false
+            loginLabel.hidden = false
+            requestToken.hidden = true
+            requestAuthenticationTitleLabel.hidden = true
+            
+       /* *     let thirdViewController: LoginPageViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("loginPageSegue") as AnyObject? as? LoginPageViewController)!
             thirdViewController.mlsEmailTextField = self.mlsEmailTextField
-            thirdViewController.mlsAreaPickerView = self.mlsAreaPickerView
+            thirdViewController.mlsAreaPickerView = self.mlsAreaPickerView **/
         }
         else{
             let alertView: UIAlertView = UIAlertView()
-            alertView.title = "Email and area do not match!"
-            alertView.message = "Please enter correct email and area!"
+            alertView.title = "Email does not exist!"
+            alertView.message = "Please enter correct email!"
             alertView.delegate = self
             alertView.addButtonWithTitle("OK")
             alertView.show()
@@ -45,8 +68,56 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     }
     
     
+    @available(iOS 8.0, *)
+    @IBAction func signInButton(sender: AnyObject) {
+    
+        //     authTokenPasswordTextField.hidden = false
+        let email = "admin@acre.com"
+        let password = "grayson"
+        
+        if mlsEmailTextField!.text == email && passwordText.text == password
+        {
+            let secondViewController: HomePageViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("homePageSegue") as AnyObject? as? HomePageViewController)!
+            //this is used when passing data to the next view
+            //secondViewController.user = self.user
+            //secondViewController.pass = self.TextFieldPassword.text
+            self.showViewController(secondViewController, sender: self)
+            //self.performSegueWithIdentifier("homePageSegue", sender: self)
+        }
+        else
+        {
+            let alertView: UIAlertView = UIAlertView()
+            alertView.title = "Sign in Failed"
+            alertView.message = "Please enter email and Password"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            //what action do i need to take in order to stay on the login page?
+        }
+        
+        /**let mlsEmail:NSString = mlsEmailTextField.text!
+        let authToken:NSString = authTokenPasswordTextField.text!
+        
+        //allows login to Home Page if email and password correct from below
+        if (mlsEmail.isEqualToString("") || authToken.isEqualToString("") ) {
+        let alertView: UIAlertView = UIAlertView()
+        alertView.title = "Sign in Failed"
+        alertView.message = "Please enter email and Password"
+        alertView.delegate = self
+        alertView.addButtonWithTitle("OK")
+        alertView.show()
+        }
+        else if (isAuthenticated(self.mlsEmailTextField.text!, password: self.authTokenPasswordTextField.text!))
+        {
+        self.performSegueWithIdentifier("homePageSegue", sender: self)
+        }**/
+        
+    }
+    
+
+    
     //picker view -- how to insert data into picker view
-    var pickerDataSource = ["Greater Alabama", "Tuscaloosa"];
+    var pickerDataSource = ["GA-MLS", "Tuscaloosa"];
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -63,9 +134,15 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mlsEmailTextField.delegate = self;
-        self.mlsAreaPickerView.dataSource = self;
-        self.mlsAreaPickerView.delegate = self;
+        self.mlsEmailTextField!.delegate = self;
+        self.mlsAreaPickerView!.dataSource = self;
+        self.mlsAreaPickerView!.delegate = self;
+        
+        loginLabel.hidden = true
+        loginButton.hidden = true
+        passwordLabel.hidden = true
+        passwordText.hidden = true
+        
     }
         /**DataManager.getEmailDataFromUserWithSucess { (data) -> Void in
         var parseError: NSError?
@@ -75,7 +152,6 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
                 if let feed = emails["feed"] as? NSDictionary{
                     if let apps = feed["entry"] as NSArray {
                         if let firstApp = apps[0] as? NSDictionary{
-        
                         }
                 }
             }**/

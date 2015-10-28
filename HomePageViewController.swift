@@ -13,72 +13,109 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //variables
     @IBOutlet weak var mlsCityPickerView: UIPickerView!
     @IBOutlet weak var timeReportPickerView: UIPickerView!
+    @IBOutlet weak var reportLabel: UILabel!
+    @IBOutlet weak var medianSalesPriceLabel: UILabel!
+    @IBOutlet weak var listSellPriceLabel: UILabel!
+    @IBOutlet weak var salesByUnitLabel: UILabel!
+    @IBOutlet weak var salesByVolumeLabel: UILabel!
+    @IBOutlet weak var domLabel: UILabel!
+    @IBOutlet weak var inventoryLabel: UILabel!
+    @IBOutlet weak var monthOfSupplyLabel: UILabel!
     
-    var pickerDataSource = ["140-Trussville", "139-Hoover", "138-Birmingham"]
+    //intializing the arrays for the picker
+    var picker1Options = []
+    var picker2Options = []
     
-    var pickerData: [String] = [String]()
-    
-    //var timePickerView = ["Monthly", "Quarterly"]
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource.count;
-        
-        //if (mlsCityPickerView.tag == 12)
-        //{
-        //return pickerDataSource.count;
-        //}
-        //else
-        //{
-        //return timePickerView.count;
-        //}
-    }
-
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row]
-        
-        //if (mlsCityPickerView.tag == 12)
-        //{
-        //return pickerDataSource[row]
-        //}
-        //else
-        //{return timePickerView[row]}
-    }
-
-    func numberOfComponentsInTimeReportPickerView(pickerView: UIPickerView) -> Int { return 1 }
-    
-    func timeReportPickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count;
-    }
-
-    func timeReportPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
-    }
-    
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        self.mlsCityPickerView.dataSource = self;
-        self.mlsCityPickerView.delegate = self;
-        self.timeReportPickerView.dataSource = self;
-        self.timeReportPickerView.delegate = self;
         
-    
-        pickerData = ["Monthly", "Quarterly"]
+        picker1Options = ["140-Trussville", "139-Hoover", "138-Birmingham"]
+        picker2Options = ["Monthly", "Quarterly"]
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        if (pickerView.tag == 1)
+        {
+            return picker1Options.count
+        }
+        else
+        {
+            return picker2Options.count
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        if (pickerView.tag == 1)
+        {
+            return "\(picker1Options[row])"
+        }
+        else
+        {
+            return "\(picker2Options[row])"
+        }
+    }
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
-    
-    
-    
-    
 }
+
+
+
+
+
+//    var pickerDataSource = ["140-Trussville", "139-Hoover", "138-Birmingham"]
+//
+//    var pickerData: [String] = [String]()
+//
+//    //var timePickerView = ["Monthly", "Quarterly"]
+//
+//    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return pickerDataSource.count;
+//
+//        //if (mlsCityPickerView.tag == 12)
+//        //{
+//        //return pickerDataSource.count;
+//        //}
+//        //else
+//        //{
+//        //return timePickerView.count;
+//        //}
+//    }
+//
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return pickerDataSource[row]
+//
+//        //if (mlsCityPickerView.tag == 12)
+//        //{
+//        //return pickerDataSource[row]
+//        //}
+//        //else
+//        //{return timePickerView[row]}
+//    }
+//
+//    func numberOfComponentsInTimeReportPickerView(pickerView: UIPickerView) -> Int { return 1 }
+//
+//    func timeReportPickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return pickerData.count;
+//    }
+//
+//    func timeReportPickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return pickerData[row]
+//    }

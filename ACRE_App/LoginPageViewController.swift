@@ -32,7 +32,7 @@ class LoginPageViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     @available(iOS 8.0, *)
     @IBAction func signInButton(sender: AnyObject) {
-        
+   //     authTokenPasswordTextField.hidden = false
         let email = "admin@acre.com"
         let password = "grayson"
         
