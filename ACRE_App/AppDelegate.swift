@@ -16,6 +16,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let filemgr = NSFileManager.defaultManager()
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
+        let databasePath = fileURL.path!
+        
+        if !filemgr.fileExistsAtPath(databasePath as String) {
+            let acreDB = FMDatabase(path: databasePath as String)
+            if acreDB == nil {
+                print("Error: \(acreDB.lastErrorMessage())")
+            }
+            if acreDB.open() {
+                let sql_stmt = "CREATE TABLE IF NOT EXISTS AGENT (agentID INTEGER PRIMARY KEY AUTOINCREMENT, authToken TEXT, agentEmail TEXT, lastLogin DATETIME, mlsFeedID INTEGER); CREATE TABLE IF NOT EXISTS LEAD (leadID INTEGER PRIMARY KEY AUTOINCREMENT, agentID INTEGER, leadName TEXT, leadEmail TEXT, leadPhone TEXT, leadArea TEXT, leadNotes TEXT, isType BOOL, FOREIGN KEY (agentID) REFERENCES AGENT(agentID)); CREATE TABLE IF NOT EXISTS MLSFEED (mlsFeedID INTEGER PRIMARY KEY AUTOINCREMENT, feedName TEXT, agentEmail TEXT, lastLogin DATETIME); CREATE TABLE IF NOT EXISTS AREA (areaID INTEGER PRIMARY KEY AUTOINCREMENT, areaCode INTEGER, areaName TEXT, isFavorite BOOL); CREATE TABLE IF NOT EXISTS VERSION (versionID INTEGER PRIMARY KEY AUTOINCREMENT, dateUpdated DATETIME, notes TEXT)"
+                
+                if !acreDB.executeStatements(sql_stmt) {
+                    print("Error: \(acreDB.lastErrorMessage())")
+                }
+                
+                acreDB.close()
+            }
+            else {
+                print("Error: \(acreDB.lastErrorMessage())")
+            }
+        }
+        else{
+            print("Success")
+        }
+        
         return true
     }
 
