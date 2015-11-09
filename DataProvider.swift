@@ -65,7 +65,7 @@ class DataProvider
     {
         let hD: HomeData = HomeData.init()
         
-        let endpoint = NSURL(string: "http://10.8.1.21/api/area/" + String(areaID))
+        let endpoint = NSURL(string: "http://10.8.1.27/api/area/" + String(areaID))
         let data = NSData(contentsOfURL: endpoint!)
         
         do {

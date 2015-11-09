@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MIB-OC-d0G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eiA-Vu-n9t">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -500,7 +500,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIp-Db-PGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="-148"/>
+            <point key="canvasLocation" x="1971" y="-148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hCA-Su-yWF">
@@ -523,13 +523,13 @@
         <scene sceneID="QFB-QR-xaU">
             <objects>
                 <tableViewController id="wq8-Lp-v7c" customClass="FavoriteAreasViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7IZ-bi-NYL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="28" sectionFooterHeight="28" id="7IZ-bi-NYL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteAreasTableCell" id="wZ6-Mh-ODg" customClass="FavoriteAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteAreasTableCell" rowHeight="37" id="wZ6-Mh-ODg" customClass="FavoriteAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZ6-Mh-ODg" id="8zf-qx-7ah">
@@ -543,7 +543,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                <rect key="frame" x="16" y="7" width="42" height="21"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -600,7 +600,7 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pPK-py-kQ9" kind="relationship" relationship="rootViewController" id="VQx-Tt-QxW"/>
+                        <segue destination="co0-uI-L5H" kind="relationship" relationship="rootViewController" id="b4Y-wP-Nly"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etK-8X-0Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -608,40 +608,48 @@
             <point key="canvasLocation" x="2587.5" y="-864"/>
         </scene>
         <!--Add Favorite Areas-->
-        <scene sceneID="S4q-3r-Xz4">
+        <scene sceneID="o06-TZ-mAN">
             <objects>
-                <viewController id="pPK-py-kQ9" customClass="AddFavoriteAreasViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a4J-gh-wk9"/>
-                        <viewControllerLayoutGuide type="bottom" id="vbf-K8-7RW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nj8-zP-wgZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="co0-uI-L5H" customClass="AddFavoriteAreasViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3g-Tv-Vu3">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Favorite Areas" id="JFC-66-bmL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3fd-5Q-EqM">
-                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddFavoriteAreasTableCell" id="RBh-fa-xCJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RBh-fa-xCJ" id="Dhh-mU-lUn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="co0-uI-L5H" id="ulo-Me-7Fv"/>
+                            <outlet property="delegate" destination="co0-uI-L5H" id="eIQ-6Y-hFZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Favorite Areas" id="ORu-VT-t6c">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BJn-iN-kNV">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="cancelButton:" destination="pPK-py-kQ9" id="YN9-uJ-oZJ"/>
+                                <action selector="cancelButton:" destination="co0-uI-L5H" id="mwi-BY-ELl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gtq-sI-yxO">
-                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0sG-JK-aez">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="saveButton:" destination="pPK-py-kQ9" id="Ltj-NI-wNE"/>
+                                <action selector="saveButton:" destination="co0-uI-L5H" id="sXD-9d-erL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButtonLabel" destination="gtq-sI-yxO" id="OPn-GJ-2T4"/>
+                        <outlet property="saveButtonLabel" destination="0sG-JK-aez" id="e5R-rn-8Ur"/>
+                        <outlet property="tableview" destination="g3g-Tv-Vu3" id="K6C-g8-0eU"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mgd-qE-w6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hQ-aL-ca3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348" y="-864"/>
+            <point key="canvasLocation" x="3361.5" y="-848"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zQ2-qS-zue">
@@ -1234,20 +1242,6 @@
                                     <rect key="frame" x="254" y="380" width="150" height="23"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2q-or-DSy">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleColor" red="0.58823529409999997" green="0.0" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="280" y="130" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="GoButton:" destination="MIB-OC-d0G" eventType="touchUpInside" id="1nK-Wp-fyh"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACRE" translatesAutoresizingMaskIntoConstraints="NO" id="eIT-90-YEP">
                                 <rect key="frame" x="0.0" y="529" width="110" height="73"/>
                                 <animations/>
@@ -1317,7 +1311,6 @@
                                 <exclude reference="M6B-Sc-fJN"/>
                                 <exclude reference="GHG-hE-Kfq"/>
                                 <exclude reference="b6J-7p-83g"/>
-                                <exclude reference="v2q-or-DSy"/>
                                 <exclude reference="qqj-cS-ix3"/>
                             </mask>
                         </variation>
@@ -1340,7 +1333,6 @@
                                 <include reference="M6B-Sc-fJN"/>
                                 <include reference="GHG-hE-Kfq"/>
                                 <include reference="b6J-7p-83g"/>
-                                <include reference="v2q-or-DSy"/>
                                 <include reference="qqj-cS-ix3"/>
                             </mask>
                         </variation>
