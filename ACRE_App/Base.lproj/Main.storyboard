@@ -574,15 +574,13 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="8Vr-Ke-G7l">
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NTv-xW-UlD">
-                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lnf-RZ-Dhr">
                             <connections>
-                                <segue destination="3Z8-ge-Dwq" kind="presentation" id="ivF-Dw-LLM"/>
+                                <segue destination="3Z8-ge-Dwq" kind="presentation" id="6MO-fF-St3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="NTv-xW-UlD" id="kpB-jz-9sx"/>
                         <outlet property="menuButton" destination="8Vr-Ke-G7l" id="xnq-A1-9XG"/>
                     </connections>
                 </tableViewController>
@@ -633,12 +631,14 @@
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="co0-uI-L5H" id="mwi-BY-ELl"/>
+                                <segue destination="7B9-U6-f7p" kind="unwind" unwindAction="cancelToAddFavoriteAreas:" id="pmE-Kr-qGd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0sG-JK-aez">
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveButton:" destination="co0-uI-L5H" id="sXD-9d-erL"/>
+                                <segue destination="7B9-U6-f7p" kind="unwind" unwindAction="saveToAddFavoriteAreas:" id="sCj-2F-gho"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -648,6 +648,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hQ-aL-ca3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7B9-U6-f7p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3361.5" y="-848"/>
         </scene>

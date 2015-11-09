@@ -73,6 +73,22 @@ class AddFavoriteAreasViewController: UITableViewController
         //Use this to implement the delete function
         //self.tableview.setEditing(true, animated: true)
         //tableview.allowsMultipleSelection = true
+        self.performSegueWithIdentifier("Save", sender: sender)
+    }
+    
+    override func prepareForSegue ( segue: UIStoryboardSegue, sender: AnyObject!) {
+        /*if (segue.identifier == "Save") {
+            let destination = segue.destinationViewController as! FavoriteAreasViewController
+            let cell = sender as! UITableViewCell
+            let selectedRow = tableView.indexPathForCell(cell)!.row
+            destination.selectedRow = array[selectedRow]  */
+            
+            //svc.toPass = self.force
+            //svc.toPass2 = stiffness
+            
+        //}
+        
+        
     }
 
     @IBAction func cancelButton(sender: UIBarButtonItem)
@@ -114,58 +130,61 @@ class AddFavoriteAreasViewController: UITableViewController
     var count = 0
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        //let addFavoriteAreas = "AddFavoriteAreasTableCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier("AddFavoriteAreasTableCell", forIndexPath: indexPath) as! UITableViewCell
         
-        var array = getAreas()
-        cell.textLabel?.text = array[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("AddFavoriteAreasTableCell", forIndexPath: indexPath) as! UITableViewCell
+        var areas = getAreas()
+        cell.textLabel?.text = areas[indexPath.row]
         
         if cell.selected
         {
+            
             cell.selected = false
             if cell.accessoryType == UITableViewCellAccessoryType.None
             {
                 cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                
             }
         else
         {
             cell.accessoryType = UITableViewCellAccessoryType.None
         }
-            count++
+            
         }
         
         return cell
     }
     
+    
+    var array = [String](count: 0, repeatedValue: String())
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let cell = tableview.cellForRowAtIndexPath(indexPath)
-        var temp = [String](count: count, repeatedValue: String())
-        var i = 0
+        
+       
         if cell!.selected
         {
             cell!.selected = false
             if cell!.accessoryType == UITableViewCellAccessoryType.None
             {
                 cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-                while(i <= count) {
-                    temp[i] = (cell!.textLabel?.text)!
-                }
+              
             }
             else
             {
                 cell!.accessoryType = UITableViewCellAccessoryType.None
             }
-            count++
+            array.append((cell!.textLabel?.text)!)
+            
+            
         }
     }
     
-    
-    func updateCount(){
-        if let list = tableView.indexPathsForSelectedRows! as? [NSIndexPath] {
-            print(list.count)
-        }
-    }
+    /*func createArray(count: Int) -> Array<String>
+    {
+        let array = [String](count: count, repeatedValue: String())
+        return array
+    } */
     
     
     func getAreas() -> Array<String>
