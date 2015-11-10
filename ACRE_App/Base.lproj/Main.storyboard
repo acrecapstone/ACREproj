@@ -530,10 +530,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteAreasTableCell" rowHeight="37" id="wZ6-Mh-ODg" customClass="FavoriteAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZ6-Mh-ODg" id="8zf-qx-7ah">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-2A-5H1">
@@ -581,12 +581,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="lnf-RZ-Dhr" id="Hym-vu-1hd"/>
                         <outlet property="menuButton" destination="8Vr-Ke-G7l" id="xnq-A1-9XG"/>
+                        <outlet property="tableview" destination="7IZ-bi-NYL" id="blA-Di-wfC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kV-mW-Z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="-864"/>
+            <point key="canvasLocation" x="1822.5" y="-855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VJB-eO-gtc">
@@ -610,13 +612,15 @@
             <objects>
                 <tableViewController id="co0-uI-L5H" customClass="AddFavoriteAreasViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="g3g-Tv-Vu3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddFavoriteAreasTableCell" id="RBh-fa-xCJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RBh-fa-xCJ" id="Dhh-mU-lUn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -630,15 +634,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BJn-iN-kNV">
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="cancelButton:" destination="co0-uI-L5H" id="mwi-BY-ELl"/>
-                                <segue destination="7B9-U6-f7p" kind="unwind" unwindAction="cancelToAddFavoriteAreas:" id="pmE-Kr-qGd"/>
+                                <action selector="cancelButton:" destination="co0-uI-L5H" id="Ois-kC-nJl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="0sG-JK-aez">
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveButton:" destination="co0-uI-L5H" id="sXD-9d-erL"/>
-                                <segue destination="7B9-U6-f7p" kind="unwind" unwindAction="saveToAddFavoriteAreas:" id="sCj-2F-gho"/>
+                                <segue destination="7B9-U6-f7p" kind="unwind" unwindAction="saveAreas:" id="9Xz-IR-wFI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

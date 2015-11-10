@@ -19,46 +19,6 @@ class AddFavoriteAreasViewController: UITableViewController
         super.viewDidLoad()
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AddFavoriteAreasTableCell")
         
-        //let cell = tableView.dequeueReusableCellWithIdentifier("addFavoriteAreas", forIndexPath: indexPath) as! AddFavoriteAreasViewCell
-        /*let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
-        let databasePath = fileURL.path!
-        let acreDB = FMDatabase(path: databasePath as String)
-        
-        if acreDB.open() {
-            
-            let querySQL = "SELECT areaName, areaCode FROM AREA ORDER BY areaCode ASC"
-            let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
-            
-            let areaCount = "SELECT COUNT(areaID) FROM AREA"
-            let capacity: FMResultSet? = acreDB.executeQuery(areaCount, withArgumentsInArray: nil)
-            
-            var count = 0
-            let cap = Int(acreDB.intForQuery(areaCount))
-            var temp = [String](count: cap, repeatedValue: String())
-            
-            while results?.next() == true {
-                let code = results?.stringForColumn("areaCode")
-                let name = results?.stringForColumn("areaName")
-                let title = (code?.stringByAppendingString(" - " + name!))
-                
-                temp[count] = title!
-                count++
-                
-                print("Record Found")
-                
-            }
-            //cell.textLabel?.text = temp[indexPath.item]
-            acreDB.close()
-            
-            for x in temp {
-                print(x)
-            }
-        }
-        else {
-            print("Error: \(acreDB.lastErrorMessage())")
-        } */
-        
     }
     
     override func viewDidAppear(animated: Bool)
@@ -67,29 +27,15 @@ class AddFavoriteAreasViewController: UITableViewController
         tableview.reloadData()
     }
     
+    
+    
 
     @IBAction func saveButton(sender: UIBarButtonItem)
     {
-        //Use this to implement the delete function
-        //self.tableview.setEditing(true, animated: true)
-        //tableview.allowsMultipleSelection = true
-        self.performSegueWithIdentifier("Save", sender: sender)
+       performSegueWithIdentifier("saveAreas", sender: self)
+
     }
     
-    override func prepareForSegue ( segue: UIStoryboardSegue, sender: AnyObject!) {
-        /*if (segue.identifier == "Save") {
-            let destination = segue.destinationViewController as! FavoriteAreasViewController
-            let cell = sender as! UITableViewCell
-            let selectedRow = tableView.indexPathForCell(cell)!.row
-            destination.selectedRow = array[selectedRow]  */
-            
-            //svc.toPass = self.force
-            //svc.toPass2 = stiffness
-            
-        //}
-        
-        
-    }
 
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
@@ -118,7 +64,7 @@ class AddFavoriteAreasViewController: UITableViewController
             
             acreDB.close()
             
-            return cap //should be return whatever.count
+            return cap
             
         } else {
             print("Error: \(acreDB.lastErrorMessage())")
@@ -133,7 +79,7 @@ class AddFavoriteAreasViewController: UITableViewController
         
         let cell = tableView.dequeueReusableCellWithIdentifier("AddFavoriteAreasTableCell", forIndexPath: indexPath) as! UITableViewCell
         var areas = getAreas()
-        cell.textLabel?.text = areas[indexPath.row]
+        cell.textLabel?.text = areas[indexPath.row].title
         
         if cell.selected
         {
@@ -155,12 +101,12 @@ class AddFavoriteAreasViewController: UITableViewController
     }
     
     
-    var array = [String](count: 0, repeatedValue: String())
+    var array = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let cell = tableview.cellForRowAtIndexPath(indexPath)
-        
+        var choice = [Int](count: 0, repeatedValue: Int())
        
         if cell!.selected
         {
@@ -174,20 +120,39 @@ class AddFavoriteAreasViewController: UITableViewController
             {
                 cell!.accessoryType = UITableViewCellAccessoryType.None
             }
-            array.append((cell!.textLabel?.text)!)
-            
-            
+          choice.append(indexPath.row)
+
         }
+            let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+            let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
+            let databasePath = fileURL.path!
+            let acreDB = FMDatabase(path: databasePath as String)
+            
+            if acreDB.open() {
+                var i = 0
+                for x in choice {
+                    let id = choice[i]
+                    let querySQL = "UPDATE AREA SET isFavorite = 1 WHERE areaID = \(id);"
+                    let results = acreDB.executeUpdate(querySQL, withArgumentsInArray:nil)
+                    
+                        print("Record Updated")
+                    
+                    i++
+                }
+                
+            }
+        acreDB.close()
+            
+        
     }
     
-    /*func createArray(count: Int) -> Array<String>
-    {
-        let array = [String](count: count, repeatedValue: String())
-        return array
-    } */
+   func passArray() -> Array<AreaDisplayer>
+   {
+    return array 
+    }
     
     
-    func getAreas() -> Array<String>
+    func getAreas() -> Array<AreaDisplayer>
     {
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
@@ -197,7 +162,7 @@ class AddFavoriteAreasViewController: UITableViewController
         
         if acreDB.open() {
             
-            let querySQL = "SELECT areaName, areaCode FROM AREA ORDER BY areaCode ASC"
+            let querySQL = "SELECT areaName, areaCode, areaID FROM AREA ORDER BY areaCode ASC"
             let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
             
             let areaCount = "SELECT COUNT(areaID) FROM AREA"
@@ -205,14 +170,17 @@ class AddFavoriteAreasViewController: UITableViewController
             
             var count = 0
             let cap = Int(acreDB.intForQuery(areaCount))
-            var temp = [String](count: cap, repeatedValue: String())
+            var temp = [AreaDisplayer](count: cap, repeatedValue: AreaDisplayer())
             
             while results?.next() == true {
                 let code = results?.stringForColumn("areaCode")
                 let name = results?.stringForColumn("areaName")
+                let areaID = results?.intForColumn("areaID")
                 let title = (code?.stringByAppendingString(" - " + name!))
-                
-                temp[count] = title!
+                let dsplyr = AreaDisplayer();
+                dsplyr.title = title!
+                dsplyr.areaID = Int(areaID!)
+                temp[count] = dsplyr
                 count++
                 
                 print("Record Found")
@@ -220,15 +188,20 @@ class AddFavoriteAreasViewController: UITableViewController
             }
             acreDB.close()
             array = temp
-            for x in temp {
-                print(x)
-            }
+            
         }
         else {
             print("Error: \(acreDB.lastErrorMessage())")
         }
 
-        return array as! Array<String>
+        return array as! Array<AreaDisplayer>
     }
     
-}
+  
+    
+    
+    }
+    
+    
+    
+

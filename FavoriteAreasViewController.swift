@@ -11,21 +11,25 @@ import UIKit
 
 class FavoriteAreasViewController: UITableViewController
 {
-
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tableview.setEditing(true, animated: true)
         
-        if revealViewController() != nil
+       if revealViewController() != nil
         {
             menuButton.target = revealViewController()
             menuButton.action = "revealToggle:"
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+
     }
+
     
     override func didReceiveMemoryWarning()
     {
@@ -38,22 +42,70 @@ class FavoriteAreasViewController: UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1 //should be return whatever.count
+        let array = query()
+        return array.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let favoriteAreaIdentifier = "FavoriteAreasTableCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(favoriteAreaIdentifier, forIndexPath: indexPath) as! FavoriteAreasTableViewCell
-        
-        // Fetches the appropriate meal for the data source layout.
-        //let meal = meals[indexPath.row]
-        
-        //cell.nameLabel.text = meal.name
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAreasTableCell", forIndexPath: indexPath) as! UITableViewCell
+        let areas = query()
+        cell.textLabel?.text = areas[indexPath.row].title
 
         return cell
     }
-}
+    
+    var array = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
+    var count = 0
+    
+    func query() -> Array<AreaDisplayer>
+    {
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
+        let databasePath = fileURL.path!
+        let acreDB = FMDatabase(path: databasePath as String)
+        
+        if acreDB.open() {
+                let querySQL = "SELECT areaName, areaCode, areaID FROM AREA WHERE isFavorite = 1 ORDER BY areaCode ASC"
+                let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
+            
+            while results?.next() == true {
+                let code = results?.stringForColumn("areaCode")
+                let name = results?.stringForColumn("areaName")
+                let areaID = results?.intForColumn("areaID")
+                let title = (code?.stringByAppendingString(" - " + name!))
+                let dsplyr = AreaDisplayer();
+                dsplyr.title = title!
+                dsplyr.areaID = Int(areaID!)
+                array.append(dsplyr)
+                count++
+                
+                print("Record Found")
+                
+            }
+            acreDB.close()
+            }
+        return array
+        }
+    
+    @IBAction func saveAreas(segue:UIStoryboardSegue)
+    {
+        if let addFavoriteAreasViewController = segue.sourceViewController as? AddFavoriteAreasViewController {
+            tableview.reloadData()
+            print("Unwinding")
+        }
+    }
+    
+    
+    
+    }
+    
+    
+   
+
+   
+    
+
 
 
 
