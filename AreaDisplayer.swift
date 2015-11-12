@@ -20,4 +20,13 @@ class AreaDisplayer
         self.areaID = -1;
         self.title = "";
     }
+    
+        
+    
 }
+
+
+
+
+
+

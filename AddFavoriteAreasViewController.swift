@@ -38,6 +38,27 @@ class AddFavoriteAreasViewController: UITableViewController
 
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
+        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
+        let databasePath = fileURL.path!
+        let acreDB = FMDatabase(path: databasePath as String)
+        
+        if acreDB.open() {
+            let sql = "CREATE TABLE STATS (statsID INTEGER PRIMARY KEY AUTOINCREMENT, areaID INTEGER, isDefault BOOL, isMonthly BOOL, timestamp DATETIME, month TEXT, day INTEGER, year TEXT, medPrice DECIMAL(10, 1), medPricePrev DECIMAL(10, 1), medPriceMth DECIMAL(10, 1), medPriceQtr DECIMAL(10, 1), medPricePerc DECIMAL(10, 1), listSell DECIMAL(10, 1), listSellPrev DECIMAL(10, 1), listSellMth DECIMAL(10, 1), listSellQtr DECIMAL(10, 1), listSellPerc DECIMAL(10, 1), unitSales INTEGER, unitSalesPrev INTEGER, unitSalesMth INTEGER, unitSalesQtr INTEGER, unitSalesPerc DECIMAL(10, 1), volSales INTEGER, volSalesPrev INTEGER, volSalesMth INTEGER, volSalesQtr INTEGER, volSalesPerc DECIMAL(10, 1), dom INTEGER, domPrev INTEGER, domMth INTEGER, domQtr INTEGER, domPerc DECIMAL(10, 1), inv INTEGER, invPRev INTEGER, invMth INTEGER, invQtr INTEGER, invPerc DECIMAL(10, 1), mos DECIMAL(10, 1), mosPrev DECIMAL(10, 1), mosMth DECIMAL(10, 1), mosQtr DECIMAL(10, 1), mosPerc DECIMAL(10, 1))"
+            let results = acreDB.executeStatements(sql)
+            if !results {
+                print("Error: \(acreDB.lastErrorMessage())")
+            }
+            else{
+                print("Table Created")
+            }
+            
+        }
+        acreDB.close()
+
+        
+        
+        
         
      dismissViewControllerAnimated(true, completion: nil)
     }
