@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 8.0, *)
 class FavoriteAreasViewController: UITableViewController
 {
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -19,18 +20,18 @@ class FavoriteAreasViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.tableview.setEditing(true, animated: true)
+        //self.tableview.setEditing(true, animated: true) --Tulsi commented this out cause it dealt with deleting the rows.
         
        if revealViewController() != nil
         {
             menuButton.target = revealViewController()
             menuButton.action = "revealToggle:"
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            tableview.reloadData()
         }
 
     }
 
-    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -40,31 +41,62 @@ class FavoriteAreasViewController: UITableViewController
         return 1
     }
     
+    var array = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
+    var cellArray = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
+    
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        let array = query()
+        array = query()
         return array.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAreasTableCell", forIndexPath: indexPath) as! UITableViewCell
-        let areas = query()
-        cell.textLabel?.text = areas[indexPath.row].title
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAreasTableCell", forIndexPath: indexPath) 
+        cellArray = query()
+        cell.textLabel?.text = cellArray[indexPath.row].title
 
         return cell
     }
     
-    var array = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
-    var count = 0
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+            let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
+            let databasePath = fileURL.path!
+            let acreDB = FMDatabase(path: databasePath as String)
+            let id = cellArray[indexPath.row].areaID
+            if acreDB.open()
+            {
+                let querySQL = "UPDATE AREA SET isFavorite = 0 WHERE areaID = \(id);"
+                let result = acreDB.executeUpdate(querySQL, withArgumentsInArray:nil)
+                
+                if !result {
+                    print("Error: \(acreDB.lastErrorMessage())")
+                } else {
+                    print("Updated")
+                }
+            }
+            acreDB.close()
+            
+            array.removeAtIndex(indexPath.row)
+            cellArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            }
+    }
+    
     
     func query() -> Array<AreaDisplayer>
     {
+        var count = 0
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
         let databasePath = fileURL.path!
         let acreDB = FMDatabase(path: databasePath as String)
-        
+        var temp = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
         if acreDB.open() {
                 let querySQL = "SELECT areaName, areaCode, areaID FROM AREA WHERE isFavorite = 1 ORDER BY areaCode ASC"
                 let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
@@ -77,28 +109,25 @@ class FavoriteAreasViewController: UITableViewController
                 let dsplyr = AreaDisplayer();
                 dsplyr.title = title!
                 dsplyr.areaID = Int(areaID!)
-                array.append(dsplyr)
+                temp.append(dsplyr)
                 count++
                 
                 print("Record Found")
-                
             }
             acreDB.close()
             }
-        return array
+        return temp
         }
     
     @IBAction func saveAreas(segue:UIStoryboardSegue)
     {
-        if let addFavoriteAreasViewController = segue.sourceViewController as? AddFavoriteAreasViewController {
-            tableview.reloadData()
+        if let addFavoriteAreasViewController = segue.sourceViewController as? AddFavoriteAreasViewController
+        {
             print("Unwinding")
         }
+
     }
-    
-    
-    
-    }
+}
     
     
    

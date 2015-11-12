@@ -535,34 +535,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZ6-Mh-ODg" id="8zf-qx-7ah">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-2A-5H1">
-                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="16" y="7" width="42" height="21"/>
-                                            </variation>
-                                        </label>
-                                    </subviews>
                                     <animations/>
-                                    <variation key="default">
-                                        <mask key="subviews">
-                                            <exclude reference="H5h-2A-5H1"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="widthClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="H5h-2A-5H1"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <outlet property="areaName" destination="H5h-2A-5H1" id="JQC-rB-ZCW"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -575,6 +550,7 @@
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lnf-RZ-Dhr">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="3Z8-ge-Dwq" kind="presentation" id="6MO-fF-St3"/>
                             </connections>
@@ -605,7 +581,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etK-8X-0Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587.5" y="-864"/>
+            <point key="canvasLocation" x="2592" y="-855"/>
         </scene>
         <!--Add Favorite Areas-->
         <scene sceneID="o06-TZ-mAN">
@@ -712,14 +688,6 @@
                                     <action selector="greaterALMLSLinkButton:" destination="G9x-Up-uYV" eventType="touchUpInside" id="66X-7e-LSb"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPM-7j-Zg9">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="289" width="360" height="291"/>
-                                </variation>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idt-Dd-RMI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -763,27 +731,46 @@
                                     <rect key="frame" x="20" y="260" width="340" height="21"/>
                                 </variation>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPM-7j-Zg9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResourcesTableViewCell" id="gWg-vh-GxK">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gWg-vh-GxK" id="7Xn-wm-teF">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="289" width="330" height="291"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="DP9-fk-06N"/>
-                                <exclude reference="TPM-7j-Zg9"/>
                                 <exclude reference="idt-Dd-RMI"/>
                                 <exclude reference="vOu-iY-9tT"/>
                                 <exclude reference="f9h-rR-6k9"/>
                                 <exclude reference="ipY-dz-XMb"/>
+                                <exclude reference="TPM-7j-Zg9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="DP9-fk-06N"/>
-                                <include reference="TPM-7j-Zg9"/>
                                 <include reference="idt-Dd-RMI"/>
                                 <include reference="vOu-iY-9tT"/>
                                 <include reference="f9h-rR-6k9"/>
                                 <include reference="ipY-dz-XMb"/>
+                                <include reference="TPM-7j-Zg9"/>
                             </mask>
                         </variation>
                     </view>
@@ -800,11 +787,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="2AQ-1T-xLT" id="yw6-yj-Uy3"/>
+                        <outlet property="tableView" destination="TPM-7j-Zg9" id="wiW-vr-5wz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkt-d8-YSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="593"/>
+            <point key="canvasLocation" x="1842" y="586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lqq-0e-wXR">
@@ -816,88 +804,101 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="56G-pX-mNo" kind="relationship" relationship="rootViewController" id="JAd-5H-S0z"/>
+                        <segue destination="uAQ-xD-tpj" kind="relationship" relationship="rootViewController" id="DqP-Y0-usk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un0-Hq-0Y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2608.5" y="593"/>
         </scene>
-        <!--Add Resource Links-->
-        <scene sceneID="iOe-vB-DcF">
+        <!--Add Personal Links-->
+        <scene sceneID="hgB-kS-Pgt">
             <objects>
-                <tableViewController id="56G-pX-mNo" customClass="AddResourceLinksViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0dd-na-2Ou">
+                <viewController id="uAQ-xD-tpj" customClass="AddResourceLinksViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="khb-d6-guO"/>
+                        <viewControllerLayoutGuide type="bottom" id="EoN-pv-Tmg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNq-L0-LGM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo4-C2-SMg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="108" width="77" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-Od-AEF">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="150" width="329" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-c2-JuL">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="265" width="329" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Personal Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egA-Ej-4WT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="225" width="148" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="TR1-Ub-jcA">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="1L6-qD-Gnf">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1L6-qD-Gnf" id="i9J-zF-4Ft">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="109"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSq-vs-7c3">
-                                                    <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="0.0" y="52" width="400" height="30"/>
-                                                    </variation>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Link " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-uq-kWi">
-                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="160" y="23" width="81" height="21"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="TSq-vs-7c3"/>
-                                                    <exclude reference="nAq-uq-kWi"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="TSq-vs-7c3"/>
-                                                    <include reference="nAq-uq-kWi"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="56G-pX-mNo" id="aSm-nC-alo"/>
-                            <outlet property="delegate" destination="56G-pX-mNo" id="1hX-6c-W0x"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Add Resource Links" id="QpW-vF-nzW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yrT-23-46I">
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uo4-C2-SMg"/>
+                                <exclude reference="Vkw-Od-AEF"/>
+                                <exclude reference="OQ9-c2-JuL"/>
+                                <exclude reference="egA-Ej-4WT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uo4-C2-SMg"/>
+                                <include reference="Vkw-Od-AEF"/>
+                                <include reference="OQ9-c2-JuL"/>
+                                <include reference="egA-Ej-4WT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Personal Links" id="aDG-L4-lcu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Eq2-bJ-qdz">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="cancel:" destination="56G-pX-mNo" id="lVR-sc-8hX"/>
+                                <action selector="cancel:" destination="uAQ-xD-tpj" id="e3E-aN-6f0"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bfX-m4-Y3r"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Nrf-E2-NNV">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveLinksButton:" destination="uAQ-xD-tpj" id="w2J-dI-33s"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Aw-ZQ-5Al" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="labelTextField" destination="OQ9-c2-JuL" id="Dgl-b1-pbX"/>
+                        <outlet property="linkLabel" destination="uo4-C2-SMg" id="4Rv-Hi-ymf"/>
+                        <outlet property="linkTextField" destination="Vkw-Od-AEF" id="4QI-mE-lFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybw-2P-2sM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3415.5" y="593"/>
+            <point key="canvasLocation" x="3423" y="593"/>
         </scene>
         <!--MARKET in a MINUTE-->
         <scene sceneID="mUT-5w-aCJ">
