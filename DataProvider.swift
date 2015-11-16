@@ -8,13 +8,36 @@
 
 import Foundation
 import UIKit
-
+@available(iOS 8.0, *)
 class DataProvider
 {
+    
+    func withinTimeThreshold () -> Bool {
+        let calendar = NSCalendar.autoupdatingCurrentCalendar()
+        
+        //comment this out after sql lite works
+        let lastLogon = calendar.dateByAddingUnit(NSCalendarUnit.NSHourCalendarUnit, value: -1, toDate: NSDate(), options: .WrapComponents)
+        
+        //var lastLogon = SQlite query for last logon
+        
+        let loginThreshold = calendar.dateByAddingUnit(NSCalendarUnit.NSHourCalendarUnit, value: 2, toDate: lastLogon!, options: .WrapComponents)
+        
+        let curTime = NSDate()
+        
+        if (loginThreshold!.laterDate(curTime) == curTime) {
+            //User has not successfully authenticated within in the past two hours and thus will attempt to auto reauthenticate
+            return false
+        }
+        else {
+            //User has logged in previously within valid time frame
+            return true
+        }
+    }
+    
     func requestAuthentication(email: String, mlsFeedID: Int) -> (Bool)
     {
-        var endpoint = NSURL(string: "http://10.8.1.27/api/user/" + String(mlsFeedID) + "?email=" + email)
-        var data = NSData(contentsOfURL: endpoint!)
+        let endpoint = NSURL(string: "http://10.8.1.27/api/user/" + String(mlsFeedID) + "?email=" + email)
+        let data = NSData(contentsOfURL: endpoint!)
         do
         {
             if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options:  NSJSONReadingOptions.MutableContainers) as? NSDictionary

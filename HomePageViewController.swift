@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+@available(iOS 8.0, *)
 class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, NSURLConnectionDataDelegate
 {
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -18,7 +19,7 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var reportLabel: UILabel! = nil
     @IBOutlet weak var refreshButtonLabel: UIButton!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
+    
     //Price Indicator Labels
     @IBOutlet weak var medianPrice: UILabel!
     @IBOutlet weak var medianPricePrevious: UILabel!
@@ -32,7 +33,7 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var volumeSalesPrevious: UILabel!
     @IBOutlet weak var dom: UILabel!
     @IBOutlet weak var domPrevious: UILabel!
-
+    
     //Supply Indicator Labels
     @IBOutlet weak var inventory: UILabel!
     @IBOutlet weak var inventoryPrevious: UILabel!
@@ -47,9 +48,6 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var picker2Options = []
     
     let dataProvider = DataProvider()
-    
-    @IBAction func GoButton(sender: AnyObject) {
-            }
     
     override func viewDidLoad()
     {
@@ -105,14 +103,23 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             print("Error: \(acreDB.lastErrorMessage())")
         }
         
+        //*************************************************************************************************
+        
+        //if default timestamp isLater most recent timestamp {
         //hD = Pull Default area from SQLite
-        //if defaultTimePrefMth {
-            //reportLabel.text = hD.month + " " + hD.year
         //}
         //else {
-            //reportLabel.text = "Quarter " + hD.quarter + " for " + hD.year
+        //hD = Pull recent area from SQLite
         //}
         
+        //if hD.isMonth {
+        //reportLabel.text = hD.month + " " + hD.year
+        //}
+        //else {
+        //reportLabel.text = "Quarter " + hD.quarter + " for " + hD.year
+        //}
+        
+        //var displayMth = hD.isMonth
         var displayMth : Bool
         displayMth = true
         
@@ -250,7 +257,7 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             monthOfSupplyPrevious.text = String(format: "(%.1f vs %.1f)", hD.mOS, hD.mOSPrev)
         }
     }
-    
+    //?????
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
         return 1
@@ -281,214 +288,158 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if timeReportPickerView.selectedRowInComponent(0) == row {
-            
-            //let hD = dataProvider.requestHomeData(mlsCityPickerView!.selectedRowInComponent(0)+1)
-            hD = dataProvider.requestHomeData(3)
-            
-            
-            //Insert Statements
-            /*
-            let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-            let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
-            let databasePath = fileURL.path!
-            let acreDB = FMDatabase(path: databasePath as String)
-            
-            if acreDB.open() {
-            let insertSQL = "INSERT INTO AGENT (authToken, agentEmail, lastLogin, mlsFeedID) VALUES ('1234abcd', 'test@email.com', '2014-7-13', 1);"
-            let result = acreDB.executeUpdate(insertSQL, withArgumentsInArray: nil)
-            
-            if !result {
-            print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-            print("Data1 Added")
-            }
-            
-            let insert2 = "INSERT INTO LEAD (agentID, leadName, leadEmail, leadPhone,leadArea, leadNotes, isType) VALUES (1, 'Grayson', 'test@email.com', '2059086787', 'Birmingham', 'notes', 1);"
-            let result2 = acreDB.executeUpdate(insert2, withArgumentsInArray: nil)
-            
-            if !result2 {
-            print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-            print("Data2 Added")
-            }
-            
-            let insert3 = "INSERT INTO MLSFEED (feedName, agentEmail, lastLogin) VALUES ('Birmingham', 'test@email.com', '2014-7-13');"
-            
-            let result3 = acreDB.executeUpdate(insert3, withArgumentsInArray: nil)
-            
-            if !result3 {
-            print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-            print("Data3 Added")
-            }
-            
-            let insert4 = "INSERT INTO AREA (areaCode, areaName, isFavorite) VALUES (150, 'Vestavia', 1);"
-            
-            let result4 = acreDB.executeUpdate(insert4, withArgumentsInArray: nil)
-            
-            if !result4 {
-            print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-            print("Data4 Added")
-            }
-            
-            let insert5 = "INSERT INTO VERSION (dateUpdated, notes) VALUES ('2014-7-13', 'first update');"
-            
-            let result5 = acreDB.executeUpdate(insert5, withArgumentsInArray: nil)
-            
-            if !result5 {
-            print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-            print("Data5 Added")
-            }
-            }
-            else {
-            print("Error: \(acreDB.lastErrorMessage())")
-            }
-            
-            */
-            
-            /////////////////////////////////////////////////////////////////////////////////////////
-            
-            medianPrice.textColor = UIColor.blackColor()
-            listToSalesRatio.textColor = UIColor.blackColor()
-            unitSales.textColor = UIColor.blackColor()
-            volumeSales.textColor = UIColor.blackColor()
-            dom.textColor = UIColor.blackColor()
-            inventory.textColor = UIColor.blackColor()
-            monthOfSupply.textColor = UIColor.blackColor()
-            
-            if row == 0 {
-                reportLabel.text = hD.month + " " + hD.year
-                if hD.mthMedianPPerc > 0 {
-                    medianPrice.textColor = UIColor.greenColor()
-                }
-                else if hD.mthMedianPPerc < 0 {
-                    medianPrice.textColor = UIColor.redColor()
-                }
-                if hD.mthListSellPerc > 0 {
-                    listToSalesRatio.textColor = UIColor.greenColor()
-                }
-                else if hD.mthListSellPerc < 0 {
-                    listToSalesRatio.textColor = UIColor.redColor()
-                }
-                if hD.mthMOSPerc > 0 {
-                    monthOfSupply.textColor = UIColor.greenColor()
-                }
-                else if hD.mthMOSPerc < 0 {
-                    monthOfSupply.textColor = UIColor.redColor()
-                }
-                if hD.mthUnitSalesPerc > 0 {
-                    unitSales.textColor = UIColor.greenColor()
-                }
-                else if hD.mthUnitSalesPerc < 0 {
-                    unitSales.textColor = UIColor.redColor()
-                }
-                if hD.mthVolumeSalesPerc > 0 {
-                    volumeSales.textColor = UIColor.greenColor()
-                }
-                else if hD.mthVolumeSalesPerc < 0 {
-                    volumeSales.textColor = UIColor.redColor()
-                }
-                if hD.mthDOMPerc > 0 {
-                    dom.textColor = UIColor.greenColor()
-                }
-                else if hD.mthDOMPerc < 0 {
-                    dom.textColor = UIColor.redColor()
-                }
-                if hD.mthInvPerc > 0 {
-                    inventory.textColor = UIColor.greenColor()
-                }
-                else if hD.mthInvPerc < 0 {
-                    inventory.textColor = UIColor.redColor()
-                }
+        if pickerView.isEqual(timeReportPickerView) {
+            if timeReportPickerView.selectedRowInComponent(0) == row {
+                //BADDDDDD  VVVVVVV  use the tuples here fropm AreaDisplayer Class
+                //let hD = dataProvider.requestHomeData(mlsCityPickerView!.selectedRowInComponent(0)+1)
+                hD = dataProvider.requestHomeData(3)
                 
-                medianPrice.text = String(format: "%.1f%%", hD.mthMedianPPerc * 100)
-                medianPricePrevious.text = String(format: "($%.0f vs $%.0f)", hD.medianP, hD.medianPPrev)
-                listToSalesRatio.text = String(format: "%.1f%%", hD.mthListSellPerc * 100)
-                listToSalesRatioPrevious.text = String(format: "(%.1f%% vs %.1f%%)", hD.listSell*100, hD.listSellPrev*100)
+                //Store HD as most recent if areaID != default AreaID and store whether is monthly or quarterly, and timestamp
+                //else update default Area's timestamp
                 
-                unitSales.text = String(format: "%.1f%%", hD.mthUnitSalesPerc*100)
-                unitSalesPrevious.text = String(format: "(%i vs %i)",hD.unitSales, hD.unitSalesPrev)
-                volumeSales.text = String(format: "%.1f%%", hD.mthVolumeSalesPerc*100)
-                volumeSalesPrevious.text = String(format: "(%i vs %i)",hD.volumeSales, hD.volumeSalesPrev)
-                dom.text = String(format: "%.1f%%", hD.mthDOMPerc*100)
-                domPrevious.text = String(format: "(%i vs %i)",hD.dOM, hD.dOMPrev)
+                medianPrice.textColor = UIColor.blackColor()
+                listToSalesRatio.textColor = UIColor.blackColor()
+                unitSales.textColor = UIColor.blackColor()
+                volumeSales.textColor = UIColor.blackColor()
+                dom.textColor = UIColor.blackColor()
+                inventory.textColor = UIColor.blackColor()
+                monthOfSupply.textColor = UIColor.blackColor()
                 
-                inventory.text = String(format: "%.1f%%", hD.mthInvPerc*100)
-                inventoryPrevious.text = String(format: "(%i vs %i)", hD.inv, hD.invPrev)
-                monthOfSupply.text = String(format: "%.1f%%", hD.mthMOSPerc*100)
-                monthOfSupplyPrevious.text = String(format: "(%.1f vs %.1f)", hD.mOS, hD.mOSPrev)
+                if row == 0 {
+                    reportLabel.text = hD.month + " " + hD.year
+                    if hD.mthMedianPPerc > 0 {
+                        medianPrice.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthMedianPPerc < 0 {
+                        medianPrice.textColor = UIColor.redColor()
+                    }
+                    if hD.mthListSellPerc > 0 {
+                        listToSalesRatio.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthListSellPerc < 0 {
+                        listToSalesRatio.textColor = UIColor.redColor()
+                    }
+                    if hD.mthMOSPerc > 0 {
+                        monthOfSupply.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthMOSPerc < 0 {
+                        monthOfSupply.textColor = UIColor.redColor()
+                    }
+                    if hD.mthUnitSalesPerc > 0 {
+                        unitSales.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthUnitSalesPerc < 0 {
+                        unitSales.textColor = UIColor.redColor()
+                    }
+                    if hD.mthVolumeSalesPerc > 0 {
+                        volumeSales.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthVolumeSalesPerc < 0 {
+                        volumeSales.textColor = UIColor.redColor()
+                    }
+                    if hD.mthDOMPerc > 0 {
+                        dom.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthDOMPerc < 0 {
+                        dom.textColor = UIColor.redColor()
+                    }
+                    if hD.mthInvPerc > 0 {
+                        inventory.textColor = UIColor.greenColor()
+                    }
+                    else if hD.mthInvPerc < 0 {
+                        inventory.textColor = UIColor.redColor()
+                    }
+                    
+                    medianPrice.text = String(format: "%.1f%%", hD.mthMedianPPerc * 100)
+                    medianPricePrevious.text = String(format: "($%.0f vs $%.0f)", hD.medianP, hD.medianPPrev)
+                    listToSalesRatio.text = String(format: "%.1f%%", hD.mthListSellPerc * 100)
+                    listToSalesRatioPrevious.text = String(format: "(%.1f%% vs %.1f%%)", hD.listSell*100, hD.listSellPrev*100)
+                    
+                    unitSales.text = String(format: "%.1f%%", hD.mthUnitSalesPerc*100)
+                    unitSalesPrevious.text = String(format: "(%i vs %i)",hD.unitSales, hD.unitSalesPrev)
+                    volumeSales.text = String(format: "%.1f%%", hD.mthVolumeSalesPerc*100)
+                    volumeSalesPrevious.text = String(format: "(%i vs %i)",hD.volumeSales, hD.volumeSalesPrev)
+                    dom.text = String(format: "%.1f%%", hD.mthDOMPerc*100)
+                    domPrevious.text = String(format: "(%i vs %i)",hD.dOM, hD.dOMPrev)
+                    
+                    inventory.text = String(format: "%.1f%%", hD.mthInvPerc*100)
+                    inventoryPrevious.text = String(format: "(%i vs %i)", hD.inv, hD.invPrev)
+                    monthOfSupply.text = String(format: "%.1f%%", hD.mthMOSPerc*100)
+                    monthOfSupplyPrevious.text = String(format: "(%.1f vs %.1f)", hD.mOS, hD.mOSPrev)
+                }
+                else if row == 1 {
+                    reportLabel.text = "Quarter " + hD.quarter + " for " + hD.year
+                    
+                    if hD.qtrMedianPPerc > 0 {
+                        medianPrice.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrMedianPPerc < 0 {
+                        medianPrice.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrListSellPerc > 0 {
+                        listToSalesRatio.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrListSellPerc < 0 {
+                        listToSalesRatio.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrMOSPerc > 0 {
+                        monthOfSupply.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrMOSPerc < 0 {
+                        monthOfSupply.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrUnitSalesPerc > 0 {
+                        unitSales.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrUnitSalesPerc < 0 {
+                        unitSales.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrVolumeSalesPerc > 0 {
+                        volumeSales.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrVolumeSalesPerc < 0 {
+                        volumeSales.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrDOMPerc > 0 {
+                        dom.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrDOMPerc < 0 {
+                        dom.textColor = UIColor.redColor()
+                    }
+                    if hD.qtrInvPerc > 0 {
+                        inventory.textColor = UIColor.greenColor()
+                    }
+                    else if hD.qtrInvPerc < 0 {
+                        inventory.textColor = UIColor.redColor()
+                    }
+                    
+                    medianPrice.text = String(format: "%.1f%%", hD.qtrMedianPPerc*100)
+                    medianPricePrevious.text = String(format: "($%.0f vs $%.0f)", hD.medianP, hD.medianPPrev)
+                    listToSalesRatio.text = String(format: "%.1f%%", hD.qtrListSellPerc*100)
+                    listToSalesRatioPrevious.text = String(format: "(%.1f%% vs %.1f%%)", hD.listSell*100, hD.listSellPrev*100)
+                    
+                    unitSales.text = String(format: "%.1f%%", hD.qtrUnitSalesPerc*100)
+                    unitSalesPrevious.text = String(format: "(%i vs %i)", hD.unitSales, hD.unitSalesPrev)
+                    volumeSales.text = String(format: "%.1f%%", hD.qtrVolumeSalesPerc*100)
+                    volumeSalesPrevious.text = String(format: "(%i vs %i)", hD.volumeSales, hD.volumeSalesPrev)
+                    dom.text = String(format: "%.1f%%", hD.qtrDOMPerc*100)
+                    domPrevious.text = String(format: "(%i vs %i)", hD.dOM, hD.dOMPrev)
+                    
+                    inventory.text = String(format: "%.1f%%", hD.qtrInvPerc*100)
+                    inventoryPrevious.text = String(format: "(%i vs %i)", hD.inv, hD.invPrev)
+                    monthOfSupply.text = String(format: "%.1f%%", hD.qtrMOSPerc*100)
+                    monthOfSupplyPrevious.text = String(format: "(%.1f vs %.1f)", hD.mOS, hD.mOSPrev)
+                }
             }
-            else if row == 1 {
-                reportLabel.text = "Quarter " + hD.quarter + " for " + hD.year
-                
-                if hD.qtrMedianPPerc > 0 {
-                    medianPrice.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrMedianPPerc < 0 {
-                    medianPrice.textColor = UIColor.redColor()
-                }
-                if hD.qtrListSellPerc > 0 {
-                    listToSalesRatio.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrListSellPerc < 0 {
-                    listToSalesRatio.textColor = UIColor.redColor()
-                }
-                if hD.qtrMOSPerc > 0 {
-                    monthOfSupply.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrMOSPerc < 0 {
-                    monthOfSupply.textColor = UIColor.redColor()
-                }
-                if hD.qtrUnitSalesPerc > 0 {
-                    unitSales.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrUnitSalesPerc < 0 {
-                    unitSales.textColor = UIColor.redColor()
-                }
-                if hD.qtrVolumeSalesPerc > 0 {
-                    volumeSales.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrVolumeSalesPerc < 0 {
-                    volumeSales.textColor = UIColor.redColor()
-                }
-                if hD.qtrDOMPerc > 0 {
-                    dom.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrDOMPerc < 0 {
-                    dom.textColor = UIColor.redColor()
-                }
-                if hD.qtrInvPerc > 0 {
-                    inventory.textColor = UIColor.greenColor()
-                }
-                else if hD.qtrInvPerc < 0 {
-                    inventory.textColor = UIColor.redColor()
-                }
-                
-                medianPrice.text = String(format: "%.1f%%", hD.qtrMedianPPerc*100)
-                medianPricePrevious.text = String(format: "($%.0f vs $%.0f)", hD.medianP, hD.medianPPrev)
-                listToSalesRatio.text = String(format: "%.1f%%", hD.qtrListSellPerc*100)
-                listToSalesRatioPrevious.text = String(format: "(%.1f%% vs %.1f%%)", hD.listSell*100, hD.listSellPrev*100)
-                
-                unitSales.text = String(format: "%.1f%%", hD.qtrUnitSalesPerc*100)
-                unitSalesPrevious.text = String(format: "(%i vs %i)", hD.unitSales, hD.unitSalesPrev)
-                volumeSales.text = String(format: "%.1f%%", hD.qtrVolumeSalesPerc*100)
-                volumeSalesPrevious.text = String(format: "(%i vs %i)", hD.volumeSales, hD.volumeSalesPrev)
-                dom.text = String(format: "%.1f%%", hD.qtrDOMPerc*100)
-                domPrevious.text = String(format: "(%i vs %i)", hD.dOM, hD.dOMPrev)
-                
-                inventory.text = String(format: "%.1f%%", hD.qtrInvPerc*100)
-                inventoryPrevious.text = String(format: "(%i vs %i)", hD.inv, hD.invPrev)
-                monthOfSupply.text = String(format: "%.1f%%", hD.qtrMOSPerc*100)
-                monthOfSupplyPrevious.text = String(format: "(%.1f vs %.1f)", hD.mOS, hD.mOSPrev)            }
+        }
+        else if pickerView.isEqual(mlsCityPickerView) {
+            //getrecID
+            //
+            //if areaID
+            //request home data on new areaID
         }
     }
     
-    
-    
-
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

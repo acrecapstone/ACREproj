@@ -63,152 +63,58 @@ class Stat {
     var mosPerc = Double()
 
     init() {
+        self.statsID = Int()
+        self.areaID = Int()
+        self.isDefault = Bool()
+        self.isMonthly = Bool()
+        self.timestamp = NSDate()
+        self.month = String()
+        self.day = Int()
+        self.year = String()
         
-    }
-    
-    
-    
-    func getStats(dB : FMDatabase, areaID : Int) -> Stat {
-        var stat = Stat()
-        if dB.open() {
-            let query = "SELECT * FROM STAT WHERE areaID = \(areaID)"
-            let result = dB.executeQuery(query, withArgumentsInArray: nil)
-            while result.next() {
-                stat.statsID = Int((result?.intForColumn("statsID"))!)
-                stat.areaID = Int((result?.intForColumn("areaID"))!)
-                stat.isDefault = (result?.boolForColumn("isDefault"))!
-                stat.isMonthly = (result?.boolForColumn("isMonthly"))!
-                stat.timestamp = (result?.dateForColumn("timestamp"))!
-                stat.month = (result?.stringForColumn("month"))!
-                stat.day = Int((result?.intForColumn("day"))!)
-                stat.year = (result?.stringForColumn("year"))!
-                stat.medPrice = (result?.doubleForColumn("medPrice"))!
-                stat.medPricePrev = (result?.doubleForColumn("medPricePrev"))!
-                stat.medPriceMth = (result?.doubleForColumn("medPriceMth"))!
-                stat.medPriceQtr = (result?.doubleForColumn("medPriceQtr"))!
-                stat.medPricePerc = (result?.doubleForColumn("medPricePerc"))!
-                stat.listSell = (result?.doubleForColumn("listSell"))!
-                stat.listSellPrev = (result?.doubleForColumn("listSellPrev"))!
-                stat.listSellMth = (result?.doubleForColumn("listSellMth"))!
-                stat.listSellQtr = (result?.doubleForColumn("listSellQtr"))!
-                stat.listSellPerc = (result?.doubleForColumn("listSellPerc"))!
-                stat.unitSales = Int((result?.intForColumn("unitSales"))!)
-                stat.unitSalesPrev = Int((result?.intForColumn("unitSalesPrev"))!)
-                stat.unitSalesMth = Int((result?.intForColumn("unitSalesMth"))!)
-                stat.unitSalesQtr = Int((result?.intForColumn("unitSalesQtr"))!)
-                stat.unitSalesPerc = (result?.doubleForColumn("unitSalesPerc"))!
-                stat.volSales = Int((result?.intForColumn("unitSales"))!)
-                stat.volSalesPrev = Int((result?.intForColumn("unitSalesPrev"))!)
-                stat.volSalesMth = Int((result?.intForColumn("unitSalesMth"))!)
-                stat.volSalesQtr = Int((result?.intForColumn("unitSalesQtr"))!)
-                stat.volSalesPerc = (result?.doubleForColumn("volSalesPerc"))!
-                stat.dom = Int((result?.intForColumn("dom"))!)
-                stat.domPrev = Int((result?.intForColumn("domPrev"))!)
-                stat.domMth = Int((result?.intForColumn("domMth"))!)
-                stat.domQtr = Int((result?.intForColumn("domQtr"))!)
-                stat.domPerc = (result?.doubleForColumn("domPerc"))!
-                stat.inv = Int((result?.intForColumn("dom"))!)
-                stat.invPrev = Int((result?.intForColumn("domPrev"))!)
-                stat.invMth = Int((result?.intForColumn("domMth"))!)
-                stat.invQtr = Int((result?.intForColumn("domQtr"))!)
-                stat.invPerc = (result?.doubleForColumn("invPerc"))!
-                stat.mos = (result?.doubleForColumn("mos"))!
-                stat.mosPrev = (result?.doubleForColumn("mosPrev"))!
-                stat.mosMth = (result?.doubleForColumn("mosMth"))!
-                stat.mosQtr = (result?.doubleForColumn("mosQtr"))!
-                stat.mosPerc = (result?.doubleForColumn("mosPerc"))!
-            }
-        }
-        dB.close()
+        self.medPrice = Double()
+        self.medPricePrev = Double()
+        self.medPriceMth = Double()
+        self.medPriceQtr = Double()
+        self.medPricePerc = Double()
         
-        return stat
-    }
-    
-    
-    func addStat(dB : FMDatabase) {
-        if dB.open() {
-            
-        }
-        dB.close()
-    }
-    
-    func updateStat(dB : FMDatabase) {
-        if dB.open() {
-            
-        }
-        dB.close()
-    }
-    
-    
-    
-    func invalidateAgent(dB : FMDatabase, mlsFeedID : Int) {
-        let agentID2BInvalid = getAgentID4Feed(dB, mlsFeedID: mlsFeedID)
+        self.listSell = Double()
+        self.listSellPrev = Double()
+        self.listSellMth = Double()
+        self.listSellQtr = Double()
+        self.listSellPerc = Double()
         
-        if dB.open() {
-            
-            let querySQL = "UPDATE AGENT isAuth = 0 WHERE agentID = \(agentID2BInvalid)"
-            let results: FMResultSet? = dB.executeUpdate(querySQL, withArgumentsInArray: nil)
-            if !(results != nil) {
-                print("Error: \(dB.lastErrorMessage())")
-            }
-            dB.close()
-        }
-    }
-    
-    
-    //Revised - Lauren
-    func revalidateAgent(dB : FMDatabase, mlsFeedID : Int) {
-        let agentID2BValid = getAgentID4Feed(dB, mlsFeedID: mlsFeedID)
+        self.unitSales = Int()
+        self.unitSalesPrev = Int()
+        self.unitSalesMth = Int()
+        self.unitSalesQtr = Int()
+        self.unitSalesPerc = Double()
         
-        if dB.open() {
-            
-            let querySQL = "UPDATE AGENT SET isAuth = 1 WHERE agentID = \(agentID2BValid)"
-            let results = dB.executeUpdate(querySQL, withArgumentsInArray: nil)
-            if !results {
-                print("Error: \(dB.lastErrorMessage())")
-            }
-        }
-        dB.close()
-    }
-    //Revised - Lauren
-    func updateLastLogin(dB: FMDatabase, mlsFeedID : Int) {
-        var curTime = NSDate()
+        self.volSales = Int()
+        self.volSalesPrev = Int()
+        self.volSalesMth = Int()
+        self.volSalesQtr = Int()
+        self.volSalesPerc = Double()
         
-        if dB.open() {
-            
-            let querySQL = "UPDATE AGENT SET lastLogin = '\(curTime)' WHERE mlsFeedID = \(mlsFeedID)"
-            let results = dB.executeUpdate(querySQL, withArgumentsInArray: nil)
-            if !results {
-                print("Error: \(dB.lastErrorMessage())")
-            }
-            
-        }
-        dB.close()
+        self.dom = Int()
+        self.domPrev = Int()
+        self.domMth = Int()
+        self.domQtr = Int()
+        self.domPerc = Double()
+        
+        self.inv = Int()
+        self.invPrev = Int()
+        self.invMth = Int()
+        self.invQtr = Int()
+        self.invPerc = Double()
+        
+        self.mos = Double()
+        self.mosPrev = Double()
+        self.mosMth = Double()
+        self.mosQtr = Double()
+        self.mosPerc = Double()
     }
     
-
-    
-    func addAgent(dB : FMDatabase, token : String, email : String, lastLogin : NSDate, mlsFeedID : Int, isAuth : Bool) {
-        if dB.open() {
-            let agent = "SELECT "
-            if {
-                let insertSQL = "INSERT INTO AGENT (authToken, agentEmail, lastLogin, mlsFeedID, isAuth) VALUES ('\(token)', '\(email)', '\(lastLogin)', \(mlsFeedID), \(isAuth));"
-                let result = dB.executeUpdate(insertSQL, withArgumentsInArray: nil)
-                
-                if !result {
-                    print("Error: \(dB.lastErrorMessage())")
-                } else {
-                    print("Agent Added")
-                }
-            }
-        }
-    
-    
-    
-    
-    
-    
- 
     
 }
 

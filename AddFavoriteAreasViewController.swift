@@ -38,7 +38,7 @@ class AddFavoriteAreasViewController: UITableViewController
 
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        /*let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
         let databasePath = fileURL.path!
         let acreDB = FMDatabase(path: databasePath as String)
@@ -54,7 +54,7 @@ class AddFavoriteAreasViewController: UITableViewController
             }
             
         }
-        acreDB.close()
+        acreDB.close() */
 
         
         
@@ -80,7 +80,6 @@ class AddFavoriteAreasViewController: UITableViewController
         if acreDB.open() {
         
             let areaCount = "SELECT COUNT(areaID) FROM AREA"
-            //let capacity: FMResultSet? = acreDB.executeQuery(areaCount, withArgumentsInArray: nil)
             let cap = Int(acreDB.intForQuery(areaCount))
             
             acreDB.close()

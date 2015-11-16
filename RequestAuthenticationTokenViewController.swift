@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+@available(iOS 8.0, *)
 class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDataSource, NSURLConnectionDataDelegate, UIPickerViewDelegate, UITextFieldDelegate
 {
     //variables
@@ -22,15 +22,13 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var mlsEmailTextField: UITextField?
     @IBOutlet weak var mlsAreaPickerView: UIPickerView?
-
+    var passedLogin = false
+    
     let dataProvider = DataProvider()
     //var mlsEmail = String()
     
     @IBAction func requestAuthTokenPassword(sender: AnyObject)
     {
-        print("Mlsarea: \(pickerDataSource[mlsAreaPickerView!.selectedRowInComponent(0)])")
-        print("email: \(mlsEmailTextField!.text!)")
-        print("mlsAreaID: \(mlsAreaPickerView!.selectedRowInComponent(0)+1)")
         
         //Hardcoded requestAuth func
         //print(dataProvider.requestAuthentication("cbboyd2@gmail.com", mlsFeedID: 1))
@@ -42,18 +40,13 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         
         let authenticated = true
         if (authenticated == true){
-        //pushes to the login page
-            print("Authenticated..!")
+            //pushes to the login page
             loginButton.hidden = false
             passwordLabel.hidden = false
             passwordText.hidden = false
             loginLabel.hidden = false
             requestToken.hidden = true
             requestAuthenticationTitleLabel.hidden = true
-            
-       /* *     let thirdViewController: LoginPageViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("loginPageSegue") as AnyObject? as? LoginPageViewController)!
-            thirdViewController.mlsEmailTextField = self.mlsEmailTextField
-            thirdViewController.mlsAreaPickerView = self.mlsAreaPickerView **/
         }
         else{
             let alertView: UIAlertView = UIAlertView()
@@ -80,19 +73,6 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         let logInAccess = true
         if (logInAccess == true)
         {
-            print("Successfully logged-in!")
-            /**if let secondViewController = self.storyboard?.instantiateInitialViewController("sw_front") as? SWRevealViewController
-            {
-                let nav
-            }**/
-            
-            /**if let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("menuSegue") as? SWRevealViewController
-            {
-                let navController = UINavigationController(rootViewController: secondViewController)
-                navController.setViewControllers([secondViewController], animated: true)
-                self.revealViewController().setFrontViewController(navController, animated: true)
-            }**/
-            
             let secondViewController: SWRevealViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("menuSegue") as AnyObject? as? SWRevealViewController)!
             self.showViewController(secondViewController, sender: self)
         }
@@ -106,10 +86,10 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
             alertView.show()
         }
     }
-
+    
     //picker view -- how to insert data into picker view
     var pickerDataSource = ["GAL-MLS", "Tuscaloosa"];
-
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
         return 1
@@ -125,7 +105,69 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         return pickerDataSource[row]
     }
     
-
+    override func viewWillAppear(animated: Bool) {
+        
+        if (dataProvider.withinTimeThreshold()) {
+            //User has logged in previously within valid time frame
+            self.view.hidden = true
+        }
+        else {
+            //User has not successfully authenticated within in the past two hours and thus will attempt to auto reauthenticate
+            
+            //self.passedLogin = dataProvider.requestAuthentication( SQLlite query results)
+            
+            self.passedLogin = false
+            if (passedLogin != false) {
+                //Login was passed
+                self.view.hidden = true
+                
+                //Get default area ID
+                //Get isMonthly
+                
+                //hD = dataProvider.requestHomeData( defaultAreaID )
+                //Store HD in Stats page, mark isDefault = true, mark isMonthly = isMonthly, set timestamp
+            }
+            else {
+                //Auto log-in failed, attempting to try again
+                
+                //self.passedLogin = dataProvider.requestAuthentication(  )
+                
+                if (passedLogin != false) {
+                    
+                    //Login succeeded on second attempt
+                    
+                    //Get default area ID
+                    //Get isMonthly
+                    
+                    //hD = dataProvider.requestHomeData( defaultAreaID )
+                    //Store HD in Stats page, mark isDefault = true, mark isMonthly = isMonthly, set timestamp
+                    
+                    self.view.hidden = true
+                }
+                else {
+                    //Login Failed, sending to request authentication at users choosing or to reauthenticate completely
+                    
+                    //Show retry auth button??
+                    
+                    self.view.hidden = false
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        if (self.passedLogin != false) {
+            let secondViewController: SWRevealViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("menuSegue") as AnyObject? as? SWRevealViewController)!
+            self.showViewController(secondViewController, sender: self)
+        }
+        else {
+            //Display error message
+            
+            //User will be sent to reauthenticate
+        }
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -137,7 +179,6 @@ class RequestAuthenticationTokenViewController: UIViewController, UIPickerViewDa
         loginButton.hidden = true
         passwordLabel.hidden = true
         passwordText.hidden = true
-        
     }
     
     override func didReceiveMemoryWarning()
