@@ -23,7 +23,9 @@ class FavoriteAreasViewController: UITableViewController
     {
         super.viewDidLoad()
         
-       if revealViewController() != nil
+        //tableView.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "FavoriteAreasTableCell")
+        
+        if revealViewController() != nil
         {
             menuButton.target = revealViewController()
             menuButton.action = "revealToggle:"
@@ -53,10 +55,10 @@ class FavoriteAreasViewController: UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAreasTableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteAreasTableCell", forIndexPath: indexPath) as UITableViewCell
         cellArray = query()
         cell.textLabel?.text = cellArray[indexPath.row].title
-        tableView.allowsMultipleSelection = false
+        tableview.allowsMultipleSelection = false
         let acreDB = dL.createACREDB()
         let selectedIndex = indexPath.row
         
@@ -105,6 +107,7 @@ class FavoriteAreasViewController: UITableViewController
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
+        
         tableview.reloadData()
         
         /*let cell = tableview.cellForRowAtIndexPath(indexPath)

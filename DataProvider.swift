@@ -90,7 +90,7 @@ class DataProvider
         
         let endpoint = NSURL(string: "http://10.8.1.27/api/area/" + String(areaID))
         let data = NSData(contentsOfURL: endpoint!)
-        
+        if data != nil {
         do {
             if let json: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options:  NSJSONReadingOptions.MutableContainers) as? NSDictionary {
                 hD.month = (json["Month"] as? String)!
@@ -136,6 +136,11 @@ class DataProvider
         catch {
             
             print("Error")
+            return hD
+        }
+    }
+        else {
+            print("Twas nil")
             return hD
         }
     }
