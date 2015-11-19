@@ -11,11 +11,17 @@ import UIKit
 
 class HomeData
 {
-    var AreaID = Int();
+    var areaID = Int();
+    var statsID = Int();
     var month = String();
     var year = String();
     var quarter = String();
     var day = Int();
+    var isDefault = Bool();
+    var isMonthly = Bool();
+    var timestamp = NSDate();
+    
+    
     var unitSales = Int();
     var unitSalesPrev = Int();
     var volumeSales = Int();
@@ -50,11 +56,16 @@ class HomeData
     init()
     {
         
-        self.AreaID = 0;
+        self.areaID = 0;
+        self.statsID = 0;
         self.month = "";
         self.year = "";
         self.quarter = "";
         self.day = 0;
+        self.isDefault = false
+        self.isMonthly = true
+        self.timestamp = NSDate()
+        
         self.unitSales = 0;
         self.unitSalesPrev = 0;
         self.volumeSales = 0;

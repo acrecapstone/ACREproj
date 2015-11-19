@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eiA-Vu-n9t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZMt-Zo-zYK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -124,15 +124,6 @@
                                     <rect key="frame" x="147" y="196" width="203" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Authentication Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DId-Af-2Ez">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="149" y="338" width="201" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-fm-QPz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -142,7 +133,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="416" width="195" height="60"/>
+                                    <rect key="frame" x="90" y="402" width="195" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="signInButton:" destination="ZMt-Zo-zYK" eventType="touchUpInside" id="6Se-eh-UWD"/>
@@ -157,7 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="416" width="195" height="60"/>
+                                    <rect key="frame" x="90" y="402" width="195" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="requestAuthTokenPassword:" destination="ZMt-Zo-zYK" eventType="touchUpInside" id="l3x-74-4E6"/>
@@ -203,23 +194,48 @@
                                     <rect key="frame" x="33" y="105" width="154" height="64"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g95-gx-2pd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Retry Authentication">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="48" y="470" width="278" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="retryAuthButton:" destination="ZMt-Zo-zYK" eventType="touchUpInside" id="ATt-h0-6dG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Authentication Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DId-Af-2Ez">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="149" y="338" width="201" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="x2r-p0-iQk"/>
-                                <exclude reference="DId-Af-2Ez"/>
                                 <exclude reference="cwH-fm-QPz"/>
                                 <exclude reference="0oe-74-KDc"/>
+                                <exclude reference="g95-gx-2pd"/>
+                                <exclude reference="DId-Af-2Ez"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="x2r-p0-iQk"/>
-                                <include reference="DId-Af-2Ez"/>
                                 <include reference="cwH-fm-QPz"/>
                                 <include reference="0oe-74-KDc"/>
+                                <include reference="g95-gx-2pd"/>
+                                <include reference="DId-Af-2Ez"/>
                             </mask>
                         </variation>
                     </view>
@@ -236,6 +252,7 @@
                         <outlet property="passwordText" destination="DId-Af-2Ez" id="EkO-9i-uq8"/>
                         <outlet property="requestAuthenticationTitleLabel" destination="RS0-71-Qi3" id="mul-8o-GBU"/>
                         <outlet property="requestToken" destination="gAR-Br-kul" id="cy1-GI-CCH"/>
+                        <outlet property="retryAuth" destination="g95-gx-2pd" id="gCw-e4-kbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAy-VU-JX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,8 +339,50 @@
                                             <segue destination="I2c-qc-olY" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="GlW-Bn-NMI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="manageAreasViewCell" id="igw-Ad-1wS" customClass="ManageAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JfL-iQ-saI" customClass="ManageDefaultsTableViewCell" customModule="ACRE_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JfL-iQ-saI" id="Ark-Fe-a3Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Areas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-9f-X8v">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                                    <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                        <rect key="frame" x="20" y="17" width="158" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fhm-9f-X8v" firstAttribute="centerY" secondItem="Ark-Fe-a3Z" secondAttribute="centerY" id="YRR-5j-QUh"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="fhm-9f-X8v"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="YRR-5j-QUh"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="fhm-9f-X8v"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="YRR-5j-QUh"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="5fx-Ue-rEm" kind="custom" identifier="manageDefaultAreaSegue" customClass="SWRevealViewControllerSeguePushController" id="gmo-Y8-FDs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="manageAreasViewCell" id="igw-Ad-1wS" customClass="ManageAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igw-Ad-1wS" id="y9Z-9s-BeI">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -367,7 +426,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewLeadsViewCell" id="MXq-mv-YP4" customClass="ViewLeadsTableViewCell" customModule="ACRE_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MXq-mv-YP4" id="EXT-17-HTZ">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -409,7 +468,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resourceViewCell" id="cMt-uB-6Te" customClass="ResourcesViewTableCell" customModule="ACRE_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cMt-uB-6Te" id="xLr-II-wzt">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -425,6 +484,12 @@
                                                         <rect key="frame" x="23" y="8" width="133" height="30"/>
                                                     </variation>
                                                 </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a4-Fv-KuD">
+                                                    <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="33" y="18" width="400" height="216"/>
+                                                    </variation>
+                                                </pickerView>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,11 +497,17 @@
                                                 <constraint firstItem="ehb-d9-Hzj" firstAttribute="centerY" secondItem="xLr-II-wzt" secondAttribute="centerY" id="gMX-wK-fth"/>
                                             </constraints>
                                             <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="4a4-Fv-KuD"/>
+                                                </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="gMX-wK-fth"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="4a4-Fv-KuD"/>
+                                                </mask>
                                                 <mask key="constraints">
                                                     <include reference="gMX-wK-fth"/>
                                                 </mask>
@@ -526,6 +597,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteAreasTableCell" rowHeight="37" id="wZ6-Mh-ODg" customClass="FavoriteAreasTableViewCell" customModule="ACRE_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="37"/>
@@ -629,6 +701,194 @@
             </objects>
             <point key="canvasLocation" x="3361.5" y="-848"/>
         </scene>
+        <!--Initial Default View Controller-->
+        <scene sceneID="AWb-0n-rTy">
+            <objects>
+                <viewController storyboardIdentifier="initDefaultArea" id="DJn-w3-br8" customClass="InitialDefaultViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I9M-r9-3r5"/>
+                        <viewControllerLayoutGuide type="bottom" id="077-8z-7Xh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qh4-im-zxf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW0-1z-NfF">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="74" y="107" width="253" height="116"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="DJn-w3-br8" id="lNa-4i-mGS"/>
+                                    <outlet property="delegate" destination="DJn-w3-br8" id="Xqd-Js-hJY"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reporting Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80F-xH-HnV">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="282" width="194" height="28"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6O-e0-NQ4">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="71" width="146" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9V-Ob-wR3">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="85" y="311" width="231" height="157"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="DJn-w3-br8" id="TOG-26-f4L"/>
+                                    <outlet property="delegate" destination="DJn-w3-br8" id="HB7-8Q-6AF"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-1b-y0B">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Set Defaults"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="501" width="84" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SW0-1z-NfF"/>
+                                <exclude reference="80F-xH-HnV"/>
+                                <exclude reference="E6O-e0-NQ4"/>
+                                <exclude reference="S9V-Ob-wR3"/>
+                                <exclude reference="rGg-1b-y0B"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SW0-1z-NfF"/>
+                                <include reference="80F-xH-HnV"/>
+                                <include reference="E6O-e0-NQ4"/>
+                                <include reference="S9V-Ob-wR3"/>
+                                <include reference="rGg-1b-y0B"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="initialDefaultAreaPickerView" destination="SW0-1z-NfF" id="t8t-h8-lMc"/>
+                        <outlet property="initialDefaultReportingPickerView" destination="S9V-Ob-wR3" id="hz8-Cc-dsU"/>
+                        <outlet property="setButton" destination="rGg-1b-y0B" id="R05-ww-xcc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8F-DX-x94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="-1416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IeS-80-sla">
+            <objects>
+                <navigationController id="5fx-Ue-rEm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7H-mT-edR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ep4-eg-3IF" kind="relationship" relationship="rootViewController" id="Qsy-in-oH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUP-f4-gwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.5" y="-1691"/>
+        </scene>
+        <!--Manage Defaults-->
+        <scene sceneID="gr3-x1-ofw">
+            <objects>
+                <viewController id="ep4-eg-3IF" customClass="ManageDefaultViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zjN-7Q-Lxh"/>
+                        <viewControllerLayoutGuide type="bottom" id="xJo-QX-KCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xXW-52-zdY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a08-e2-5Ps">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="123" y="105" width="140" height="28"/>
+                                </variation>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elY-Vu-NFs">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="85" y="389" width="230" height="122"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="ep4-eg-3IF" id="bgT-jG-QTC"/>
+                                    <outlet property="delegate" destination="ep4-eg-3IF" id="A74-53-Ac4"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xy6-J7-Q6t">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="131" width="256" height="166"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="ep4-eg-3IF" id="Q2I-NR-plo"/>
+                                    <outlet property="delegate" destination="ep4-eg-3IF" id="px1-5I-2Y1"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reporting Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-MH-dKd">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="343" width="188" height="32"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="a08-e2-5Ps"/>
+                                <exclude reference="elY-Vu-NFs"/>
+                                <exclude reference="xy6-J7-Q6t"/>
+                                <exclude reference="1Fc-MH-dKd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="a08-e2-5Ps"/>
+                                <include reference="elY-Vu-NFs"/>
+                                <include reference="xy6-J7-Q6t"/>
+                                <include reference="1Fc-MH-dKd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Defaults" id="JzG-Cs-9X3">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="JH0-zg-GRs">
+                            <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="defaultAreaPickerView" destination="xy6-J7-Q6t" id="cud-A5-EY4"/>
+                        <outlet property="defaultReportingPickerView" destination="elY-Vu-NFs" id="REF-bU-nPt"/>
+                        <outlet property="menuButton" destination="JH0-zg-GRs" id="vJy-JS-3yQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Biz-nh-3wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849.5" y="-1691"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zQ2-qS-zue">
             <objects>
@@ -666,7 +926,7 @@
         <!--Resources-->
         <scene sceneID="kBf-Tz-BwX">
             <objects>
-                <viewController id="G9x-Up-uYV" customClass="ResourceLinksViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resourcePage" id="G9x-Up-uYV" customClass="ResourceLinksViewController" customModule="ACRE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dOv-io-v7f"/>
                         <viewControllerLayoutGuide type="bottom" id="w5G-fn-Lfh"/>
@@ -723,10 +983,10 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="260" width="340" height="21"/>
+                                    <rect key="frame" x="20" y="260" width="367" height="21"/>
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPM-7j-Zg9">
@@ -745,7 +1005,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="289" width="330" height="291"/>
+                                    <rect key="frame" x="20" y="289" width="323" height="291"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -779,13 +1039,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EFE-op-nlE">
                             <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="VGH-6t-OpQ" kind="presentation" id="Oe5-90-tkm"/>
+                                <segue destination="VGH-6t-OpQ" kind="presentation" id="6dv-5O-PwA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="2AQ-1T-xLT" id="yw6-yj-Uy3"/>
-                        <outlet property="tableView" destination="TPM-7j-Zg9" id="wiW-vr-5wz"/>
+                        <outlet property="tableView" destination="TPM-7j-Zg9" id="Bz8-1a-oNW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkt-d8-YSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -823,11 +1083,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo4-C2-SMg">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="108" width="77" height="21"/>
+                                    <rect key="frame" x="135" y="112" width="131" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-Od-AEF">
@@ -835,42 +1095,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="150" width="329" height="30"/>
+                                    <rect key="frame" x="52" y="151" width="297" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Personal Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egA-Ej-4WT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="84" y="225" width="232" height="21"/>
+                                </variation>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-c2-JuL">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="36" y="265" width="329" height="30"/>
+                                    <rect key="frame" x="54" y="267" width="293" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Personal Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egA-Ej-4WT">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="225" width="148" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="uo4-C2-SMg"/>
                                 <exclude reference="Vkw-Od-AEF"/>
-                                <exclude reference="OQ9-c2-JuL"/>
                                 <exclude reference="egA-Ej-4WT"/>
+                                <exclude reference="OQ9-c2-JuL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uo4-C2-SMg"/>
                                 <include reference="Vkw-Od-AEF"/>
-                                <include reference="OQ9-c2-JuL"/>
                                 <include reference="egA-Ej-4WT"/>
+                                <include reference="OQ9-c2-JuL"/>
                             </mask>
                         </variation>
                     </view>
@@ -1086,19 +1346,6 @@
                                     <rect key="frame" x="125" y="381" width="50" height="21"/>
                                 </variation>
                             </label>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Vl-NkF">
-                                <rect key="frame" x="0.0" y="50" width="600" height="92"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-1" y="15" width="375" height="93"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="MIB-OC-d0G" id="PP8-Cb-WTk"/>
-                                    <outlet property="delegate" destination="MIB-OC-d0G" id="KjK-J7-sUW"/>
-                                </connections>
-                            </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BAR" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-rA-uTV">
                                 <rect key="frame" x="0.0" y="529" width="110" height="73"/>
                                 <animations/>
@@ -1292,6 +1539,19 @@
                                     <rect key="frame" x="187" y="469" width="58" height="23"/>
                                 </variation>
                             </label>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Vl-NkF">
+                                <rect key="frame" x="0.0" y="50" width="600" height="92"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.50980392159999999" green="0.0" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="15" width="375" height="93"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="MIB-OC-d0G" id="PP8-Cb-WTk"/>
+                                    <outlet property="delegate" destination="MIB-OC-d0G" id="KjK-J7-sUW"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -1375,7 +1635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juu-L2-GIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.75" y="-897.5"/>
+            <point key="canvasLocation" x="-11.25" y="-917.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pn3-U9-xgH">
@@ -1409,6 +1669,6 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GlW-Bn-NMI"/>
+        <segue reference="hOs-zA-N3R"/>
     </inferredMetricsTieBreakers>
 </document>

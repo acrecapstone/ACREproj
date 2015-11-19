@@ -16,7 +16,7 @@ class DataProvider
         let calendar = NSCalendar.autoupdatingCurrentCalendar()
         
         //comment this out after sql lite works
-        let lastLogon = calendar.dateByAddingUnit(NSCalendarUnit.NSHourCalendarUnit, value: -1, toDate: NSDate(), options: .WrapComponents)
+        let lastLogon = calendar.dateByAddingUnit(NSCalendarUnit.NSHourCalendarUnit, value: -4, toDate: NSDate(), options: .WrapComponents)
         
         //var lastLogon = SQlite query for last logon
         
@@ -97,7 +97,7 @@ class DataProvider
                 hD.year = (json["Year"] as? String)!
                 hD.day = (json["Day"] as? Int)!
                 hD.quarter = hD.parseQuarter(hD.month)
-                hD.AreaID = (json["AreaID"] as? Int)!
+                hD.areaID = (json["AreaID"] as? Int)!
                 hD.unitSales = (json["UnitSales"] as? Int)!
                 hD.unitSalesPrev = (json["UnitSalesPrev"] as? Int)!
                 hD.volumeSales = (json["VolumeSales"] as? Int)!

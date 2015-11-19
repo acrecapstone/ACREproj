@@ -37,7 +37,7 @@ class SideMenuBarController: UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 4 //should be return whatever.count
+        return 5 //should be return whatever.count
     }
     
     

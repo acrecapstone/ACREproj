@@ -2,7 +2,7 @@
 //  HomePageViewController.swift
 //  ACRE_App
 //
-//  Created by Tulsi Patel on 10/8/15.
+//  Created by Walker Philips and Lauren Bowers on 11/18/15.
 //  Copyright © 2015 AcreApp.Practice. All rights reserved.
 //
 
@@ -13,7 +13,6 @@ import Foundation
 class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, NSURLConnectionDataDelegate
 {
     @IBOutlet weak var navigationBar: UINavigationItem!
-    //variables
     @IBOutlet weak var mlsCityPickerView: UIPickerView!
     @IBOutlet weak var timeReportPickerView: UIPickerView!
     @IBOutlet weak var reportLabel: UILabel! = nil
@@ -62,13 +61,10 @@ class HomePageViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
-        let databasePath = fileURL.path!
-        let acreDB = FMDatabase(path: databasePath as String)
+        let acreDB = dL.createACREDB()
         
         if acreDB.open() {
-            picker1Options = dL.getAreas(acreDB)
+            picker1Options = dL.getAreas()
             acreDB.close()
             picker2Options = ["Monthly", "Quarterly"]
         }

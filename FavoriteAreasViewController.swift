@@ -32,9 +32,9 @@ class FavoriteAreasViewController: UITableViewController
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             tableview.reloadData()
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -60,55 +60,79 @@ class FavoriteAreasViewController: UITableViewController
         cell.textLabel?.text = cellArray[indexPath.row].title
         tableview.allowsMultipleSelection = false
         let acreDB = dL.createACREDB()
-        let selectedIndex = indexPath.row
+        let defArea = dL.getDefaultAreaID()
         
-        if(indexPath.row == selectedIndex)
+        
+        
+        
+        
+        //let selectedIndex = indexPath.row
+        
+        /* if(indexPath.row == selectedIndex)
         {
-            if (cell.accessoryType == UITableViewCellAccessoryType.None) {
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
-            }
-                
-            else if (cell.accessoryType == UITableViewCellAccessoryType.Checkmark) {
-                cell.accessoryType = UITableViewCellAccessoryType.None;
-            }
+        if (cell.accessoryType == UITableViewCellAccessoryType.None) {
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark;
         }
-            //cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
+        else if (cell.accessoryType == UITableViewCellAccessoryType.Checkmark) {
+        cell.accessoryType = UITableViewCellAccessoryType.None;
+        }
+        } */
+        //cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         //}
         //else {
         //    cell.accessoryType = UITableViewCellAccessoryType.None
         //}
         
         /*if cell.selected {
-            let rowIndex = indexPath.row
-            let selectedArea = cellArray[rowIndex].areaID
-            
-            cell.selected = false
-            if cell.accessoryType == UITableViewCellAccessoryType.None
-            {
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-                if acreDB.open() {
-                    if selectedArea != dL.getDefaultAreaID(acreDB) {
-                        dL.updateDefAreaAndStat(acreDB, nDefAreaID: selectedArea)
-                    }
-                }
-            }
-            else
-            {
-                cell.accessoryType = UITableViewCellAccessoryType.None
-            }
-            acreDB.close() */
-
+        let rowIndex = indexPath.row
+        let selectedArea = cellArray[rowIndex].areaID
+        
+        cell.selected = false
+        if cell.accessoryType == UITableViewCellAccessoryType.None
+        {
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        if acreDB.open() {
+        if selectedArea != dL.getDefaultAreaID(acreDB) {
+        dL.updateDefAreaAndStat(acreDB, nDefAreaID: selectedArea)
+        }
+        }
+        }
+        else
+        {
+        cell.accessoryType = UITableViewCellAccessoryType.None
+        }
+        acreDB.close() */
+        
         //}
-
+        
         return cell
+    }
+    
+    override func tableView(tableView:UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.accessoryType = UITableViewCellAccessoryType.None;
     }
     
     var checkedIndexPath : NSIndexPath?
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        
-        tableview.reloadData()
+        let cell = tableview.cellForRowAtIndexPath(indexPath)
+        cell!.accessoryType = UITableViewCellAccessoryType.Checkmark;
+        let row = indexPath.row
+        let id = array[row].areaID
+        let acreDB = dL.createACREDB()
+        if acreDB.open() {
+            //get value from picker
+            dL.updateDefAreaAndStat(id, isMonthly: true)
+            acreDB.close()
+        }
+        else {
+            print("Error: \(acreDB.lastErrorMessage())")
+        }
+        //tableview.reloadData()
         
         /*let cell = tableview.cellForRowAtIndexPath(indexPath)
         var choice = [Int](count: 1, repeatedValue: Int())
@@ -117,47 +141,29 @@ class FavoriteAreasViewController: UITableViewController
         
         if cell!.selected
         {
-            let rowIndex = indexPath.row
-            let selectedArea = cellArray[rowIndex].areaID
-            
-            cell!.selected = false
-            if cell!.accessoryType == UITableViewCellAccessoryType.None
-            {
-                    cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
-                if acreDB.open() {
-                    if selectedArea != dL.getDefaultAreaID(acreDB) {
-                        dL.updateDefAreaAndStat(acreDB, nDefAreaID: selectedArea)
-                    }
-                }
-            }
-            else
-            {
-                cell!.accessoryType = UITableViewCellAccessoryType.None
-            }
-
-            let row = indexPath.row
-            choice[0] = row
-            acreDB.close() */
+        let rowIndex = indexPath.row
+        let selectedArea = cellArray[rowIndex].areaID
         
-        //let acreDB = dL.createACREDB()
-        /*
+        cell!.selected = false
+        if cell!.accessoryType == UITableViewCellAccessoryType.None
+        {
+        cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
         if acreDB.open() {
-        
-        let id = choice[0]
-        let querySQL = "UPDATE AREA SET isDefault = 1 WHERE areaID = \(id);"
-        let results = acreDB.executeUpdate(querySQL, withArgumentsInArray:nil)
-        if !results {
-        print("Error: \(acreDB.lastErrorMessage())")
+        if selectedArea != dL.getDefaultAreaID(acreDB) {
+        dL.updateDefAreaAndStat(acreDB, nDefAreaID: selectedArea)
         }
-        else{
-        print("Record Updated")
         }
-        acreDB.close()
+        }
+        else
+        {
+        cell!.accessoryType = UITableViewCellAccessoryType.None
         } */
         
-        }
-
+        
+        
+    }
     
+    //delete function
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -180,7 +186,7 @@ class FavoriteAreasViewController: UITableViewController
             cellArray.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             
-            }
+        }
     }
     
     
@@ -191,8 +197,8 @@ class FavoriteAreasViewController: UITableViewController
         let acreDB = dL.createACREDB()
         var temp = [AreaDisplayer](count: 0, repeatedValue: AreaDisplayer())
         if acreDB.open() {
-                let querySQL = "SELECT areaName, areaCode, areaID FROM AREA WHERE isFavorite = 1 ORDER BY areaCode ASC"
-                let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
+            let querySQL = "SELECT areaName, areaCode, areaID FROM AREA WHERE isFavorite = 1 ORDER BY areaCode ASC"
+            let results: FMResultSet? = acreDB.executeQuery(querySQL, withArgumentsInArray: nil)
             
             while results?.next() == true {
                 let code = results?.stringForColumn("areaCode")
@@ -208,9 +214,10 @@ class FavoriteAreasViewController: UITableViewController
                 print("Record Found")
             }
             acreDB.close()
-            }
-        return temp
         }
+        return temp
+    }
+    
     
     @IBAction func saveAreas(segue:UIStoryboardSegue)
     {
@@ -219,15 +226,12 @@ class FavoriteAreasViewController: UITableViewController
             print("Unwinding")
         }
         tableview.reloadData()
-
     }
-
-    
-    
 }
 
-   
-    
+
+
+
 
 
 

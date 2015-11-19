@@ -9,65 +9,68 @@
 import Foundation
 import UIKit
 
+@available(iOS 8.0, *)
 class AddResourceLinksViewController: UIViewController
 {
-    
-    @IBAction func cancel(sender: UIBarButtonItem)
-    {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var linkTextField: UITextField!
     @IBOutlet weak var labelTextField: UITextField!
-    
-    
-    
+    let dL = FEDataLayer()
     
     @IBAction func saveLinksButton(sender: AnyObject)
     {
-        let url = linkTextField!.text
-        let label = labelTextField!.text
-        
-        let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let fileURL = documentsURL.URLByAppendingPathComponent("database.sqlite")
-        let databasePath = fileURL.path!
-        let acreDB = FMDatabase(path: databasePath as String)
-        
-        if acreDB.open() {
-            
-            let sqlStmt = "INSERT INTO RESOURCE (url, label) VALUES ('\(url)', '\(label)');"
-            let result = acreDB.executeUpdate(sqlStmt, withArgumentsInArray: nil)
-            
-            if !result {
-                print("Error: \(acreDB.lastErrorMessage())")
-            } else {
-                print("Resource Added")
-            }
+        let url = String(linkTextField!.text)
+        let label = String(labelTextField!.text)
 
-        }
-        acreDB.close()
+        let acreDB = dL.createACREDB()
         
-        if (linkTextField.text!.isEmpty && labelTextField.text!.isEmpty)
-        {
-            let alert = UIAlertView()
-            alert.title = "Error"
-            alert.message = "Please enter URL Link and Label"
-            alert.addButtonWithTitle("Ok")
-            alert.show()
+        if url == "" || label == "" {
+            if (linkTextField.text!.isEmpty && labelTextField.text!.isEmpty)
+            {
+                let alert = UIAlertView()
+                alert.title = "Error"
+                alert.message = "Please enter URL Link and Label"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
         }
-        /*else
-        {
-            performSegueWithIdentifier("saveLinks", sender: self)
-        }*/
+        else {
+            if acreDB.open() {
+                
+                let sqlStmt = "INSERT INTO RESOURCE (url, label) VALUES ('\(url)', '\(label)');"
+                let result = acreDB.executeUpdate(sqlStmt, withArgumentsInArray: nil)
+                
+                if !result {
+                    print("Error: \(acreDB.lastErrorMessage())")
+                } else {
+                    print("Resource Added")
+                }
+                acreDB.close()
+            }
+            else{
+                print("Error: \(acreDB.lastErrorMessage())")
+            }
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
     override func viewDidLoad()
     {
-        
-        //self.linkTextField!.delegate = self
-        //self.labelTextField!.delegate = self
+        super.viewDidLoad()
     }
     
+    @IBAction func cancel(sender: UIBarButtonItem)
+    {
+        var a = dL.getValidAgents()
+        var b = dL.getValidAgentFeedIDs()
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
 }
